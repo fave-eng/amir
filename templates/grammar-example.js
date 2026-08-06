@@ -1,0 +1,20 @@
+window.GRAMMAR_TOPIC_EXAMPLE = {
+  id: "grammar-topic-id",
+  order: 1,
+  title: "Topic title",
+  level: "A1",
+  status: "draft",
+  page: "grammar-topic.html?id=grammar-topic-id",
+  linkedLessonId: "lesson-N",
+  explanation: "",
+  formula: "",
+  glanceCards: [],
+  anchorLinks: [],
+  miniRules: [],
+  tables: [],
+  exampleGroups: [],
+  commonMistakes: [],
+  exercises: [],
+  lockOnPass: false,
+  revealAnswersOnError: true
+};

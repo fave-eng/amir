@@ -1,0 +1,1 @@
+window.GRAMMAR_DATA = [];

@@ -1,0 +1,1 @@
+window.VOCABULARY_DATA = [];

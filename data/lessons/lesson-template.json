@@ -1,0 +1,16 @@
+{
+  "id": "lesson-N",
+  "number": 0,
+  "title": "Real lesson title",
+  "subtitle": "Short description",
+  "status": "draft",
+  "publishedAt": "2026-01-01",
+  "totalPoints": 0,
+  "vocabularyId": "",
+  "grammarIds": [],
+  "notification": {
+    "enabled": false,
+    "version": 1
+  },
+  "blocks": []
+}
