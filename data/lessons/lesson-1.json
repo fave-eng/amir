@@ -340,7 +340,8 @@
             "m________"
           ]
         }
-      ]
+      ],
+      "instructions": "Впиши недостающие слова. Первые буквы уже даны."
     },
     {
       "type": "section",
@@ -673,211 +674,80 @@
         {
           "id": "2",
           "number": 2,
-          "input": "select",
-          "options": [
-            "earns",
-            "study",
-            "want",
-            "lives",
-            "share",
-            "have",
-            "doesn't come",
-            "doesn't like",
-            "prefer",
-            "don't see",
-            "get on"
-          ],
-          "answer": 0
+          "input": "text",
+          "answer": "earns"
         },
         {
           "id": "3",
           "number": 3,
-          "input": "select",
-          "options": [
-            "earns",
-            "study",
-            "want",
-            "lives",
-            "share",
-            "have",
-            "doesn't come",
-            "doesn't like",
-            "prefer",
-            "don't see",
-            "get on"
-          ],
-          "answer": 1
+          "input": "text",
+          "answer": "study"
         },
         {
           "id": "4",
           "number": 4,
-          "input": "select",
-          "options": [
-            "earns",
-            "study",
-            "want",
-            "lives",
-            "share",
-            "have",
-            "doesn't come",
-            "doesn't like",
-            "prefer",
-            "don't see",
-            "get on"
-          ],
-          "answer": 2
+          "input": "text",
+          "answer": "want"
         },
         {
           "id": "5",
           "number": 5,
-          "input": "select",
-          "options": [
-            "earns",
-            "study",
-            "want",
-            "lives",
-            "share",
-            "have",
-            "doesn't come",
-            "doesn't like",
-            "prefer",
-            "don't see",
-            "get on"
-          ],
-          "answer": 3
+          "input": "text",
+          "answer": "lives"
         },
         {
           "id": "6",
           "number": 6,
-          "input": "select",
-          "options": [
-            "earns",
-            "study",
-            "want",
-            "lives",
-            "share",
-            "have",
-            "doesn't come",
-            "doesn't like",
-            "prefer",
-            "don't see",
-            "get on"
-          ],
-          "answer": 4
+          "input": "text",
+          "answer": "share"
         },
         {
           "id": "7",
           "number": 7,
-          "input": "select",
-          "options": [
-            "earns",
-            "study",
-            "want",
-            "lives",
-            "share",
-            "have",
-            "doesn't come",
-            "doesn't like",
-            "prefer",
-            "don't see",
-            "get on"
-          ],
-          "answer": 5
+          "input": "text",
+          "answer": "have"
         },
         {
           "id": "8",
           "number": 8,
-          "input": "select",
-          "options": [
-            "earns",
-            "study",
-            "want",
-            "lives",
-            "share",
-            "have",
+          "input": "text",
+          "answer": "doesn't come",
+          "acceptedAnswers": [
             "doesn't come",
-            "doesn't like",
-            "prefer",
-            "don't see",
-            "get on"
-          ],
-          "answer": 6
+            "does not come"
+          ]
         },
         {
           "id": "9",
           "number": 9,
-          "input": "select",
-          "options": [
-            "earns",
-            "study",
-            "want",
-            "lives",
-            "share",
-            "have",
-            "doesn't come",
+          "input": "text",
+          "answer": "doesn't like",
+          "acceptedAnswers": [
             "doesn't like",
-            "prefer",
-            "don't see",
-            "get on"
-          ],
-          "answer": 7
+            "does not like"
+          ]
         },
         {
           "id": "10",
           "number": 10,
-          "input": "select",
-          "options": [
-            "earns",
-            "study",
-            "want",
-            "lives",
-            "share",
-            "have",
-            "doesn't come",
-            "doesn't like",
-            "prefer",
-            "don't see",
-            "get on"
-          ],
-          "answer": 8
+          "input": "text",
+          "answer": "prefer"
         },
         {
           "id": "11",
           "number": 11,
-          "input": "select",
-          "options": [
-            "earns",
-            "study",
-            "want",
-            "lives",
-            "share",
-            "have",
-            "doesn't come",
-            "doesn't like",
-            "prefer",
+          "input": "text",
+          "answer": "don't see",
+          "acceptedAnswers": [
             "don't see",
-            "get on"
-          ],
-          "answer": 9
+            "do not see"
+          ]
         },
         {
           "id": "12",
           "number": 12,
-          "input": "select",
-          "options": [
-            "earns",
-            "study",
-            "want",
-            "lives",
-            "share",
-            "have",
-            "doesn't come",
-            "doesn't like",
-            "prefer",
-            "don't see",
-            "get on"
-          ],
-          "answer": 10
+          "input": "text",
+          "answer": "get on"
         }
       ],
       "clozeParagraphs": [
@@ -938,7 +808,8 @@
           },
           " really well. Some people say that opposites attract, and for Jamie and me, it’s true."
         ]
-      ]
+      ],
+      "instructions": "Впиши слова прямо в текст. Используй каждое слово один раз и поставь глагол в правильную форму."
     },
     {
       "type": "exercise",

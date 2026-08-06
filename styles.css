@@ -2036,3 +2036,154 @@ label.odd-option {
     display: none;
   }
 }
+
+/* Homework readability fixes: one sentence per task and inline cloze answers. */
+.exercise-sentence-item {
+  display: grid;
+  grid-template-columns: 31px minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: start;
+}
+
+.exercise-sentence-item .exercise-item-header {
+  margin: 0;
+}
+
+.exercise-sentence-item .exercise-control {
+  min-width: 0;
+  padding-left: 0;
+}
+
+.exercise-sentence-item > .feedback {
+  grid-column: 2;
+}
+
+.exercise-sentence-item .sentence-gaps {
+  min-height: 43px;
+  color: var(--dark);
+  font-size: .98rem;
+  font-weight: 650;
+  line-height: 2.35;
+}
+
+.exercise-sentence-item .gap-input {
+  font-weight: 700;
+}
+
+.cloze-card .exercise-heading {
+  padding-bottom: 18px;
+}
+
+.cloze-card .word-bank {
+  margin-top: 14px;
+}
+
+.cloze-document {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  border-top: 1px solid var(--border);
+  box-shadow: none;
+  background:
+    linear-gradient(rgba(255,255,255,.97), rgba(255,255,255,.97)),
+    repeating-linear-gradient(0deg, transparent 0 34px, rgba(148,163,184,.13) 34px 35px);
+}
+
+.cloze-title {
+  margin: 0 0 3px;
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-size: clamp(1.2rem, 4vw, 1.45rem);
+  line-height: 1.25;
+}
+
+.cloze-intro {
+  margin: 0 0 4px;
+  color: var(--muted);
+}
+
+.cloze-paragraph {
+  font-size: 1rem;
+  line-height: 2.55;
+}
+
+.cloze-inline-item {
+  position: relative;
+  gap: 4px;
+  margin: 0 4px;
+  white-space: nowrap;
+}
+
+.cloze-text-input {
+  width: clamp(104px, 17vw, 154px);
+  min-height: 38px;
+  padding: 5px 8px;
+  font-weight: 750;
+  vertical-align: middle;
+}
+
+.cloze-example-answer {
+  min-width: 58px;
+  text-align: center;
+}
+
+/* Keep feedback available to screen readers without breaking the paragraph flow. */
+.cloze-inline-item > .feedback,
+.cloze-inline-item > .feedback.show {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 620px) {
+  .exercise-sentence-item {
+    grid-template-columns: 28px minmax(0, 1fr);
+    column-gap: 9px;
+  }
+
+  .exercise-sentence-item > .feedback {
+    grid-column: 1 / -1;
+  }
+
+  .exercise-sentence-item .sentence-gaps {
+    font-size: .95rem;
+    line-height: 2.25;
+  }
+
+  .cloze-document {
+    padding: 18px 15px 21px;
+    border-radius: 0;
+  }
+
+  .cloze-paragraph {
+    font-size: .96rem;
+    line-height: 2.7;
+  }
+
+  .cloze-text-input {
+    width: clamp(98px, 34vw, 142px);
+  }
+}
+
+/* A worksheet should never be covered by the floating navigation. */
+body[data-view="lesson"].has-bottom-nav {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+body[data-view="lesson"] .bottom-nav {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  margin: 30px auto calc(14px + env(safe-area-inset-bottom));
+}
+
+body[data-view="lesson"] .toast {
+  bottom: 24px;
+}

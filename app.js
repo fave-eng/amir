@@ -963,19 +963,66 @@
     } else if (item.input === 'gaps') {
       const answers = Array.isArray(item.answers) ? item.answers : [];
       const segments = Array.isArray(item.segments) ? item.segments : [];
-      control = `<div class="sentence-gaps" aria-label="${prompt}">${answers.map((answer, gapIndex) => `${gapIndex < segments.length ? `<span>${escapeHtml(segments[gapIndex])}</span>` : ''}<input class="gap-input" data-gap-index="${gapIndex}" aria-label="Gap ${gapIndex + 1}" autocomplete="off">`).join('')}${segments.length > answers.length ? `<span>${escapeHtml(segments[segments.length - 1])}</span>` : ''}</div>`;
+      const placeholders = Array.isArray(item.placeholders) ? item.placeholders : [];
+      control = `<div class="sentence-gaps" role="group" aria-label="${prompt}">${answers.map((answer, gapIndex) => `${gapIndex < segments.length ? `<span>${escapeHtml(segments[gapIndex])}</span>` : ''}<input class="gap-input" data-gap-index="${gapIndex}" aria-label="Пропуск ${gapIndex + 1}: ${prompt}" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="${escapeHtml(placeholders[gapIndex] || '')}">`).join('')}${segments.length > answers.length ? `<span>${escapeHtml(segments[segments.length - 1])}</span>` : ''}</div>`;
     } else {
       control = `<input class="text-field" id="${escapeHtml(inputId)}" autocomplete="off" placeholder="${escapeHtml(item.placeholder || '')}">`;
     }
 
-    const itemHeader = numberMarkup || prompt
-      ? `<div class="exercise-item-header">${numberMarkup}<label class="exercise-prompt" for="${escapeHtml(inputId)}">${prompt}</label></div>`
-      : '';
-    return `<div class="exercise-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">
+    const isSentenceGaps = item.input === 'gaps';
+    const itemHeader = isSentenceGaps
+      ? (numberMarkup ? `<div class="exercise-item-header exercise-item-header-number-only">${numberMarkup}</div>` : '')
+      : (numberMarkup || prompt
+        ? `<div class="exercise-item-header">${numberMarkup}<label class="exercise-prompt" for="${escapeHtml(inputId)}">${prompt}</label></div>`
+        : '');
+    return `<div class="exercise-item${isSentenceGaps ? ' exercise-sentence-item' : ''}" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">
       ${itemHeader}
       <div class="exercise-control">${control}</div>
       <div class="feedback" aria-live="polite"></div>
     </div>`;
+  }
+
+  function renderClozeItem(item, blockId, index) {
+    const itemId = safeText(item.id, `${index + 1}`);
+    const number = item.number === undefined ? index + 1 : item.number;
+    const inputId = `cloze-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
+    const gapNumber = number === '' || number === null ? '' : `<sup class="cloze-gap-number">${escapeHtml(number)}</sup>`;
+
+    if (item.example) {
+      return `<span class="cloze-inline-item cloze-example" data-exercise-item="${escapeHtml(itemId)}">${gapNumber}<span class="cloze-example-answer">${escapeHtml(item.exampleAnswer || '')}</span></span>`;
+    }
+
+    let control = '';
+    if (item.input === 'select') {
+      control = `<select id="${escapeHtml(inputId)}" aria-label="Пропуск ${escapeHtml(number)}"><option value="">— выбери —</option>${(item.options || []).map((option, optionIndex) => `<option value="${optionIndex}">${escapeHtml(option)}</option>`).join('')}</select>`;
+    } else {
+      control = `<input class="gap-input cloze-text-input" id="${escapeHtml(inputId)}" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Пропуск ${escapeHtml(number)}">`;
+    }
+
+    return `<span class="cloze-inline-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">${gapNumber}${control}<span class="feedback" aria-live="polite"></span></span>`;
+  }
+
+  function renderClozeExercise(block, blockId) {
+    const items = Array.isArray(block.items) ? block.items : [];
+    const itemMap = new Map(items.map((item, index) => [safeText(item.id, `${index + 1}`), { item, index }]));
+    const paragraphs = Array.isArray(block.clozeParagraphs) ? block.clozeParagraphs : [];
+
+    if (!paragraphs.length) {
+      return `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, blockId, itemIndex)).join('')}</div>`;
+    }
+
+    const title = block.introTitle ? `<h4 class="cloze-title">${escapeHtml(block.introTitle)}</h4>` : '';
+    const intro = block.introText ? `<p class="cloze-intro">${escapeHtml(block.introText)}</p>` : '';
+    const content = paragraphs.map((paragraph) => {
+      const parts = Array.isArray(paragraph) ? paragraph : [paragraph];
+      return `<p class="cloze-paragraph">${parts.map((part) => {
+        if (typeof part === 'string') return escapeHtml(part);
+        const entry = itemMap.get(safeText(part?.itemId));
+        return entry ? renderClozeItem(entry.item, blockId, entry.index) : '';
+      }).join('')}</p>`;
+    }).join('');
+
+    return `<div class="cloze-document">${title}${intro}${content}</div>`;
   }
 
 
@@ -1067,11 +1114,16 @@
             return `<figure class="exercise-image-figure"><a class="exercise-image-link" href="${escapeHtml(src)}" target="_blank" rel="noopener"><img class="exercise-image" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy"></a>${label ? `<figcaption>${escapeHtml(label)}</figcaption>` : ''}</figure>`;
           }).join('')}</div>`
         : '';
-      const intro = block.introTitle || block.introText ? `<div class="exercise-source"><h4>${escapeHtml(block.introTitle || '')}</h4>${block.introText ? `<p>${escapeHtml(block.introText)}</p>` : ''}</div>` : '';
+      const intro = block.layout === 'cloze'
+        ? ''
+        : (block.introTitle || block.introText ? `<div class="exercise-source"><h4>${escapeHtml(block.introTitle || '')}</h4>${block.introText ? `<p>${escapeHtml(block.introText)}</p>` : ''}</div>` : '');
       const exerciseContent = block.layout === 'dialogue'
         ? renderDialogueExercise(block, id)
-        : `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex)).join('')}</div>`;
-      return `<article class="card lesson-block exercise-card${block.layout === 'dialogue' ? ' dialogue-card' : ''}" data-task="${escapeHtml(id)}" data-type="exercise">
+        : block.layout === 'cloze'
+          ? renderClozeExercise(block, id)
+          : `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex)).join('')}</div>`;
+      const layoutClass = block.layout === 'dialogue' ? ' dialogue-card' : block.layout === 'cloze' ? ' cloze-card' : '';
+      return `<article class="card lesson-block exercise-card${layoutClass}" data-task="${escapeHtml(id)}" data-type="exercise">
         <div class="exercise-heading"><span class="eyebrow">Exercise</span><h3>${title}</h3>${block.instructions ? `<p class="muted exercise-instructions">${escapeHtml(block.instructions)}</p>` : ''}${player}${wordBank}${wordBanks}</div>
         ${image}${intro}
         ${exerciseContent}
@@ -1298,6 +1350,35 @@
     });
   }
 
+  function collectLessonAnswers(root, blocks) {
+    const answers = {};
+    const checkableTypes = new Set(['text', 'textarea', 'single', 'multiple', 'select', 'match', 'reorder', 'translate', 'audio', 'exercise']);
+
+    blocks.forEach((block, blockIndex) => {
+      if (!checkableTypes.has(block.type) || (block.type === 'audio' && block.response === false)) return;
+      const taskId = safeText(block.id, `task-${blockIndex}`);
+      const node = root.querySelector(`[data-task="${CSS.escape(taskId)}"]`);
+      if (!node) return;
+
+      if (block.type !== 'exercise') {
+        answers[taskId] = checkLessonTask(block, node).actual;
+        return;
+      }
+
+      const blockAnswers = {};
+      (Array.isArray(block.items) ? block.items : []).forEach((item, itemIndex) => {
+        if (item.example || item.displayOnly) return;
+        const itemId = safeText(item.id, `${itemIndex + 1}`);
+        const itemNode = node.querySelector(`[data-exercise-item="${CSS.escape(itemId)}"]`);
+        if (!itemNode) return;
+        blockAnswers[itemId] = checkExerciseItem(item, itemNode).actual;
+      });
+      answers[taskId] = blockAnswers;
+    });
+
+    return answers;
+  }
+
   async function renderLesson() {
     const id = queryParam('id');
     const lessonRecord = HOMEWORK_DATA.find((item) => item.id === id && item.status !== 'draft');
@@ -1328,7 +1409,7 @@
 
     const progress = window.ProgressService.loadHomeworkProgress();
     const savedResult = progress.results[lesson.id];
-    const pointsLabel = Number(lesson.totalPoints || 0) > 0 ? `${escapeHtml(lesson.totalPoints)} checked answers` : 'Без автоматической оценки';
+    const pointsLabel = Number(lesson.totalPoints || 0) > 0 ? `${escapeHtml(lesson.totalPoints)} проверяемых ответов` : 'Без автоматической проверки';
     const hasManualResponses = blocks.some((block) => block.type === 'exercise' && (block.items || []).some((item) => item.scored === false));
     const lessonSections = blocks
       .map((block, blockIndex) => block.type === 'section' ? { block, blockIndex } : null)
@@ -1346,9 +1427,56 @@
       ${linkedMaterials}
       ${roadmap}
       <div id="lesson-blocks">${renderedBlocks}</div>
-      <div class="card section lesson-actions"><div id="lesson-result" aria-live="polite"></div><div class="button-row"><button class="btn btn-primary" id="check-lesson" type="button">Проверить ответы</button><button class="btn btn-secondary" id="submit-lesson" type="button" ${savedResult ? '' : 'disabled'}>Отправить преподавателю</button></div><p class="muted save-note">After checking, your answers are saved on this device and synced with Supabase.</p></div>`;
+      <div class="card section lesson-actions"><div id="lesson-result" aria-live="polite"></div><div class="button-row"><button class="btn btn-primary" id="check-lesson" type="button">Проверить ответы</button><button class="btn btn-secondary" id="submit-lesson" type="button" ${Number(savedResult?.total || 0) > 0 ? '' : 'disabled'}>Отправить преподавателю</button></div><p class="muted save-note">Черновик сохраняется автоматически. После проверки станет доступна отправка преподавателю.</p></div>`;
 
     restoreLessonAnswers(root, blocks, savedResult?.answers);
+
+    let draftSaveTimer = 0;
+    const saveDraft = () => {
+      window.clearTimeout(draftSaveTimer);
+      draftSaveTimer = 0;
+      const updatedProgress = window.ProgressService.loadHomeworkProgress();
+      updatedProgress.results[lesson.id] = {
+        correct: 0,
+        total: 0,
+        percent: 0,
+        answers: collectLessonAnswers(root, blocks),
+        checkedAt: null,
+        draftSavedAt: new Date().toISOString()
+      };
+      window.ProgressService.saveHomeworkProgress(updatedProgress);
+      byId('submit-lesson').disabled = true;
+      byId('lesson-result').innerHTML = '<p class="muted draft-status">Черновик сохранён. После изменений проверь ответы ещё раз.</p>';
+    };
+
+    const scheduleDraftSave = (target) => {
+      if (!target?.matches?.('input, textarea, select')) return;
+      const itemNode = target.closest('[data-exercise-item]');
+      if (itemNode) {
+        itemNode.classList.remove('is-correct', 'is-wrong', 'is-saved');
+        const feedback = itemNode.querySelector('.feedback');
+        if (feedback) {
+          feedback.className = 'feedback';
+          feedback.textContent = '';
+        }
+      } else {
+        const taskNode = target.closest('[data-task]');
+        const feedback = taskNode?.querySelector('.feedback');
+        if (feedback) {
+          feedback.className = 'feedback';
+          feedback.textContent = '';
+        }
+      }
+      byId('submit-lesson').disabled = true;
+      window.clearTimeout(draftSaveTimer);
+      draftSaveTimer = window.setTimeout(saveDraft, 550);
+    };
+
+    root.addEventListener('input', (event) => scheduleDraftSave(event.target));
+    root.addEventListener('change', (event) => scheduleDraftSave(event.target));
+    window.addEventListener('pagehide', () => {
+      if (draftSaveTimer) saveDraft();
+    }, { once: true });
 
     root.querySelectorAll('[data-reorder-source]').forEach((source) => {
       source.addEventListener('click', (event) => {
@@ -1359,6 +1487,7 @@
         const input = parent.querySelector('input');
         const selected = [...source.querySelectorAll('.selected')].map((item) => item.dataset.word);
         input.value = selected.join(' ');
+        input.dispatchEvent(new Event('input', { bubbles: true }));
       });
     });
 
@@ -1396,13 +1525,15 @@
     // Restore not only the values, but also the green/red review state after reload.
     if (savedResult && Number(savedResult.total) > 0) {
       evaluateLesson();
-      byId('lesson-result').innerHTML = `<h3>Saved score: ${Number(savedResult.correct || 0)} of ${Number(savedResult.total || 0)}</h3><p class="muted">${Number(savedResult.percent || 0)}% correct</p>`;
+      byId('lesson-result').innerHTML = `<h3>Сохранённый результат: ${Number(savedResult.correct || 0)} из ${Number(savedResult.total || 0)}</h3><p class="muted">${Number(savedResult.percent || 0)}% правильных ответов</p>`;
     }
 
     byId('check-lesson').addEventListener('click', () => {
+      window.clearTimeout(draftSaveTimer);
+      draftSaveTimer = 0;
       const result = evaluateLesson();
-      const manualNote = hasManualResponses ? ' · the extended answer is saved separately and is not included in the score' : '';
-      byId('lesson-result').innerHTML = `<h3>Score: ${result.correct} of ${result.total}</h3><p class="muted">${result.percent}% correct${manualNote}</p>`;
+      const manualNote = hasManualResponses ? ' · развёрнутый ответ сохранён отдельно и не входит в балл' : '';
+      byId('lesson-result').innerHTML = `<h3>Результат: ${result.correct} из ${result.total}</h3><p class="muted">${result.percent}% правильных ответов${manualNote}</p>`;
       const updatedProgress = window.ProgressService.loadHomeworkProgress();
       updatedProgress.results[lesson.id] = {
         correct: result.correct,
