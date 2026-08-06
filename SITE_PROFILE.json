@@ -1,0 +1,16 @@
+{
+  "nameRu": "Амир",
+  "nameEn": "Amir",
+  "studentId": "amir",
+  "level": "A1",
+  "textbook": "English File",
+  "textbookEdition": "Pre-Intermediate A2",
+  "interfaceLanguages": [
+    "ru",
+    "en"
+  ],
+  "russianSupportPercent": 80,
+  "baseUrl": "",
+  "initialMaterials": "empty",
+  "supabaseUrl": "https://zqzgarvmpqqqaobeicpc.supabase.co"
+}
