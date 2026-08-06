@@ -1,0 +1,50 @@
+name: Notify about new homework
+
+on:
+  push:
+    paths:
+      - 'data/lessons/lesson-*.json'
+  workflow_dispatch:
+    inputs:
+      lesson_id:
+        description: Optional lesson ID, for example lesson-5. Leave empty to scan all published lessons.
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validate notification configuration
+        shell: bash
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          NOTIFY_WEBHOOK_SECRET: ${{ secrets.NOTIFY_WEBHOOK_SECRET }}
+        run: |
+          set -euo pipefail
+          for name in SUPABASE_URL SUPABASE_ANON_KEY NOTIFY_WEBHOOK_SECRET; do
+            if [ -z "${!name:-}" ]; then
+              echo "Missing GitHub secret or variable: $name" >&2
+              exit 1
+            fi
+          done
+
+      - name: Notify teacher about published homework
+        env:
+          LESSON_ID: ${{ inputs.lesson_id || '' }}
+          STUDENT_ID: ${{ vars.STUDENT_ID || 'amir' }}
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          NOTIFY_WEBHOOK_SECRET: ${{ secrets.NOTIFY_WEBHOOK_SECRET }}
+        run: node scripts/prepare-notification.mjs

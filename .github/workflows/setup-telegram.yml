@@ -1,0 +1,54 @@
+name: Set up Telegram Edge Function
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate required configuration
+        shell: bash
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          NOTIFY_WEBHOOK_SECRET: ${{ secrets.NOTIFY_WEBHOOK_SECRET }}
+          SUPABASE_PROJECT_REF: ${{ vars.SUPABASE_PROJECT_REF }}
+        run: |
+          set -euo pipefail
+          for name in SUPABASE_ACCESS_TOKEN TELEGRAM_BOT_TOKEN NOTIFY_WEBHOOK_SECRET SUPABASE_PROJECT_REF; do
+            if [ -z "${!name:-}" ]; then echo "Missing GitHub secret or variable: $name" >&2; exit 1; fi
+          done
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Store Edge Function secrets
+        shell: bash
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          NOTIFY_WEBHOOK_SECRET: ${{ secrets.NOTIFY_WEBHOOK_SECRET }}
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+          TEACHER_TIME_ZONE: ${{ vars.TEACHER_TIME_ZONE }}
+          SUPABASE_PROJECT_REF: ${{ vars.SUPABASE_PROJECT_REF }}
+        run: |
+          set -euo pipefail
+          supabase secrets set \
+            "TELEGRAM_BOT_TOKEN=$TELEGRAM_BOT_TOKEN" \
+            "NOTIFY_WEBHOOK_SECRET=$NOTIFY_WEBHOOK_SECRET" \
+            "SITE_BASE_URL=${SITE_BASE_URL:-}" \
+            "TEACHER_TIME_ZONE=${TEACHER_TIME_ZONE:-Europe/Riga}" \
+            --project-ref "$SUPABASE_PROJECT_REF"
+
+      - name: Deploy notify-telegram
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: ${{ vars.SUPABASE_PROJECT_REF }}
+        run: supabase functions deploy notify-telegram --project-ref "$SUPABASE_PROJECT_REF" --no-verify-jwt

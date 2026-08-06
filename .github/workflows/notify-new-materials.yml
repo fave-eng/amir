@@ -1,0 +1,37 @@
+name: Notify about new learning materials
+
+on:
+  push:
+    paths:
+      - 'data/vocabulary-data.js'
+      - 'data/grammar-data.js'
+      - 'scripts/prepare-notification.mjs'
+  workflow_dispatch:
+    inputs:
+      lesson_id:
+        description: Optional lesson ID, for example lesson-5. Leave empty to scan all lessons.
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Send idempotent lesson bundles
+        env:
+          LESSON_ID: ${{ inputs.lesson_id || '' }}
+          STUDENT_ID: ${{ vars.STUDENT_ID || 'amir' }}
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          NOTIFY_WEBHOOK_SECRET: ${{ secrets.NOTIFY_WEBHOOK_SECRET }}
+        run: node scripts/prepare-notification.mjs
