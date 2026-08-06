@@ -1073,7 +1073,9 @@
   function renderExerciseItem(item, blockId, index) {
     const itemId = safeText(item.id, `${index + 1}`);
     const number = item.number === undefined ? index + 1 : item.number;
-    const prompt = escapeHtml(item.prompt || '');
+    const prompt = item.promptStrong
+      ? `<strong>${escapeHtml(item.promptStrong)}</strong>${escapeHtml(item.promptTail || '')}`
+      : escapeHtml(item.prompt || '');
     const inputId = `exercise-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
     const numberMarkup = number === '' || number === null ? '' : `<span class="exercise-number">${escapeHtml(number)}</span>`;
 
@@ -1114,7 +1116,26 @@
     } else if (item.input === 'gaps') {
       const answers = Array.isArray(item.answers) ? item.answers : [];
       const segments = Array.isArray(item.segments) ? item.segments : [];
-      control = `<div class="sentence-gaps" aria-label="${prompt}">${answers.map((answer, gapIndex) => `${gapIndex < segments.length ? `<span>${escapeHtml(segments[gapIndex])}</span>` : ''}<input class="gap-input" data-gap-index="${gapIndex}" aria-label="Gap ${gapIndex + 1}" autocomplete="off">`).join('')}${segments.length > answers.length ? `<span>${escapeHtml(segments[segments.length - 1])}</span>` : ''}</div>`;
+      const exampleGaps = item.exampleGaps && typeof item.exampleGaps === 'object' ? item.exampleGaps : {};
+      const gapNumbers = Array.isArray(item.gapNumbers) ? item.gapNumbers : [];
+      const sharedGapOptions = Array.isArray(item.gapOptions) && item.gapOptions.every((option) => !Array.isArray(option)) ? item.gapOptions : null;
+      const perGapOptions = Array.isArray(item.gapOptions) && item.gapOptions.some(Array.isArray) ? item.gapOptions : [];
+      const inlineText = (value) => escapeHtml(value).replaceAll('\n', '<br>');
+      const gapMarkup = answers.map((answer, gapIndex) => {
+        const before = gapIndex < segments.length ? `<span>${inlineText(segments[gapIndex])}</span>` : '';
+        const gapNumber = gapNumbers[gapIndex] === undefined ? '' : `<sup class="inline-gap-number">${escapeHtml(gapNumbers[gapIndex])}</sup>`;
+        if (Object.prototype.hasOwnProperty.call(exampleGaps, String(gapIndex))) {
+          const exampleAnswer = safeText(exampleGaps[String(gapIndex)]);
+          return `${before}<span class="inline-example-answer gap-example">${gapNumber}${escapeHtml(exampleAnswer)}</span><input type="hidden" data-gap-index="${gapIndex}" value="${escapeHtml(exampleAnswer)}">`;
+        }
+        const options = Array.isArray(perGapOptions[gapIndex]) ? perGapOptions[gapIndex] : sharedGapOptions;
+        if (Array.isArray(options) && options.length) {
+          return `${before}<span class="gap-control-pair">${gapNumber}<select class="gap-input gap-select" data-gap-index="${gapIndex}" aria-label="Gap ${gapIndex + 1}"><option value="">Choose</option>${options.map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join('')}</select></span>`;
+        }
+        return `${before}<span class="gap-control-pair">${gapNumber}<input class="gap-input" data-gap-index="${gapIndex}" aria-label="Gap ${gapIndex + 1}" autocomplete="off"></span>`;
+      }).join('');
+      const tail = segments.length > answers.length ? `<span>${inlineText(segments[segments.length - 1])}</span>` : '';
+      control = `<div class="sentence-gaps" aria-label="${prompt}">${gapMarkup}${tail}</div>`;
     } else {
       control = `<input class="text-field" id="${escapeHtml(inputId)}" autocomplete="off" placeholder="${escapeHtml(item.placeholder || '')}">`;
     }
@@ -1228,7 +1249,9 @@
       const exerciseContent = block.layout === 'dialogue'
         ? renderDialogueExercise(block, id)
         : `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex)).join('')}</div>`;
-      return `<article class="card lesson-block exercise-card${block.layout === 'dialogue' ? ' dialogue-card' : ''}${block.layout === 'media-list' ? ' exercise-layout-media-list' : ''}" data-task="${escapeHtml(id)}" data-type="exercise">
+      const safeLayout = safeText(block.layout).toLowerCase().replace(/[^a-z0-9_-]+/g, '');
+      const layoutClass = safeLayout ? ` exercise-layout-${safeLayout}` : '';
+      return `<article class="card lesson-block exercise-card${block.layout === 'dialogue' ? ' dialogue-card' : ''}${layoutClass}" data-task="${escapeHtml(id)}" data-type="exercise">
         <div class="exercise-heading"><span class="eyebrow">Exercise</span><h3>${title}</h3>${block.instructions ? `<p class="muted exercise-instructions">${escapeHtml(block.instructions)}</p>` : ''}${player}${wordBank}${wordBanks}</div>
         ${image}${intro}
         ${exerciseContent}
@@ -1332,8 +1355,10 @@
       correctCount = actual !== '' && Number(actual) === Number(item.answer) ? 1 : 0;
     } else if (inputType === 'gaps') {
       const expected = Array.isArray(item.answers) ? item.answers : [];
-      total = expected.length;
+      const exampleGapIndexes = new Set(Object.keys(item.exampleGaps && typeof item.exampleGaps === 'object' ? item.exampleGaps : {}).map(Number));
+      total = expected.reduce((count, answer, index) => count + (exampleGapIndexes.has(index) ? 0 : 1), 0);
       correctCount = expected.reduce((count, answer, index) => {
+        if (exampleGapIndexes.has(index)) return count;
         const accepted = Array.isArray(answer) ? answer : [answer];
         const matches = accepted.some((variant) => normalizeAnswer(variant) !== '' && normalizeAnswer(variant) === normalizeAnswer(actual[index]));
         return count + (matches ? 1 : 0);

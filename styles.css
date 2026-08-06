@@ -2029,3 +2029,152 @@ h1, h2, h3, h4, p, .item-main, .lesson-material-text { overflow-wrap: anywhere; 
 .diagnostic-form .checkbox-row { display: flex; align-items: flex-start; gap: 10px; }
 .diagnostic-form .checkbox-row input { width: auto; margin-top: 5px; }
 @media (max-width: 620px) { .diagnostic-grid { grid-template-columns: 1fr; } }
+
+/* Lesson 1: workbook article cloze and selectable inline gaps */
+.gap-select {
+  width: auto;
+  min-width: clamp(118px, 24vw, 178px);
+  max-width: 210px;
+  min-height: 43px;
+  padding-right: 30px;
+  text-align: left;
+}
+
+.gap-example {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 4px 9px;
+  border: 1px dashed #c7d2fe;
+  border-radius: 10px;
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.exercise-layout-article-cloze .exercise-images {
+  margin: 0;
+  padding: 18px 18px 0;
+  background: #f6f8fb;
+}
+
+.exercise-layout-article-cloze .exercise-image-figure {
+  width: min(100%, 640px);
+  margin: 0 auto;
+}
+
+.exercise-layout-article-cloze .exercise-image-link {
+  margin: 0;
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, .08);
+}
+
+.exercise-layout-article-cloze .exercise-source {
+  width: min(calc(100% - 36px), 640px);
+  margin: 0 auto;
+  padding: 18px 20px 8px;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  text-align: center;
+}
+
+.exercise-layout-article-cloze .exercise-source h4 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.65rem, 5vw, 2.35rem);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -.035em;
+}
+
+.exercise-layout-article-cloze .exercise-items {
+  padding-top: 10px;
+}
+
+.exercise-layout-article-cloze .exercise-item {
+  width: min(100%, 680px);
+  margin: 0 auto;
+  padding: 22px 24px 25px;
+  border-color: #dbe3ef;
+  box-shadow: none;
+}
+
+.exercise-layout-article-cloze .exercise-control {
+  padding-left: 0;
+}
+
+.exercise-layout-article-cloze .sentence-gaps {
+  display: block;
+  color: #1e293b;
+  font-size: 1rem;
+  line-height: 2.45;
+}
+
+.exercise-layout-article-cloze .sentence-gaps > span,
+.exercise-layout-article-cloze .sentence-gaps > select,
+.exercise-layout-article-cloze .sentence-gaps > input,
+.exercise-layout-article-cloze .sentence-gaps > sup {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.exercise-layout-article-cloze .sentence-gaps br {
+  content: '';
+  display: block;
+  margin-top: .75rem;
+}
+
+@media (max-width: 620px) {
+  .gap-select {
+    min-width: 112px;
+    max-width: 165px;
+  }
+
+  .exercise-layout-article-cloze .exercise-images {
+    padding: 12px 12px 0;
+  }
+
+  .exercise-layout-article-cloze .exercise-source {
+    width: calc(100% - 24px);
+    padding-inline: 12px;
+  }
+
+  .exercise-layout-article-cloze .exercise-item {
+    padding: 18px 15px 21px;
+  }
+
+  .exercise-layout-article-cloze .sentence-gaps {
+    line-height: 2.6;
+  }
+}
+
+.gap-control-pair {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.gap-control-pair .inline-gap-number {
+  margin-right: 0;
+}
+
+.exercise-layout-article-cloze .sentence-gaps > .gap-control-pair {
+  display: inline-flex;
+}
+
+/* Keep wide grammar tables inside their own horizontal scroller. */
+.list,
+.list > *,
+#grammar-tables .card,
+#grammar-tables .table-wrap {
+  min-width: 0;
+  max-width: 100%;
+}
+
+#grammar-tables .table-wrap {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
