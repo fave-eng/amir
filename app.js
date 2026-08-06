@@ -457,13 +457,16 @@
             student_name: safeText(student.nameEn || student.nameRu),
             lesson_id: lessonId,
             lesson_title: safeText(lesson.title, lessonId),
-            status: submission ? 'submitted' : 'checked',
+            // The shared table treats an unfinished checked attempt as a draft.
+            // A submitted row must also contain both submitted_at and locked_at.
+            status: submission ? 'submitted' : 'draft',
             answers: result.answers && typeof result.answers === 'object' ? result.answers : {},
             score_correct: total > 0 ? correct : null,
             score_total: total > 0 ? total : null,
             score_percent: total > 0 ? safePercent(correct, total) : null,
             checked_at: result.checkedAt || null,
-            submitted_at: submission?.savedAt || null
+            submitted_at: submission?.savedAt || null,
+            locked_at: submission?.savedAt || null
           };
         });
         if (rows.length) {
@@ -943,8 +946,7 @@
     } else if (item.input === 'gaps') {
       const answers = Array.isArray(item.answers) ? item.answers : [];
       const segments = Array.isArray(item.segments) ? item.segments : [];
-      const placeholders = Array.isArray(item.placeholders) ? item.placeholders : [];
-      control = `<div class="sentence-gaps" aria-label="${prompt}">${answers.map((answer, gapIndex) => `${gapIndex < segments.length ? `<span>${escapeHtml(segments[gapIndex])}</span>` : ''}<input class="gap-input" data-gap-index="${gapIndex}" aria-label="Gap ${gapIndex + 1}" autocomplete="off" placeholder="${escapeHtml(placeholders[gapIndex] || '')}">`).join('')}${segments.length > answers.length ? `<span>${escapeHtml(segments[segments.length - 1])}</span>` : ''}</div>`;
+      control = `<div class="sentence-gaps" aria-label="${prompt}">${answers.map((answer, gapIndex) => `${gapIndex < segments.length ? `<span>${escapeHtml(segments[gapIndex])}</span>` : ''}<input class="gap-input" data-gap-index="${gapIndex}" aria-label="Gap ${gapIndex + 1}" autocomplete="off">`).join('')}${segments.length > answers.length ? `<span>${escapeHtml(segments[segments.length - 1])}</span>` : ''}</div>`;
     } else {
       control = `<input class="text-field" id="${escapeHtml(inputId)}" autocomplete="off" placeholder="${escapeHtml(item.placeholder || '')}">`;
     }
@@ -957,49 +959,6 @@
       <div class="exercise-control">${control}</div>
       <div class="feedback" aria-live="polite"></div>
     </div>`;
-  }
-
-
-  function renderInlineClozeItem(item, blockId, index) {
-    const itemId = safeText(item.id, `${index + 1}`);
-    const number = item.number === undefined ? index + 1 : item.number;
-    const inputId = `cloze-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
-    const numberMarkup = number === '' || number === null ? '' : `<sup class="cloze-gap-number">${escapeHtml(number)}</sup>`;
-
-    if (item.example) {
-      return `<span class="cloze-inline-item cloze-inline-example" data-exercise-item="${escapeHtml(itemId)}">${numberMarkup}<span class="cloze-example-answer">${escapeHtml(item.exampleAnswer || '')}</span></span>`;
-    }
-
-    let control = '';
-    if (item.input === 'select') {
-      control = `<select id="${escapeHtml(inputId)}" aria-label="Gap ${escapeHtml(number || index + 1)}"><option value="">—</option>${(item.options || []).map((option, optionIndex) => `<option value="${optionIndex}">${escapeHtml(option)}</option>`).join('')}</select>`;
-    } else if (item.input === 'gaps') {
-      const answers = Array.isArray(item.answers) ? item.answers : [];
-      const placeholders = Array.isArray(item.placeholders) ? item.placeholders : [];
-      control = answers.map((answer, gapIndex) => `<input class="gap-input cloze-text-input" data-gap-index="${gapIndex}" aria-label="Gap ${escapeHtml(number || index + 1)}${answers.length > 1 ? `, part ${gapIndex + 1}` : ''}" autocomplete="off" placeholder="${escapeHtml(placeholders[gapIndex] || '')}">`).join('');
-    } else {
-      control = `<input class="gap-input cloze-text-input" id="${escapeHtml(inputId)}" autocomplete="off" placeholder="${escapeHtml(item.placeholder || '')}">`;
-    }
-
-    return `<span class="cloze-inline-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">${numberMarkup}${control}<span class="feedback" aria-live="polite"></span></span>`;
-  }
-
-  function renderClozeExercise(block, blockId) {
-    const items = Array.isArray(block.items) ? block.items : [];
-    const itemMap = new Map(items.map((item, index) => [safeText(item.id, `${index + 1}`), { item, index }]));
-    const paragraphs = Array.isArray(block.clozeParagraphs) ? block.clozeParagraphs : [];
-
-    if (!paragraphs.length) {
-      return `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, blockId, itemIndex)).join('')}</div>`;
-    }
-
-    const renderPart = (part) => {
-      if (typeof part === 'string') return escapeHtml(part);
-      const entry = itemMap.get(safeText(part?.itemId));
-      return entry ? renderInlineClozeItem(entry.item, blockId, entry.index) : '';
-    };
-
-    return `<div class="cloze-document">${paragraphs.map((paragraph) => `<p class="cloze-paragraph">${(Array.isArray(paragraph) ? paragraph : [paragraph]).map(renderPart).join('')}</p>`).join('')}</div>`;
   }
 
 
@@ -1094,9 +1053,7 @@
       const intro = block.introTitle || block.introText ? `<div class="exercise-source"><h4>${escapeHtml(block.introTitle || '')}</h4>${block.introText ? `<p>${escapeHtml(block.introText)}</p>` : ''}</div>` : '';
       const exerciseContent = block.layout === 'dialogue'
         ? renderDialogueExercise(block, id)
-        : block.layout === 'cloze'
-          ? renderClozeExercise(block, id)
-          : `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex)).join('')}</div>`;
+        : `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex)).join('')}</div>`;
       return `<article class="card lesson-block exercise-card${block.layout === 'dialogue' ? ' dialogue-card' : ''}" data-task="${escapeHtml(id)}" data-type="exercise">
         <div class="exercise-heading"><span class="eyebrow">Exercise</span><h3>${title}</h3>${block.instructions ? `<p class="muted exercise-instructions">${escapeHtml(block.instructions)}</p>` : ''}${player}${wordBank}${wordBanks}</div>
         ${image}${intro}
@@ -1511,11 +1468,7 @@
         ${block.instructions ? `<p class="muted exercise-instructions">${escapeHtml(block.instructions)}</p>` : ''}
         ${wordBank}
       </div>
-      ${block.layout === 'dialogue'
-        ? renderDialogueExercise(block, id)
-        : block.layout === 'cloze'
-          ? renderClozeExercise(block, id)
-          : `<div class="exercise-items">${(Array.isArray(block.items) ? block.items : []).map((item, itemIndex) => renderExerciseItem(item, id, itemIndex)).join('')}</div>`}
+      <div class="exercise-items">${(Array.isArray(block.items) ? block.items : []).map((item, itemIndex) => renderExerciseItem(item, id, itemIndex)).join('')}</div>
     </article>`;
   }
 

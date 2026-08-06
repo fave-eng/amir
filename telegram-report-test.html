@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="Служебная страница проверки Telegram-отчётов">
-  <title>Проверка Telegram-отчёта v2</title>
+  <title>Проверка Telegram-отчёта v3</title>
   <link rel="stylesheet" href="styles.css?v=5">
   <style>
     .test-grid { display: grid; gap: 14px; }
@@ -35,7 +35,7 @@
   <header class="hero hero-compact">
     <span class="star one">✦</span><span class="star two">✦</span>
     <div class="container hero-content">
-      <span class="hero-badge">Служебная проверка · v2</span>
+      <span class="hero-badge">Служебная проверка · v3</span>
       <h1>Telegram-отчёт по домашней работе</h1>
       <p>Страница проверяет всю цепочку: запись в Supabase → чтение результата → вызов Edge Function → отправка сообщения в Telegram.</p>
     </div>
@@ -222,7 +222,8 @@
           score_total: 5,
           score_percent: 80,
           checked_at: submittedAt,
-          submitted_at: submittedAt
+          submitted_at: submittedAt,
+          locked_at: submittedAt
         };
 
         sendButton.disabled = true;
@@ -239,7 +240,7 @@
 
           const { data: savedRow, error: readError } = await client
             .from(table)
-            .select('student_id,lesson_id,status,score_correct,score_total,score_percent,submitted_at')
+            .select('student_id,lesson_id,status,score_correct,score_total,score_percent,submitted_at,locked_at')
             .eq('student_id', studentId)
             .eq('lesson_id', TEST_LESSON_ID)
             .single();
@@ -256,6 +257,9 @@
 
           if (savedStatus !== 'submitted') {
             throw new Error(`Статус тестовой записи: ${savedRow?.status || 'не указан'}, ожидался submitted.`);
+          }
+          if (!savedRow?.locked_at) {
+            throw new Error('Supabase сохранил отправленную работу без locked_at.');
           }
           if (!sameSubmissionTime) {
             throw new Error(`Время отправки не совпало. Записано: ${savedRow?.submitted_at || 'не указано'}. Ожидалось: ${submittedAt}.`);
