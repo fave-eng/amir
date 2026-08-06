@@ -2171,19 +2171,3 @@ label.odd-option {
   }
 }
 
-/* A worksheet should never be covered by the floating navigation. */
-body[data-view="lesson"].has-bottom-nav {
-  padding-bottom: env(safe-area-inset-bottom);
-}
-
-body[data-view="lesson"] .bottom-nav {
-  position: relative;
-  left: auto;
-  bottom: auto;
-  transform: none;
-  margin: 30px auto calc(14px + env(safe-area-inset-bottom));
-}
-
-body[data-view="lesson"] .toast {
-  bottom: 24px;
-}
