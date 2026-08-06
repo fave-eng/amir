@@ -387,9 +387,20 @@
             };
           }
           if (row.status === 'submitted') {
-            homework.submissions[row.lesson_id] = { savedAt: row.submitted_at || row.updated_at, status: 'cloud' };
+            homework.submissions[row.lesson_id] = {
+              savedAt: row.submitted_at || row.updated_at,
+              status: 'report-sent',
+              reportSentAt: row.report_sent_at || row.updated_at
+            };
             // A homework assignment is counted as complete after it is submitted,
             // even if some answers are incorrect.
+            homework.completedIds.push(row.lesson_id);
+          } else if (row.status === 'submitted_pending_report') {
+            homework.submissions[row.lesson_id] = {
+              savedAt: row.submitted_at || row.updated_at,
+              status: row.report_status === 'failed' ? 'report-failed' : 'pending-cloud',
+              reportError: row.report_error || null
+            };
             homework.completedIds.push(row.lesson_id);
           } else if (Number(row.score_total) > 0 && Number(row.score_correct) === Number(row.score_total)) {
             homework.completedIds.push(row.lesson_id);
@@ -452,21 +463,27 @@
           const lesson = HOMEWORK_DATA.find((item) => item.id === lessonId) || {};
           const total = Number(result.total || 0);
           const correct = Number(result.correct || 0);
+          const submissionState = safeText(submission?.status);
+          const reportWasSent = ['report-sent', 'cloud'].includes(submissionState);
+          const reportFailed = submissionState === 'report-failed';
           return {
             student_id: studentId,
             student_name: safeText(student.nameEn || student.nameRu),
             lesson_id: lessonId,
             lesson_title: safeText(lesson.title, lessonId),
-            // The shared table treats an unfinished checked attempt as a draft.
-            // A submitted row must also contain both submitted_at and locked_at.
-            status: submission ? 'submitted' : 'draft',
+            // The shared table uses a three-stage report state machine:
+            // draft -> submitted_pending_report -> submitted.
+            status: !submission ? 'draft' : reportWasSent ? 'submitted' : 'submitted_pending_report',
             answers: result.answers && typeof result.answers === 'object' ? result.answers : {},
             score_correct: total > 0 ? correct : null,
             score_total: total > 0 ? total : null,
             score_percent: total > 0 ? safePercent(correct, total) : null,
             checked_at: result.checkedAt || null,
             submitted_at: submission?.savedAt || null,
-            locked_at: submission?.savedAt || null
+            locked_at: submission?.savedAt || null,
+            report_status: !submission ? 'not_sent' : reportWasSent ? 'sent' : reportFailed ? 'failed' : 'pending',
+            report_sent_at: reportWasSent ? (submission?.reportSentAt || submission?.savedAt || null) : null,
+            report_error: reportFailed ? safeText(submission?.reportError, 'Telegram report failed') : null
           };
         });
         if (rows.length) {
@@ -1428,7 +1445,8 @@
           const latest = window.ProgressService.loadHomeworkProgress();
           latest.submissions[lesson.id] = {
             savedAt: submittedAt,
-            status: report?.skipped ? 'cloud' : 'report-sent'
+            status: 'report-sent',
+            reportSentAt: report?.reportSentAt || new Date().toISOString()
           };
           window.ProgressService.saveHomeworkProgress(latest);
           showToast(report?.skipped ? 'Домашняя работа сохранена в Supabase.' : 'Домашняя работа отправлена. Преподаватель получил отчёт в Telegram.');
@@ -1438,7 +1456,11 @@
       } catch (error) {
         console.error('Ошибка отправки домашней работы или отчёта:', error);
         const latest = window.ProgressService.loadHomeworkProgress();
-        latest.submissions[lesson.id] = { savedAt: submittedAt, status: 'report-failed' };
+        latest.submissions[lesson.id] = {
+          savedAt: submittedAt,
+          status: 'report-failed',
+          reportError: safeText(error?.message, 'unknown error')
+        };
         window.ProgressService.saveHomeworkProgress(latest);
         showToast(`Homework saved, but the Telegram report was not sent: ${safeText(error?.message, 'unknown error')}`);
       } finally {

@@ -1,7 +1,7 @@
 import { withSupabase } from 'npm:@supabase/server@^1'
 
 const encoder = new TextEncoder()
-const FUNCTION_VERSION = 'homework-reports-v3'
+const FUNCTION_VERSION = 'homework-reports-v4'
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-notify-secret',
@@ -132,6 +132,21 @@ async function getRecipient(ctx: any, studentId: string) {
   return recipient
 }
 
+async function updateHomeworkProgressReportState(
+  ctx: any,
+  studentId: string,
+  lessonId: string,
+  values: Record<string, unknown>,
+) {
+  const { error } = await ctx.supabaseAdmin
+    .from('homework_progress')
+    .update(values)
+    .eq('student_id', studentId)
+    .eq('lesson_id', lessonId)
+
+  if (error) throw new Error(`Homework progress update failed: ${error.message}`)
+}
+
 async function handleHomeworkReport(payload: any, ctx: any, botToken: string) {
   const studentId = typeof payload.studentId === 'string' ? payload.studentId.trim() : ''
   const lessonId = typeof payload.lessonId === 'string' ? payload.lessonId.trim() : ''
@@ -150,14 +165,26 @@ async function handleHomeworkReport(payload: any, ctx: any, botToken: string) {
 
   const { data: row, error: progressError } = await ctx.supabaseAdmin
     .from('homework_progress')
-    .select('student_id, student_name, lesson_id, lesson_title, status, answers, score_correct, score_total, score_percent, checked_at, submitted_at, updated_at')
+    .select('student_id, student_name, lesson_id, lesson_title, status, answers, score_correct, score_total, score_percent, checked_at, submitted_at, locked_at, report_status, report_sent_at, report_error, updated_at')
     .eq('student_id', studentId)
     .eq('lesson_id', lessonId)
     .maybeSingle()
 
   if (progressError) return json({ ok: false, error: progressError.message }, 500)
-  if (!row || row.status !== 'submitted') {
-    return json({ ok: false, error: 'The submitted homework row was not found in homework_progress' }, 409)
+  if (!row) return json({ ok: false, error: 'The homework row was not found in homework_progress' }, 409)
+
+  const isPendingReport = row.status === 'submitted_pending_report'
+    && ['pending', 'failed'].includes(String(row.report_status || ''))
+    && !row.report_sent_at
+  const isSentReport = row.status === 'submitted'
+    && row.report_status === 'sent'
+    && Boolean(row.report_sent_at)
+
+  if (!isPendingReport && !isSentReport) {
+    return json({
+      ok: false,
+      error: `Invalid homework report state: ${String(row.status || 'null')} / ${String(row.report_status || 'null')}`,
+    }, 409)
   }
 
   const submissionKey = String(row.submitted_at || row.updated_at || row.checked_at || '')
@@ -165,20 +192,45 @@ async function handleHomeworkReport(payload: any, ctx: any, botToken: string) {
 
   const { data: existing, error: existingError } = await ctx.supabaseAdmin
     .from('homework_reports')
-    .select('id, status, telegram_message_id')
+    .select('id, status, telegram_message_id, sent_at')
     .eq('student_id', studentId)
     .eq('lesson_id', lessonId)
     .eq('submission_key', submissionKey)
     .maybeSingle()
 
   if (existingError) return json({ ok: false, error: existingError.message }, 500)
-  if (existing?.status === 'sent') {
+
+  if (existing?.status === 'sent' || isSentReport) {
+    const reportSentAt = existing?.sent_at || row.report_sent_at || new Date().toISOString()
+    try {
+      await updateHomeworkProgressReportState(ctx, studentId, lessonId, {
+        status: 'submitted',
+        report_status: 'sent',
+        report_sent_at: reportSentAt,
+        report_error: null,
+      })
+    } catch (error) {
+      return json({ ok: false, error: error instanceof Error ? error.message : String(error) }, 500)
+    }
+
     return json({
       ok: true,
       skipped: true,
       reason: 'already_sent',
-      telegramMessageId: existing.telegram_message_id,
+      telegramMessageId: existing?.telegram_message_id || null,
+      reportSentAt,
     })
+  }
+
+  try {
+    await updateHomeworkProgressReportState(ctx, studentId, lessonId, {
+      status: 'submitted_pending_report',
+      report_status: 'pending',
+      report_sent_at: null,
+      report_error: null,
+    })
+  } catch (error) {
+    return json({ ok: false, error: error instanceof Error ? error.message : String(error) }, 500)
   }
 
   let reportId = existing?.id as string | undefined
@@ -205,7 +257,9 @@ async function handleHomeworkReport(payload: any, ctx: any, botToken: string) {
       .single()
 
     if (error) {
-      if (error.code === '23505') return json({ ok: true, skipped: true, reason: 'already_claimed' })
+      if (error.code === '23505') {
+        return json({ ok: false, error: 'This homework report is already being processed' }, 409)
+      }
       return json({ ok: false, error: error.message }, 500)
     }
     reportId = created.id
@@ -215,35 +269,73 @@ async function handleHomeworkReport(payload: any, ctx: any, botToken: string) {
     ? [[{ text: '📝 Открыть домашнюю работу', url: lessonUrl }]]
     : []
 
+  let telegramMessage
   try {
-    const telegramMessage = await sendTelegramMessage(
+    telegramMessage = await sendTelegramMessage(
       botToken,
       Number(recipient.chat_id),
       buildHomeworkReport(row),
       keyboard,
     )
-
-    const { error: updateError } = await ctx.supabaseAdmin
-      .from('homework_reports')
-      .update({
-        status: 'sent',
-        telegram_message_id: telegramMessage.message_id,
-        sent_at: new Date().toISOString(),
-        error_message: null,
-      })
-      .eq('id', reportId)
-
-    if (updateError) throw new Error(`Telegram sent, but report log update failed: ${updateError.message}`)
-
-    return json({ ok: true, skipped: false, telegramMessageId: telegramMessage.message_id })
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error)
     await ctx.supabaseAdmin
       .from('homework_reports')
       .update({ status: 'failed', error_message: message })
       .eq('id', reportId)
+    await ctx.supabaseAdmin
+      .from('homework_progress')
+      .update({
+        status: 'submitted_pending_report',
+        report_status: 'failed',
+        report_sent_at: null,
+        report_error: message,
+      })
+      .eq('student_id', studentId)
+      .eq('lesson_id', lessonId)
     return json({ ok: false, error: message }, 502)
   }
+
+  const reportSentAt = new Date().toISOString()
+  const { error: reportUpdateError } = await ctx.supabaseAdmin
+    .from('homework_reports')
+    .update({
+      status: 'sent',
+      telegram_message_id: telegramMessage.message_id,
+      sent_at: reportSentAt,
+      error_message: null,
+    })
+    .eq('id', reportId)
+
+  if (reportUpdateError) {
+    return json({
+      ok: false,
+      error: `Telegram sent, but report log update failed: ${reportUpdateError.message}`,
+      telegramMessageId: telegramMessage.message_id,
+    }, 500)
+  }
+
+  try {
+    await updateHomeworkProgressReportState(ctx, studentId, lessonId, {
+      status: 'submitted',
+      report_status: 'sent',
+      report_sent_at: reportSentAt,
+      report_error: null,
+    })
+  } catch (error) {
+    return json({
+      ok: false,
+      error: error instanceof Error ? `Telegram sent, but ${error.message}` : String(error),
+      telegramMessageId: telegramMessage.message_id,
+    }, 500)
+  }
+
+  return json({
+    ok: true,
+    skipped: false,
+    telegramMessageId: telegramMessage.message_id,
+    reportSentAt,
+  })
 }
 
 async function handleMaterialNotification(payload: any, req: Request, ctx: any, botToken: string) {

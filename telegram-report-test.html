@@ -216,14 +216,17 @@
           student_name: String(config.student?.nameEn || config.student?.nameRu || studentId),
           lesson_id: TEST_LESSON_ID,
           lesson_title: 'ТЕСТ: проверка Telegram-отчёта',
-          status: 'submitted',
+          status: 'submitted_pending_report',
           answers: { test: true, note: 'Служебная проверка отправки Telegram-отчёта' },
           score_correct: 4,
           score_total: 5,
           score_percent: 80,
           checked_at: submittedAt,
           submitted_at: submittedAt,
-          locked_at: submittedAt
+          locked_at: submittedAt,
+          report_status: 'pending',
+          report_sent_at: null,
+          report_error: null
         };
 
         sendButton.disabled = true;
@@ -240,7 +243,7 @@
 
           const { data: savedRow, error: readError } = await client
             .from(table)
-            .select('student_id,lesson_id,status,score_correct,score_total,score_percent,submitted_at,locked_at')
+            .select('student_id,lesson_id,status,score_correct,score_total,score_percent,submitted_at,locked_at,report_status,report_sent_at,report_error')
             .eq('student_id', studentId)
             .eq('lesson_id', TEST_LESSON_ID)
             .single();
@@ -255,8 +258,14 @@
           const sameSubmissionTime = Number.isFinite(expectedTime) && Number.isFinite(savedTime)
             && Math.abs(savedTime - expectedTime) < 1000;
 
-          if (savedStatus !== 'submitted') {
-            throw new Error(`Статус тестовой записи: ${savedRow?.status || 'не указан'}, ожидался submitted.`);
+          if (savedStatus !== 'submitted_pending_report') {
+            throw new Error(`Статус тестовой записи: ${savedRow?.status || 'не указан'}, ожидался submitted_pending_report.`);
+          }
+          if (String(savedRow?.report_status || '') !== 'pending') {
+            throw new Error(`Статус отчёта: ${savedRow?.report_status || 'не указан'}, ожидался pending.`);
+          }
+          if (savedRow?.report_sent_at) {
+            throw new Error('У ожидающего отчёта report_sent_at должен быть пустым.');
           }
           if (!savedRow?.locked_at) {
             throw new Error('Supabase сохранил отправленную работу без locked_at.');
@@ -265,8 +274,8 @@
             throw new Error(`Время отправки не совпало. Записано: ${savedRow?.submitted_at || 'не указано'}. Ожидалось: ${submittedAt}.`);
           }
 
-          setStatus('status-db', 'success', 'Тестовая работа записана и прочитана обратно.');
-          log('Тестовая запись подтверждена. Формат времени Supabase корректно распознан.');
+          setStatus('status-db', 'success', 'Тестовая работа записана в очередь Telegram-отчёта.');
+          log('Тестовая запись подтверждена: submitted_pending_report / pending.');
 
           const endpoint = `${String(config.supabase.url).replace(/\/+$/, '')}/functions/v1/notify-telegram`;
           setStatus('status-function', 'working', 'Вызываем notify-telegram…');
@@ -293,7 +302,19 @@
             throw error;
           }
 
-          setStatus('status-function', 'success', result.skipped ? 'Функция ответила успешно, но отчёт уже был отправлен.' : 'Функция обработала отчёт без ошибки.');
+          const { data: finalRow, error: finalReadError } = await client
+            .from(table)
+            .select('status,report_status,report_sent_at,report_error')
+            .eq('student_id', studentId)
+            .eq('lesson_id', TEST_LESSON_ID)
+            .single();
+          if (finalReadError) throw finalReadError;
+          log('Финальное состояние записи после Telegram.', finalRow);
+          if (finalRow?.status !== 'submitted' || finalRow?.report_status !== 'sent' || !finalRow?.report_sent_at) {
+            throw new Error(`После отправки ожидалось submitted / sent. Получено: ${finalRow?.status || '—'} / ${finalRow?.report_status || '—'}.`);
+          }
+
+          setStatus('status-function', 'success', result.skipped ? 'Функция ответила успешно, отчёт уже был отправлен.' : 'Функция обработала отчёт без ошибки.');
           if (result.skipped) {
             setStatus('status-telegram', 'success', `Отчёт уже был отправлен ранее. ID сообщения: ${result.telegramMessageId || 'не указан'}.`);
             showFinal(true, 'Проверка завершена', 'Функция работает. Этот экземпляр отчёта уже был зарегистрирован как отправленный.');
