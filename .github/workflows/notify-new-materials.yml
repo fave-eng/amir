@@ -1,8 +1,9 @@
-name: Notify about new learning materials
+name: 2 - Notify about new materials
 
 on:
   push:
     paths:
+      - 'data/lessons/lesson-*.json'
       - 'data/vocabulary-data.js'
       - 'data/grammar-data.js'
       - 'scripts/prepare-notification.mjs'
@@ -26,7 +27,22 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Send idempotent lesson bundles
+      - name: Validate notification configuration
+        shell: bash
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          NOTIFY_WEBHOOK_SECRET: ${{ secrets.NOTIFY_WEBHOOK_SECRET }}
+        run: |
+          set -euo pipefail
+          for name in SUPABASE_URL SUPABASE_ANON_KEY NOTIFY_WEBHOOK_SECRET; do
+            if [ -z "${!name:-}" ]; then
+              echo "Missing GitHub secret or variable: $name" >&2
+              exit 1
+            fi
+          done
+
+      - name: Notify teacher about published lesson bundles
         env:
           LESSON_ID: ${{ inputs.lesson_id || '' }}
           STUDENT_ID: ${{ vars.STUDENT_ID || 'amir' }}
