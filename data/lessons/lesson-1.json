@@ -1,0 +1,1129 @@
+{
+  "id": "lesson-1",
+  "number": 1,
+  "title": "Unit 1B · The perfect date?",
+  "subtitle": "English File Pre-Intermediate · Workbook · Vocabulary, Present Simple and pronunciation",
+  "status": "available",
+  "page": "lesson.html?id=lesson-1",
+  "vocabularyId": "vocab-lesson-1b",
+  "grammarIds": [
+    "grammar-present-simple"
+  ],
+  "publishedAt": "2026-08-07",
+  "totalPoints": 57,
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "1B · 1",
+      "title": "VOCABULARY · describing people",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1a",
+      "title": "1a. Cross out the word which can’t be used with the bold noun.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "hair — red · curly · straight · tall",
+          "options": [
+            "red",
+            "curly",
+            "straight",
+            "tall"
+          ],
+          "answer": 3,
+          "example": true,
+          "exampleAnswer": "tall"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "eyes",
+          "options": [
+            "blonde",
+            "big",
+            "blue",
+            "brown"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "man",
+          "options": [
+            "thin",
+            "short",
+            "long",
+            "overweight"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "woman",
+          "options": [
+            "medium height",
+            "slim",
+            "beautiful",
+            "bald"
+          ],
+          "answer": 3
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1b",
+      "title": "1b. Order the letters to make words that complete the sentences.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "Thanks for paying for dinner – that was very generous. (enersuog)",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "prompt": "Sarah’s really ________ (nynfu). She makes me laugh.",
+          "answer": "funny"
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "prompt": "Sam’s very ________ (rdfylnei). Everybody likes him.",
+          "answer": "friendly"
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "prompt": "John never does his homework. He’s very ________ (alzy).",
+          "answer": "lazy"
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "prompt": "Imogen is a ________ (eervlc) girl. She’ll do well in her exams.",
+          "answer": "clever"
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "text",
+          "prompt": "That was a very ________ (dinukn) thing to say.",
+          "answer": "unkind"
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "text",
+          "prompt": "David is quite intelligent, but sometimes he says really ________ (updits) things.",
+          "answer": "stupid"
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "text",
+          "prompt": "Paula is really ________ (ihsy) – she doesn’t like meeting new people.",
+          "answer": "shy"
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "text",
+          "prompt": "Laura’s usually very ________ (iuetq) – she doesn’t talk very much.",
+          "answer": "quiet"
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1c",
+      "title": "1c. Complete the sentences.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "Does your boyfriend have brown eyes or blue eyes?",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "Tanya’s dad doesn’t have any hair. He’s b________.",
+          "segments": [
+            "Tanya’s dad doesn’t have any hair. He’s ",
+            "."
+          ],
+          "answers": [
+            [
+              "bald"
+            ]
+          ],
+          "placeholders": [
+            "b________"
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "Jamie’s new girlfriend is really e________ – she loves meeting new people.",
+          "segments": [
+            "Jamie’s new girlfriend is really ",
+            " – she loves meeting new people."
+          ],
+          "answers": [
+            [
+              "extrovert"
+            ]
+          ],
+          "placeholders": [
+            "e________"
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "My dad never shaves. He has a b________ and a m________.",
+          "segments": [
+            "My dad never shaves. He has a ",
+            " and a ",
+            "."
+          ],
+          "answers": [
+            [
+              "beard"
+            ],
+            [
+              "moustache",
+              "mustache"
+            ]
+          ],
+          "placeholders": [
+            "b________",
+            "m________"
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "What does your sister look l________? Is she tall and blonde, too?",
+          "segments": [
+            "What does your sister look ",
+            "? Is she tall and blonde, too?"
+          ],
+          "answers": [
+            [
+              "like"
+            ]
+          ],
+          "placeholders": [
+            "l________"
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "When Jake was young, he was very th________, but now he’s a bit o________.",
+          "segments": [
+            "When Jake was young, he was very ",
+            ", but now he’s a bit ",
+            "."
+          ],
+          "answers": [
+            [
+              "thin"
+            ],
+            [
+              "overweight"
+            ]
+          ],
+          "placeholders": [
+            "th________",
+            "o________"
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "prompt": "My dad is really h________-w________ – he starts work at 7.00 and gets home at 6.00.",
+          "segments": [
+            "My dad is really ",
+            " – he starts work at 7.00 and gets home at 6.00."
+          ],
+          "answers": [
+            [
+              "hard-working",
+              "hard working"
+            ]
+          ],
+          "placeholders": [
+            "h________-w________"
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "prompt": "I’m not l________ my sister. I don’t say much, but she’s very t________ – in fact she never stops talking.",
+          "segments": [
+            "I’m not ",
+            " my sister. I don’t say much, but she’s very ",
+            " – in fact she never stops talking."
+          ],
+          "answers": [
+            [
+              "like"
+            ],
+            [
+              "talkative"
+            ]
+          ],
+          "placeholders": [
+            "l________",
+            "t________"
+          ]
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "gaps",
+          "prompt": "George is a very s________ student – he works hard and wants to do well.",
+          "segments": [
+            "George is a very ",
+            " student – he works hard and wants to do well."
+          ],
+          "answers": [
+            [
+              "serious"
+            ]
+          ],
+          "placeholders": [
+            "s________"
+          ]
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "gaps",
+          "prompt": "Dan is really m________ – he never pays for anything.",
+          "segments": [
+            "Dan is really ",
+            " – he never pays for anything."
+          ],
+          "answers": [
+            [
+              "mean"
+            ]
+          ],
+          "placeholders": [
+            "m________"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "1B · 2",
+      "title": "GRAMMAR · present simple",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-2a",
+      "layout": "dialogue",
+      "title": "2a. Complete the conversation with the present simple form of the verbs in brackets.",
+      "items": [
+        {
+          "id": "1-do",
+          "number": 1,
+          "example": true,
+          "segments": [
+            "",
+            " your parents "
+          ],
+          "exampleAnswer": "Do"
+        },
+        {
+          "id": "1-live",
+          "number": "",
+          "example": true,
+          "segments": [
+            "",
+            " together? (live)"
+          ],
+          "exampleAnswer": "live"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "",
+            " Louisa ",
+            " to marry her boyfriend? (want)"
+          ],
+          "answers": [
+            [
+              "Does"
+            ],
+            [
+              "want"
+            ]
+          ],
+          "placeholders": [
+            "",
+            ""
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "It rains a lot in winter, but it ",
+            " often ",
+            " in the summer. (not rain)"
+          ],
+          "answers": [
+            [
+              "doesn't",
+              "does not"
+            ],
+            [
+              "rain"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "He ",
+            " a lot of TV. (watch)"
+          ],
+          "answers": [
+            [
+              "watches"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "",
+            " your sister ",
+            " Spanish? (speak)"
+          ],
+          "answers": [
+            [
+              "Does"
+            ],
+            [
+              "speak"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "",
+            " you ",
+            " Monday to Friday? (work)"
+          ],
+          "answers": [
+            [
+              "Do"
+            ],
+            [
+              "work"
+            ]
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "segments": [
+            "We ",
+            " very often because it’s cold and wet. (not play)"
+          ],
+          "answers": [
+            [
+              "don't play",
+              "do not play"
+            ]
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "segments": [
+            "Yes, she ",
+            " it. (love)"
+          ],
+          "answers": [
+            [
+              "loves"
+            ]
+          ]
+        }
+      ],
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "itemIds": [
+            "1-do",
+            "1-live"
+          ]
+        },
+        {
+          "speaker": "B",
+          "text": "No, they don’t. They’re divorced now."
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "2"
+          ]
+        },
+        {
+          "speaker": "B",
+          "text": "In a few years perhaps."
+        },
+        {
+          "speaker": "A",
+          "text": "What’s the weather like where you live?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "3"
+          ]
+        },
+        {
+          "speaker": "A",
+          "text": "What does José do in the evenings?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "4"
+          ]
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "5"
+          ]
+        },
+        {
+          "speaker": "B",
+          "text": "No, but she speaks English and Italian."
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "6"
+          ]
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, and I usually work on Saturdays, too."
+        },
+        {
+          "speaker": "A",
+          "text": "How often do you play tennis in winter?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "7"
+          ]
+        },
+        {
+          "speaker": "A",
+          "text": "Does your sister like living in Italy?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-2b",
+      "title": "2b. Rewrite the sentences with the words in brackets in the correct place. Use contractions where possible.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "My dad lives alone and he does not go out. (often)",
+          "example": true,
+          "exampleAnswer": "My dad lives alone and he doesn’t often go out."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "prompt": "You are too old to get married. (never)",
+          "answer": "You're never too old to get married.",
+          "acceptedAnswers": [
+            "You're never too old to get married",
+            "You’re never too old to get married"
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "prompt": "Candice sees her boyfriend. (every day)",
+          "answer": "Candice sees her boyfriend every day."
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "prompt": "Alice meets people on the internet. (sometimes)",
+          "answer": "Alice sometimes meets people on the internet."
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "prompt": "It is fun to go on a date. (always)",
+          "answer": "It's always fun to go on a date.",
+          "acceptedAnswers": [
+            "It's always fun to go on a date",
+            "It’s always fun to go on a date"
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "text",
+          "prompt": "I see my wife these days. (hardly ever)",
+          "answer": "I hardly ever see my wife these days."
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "text",
+          "prompt": "I go out during the week. (never)",
+          "answer": "I never go out during the week."
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-2c",
+      "layout": "cloze",
+      "title": "2c. Complete the text with the correct form of the words from the list.",
+      "wordBank": [
+        "earn",
+        "get on",
+        "have",
+        "live",
+        "not come",
+        "not like",
+        "not see",
+        "prefer",
+        "share",
+        "study",
+        "want",
+        "work"
+      ],
+      "introTitle": "My boyfriend Jamie",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "exampleAnswer": "works"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select",
+          "options": [
+            "earns",
+            "study",
+            "want",
+            "lives",
+            "share",
+            "have",
+            "doesn't come",
+            "doesn't like",
+            "prefer",
+            "don't see",
+            "get on"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select",
+          "options": [
+            "earns",
+            "study",
+            "want",
+            "lives",
+            "share",
+            "have",
+            "doesn't come",
+            "doesn't like",
+            "prefer",
+            "don't see",
+            "get on"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select",
+          "options": [
+            "earns",
+            "study",
+            "want",
+            "lives",
+            "share",
+            "have",
+            "doesn't come",
+            "doesn't like",
+            "prefer",
+            "don't see",
+            "get on"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select",
+          "options": [
+            "earns",
+            "study",
+            "want",
+            "lives",
+            "share",
+            "have",
+            "doesn't come",
+            "doesn't like",
+            "prefer",
+            "don't see",
+            "get on"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select",
+          "options": [
+            "earns",
+            "study",
+            "want",
+            "lives",
+            "share",
+            "have",
+            "doesn't come",
+            "doesn't like",
+            "prefer",
+            "don't see",
+            "get on"
+          ],
+          "answer": 4
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select",
+          "options": [
+            "earns",
+            "study",
+            "want",
+            "lives",
+            "share",
+            "have",
+            "doesn't come",
+            "doesn't like",
+            "prefer",
+            "don't see",
+            "get on"
+          ],
+          "answer": 5
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select",
+          "options": [
+            "earns",
+            "study",
+            "want",
+            "lives",
+            "share",
+            "have",
+            "doesn't come",
+            "doesn't like",
+            "prefer",
+            "don't see",
+            "get on"
+          ],
+          "answer": 6
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "select",
+          "options": [
+            "earns",
+            "study",
+            "want",
+            "lives",
+            "share",
+            "have",
+            "doesn't come",
+            "doesn't like",
+            "prefer",
+            "don't see",
+            "get on"
+          ],
+          "answer": 7
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "select",
+          "options": [
+            "earns",
+            "study",
+            "want",
+            "lives",
+            "share",
+            "have",
+            "doesn't come",
+            "doesn't like",
+            "prefer",
+            "don't see",
+            "get on"
+          ],
+          "answer": 8
+        },
+        {
+          "id": "11",
+          "number": 11,
+          "input": "select",
+          "options": [
+            "earns",
+            "study",
+            "want",
+            "lives",
+            "share",
+            "have",
+            "doesn't come",
+            "doesn't like",
+            "prefer",
+            "don't see",
+            "get on"
+          ],
+          "answer": 9
+        },
+        {
+          "id": "12",
+          "number": 12,
+          "input": "select",
+          "options": [
+            "earns",
+            "study",
+            "want",
+            "lives",
+            "share",
+            "have",
+            "doesn't come",
+            "doesn't like",
+            "prefer",
+            "don't see",
+            "get on"
+          ],
+          "answer": 10
+        }
+      ],
+      "clozeParagraphs": [
+        [
+          "I’m very different from my boyfriend, Jamie. Jamie ",
+          {
+            "itemId": "1"
+          },
+          " as a vet, and he ",
+          {
+            "itemId": "2"
+          },
+          " quite a lot of money. I’m a student, and I ",
+          {
+            "itemId": "3"
+          },
+          " music at university. I ",
+          {
+            "itemId": "4"
+          },
+          " to be a music teacher when I finish."
+        ],
+        [
+          "Jamie ",
+          {
+            "itemId": "5"
+          },
+          " alone in a small house in the country, and I ",
+          {
+            "itemId": "6"
+          },
+          " a flat with some friends in the city centre. We often ",
+          {
+            "itemId": "7"
+          },
+          " parties in our flat, but Jamie ",
+          {
+            "itemId": "8"
+          },
+          ". He’s quite shy, so he ",
+          {
+            "itemId": "9"
+          },
+          " being with other people. I’m quite extrovert, so I ",
+          {
+            "itemId": "10"
+          },
+          " being in a group."
+        ],
+        [
+          "I ",
+          {
+            "itemId": "11"
+          },
+          " Jamie very often because he’s usually busy. But when we’re together, we always ",
+          {
+            "itemId": "12"
+          },
+          " really well. Some people say that opposites attract, and for Jamie and me, it’s true."
+        ]
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-2d",
+      "title": "2d. Write questions about you and your best friend, Anna.",
+      "items": [
+        {
+          "id": "1a",
+          "number": "1a",
+          "prompt": "What / you / do?",
+          "example": true,
+          "exampleAnswer": "What do you do?"
+        },
+        {
+          "id": "1b",
+          "number": "1b",
+          "prompt": "What / Anna / do?",
+          "example": true,
+          "exampleAnswer": "What does Anna do?"
+        },
+        {
+          "id": "2a",
+          "number": "2a",
+          "input": "text",
+          "prompt": "Where / you / live?",
+          "answer": "Where do you live?"
+        },
+        {
+          "id": "2b",
+          "number": "2b",
+          "input": "text",
+          "prompt": "Where / Anna / live?",
+          "answer": "Where does Anna live?"
+        },
+        {
+          "id": "3a",
+          "number": "3a",
+          "input": "text",
+          "prompt": "Who / you / live / with?",
+          "answer": "Who do you live with?"
+        },
+        {
+          "id": "3b",
+          "number": "3b",
+          "input": "text",
+          "prompt": "Who / Anna / live with?",
+          "answer": "Who does Anna live with?"
+        },
+        {
+          "id": "4a",
+          "number": "4a",
+          "input": "text",
+          "prompt": "you / like going to parties?",
+          "answer": "Do you like going to parties?"
+        },
+        {
+          "id": "4b",
+          "number": "4b",
+          "input": "text",
+          "prompt": "Anna / like going to parties?",
+          "answer": "Does Anna like going to parties?"
+        },
+        {
+          "id": "5a",
+          "number": "5a",
+          "input": "text",
+          "prompt": "you / be shy or extrovert?",
+          "answer": "Are you shy or extrovert?"
+        },
+        {
+          "id": "5b",
+          "number": "5b",
+          "input": "text",
+          "prompt": "Anna / be shy or extrovert?",
+          "answer": "Is Anna shy or extrovert?"
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-2e",
+      "title": "2e. Think about a good friend. Write a paragraph about the differences between you. Use the text in c and the questions in d to help you.",
+      "items": [
+        {
+          "id": "paragraph",
+          "number": "",
+          "input": "textarea",
+          "prompt": "",
+          "scored": false
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "1B · 3",
+      "title": "PRONUNCIATION · final -s and -es",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "pronunciation-3a",
+      "title": "3a. Circle the verb with a different final sound.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "snake /s/ — works · laughs · watches",
+          "options": [
+            "works",
+            "laughs",
+            "watches"
+          ],
+          "answer": 2,
+          "example": true,
+          "exampleAnswer": "watches"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "snake /s/ — lives · thinks · drinks",
+          "options": [
+            "lives",
+            "thinks",
+            "drinks"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "zebra /z/ — knows · rains · likes",
+          "options": [
+            "knows",
+            "rains",
+            "likes"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "zebra /z/ — runs · starts · goes",
+          "options": [
+            "runs",
+            "starts",
+            "goes"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "/ɪz/ — leaves · dresses · washes",
+          "options": [
+            "leaves",
+            "dresses",
+            "washes"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "/ɪz/ — teaches · cooks · uses",
+          "options": [
+            "teaches",
+            "cooks",
+            "uses"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "type": "audio",
+      "id": "pronunciation-3b",
+      "title": "3b. Listen and check. Then listen again and repeat the words.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_1.2.mp3",
+      "response": false
+    }
+  ]
+}
