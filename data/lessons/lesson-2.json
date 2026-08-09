@@ -1277,7 +1277,7 @@
           "id": "4",
           "number": 4,
           "input": "text",
-          "prompt": "",
+          "prompt": "What is she wearing?",
           "answer": "She's wearing a tracksuit and trainers.",
           "acceptedAnswers": [
             "She's wearing a tracksuit and trainers",
@@ -1288,7 +1288,7 @@
           "id": "5",
           "number": 5,
           "input": "text",
-          "prompt": "",
+          "prompt": "What is the woman on the right wearing?",
           "answer": "The woman on the right is wearing a dress and a cardigan.",
           "acceptedAnswers": [
             "The woman on the right is wearing a dress and a cardigan"
@@ -1298,7 +1298,7 @@
           "id": "6",
           "number": 6,
           "input": "text",
-          "prompt": "",
+          "prompt": "What is she carrying?",
           "answer": "She's carrying a bag.",
           "acceptedAnswers": [
             "She's carrying a bag",
@@ -1309,7 +1309,7 @@
           "id": "7",
           "number": 7,
           "input": "text",
-          "prompt": "",
+          "prompt": "What is the runner wearing?",
           "answer": "He's wearing shorts, a T-shirt and trainers.",
           "acceptedAnswers": [
             "He's wearing shorts, a T-shirt and trainers",
@@ -1320,14 +1320,16 @@
           "id": "8",
           "number": 8,
           "input": "text",
-          "prompt": "",
+          "prompt": "What is the man under the tree doing?",
           "answer": "He's sleeping.",
           "acceptedAnswers": [
             "He's sleeping",
             "He is sleeping"
           ]
         }
-      ]
+      ],
+      "image": "images/lesson-2/park-scene.webp",
+      "imageAlt": "People in a park: boys playing football, a cyclist, a woman carrying a bag, a runner, a man reading on a bench, and a man sleeping under a tree"
     }
   ]
 }
