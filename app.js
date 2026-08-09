@@ -925,6 +925,10 @@
     const prompt = escapeHtml(item.prompt || '');
     const inputId = `exercise-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
     const numberMarkup = number === '' || number === null ? '' : `<span class="exercise-number">${escapeHtml(number)}</span>`;
+    const itemMedia = item.image
+      ? `<div class="exercise-item-media"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt || '')}" loading="lazy"></div>`
+      : '';
+    const mediaClass = item.image ? ' exercise-media-item' : '';
 
     if (item.displayOnly) {
       const className = item.displayStyle === 'heading' ? 'exercise-display-heading' : 'exercise-display-copy';
@@ -941,7 +945,8 @@
     }
 
     if (item.example) {
-      return `<div class="exercise-item exercise-example" data-exercise-item="${escapeHtml(itemId)}">
+      return `<div class="exercise-item exercise-example${mediaClass}" data-exercise-item="${escapeHtml(itemId)}">
+        ${itemMedia}
         <div class="exercise-item-header">${numberMarkup}<div class="exercise-prompt">${prompt}</div></div>
         ${item.exampleTextOnly ? '' : `<div class="example-answer"><span>Example</span><strong>${escapeHtml(item.exampleAnswer || '')}</strong></div>`}
       </div>`;
@@ -958,13 +963,22 @@
       control = `<div class="option-list compact-options">${(item.options || []).map((option, optionIndex) => `<label class="option"><input type="${inputType}" name="${escapeHtml(inputId)}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('')}</div>`;
     } else if (item.input === 'select') {
       control = `<select id="${escapeHtml(inputId)}"><option value="">Выбери ответ</option>${(item.options || []).map((option, optionIndex) => `<option value="${optionIndex}">${escapeHtml(option)}</option>`).join('')}</select>`;
+    } else if (item.input === 'bank-select') {
+      control = `<select id="${escapeHtml(inputId)}" data-bank-select><option value="">— выбери —</option>${(item.options || []).map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join('')}</select>`;
     } else if (item.input === 'textarea') {
       control = `<textarea id="${escapeHtml(inputId)}" placeholder="${escapeHtml(item.placeholder || '')}"></textarea>`;
     } else if (item.input === 'gaps') {
       const answers = Array.isArray(item.answers) ? item.answers : [];
       const segments = Array.isArray(item.segments) ? item.segments : [];
       const placeholders = Array.isArray(item.placeholders) ? item.placeholders : [];
-      control = `<div class="sentence-gaps" role="group" aria-label="${prompt}">${answers.map((answer, gapIndex) => `${gapIndex < segments.length ? `<span>${escapeHtml(segments[gapIndex])}</span>` : ''}<input class="gap-input" data-gap-index="${gapIndex}" aria-label="Пропуск ${gapIndex + 1}: ${prompt}" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="${escapeHtml(placeholders[gapIndex] || '')}">`).join('')}${segments.length > answers.length ? `<span>${escapeHtml(segments[segments.length - 1])}</span>` : ''}</div>`;
+      const gapOptions = Array.isArray(item.gapOptions) ? item.gapOptions : [];
+      control = `<div class="sentence-gaps" role="group" aria-label="${prompt}">${answers.map((answer, gapIndex) => {
+        const options = Array.isArray(gapOptions[gapIndex]) ? gapOptions[gapIndex] : null;
+        const gapControl = options
+          ? `<select class="gap-select" data-gap-index="${gapIndex}" aria-label="Пропуск ${gapIndex + 1}: ${prompt}"><option value="">— выбери —</option>${options.map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join('')}</select>`
+          : `<input class="gap-input" data-gap-index="${gapIndex}" aria-label="Пропуск ${gapIndex + 1}: ${prompt}" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="${escapeHtml(placeholders[gapIndex] || '')}">`;
+        return `${gapIndex < segments.length ? `<span>${escapeHtml(segments[gapIndex])}</span>` : ''}${gapControl}`;
+      }).join('')}${segments.length > answers.length ? `<span>${escapeHtml(segments[segments.length - 1])}</span>` : ''}</div>`;
     } else {
       control = `<input class="text-field" id="${escapeHtml(inputId)}" autocomplete="off" placeholder="${escapeHtml(item.placeholder || '')}">`;
     }
@@ -975,7 +989,8 @@
       : (numberMarkup || prompt
         ? `<div class="exercise-item-header">${numberMarkup}<label class="exercise-prompt" for="${escapeHtml(inputId)}">${prompt}</label></div>`
         : '');
-    return `<div class="exercise-item${isSentenceGaps ? ' exercise-sentence-item' : ''}" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">
+    return `<div class="exercise-item${isSentenceGaps ? ' exercise-sentence-item' : ''}${mediaClass}" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">
+      ${itemMedia}
       ${itemHeader}
       <div class="exercise-control">${control}</div>
       <div class="feedback" aria-live="polite"></div>
@@ -1077,6 +1092,24 @@
     }).join('')}</div>`;
   }
 
+  function renderWordChartExercise(block, blockId) {
+    const items = Array.isArray(block.items) ? block.items : [];
+    const columns = Array.isArray(block.chartColumns) ? block.chartColumns : [];
+    if (!columns.length) return `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, blockId, itemIndex)).join('')}</div>`;
+
+    return `<div class="pronunciation-word-chart">${columns.map((column) => {
+      const columnItems = items.filter((item) => safeText(item.group) === safeText(column.id));
+      return `<section class="pronunciation-word-column" aria-label="${escapeHtml(column.label || '')}">
+        <div class="pronunciation-word-column-head"><strong>${escapeHtml(column.label || '')}</strong>${column.example ? `<span class="pronunciation-word-example">${escapeHtml(column.example)}</span>` : ''}</div>
+        <div class="pronunciation-word-slots">${columnItems.map((item, itemIndex) => {
+          const itemId = safeText(item.id, `${itemIndex + 1}`);
+          const inputId = `exercise-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
+          return `<div class="pronunciation-word-slot" data-exercise-item="${escapeHtml(itemId)}" data-input-type="bank-select"><select id="${escapeHtml(inputId)}" data-bank-select aria-label="${escapeHtml(column.label || '')}"><option value="">— выбери —</option>${(item.options || []).map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join('')}</select><div class="feedback" aria-live="polite"></div></div>`;
+        }).join('')}</div>
+      </section>`;
+    }).join('')}</div>`;
+  }
+
   function renderLessonBlock(block, index) {
     const id = safeText(block.id, `task-${index}`);
     const title = escapeHtml(block.title || block.prompt || `Task ${index + 1}`);
@@ -1121,8 +1154,18 @@
         ? renderDialogueExercise(block, id)
         : block.layout === 'cloze'
           ? renderClozeExercise(block, id)
-          : `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex)).join('')}</div>`;
-      const layoutClass = block.layout === 'dialogue' ? ' dialogue-card' : block.layout === 'cloze' ? ' cloze-card' : '';
+          : block.layout === 'word-chart'
+            ? renderWordChartExercise(block, id)
+            : `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex)).join('')}</div>`;
+      const layoutClass = block.layout === 'dialogue'
+        ? ' dialogue-card'
+        : block.layout === 'cloze'
+          ? ' cloze-card'
+          : block.layout === 'word-chart'
+            ? ' word-chart-card'
+            : block.layout === 'media-list'
+              ? ' media-list-card'
+              : '';
       return `<article class="card lesson-block exercise-card${layoutClass}" data-task="${escapeHtml(id)}" data-type="exercise">
         <div class="exercise-heading"><span class="eyebrow">Exercise</span><h3>${title}</h3>${block.instructions ? `<p class="muted exercise-instructions">${escapeHtml(block.instructions)}</p>` : ''}${player}${wordBank}${wordBanks}</div>
         ${image}${intro}
@@ -1200,6 +1243,10 @@
     } else if (inputType === 'select') {
       actual = itemNode.querySelector('select')?.value ?? '';
       correct = actual !== '' && Number(actual) === Number(item.answer);
+    } else if (inputType === 'bank-select') {
+      actual = itemNode.querySelector('select')?.value ?? '';
+      const accepted = Array.isArray(item.acceptedAnswers) ? item.acceptedAnswers : [];
+      correct = actual !== '' && accepted.some((answer) => normalizeAnswer(answer) === normalizeAnswer(actual));
     } else if (inputType === 'gaps') {
       actual = [...itemNode.querySelectorAll('[data-gap-index]')].map((input) => input.value);
       const expected = Array.isArray(item.answers) ? item.answers : [];
@@ -1219,13 +1266,26 @@
     const actual = {};
     let correctCount = 0;
     let total = 0;
+    const items = Array.isArray(block.items) ? block.items : [];
+    const bankValueCounts = {};
+    items.forEach((item, index) => {
+      if (item.example || item.displayOnly || item.input !== 'bank-select') return;
+      const itemId = safeText(item.id, `${index + 1}`);
+      const itemNode = node.querySelector(`[data-exercise-item="${CSS.escape(itemId)}"]`);
+      const value = normalizeAnswer(itemNode?.querySelector('select')?.value || '');
+      if (value) bankValueCounts[value] = (bankValueCounts[value] || 0) + 1;
+    });
 
-    (Array.isArray(block.items) ? block.items : []).forEach((item, index) => {
+    items.forEach((item, index) => {
       if (item.example || item.displayOnly) return;
       const itemId = safeText(item.id, `${index + 1}`);
       const itemNode = node.querySelector(`[data-exercise-item="${CSS.escape(itemId)}"]`);
       if (!itemNode) return;
       const result = checkExerciseItem(item, itemNode);
+      if (item.input === 'bank-select') {
+        const normalized = normalizeAnswer(result.actual);
+        if (normalized && bankValueCounts[normalized] > 1) result.correct = false;
+      }
       actual[itemId] = result.actual;
       const feedback = itemNode.querySelector('.feedback');
 
@@ -1308,7 +1368,7 @@
       } else if (inputType === 'single') {
         const input = itemNode.querySelector(`input[value="${CSS.escape(safeText(value))}"]`);
         if (input) input.checked = true;
-      } else if (inputType === 'select') {
+      } else if (inputType === 'select' || inputType === 'bank-select') {
         const select = itemNode.querySelector('select');
         if (select) select.value = safeText(value);
       } else if (inputType === 'gaps') {

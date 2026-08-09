@@ -254,5 +254,258 @@ window.VOCABULARY_DATA = [
         "exampleRu": "Некоторые говорят, что противоположности притягиваются."
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-1c",
+    "order": 2,
+    "title": "Clothes & prepositions of place",
+    "label": "Lesson 2 · Unit 1C · The Remake Project",
+    "icon": "👕",
+    "type": "lesson",
+    "linkedLessonId": "lesson-2",
+    "page": "vocabulary.html?id=vocab-lesson-1c",
+    "publishedAt": "2026-08-09",
+    "words": [
+      {
+        "id": "lesson-1c-leggings",
+        "en": "leggings",
+        "ru": "легинсы",
+        "transcription": "/ˈleɡɪŋz/",
+        "exampleEn": "She’s wearing black leggings.",
+        "exampleRu": "На ней чёрные легинсы."
+      },
+      {
+        "id": "lesson-1c-trousers",
+        "en": "trousers",
+        "ru": "брюки",
+        "transcription": "/ˈtraʊzəz/",
+        "exampleEn": "These trousers are very comfortable.",
+        "exampleRu": "Эти брюки очень удобные."
+      },
+      {
+        "id": "lesson-1c-shirt",
+        "en": "shirt",
+        "ru": "рубашка",
+        "transcription": "/ʃɜːt/",
+        "exampleEn": "He’s wearing a white shirt.",
+        "exampleRu": "На нём белая рубашка."
+      },
+      {
+        "id": "lesson-1c-cap",
+        "en": "cap",
+        "ru": "кепка",
+        "transcription": "/kæp/",
+        "exampleEn": "He’s wearing a cap.",
+        "exampleRu": "На нём кепка."
+      },
+      {
+        "id": "lesson-1c-tracksuit",
+        "en": "tracksuit",
+        "ru": "спортивный костюм",
+        "transcription": "/ˈtræksuːt/",
+        "exampleEn": "She’s wearing a tracksuit and trainers.",
+        "exampleRu": "На ней спортивный костюм и кроссовки."
+      },
+      {
+        "id": "lesson-1c-trainers",
+        "en": "trainers",
+        "ru": "кроссовки",
+        "transcription": "/ˈtreɪnəz/",
+        "exampleEn": "The runner is wearing trainers.",
+        "exampleRu": "На бегуне кроссовки."
+      },
+      {
+        "id": "lesson-1c-belt",
+        "en": "belt",
+        "ru": "ремень",
+        "transcription": "/belt/",
+        "exampleEn": "He’s wearing a black belt.",
+        "exampleRu": "На нём чёрный ремень."
+      },
+      {
+        "id": "lesson-1c-coat",
+        "en": "coat",
+        "ru": "пальто",
+        "transcription": "/kəʊt/",
+        "exampleEn": "Take your coat — it’s cold.",
+        "exampleRu": "Возьми пальто — холодно."
+      },
+      {
+        "id": "lesson-1c-dress",
+        "en": "dress",
+        "ru": "платье",
+        "transcription": "/dres/",
+        "exampleEn": "The woman is wearing a dress.",
+        "exampleRu": "На женщине платье."
+      },
+      {
+        "id": "lesson-1c-tie",
+        "en": "tie",
+        "ru": "галстук",
+        "transcription": "/taɪ/",
+        "exampleEn": "He wears a tie to job interviews.",
+        "exampleRu": "Он надевает галстук на собеседования."
+      },
+      {
+        "id": "lesson-1c-shorts",
+        "en": "shorts",
+        "ru": "шорты",
+        "transcription": "/ʃɔːts/",
+        "exampleEn": "He’s wearing shorts and a T-shirt.",
+        "exampleRu": "На нём шорты и футболка."
+      },
+      {
+        "id": "lesson-1c-blouse",
+        "en": "blouse",
+        "ru": "блузка",
+        "transcription": "/blaʊz/",
+        "exampleEn": "This blouse is like a shirt for women.",
+        "exampleRu": "Эта блузка похожа на женскую рубашку."
+      },
+      {
+        "id": "lesson-1c-suit",
+        "en": "suit",
+        "ru": "костюм",
+        "transcription": "/suːt/",
+        "exampleEn": "People often wear a suit to a job interview.",
+        "exampleRu": "На собеседование часто надевают костюм."
+      },
+      {
+        "id": "lesson-1c-earrings",
+        "en": "earrings",
+        "ru": "серьги",
+        "transcription": "/ˈɪərɪŋz/",
+        "exampleEn": "She’s wearing pearl earrings.",
+        "exampleRu": "На ней жемчужные серьги."
+      },
+      {
+        "id": "lesson-1c-flip-flops",
+        "en": "flip-flops",
+        "ru": "шлёпанцы",
+        "transcription": "/ˈflɪp flɒps/",
+        "exampleEn": "People wear flip-flops to the beach.",
+        "exampleRu": "На пляж люди надевают шлёпанцы."
+      },
+      {
+        "id": "lesson-1c-gloves",
+        "en": "gloves",
+        "ru": "перчатки",
+        "transcription": "/ɡlʌvz/",
+        "exampleEn": "Gloves keep your hands warm.",
+        "exampleRu": "Перчатки согревают руки."
+      },
+      {
+        "id": "lesson-1c-pyjamas",
+        "en": "pyjamas",
+        "ru": "пижама",
+        "transcription": "/pəˈdʒɑːməz/",
+        "exampleEn": "I wear pyjamas when I go to bed.",
+        "exampleRu": "Я надеваю пижаму, когда ложусь спать."
+      },
+      {
+        "id": "lesson-1c-scarf",
+        "en": "scarf",
+        "ru": "шарф",
+        "transcription": "/skɑːf/",
+        "exampleEn": "She’s wearing a blue and yellow scarf.",
+        "exampleRu": "На ней сине-жёлтый шарф."
+      },
+      {
+        "id": "lesson-1c-underwear",
+        "en": "underwear",
+        "ru": "нижнее бельё",
+        "transcription": "/ˈʌndəweə/",
+        "exampleEn": "You wear underwear under your clothes.",
+        "exampleRu": "Нижнее бельё носят под одеждой."
+      },
+      {
+        "id": "lesson-1c-above",
+        "en": "above",
+        "ru": "над; выше",
+        "transcription": "/əˈbʌv/",
+        "exampleEn": "There’s a mirror above the table.",
+        "exampleRu": "Над столом есть зеркало."
+      },
+      {
+        "id": "lesson-1c-behind",
+        "en": "behind",
+        "ru": "за; позади",
+        "transcription": "/bɪˈhaɪnd/",
+        "exampleEn": "There are some clothes behind the bed.",
+        "exampleRu": "За кроватью лежит одежда."
+      },
+      {
+        "id": "lesson-1c-between",
+        "en": "between",
+        "ru": "между",
+        "transcription": "/bɪˈtwiːn/",
+        "exampleEn": "The chair is between the bed and the table.",
+        "exampleRu": "Стул находится между кроватью и столом."
+      },
+      {
+        "id": "lesson-1c-in-front-of",
+        "en": "in front of",
+        "ru": "перед",
+        "transcription": "/ɪn ˈfrʌnt əv/",
+        "exampleEn": "The bed is in front of the wall.",
+        "exampleRu": "Кровать находится перед стеной."
+      },
+      {
+        "id": "lesson-1c-next-to",
+        "en": "next to",
+        "ru": "рядом с",
+        "transcription": "/ˈnekst tə/",
+        "exampleEn": "The pillows are next to each other.",
+        "exampleRu": "Подушки лежат рядом друг с другом."
+      },
+      {
+        "id": "lesson-1c-on-the-left-of",
+        "en": "on the left of",
+        "ru": "слева от",
+        "transcription": "/ɒn ðə ˈleft əv/",
+        "exampleEn": "The painting is on the left of the other picture.",
+        "exampleRu": "Картина находится слева от другой картины."
+      },
+      {
+        "id": "lesson-1c-under",
+        "en": "under",
+        "ru": "под",
+        "transcription": "/ˈʌndə/",
+        "exampleEn": "The chair is under the window.",
+        "exampleRu": "Стул находится под окном."
+      },
+      {
+        "id": "lesson-1c-wear",
+        "en": "wear",
+        "ru": "носить; быть одетым в",
+        "transcription": "/weə/",
+        "exampleEn": "What is the runner wearing?",
+        "exampleRu": "Во что одет бегун?"
+      },
+      {
+        "id": "lesson-1c-carry",
+        "en": "carry",
+        "ru": "нести; держать при себе",
+        "transcription": "/ˈkæri/",
+        "exampleEn": "She’s carrying a bag.",
+        "exampleRu": "Она несёт сумку."
+      },
+      {
+        "id": "lesson-1c-bench",
+        "en": "bench",
+        "ru": "скамейка",
+        "transcription": "/bentʃ/",
+        "exampleEn": "The man on the bench is reading.",
+        "exampleRu": "Мужчина на скамейке читает."
+      },
+      {
+        "id": "lesson-1c-cardigan",
+        "en": "cardigan",
+        "ru": "кардиган",
+        "transcription": "/ˈkɑːdɪɡən/",
+        "exampleEn": "She’s wearing a dress and a cardigan.",
+        "exampleRu": "На ней платье и кардиган."
+      }
+    ]
   }
 ];

@@ -1,0 +1,1333 @@
+{
+  "id": "lesson-2",
+  "number": 2,
+  "title": "Unit 1C · The Remake Project",
+  "subtitle": "English File Pre-Intermediate · Workbook · Clothes, prepositions of place, pronunciation and Present Continuous",
+  "status": "available",
+  "page": "lesson.html?id=lesson-2",
+  "vocabularyId": "vocab-lesson-1c",
+  "grammarIds": [
+    "grammar-present-continuous"
+  ],
+  "publishedAt": "2026-08-09",
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "totalPoints": 61,
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "1C · 1",
+      "title": "VOCABULARY · clothes, prepositions of place",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1a",
+      "layout": "media-list",
+      "title": "1a. Complete the words.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "r_ing",
+          "example": true,
+          "exampleAnswer": "ring",
+          "image": "images/lesson-2/ring.webp",
+          "imageAlt": "A ring"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "prompt": "l_gg_ngs",
+          "answer": "leggings",
+          "image": "images/lesson-2/leggings.webp",
+          "imageAlt": "Leggings"
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "prompt": "tr__s_rs",
+          "answer": "trousers",
+          "image": "images/lesson-2/trousers.webp",
+          "imageAlt": "Trousers"
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "prompt": "sh_rt",
+          "answer": "shirt",
+          "image": "images/lesson-2/shirt.webp",
+          "imageAlt": "A shirt"
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "prompt": "c_p",
+          "answer": "cap",
+          "image": "images/lesson-2/cap.webp",
+          "imageAlt": "A cap"
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "text",
+          "prompt": "tr_cks__t",
+          "answer": "tracksuit",
+          "image": "images/lesson-2/tracksuit.webp",
+          "imageAlt": "A tracksuit"
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "text",
+          "prompt": "tr__n_rs",
+          "answer": "trainers",
+          "image": "images/lesson-2/trainers.webp",
+          "imageAlt": "Trainers"
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "text",
+          "prompt": "b_lt",
+          "answer": "belt",
+          "image": "images/lesson-2/belt.webp",
+          "imageAlt": "A belt"
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "text",
+          "prompt": "c__t",
+          "answer": "coat",
+          "image": "images/lesson-2/coat.webp",
+          "imageAlt": "A coat"
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "text",
+          "prompt": "dr_ss",
+          "answer": "dress",
+          "image": "images/lesson-2/dress.webp",
+          "imageAlt": "A dress"
+        },
+        {
+          "id": "11",
+          "number": 11,
+          "input": "text",
+          "prompt": "t__",
+          "answer": "tie",
+          "image": "images/lesson-2/tie.webp",
+          "imageAlt": "A tie"
+        },
+        {
+          "id": "12",
+          "number": 12,
+          "input": "text",
+          "prompt": "sh_rts",
+          "answer": "shorts",
+          "image": "images/lesson-2/shorts.webp",
+          "imageAlt": "Shorts"
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1b",
+      "title": "1b. Match descriptions 1–10 to a–j.",
+      "wordBank": [
+        "a blouse",
+        "b suit",
+        "c earrings",
+        "d flip-flops",
+        "e gloves",
+        "f hat",
+        "g pyjamas",
+        "h scarf",
+        "i socks",
+        "j underwear"
+      ],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "They keep your hands warm.",
+          "example": true,
+          "exampleAnswer": "e gloves"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select",
+          "prompt": "This is like a shirt, but for women.",
+          "options": [
+            "a blouse",
+            "b suit",
+            "c earrings",
+            "d flip-flops",
+            "e gloves",
+            "f hat",
+            "g pyjamas",
+            "h scarf",
+            "i socks",
+            "j underwear"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select",
+          "prompt": "They keep your feet warm.",
+          "options": [
+            "a blouse",
+            "b suit",
+            "c earrings",
+            "d flip-flops",
+            "e gloves",
+            "f hat",
+            "g pyjamas",
+            "h scarf",
+            "i socks",
+            "j underwear"
+          ],
+          "answer": 8
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select",
+          "prompt": "This keeps your neck warm.",
+          "options": [
+            "a blouse",
+            "b suit",
+            "c earrings",
+            "d flip-flops",
+            "e gloves",
+            "f hat",
+            "g pyjamas",
+            "h scarf",
+            "i socks",
+            "j underwear"
+          ],
+          "answer": 7
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select",
+          "prompt": "You wear this on your head.",
+          "options": [
+            "a blouse",
+            "b suit",
+            "c earrings",
+            "d flip-flops",
+            "e gloves",
+            "f hat",
+            "g pyjamas",
+            "h scarf",
+            "i socks",
+            "j underwear"
+          ],
+          "answer": 5
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select",
+          "prompt": "You wear these in your ears.",
+          "options": [
+            "a blouse",
+            "b suit",
+            "c earrings",
+            "d flip-flops",
+            "e gloves",
+            "f hat",
+            "g pyjamas",
+            "h scarf",
+            "i socks",
+            "j underwear"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select",
+          "prompt": "People often wear this to a job interview.",
+          "options": [
+            "a blouse",
+            "b suit",
+            "c earrings",
+            "d flip-flops",
+            "e gloves",
+            "f hat",
+            "g pyjamas",
+            "h scarf",
+            "i socks",
+            "j underwear"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select",
+          "prompt": "You wear these when you go to bed.",
+          "options": [
+            "a blouse",
+            "b suit",
+            "c earrings",
+            "d flip-flops",
+            "e gloves",
+            "f hat",
+            "g pyjamas",
+            "h scarf",
+            "i socks",
+            "j underwear"
+          ],
+          "answer": 6
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "select",
+          "prompt": "You wear this under your trousers and top.",
+          "options": [
+            "a blouse",
+            "b suit",
+            "c earrings",
+            "d flip-flops",
+            "e gloves",
+            "f hat",
+            "g pyjamas",
+            "h scarf",
+            "i socks",
+            "j underwear"
+          ],
+          "answer": 9
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "select",
+          "prompt": "People wear these shoes to the beach.",
+          "options": [
+            "a blouse",
+            "b suit",
+            "c earrings",
+            "d flip-flops",
+            "e gloves",
+            "f hat",
+            "g pyjamas",
+            "h scarf",
+            "i socks",
+            "j underwear"
+          ],
+          "answer": 3
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1c",
+      "title": "1c. Look at the photo, a remake of van Gogh’s painting The Bedroom. Complete the sentences with a preposition from the list.",
+      "wordBank": [
+        "above",
+        "behind",
+        "between",
+        "in front of",
+        "next to",
+        "on",
+        "on the left of",
+        "under"
+      ],
+      "image": "images/lesson-2/bedroom-remake.webp",
+      "imageAlt": "A remake of van Gogh’s painting The Bedroom",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "There’s a painting of a man on the left of the painting of the woman.",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "There are some clothes ________ the bed.",
+          "segments": [
+            "There are some clothes ",
+            " the bed."
+          ],
+          "answers": [
+            [
+              "behind"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "above",
+              "behind",
+              "between",
+              "in front of",
+              "next to",
+              "on",
+              "on the left of",
+              "under"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "There’s a chair ________ the bed and the table.",
+          "segments": [
+            "There’s a chair ",
+            " the bed and the table."
+          ],
+          "answers": [
+            [
+              "between"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "above",
+              "behind",
+              "between",
+              "in front of",
+              "next to",
+              "on",
+              "on the left of",
+              "under"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "There’s a small cup ________ the two jugs ________ the table.",
+          "segments": [
+            "There’s a small cup ",
+            " the two jugs ",
+            " the table."
+          ],
+          "answers": [
+            [
+              "in front of"
+            ],
+            [
+              "on"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "above",
+              "behind",
+              "between",
+              "in front of",
+              "next to",
+              "on",
+              "on the left of",
+              "under"
+            ],
+            [
+              "above",
+              "behind",
+              "between",
+              "in front of",
+              "next to",
+              "on",
+              "on the left of",
+              "under"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "The two pillows on the bed are ________ each other.",
+          "segments": [
+            "The two pillows on the bed are ",
+            " each other."
+          ],
+          "answers": [
+            [
+              "next to"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "above",
+              "behind",
+              "between",
+              "in front of",
+              "next to",
+              "on",
+              "on the left of",
+              "under"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "There’s a mirror ________ the table.",
+          "segments": [
+            "There’s a mirror ",
+            " the table."
+          ],
+          "answers": [
+            [
+              "above"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "above",
+              "behind",
+              "between",
+              "in front of",
+              "next to",
+              "on",
+              "on the left of",
+              "under"
+            ]
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "prompt": "The chair by the bed is ________ the window.",
+          "segments": [
+            "The chair by the bed is ",
+            " the window."
+          ],
+          "answers": [
+            [
+              "under"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "above",
+              "behind",
+              "between",
+              "in front of",
+              "next to",
+              "on",
+              "on the left of",
+              "under"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "1C · 2",
+      "title": "PRONUNCIATION · /ə/ and /ɜː/",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "pronunciation-2a",
+      "layout": "word-chart",
+      "title": "2a. Write the words in the chart.",
+      "wordBank": [
+        "cardigan",
+        "fashion",
+        "prefer",
+        "sandals",
+        "shirt",
+        "skirt",
+        "sweater",
+        "third",
+        "trainers",
+        "trousers",
+        "T-shirt",
+        "world"
+      ],
+      "chartColumns": [
+        {
+          "id": "schwa",
+          "label": "/ə/",
+          "example": "cardigan"
+        },
+        {
+          "id": "er",
+          "label": "/ɜː/",
+          "example": "prefer"
+        }
+      ],
+      "items": [
+        {
+          "id": "schwa-1",
+          "number": "",
+          "input": "bank-select",
+          "group": "schwa",
+          "options": [
+            "fashion",
+            "sandals",
+            "shirt",
+            "skirt",
+            "sweater",
+            "third",
+            "trainers",
+            "trousers",
+            "T-shirt",
+            "world"
+          ],
+          "acceptedAnswers": [
+            "fashion",
+            "sandals",
+            "sweater",
+            "trainers",
+            "trousers"
+          ]
+        },
+        {
+          "id": "schwa-2",
+          "number": "",
+          "input": "bank-select",
+          "group": "schwa",
+          "options": [
+            "fashion",
+            "sandals",
+            "shirt",
+            "skirt",
+            "sweater",
+            "third",
+            "trainers",
+            "trousers",
+            "T-shirt",
+            "world"
+          ],
+          "acceptedAnswers": [
+            "fashion",
+            "sandals",
+            "sweater",
+            "trainers",
+            "trousers"
+          ]
+        },
+        {
+          "id": "schwa-3",
+          "number": "",
+          "input": "bank-select",
+          "group": "schwa",
+          "options": [
+            "fashion",
+            "sandals",
+            "shirt",
+            "skirt",
+            "sweater",
+            "third",
+            "trainers",
+            "trousers",
+            "T-shirt",
+            "world"
+          ],
+          "acceptedAnswers": [
+            "fashion",
+            "sandals",
+            "sweater",
+            "trainers",
+            "trousers"
+          ]
+        },
+        {
+          "id": "schwa-4",
+          "number": "",
+          "input": "bank-select",
+          "group": "schwa",
+          "options": [
+            "fashion",
+            "sandals",
+            "shirt",
+            "skirt",
+            "sweater",
+            "third",
+            "trainers",
+            "trousers",
+            "T-shirt",
+            "world"
+          ],
+          "acceptedAnswers": [
+            "fashion",
+            "sandals",
+            "sweater",
+            "trainers",
+            "trousers"
+          ]
+        },
+        {
+          "id": "schwa-5",
+          "number": "",
+          "input": "bank-select",
+          "group": "schwa",
+          "options": [
+            "fashion",
+            "sandals",
+            "shirt",
+            "skirt",
+            "sweater",
+            "third",
+            "trainers",
+            "trousers",
+            "T-shirt",
+            "world"
+          ],
+          "acceptedAnswers": [
+            "fashion",
+            "sandals",
+            "sweater",
+            "trainers",
+            "trousers"
+          ]
+        },
+        {
+          "id": "er-1",
+          "number": "",
+          "input": "bank-select",
+          "group": "er",
+          "options": [
+            "fashion",
+            "sandals",
+            "shirt",
+            "skirt",
+            "sweater",
+            "third",
+            "trainers",
+            "trousers",
+            "T-shirt",
+            "world"
+          ],
+          "acceptedAnswers": [
+            "shirt",
+            "skirt",
+            "third",
+            "T-shirt",
+            "world"
+          ]
+        },
+        {
+          "id": "er-2",
+          "number": "",
+          "input": "bank-select",
+          "group": "er",
+          "options": [
+            "fashion",
+            "sandals",
+            "shirt",
+            "skirt",
+            "sweater",
+            "third",
+            "trainers",
+            "trousers",
+            "T-shirt",
+            "world"
+          ],
+          "acceptedAnswers": [
+            "shirt",
+            "skirt",
+            "third",
+            "T-shirt",
+            "world"
+          ]
+        },
+        {
+          "id": "er-3",
+          "number": "",
+          "input": "bank-select",
+          "group": "er",
+          "options": [
+            "fashion",
+            "sandals",
+            "shirt",
+            "skirt",
+            "sweater",
+            "third",
+            "trainers",
+            "trousers",
+            "T-shirt",
+            "world"
+          ],
+          "acceptedAnswers": [
+            "shirt",
+            "skirt",
+            "third",
+            "T-shirt",
+            "world"
+          ]
+        },
+        {
+          "id": "er-4",
+          "number": "",
+          "input": "bank-select",
+          "group": "er",
+          "options": [
+            "fashion",
+            "sandals",
+            "shirt",
+            "skirt",
+            "sweater",
+            "third",
+            "trainers",
+            "trousers",
+            "T-shirt",
+            "world"
+          ],
+          "acceptedAnswers": [
+            "shirt",
+            "skirt",
+            "third",
+            "T-shirt",
+            "world"
+          ]
+        },
+        {
+          "id": "er-5",
+          "number": "",
+          "input": "bank-select",
+          "group": "er",
+          "options": [
+            "fashion",
+            "sandals",
+            "shirt",
+            "skirt",
+            "sweater",
+            "third",
+            "trainers",
+            "trousers",
+            "T-shirt",
+            "world"
+          ],
+          "acceptedAnswers": [
+            "shirt",
+            "skirt",
+            "third",
+            "T-shirt",
+            "world"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "audio",
+      "id": "pronunciation-2b",
+      "title": "2b. Listen and check. Then listen again and repeat the words.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_1.3.mp3",
+      "response": false
+    },
+    {
+      "type": "section",
+      "eyebrow": "1C · 3",
+      "title": "GRAMMAR · present continuous",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-3a",
+      "layout": "dialogue",
+      "title": "3a. Complete the conversation with the present continuous form of the verbs in brackets. Use contractions where possible.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "segments": [
+            "What ",
+            " (you / do), Stefan?"
+          ],
+          "exampleAnswer": "are you doing"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "I ",
+            " (look) at some paintings online. I want to buy a poster of one for the living room."
+          ],
+          "answers": [
+            [
+              "'m looking"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "My sister ",
+            " (do) an art course at the moment. Perhaps she can paint something for us."
+          ],
+          "answers": [
+            [
+              "'s doing"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "Um…perhaps. But look at this one – it’s really beautiful. It’s by Vermeer, and there’s a girl who ",
+            " (wear) a blue and yellow scarf on her head and a big pearl earring."
+          ],
+          "answers": [
+            [
+              "'s wearing"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "I’m not sure. She ",
+            " (not / smile)."
+          ],
+          "answers": [
+            [
+              "isn't smiling"
+            ]
+          ]
+        }
+      ],
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "itemIds": [
+            "1"
+          ]
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "2"
+          ]
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "3"
+          ]
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "4"
+          ]
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "5"
+          ]
+        },
+        {
+          "speaker": "B",
+          "text": "I know, but that makes it more interesting."
+        },
+        {
+          "speaker": "A",
+          "text": "OK. If you like it, order it. My sister can paint something for the dining room."
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-3b",
+      "title": "3b. Complete the sentences with the present simple or present continuous form of a verb from the list. Use contractions where possible.",
+      "wordBank": [
+        "drink",
+        "drive",
+        "like",
+        "live",
+        "rain",
+        "sleep",
+        "study",
+        "wear"
+      ],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "We like this painting very much – it’s really interesting.",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select",
+          "prompt": "Charles always ________ to work.",
+          "options": [
+            "drives",
+            "are sleeping",
+            "'s raining",
+            "drinks",
+            "wears",
+            "'re studying",
+            "live"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select",
+          "prompt": "Shhhh! The children ________.",
+          "options": [
+            "drives",
+            "are sleeping",
+            "'s raining",
+            "drinks",
+            "wears",
+            "'re studying",
+            "live"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select",
+          "prompt": "We can’t play tennis today. It ________.",
+          "options": [
+            "drives",
+            "are sleeping",
+            "'s raining",
+            "drinks",
+            "wears",
+            "'re studying",
+            "live"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select",
+          "prompt": "Fiona ________ four cups of coffee every day.",
+          "options": [
+            "drives",
+            "are sleeping",
+            "'s raining",
+            "drinks",
+            "wears",
+            "'re studying",
+            "live"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select",
+          "prompt": "Kathy always ________ jeans at home.",
+          "options": [
+            "drives",
+            "are sleeping",
+            "'s raining",
+            "drinks",
+            "wears",
+            "'re studying",
+            "live"
+          ],
+          "answer": 4
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select",
+          "prompt": "They can’t come to the theatre because they ________ for the exam tomorrow.",
+          "options": [
+            "drives",
+            "are sleeping",
+            "'s raining",
+            "drinks",
+            "wears",
+            "'re studying",
+            "live"
+          ],
+          "answer": 5
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select",
+          "prompt": "My parents ________ in a big house in the country.",
+          "options": [
+            "drives",
+            "are sleeping",
+            "'s raining",
+            "drinks",
+            "wears",
+            "'re studying",
+            "live"
+          ],
+          "answer": 6
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-3c",
+      "title": "3c. Look at the picture. Complete the questions with the present simple or present continuous form of the verb in brackets.",
+      "image": "images/lesson-2/park-scene.webp",
+      "imageAlt": "People in a park: boys playing football, a cyclist, a woman carrying a bag, a runner, a man reading on a bench, and a man sleeping under a tree",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "What is the man on the bench reading (read)?",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "What ________ the boys under the tree ________ (play)?",
+          "segments": [
+            "What ",
+            " the boys under the tree ",
+            " (play)?"
+          ],
+          "answers": [
+            [
+              "are"
+            ],
+            [
+              "playing"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "What ________ the woman on the left ________ (do)?",
+          "segments": [
+            "What ",
+            " the woman on the left ",
+            " (do)?"
+          ],
+          "answers": [
+            [
+              "is"
+            ],
+            [
+              "doing"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "What ________ she ________ (wear)?",
+          "segments": [
+            "What ",
+            " she ",
+            " (wear)?"
+          ],
+          "answers": [
+            [
+              "is"
+            ],
+            [
+              "wearing"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "What ________ the woman on the right ________ (wear)?",
+          "segments": [
+            "What ",
+            " the woman on the right ",
+            " (wear)?"
+          ],
+          "answers": [
+            [
+              "is"
+            ],
+            [
+              "wearing"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "What ________ she ________ (carry)?",
+          "segments": [
+            "What ",
+            " she ",
+            " (carry)?"
+          ],
+          "answers": [
+            [
+              "is"
+            ],
+            [
+              "carrying"
+            ]
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "prompt": "What ________ the runner ________ (wear)?",
+          "segments": [
+            "What ",
+            " the runner ",
+            " (wear)?"
+          ],
+          "answers": [
+            [
+              "is"
+            ],
+            [
+              "wearing"
+            ]
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "prompt": "What ________ the man under the tree ________ (do)?",
+          "segments": [
+            "What ",
+            " the man under the tree ",
+            " (do)?"
+          ],
+          "answers": [
+            [
+              "is"
+            ],
+            [
+              "doing"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-3d",
+      "title": "3d. Answer questions 1–8 in c.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "The man on the bench is reading a newspaper.",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "prompt": "The boys are ________.",
+          "answer": "playing football",
+          "acceptedAnswers": [
+            "playing football",
+            "playing football."
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "prompt": "The woman on the left ________.",
+          "answer": "is riding a bike",
+          "acceptedAnswers": [
+            "is riding a bike",
+            "is riding a bike."
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "prompt": "",
+          "answer": "She's wearing a tracksuit and trainers.",
+          "acceptedAnswers": [
+            "She's wearing a tracksuit and trainers",
+            "She is wearing a tracksuit and trainers"
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "prompt": "",
+          "answer": "The woman on the right is wearing a dress and a cardigan.",
+          "acceptedAnswers": [
+            "The woman on the right is wearing a dress and a cardigan"
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "text",
+          "prompt": "",
+          "answer": "She's carrying a bag.",
+          "acceptedAnswers": [
+            "She's carrying a bag",
+            "She is carrying a bag"
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "text",
+          "prompt": "",
+          "answer": "He's wearing shorts, a T-shirt and trainers.",
+          "acceptedAnswers": [
+            "He's wearing shorts, a T-shirt and trainers",
+            "He is wearing shorts, a T-shirt and trainers"
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "text",
+          "prompt": "",
+          "answer": "He's sleeping.",
+          "acceptedAnswers": [
+            "He's sleeping",
+            "He is sleeping"
+          ]
+        }
+      ]
+    }
+  ]
+}

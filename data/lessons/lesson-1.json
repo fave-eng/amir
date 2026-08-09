@@ -10,6 +10,10 @@
     "grammar-present-simple"
   ],
   "publishedAt": "2026-08-07",
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
   "totalPoints": 57,
   "blocks": [
     {

@@ -2171,3 +2171,171 @@ label.odd-option {
   }
 }
 
+
+/* Lesson 2: pronunciation chart and dropdown gaps */
+.gap-select {
+  min-width: 150px;
+  min-height: 43px;
+  padding: 7px 34px 7px 10px;
+  border: 0;
+  border-bottom: 2px solid #94a3b8;
+  border-radius: 8px 8px 2px 2px;
+  background-color: #f8fafc;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.gap-select:focus {
+  border-bottom-color: var(--indigo);
+  background-color: #eef2ff;
+  outline: none;
+}
+
+.pronunciation-word-chart {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pronunciation-word-column {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fbfcff;
+}
+
+.pronunciation-word-column-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  background: #f5f3ff;
+}
+
+.pronunciation-word-column-head strong {
+  min-width: 56px;
+  font-size: 1.18rem;
+  color: #312e81;
+}
+
+.pronunciation-word-example {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: #fff;
+  color: #475569;
+  font-weight: 800;
+}
+
+.pronunciation-word-slots {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.pronunciation-word-slot {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
+}
+
+.pronunciation-word-slot select {
+  width: 100%;
+  min-height: 44px;
+}
+
+.pronunciation-word-slot .feedback {
+  margin: 0;
+  min-height: 0;
+}
+
+.pronunciation-word-slot.is-correct select {
+  border-color: #86efac;
+  background: #f0fdf4;
+}
+
+.pronunciation-word-slot.is-wrong select {
+  border-color: #fecaca;
+  background: #fff7f7;
+}
+
+@media (max-width: 700px) {
+  .pronunciation-word-chart {
+    grid-template-columns: 1fr;
+  }
+
+  .gap-select {
+    min-width: min(100%, 180px);
+  }
+}
+
+/* Lesson 2: image cards for clothes exercise 1a */
+.media-list-card .exercise-items {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.exercise-media-item {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.exercise-item-media {
+  display: grid;
+  place-items: center;
+  min-height: 150px;
+  margin: -4px -4px 14px;
+  padding: 8px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fbfcfe;
+}
+
+.exercise-item-media img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.exercise-media-item .exercise-item-header {
+  margin-bottom: 10px;
+}
+
+.exercise-media-item .exercise-control {
+  margin-top: auto;
+  padding-left: 43px;
+}
+
+.exercise-media-item .exercise-control .text-field {
+  width: 100%;
+}
+
+.exercise-media-item .example-answer {
+  margin-top: auto;
+}
+
+@media (max-width: 820px) {
+  .media-list-card .exercise-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .media-list-card .exercise-items {
+    grid-template-columns: 1fr;
+  }
+
+  .exercise-item-media {
+    min-height: 170px;
+  }
+
+  .exercise-item-media img {
+    height: 170px;
+  }
+}
