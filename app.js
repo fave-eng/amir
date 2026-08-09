@@ -1166,10 +1166,15 @@
             : block.layout === 'media-list'
               ? ' media-list-card'
               : '';
-      return `<article class="card lesson-block exercise-card${layoutClass}" data-task="${escapeHtml(id)}" data-type="exercise">
+      const referenceBody = image
+        ? `<div class="exercise-reference-layout">
+            <aside class="exercise-reference-media" aria-label="Reference image">${image}</aside>
+            <div class="exercise-reference-content">${intro}${exerciseContent}</div>
+          </div>`
+        : `${intro}${exerciseContent}`;
+      return `<article class="card lesson-block exercise-card${image ? ' exercise-card-with-reference-image' : ''}${layoutClass}" data-task="${escapeHtml(id)}" data-type="exercise">
         <div class="exercise-heading"><span class="eyebrow">Exercise</span><h3>${title}</h3>${block.instructions ? `<p class="muted exercise-instructions">${escapeHtml(block.instructions)}</p>` : ''}${player}${wordBank}${wordBanks}</div>
-        ${image}${intro}
-        ${exerciseContent}
+        ${referenceBody}
       </article>`;
     }
     if (block.type === 'text' || block.type === 'translate') return `<article class="card lesson-block" data-task="${escapeHtml(id)}" data-type="${escapeHtml(block.type)}"><label class="field-label" for="${escapeHtml(id)}">${title}</label>${block.source ? `<p class="muted">${escapeHtml(block.source)}</p>` : ''}<input class="text-field" id="${escapeHtml(id)}" name="${escapeHtml(id)}" autocomplete="off"><div class="feedback"></div></article>`;

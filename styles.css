@@ -1658,6 +1658,74 @@ body[data-view="lesson"] #lesson-root {
   text-transform: uppercase;
 }
 
+/* Reference images that stay visible only inside their own exercise. */
+.exercise-card-with-reference-image {
+  /* Sticky positioning must not be trapped by overflow on the card. */
+  overflow: visible;
+}
+
+.exercise-card-with-reference-image > .exercise-heading {
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.exercise-reference-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, .9fr) minmax(0, 1.35fr);
+  align-items: start;
+  background: #f6f8fb;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.exercise-reference-media {
+  position: sticky;
+  top: 16px;
+  align-self: start;
+  min-width: 0;
+  padding: 16px 0 16px 16px;
+}
+
+.exercise-reference-media .exercise-images {
+  margin: 0;
+}
+
+.exercise-reference-media .exercise-image-link {
+  margin: 0;
+  background: #fff;
+}
+
+.exercise-reference-media .exercise-image {
+  width: 100%;
+  max-height: calc(100vh - 32px);
+  object-fit: contain;
+}
+
+.exercise-reference-content {
+  min-width: 0;
+}
+
+.exercise-reference-content > .exercise-source {
+  margin: 16px 16px 0;
+}
+
+@media (max-width: 820px) {
+  .exercise-card-with-reference-image {
+    overflow: hidden;
+  }
+
+  .exercise-reference-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .exercise-reference-media {
+    position: static;
+    padding: 16px 16px 0;
+  }
+
+  .exercise-reference-media .exercise-image {
+    max-height: none;
+  }
+}
+
 /* Lesson 4: image-based packing exercises */
 .exercise-images {
   display: grid;
