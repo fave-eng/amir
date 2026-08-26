@@ -35,8 +35,6 @@
         "Two minutes later",
         "when"
       ],
-      "image": "images/lesson-6/amazing-holiday.png",
-      "imageAlt": "Workbook article An Amazing holiday with a photo from Peru.",
       "hideAnswersOnError": true,
       "introTitle": "An AMAZING holiday",
       "items": [
@@ -973,8 +971,6 @@
         "waiting"
       ],
       "hideAnswersOnError": true,
-      "image": "images/lesson-6/verb-phrases.png",
-      "imageAlt": "Workbook photos for verb phrases: a DJ and people having dinner.",
       "items": [
         {
           "id": "1",
