@@ -2408,176 +2408,21 @@ label.odd-option {
   }
 }
 
-/* Dependent sentence selects: used when part b must reuse the student's answers from part a. */
-select[data-dependent-select] {
-  font-weight: 750;
-}
 
-select[data-dependent-select]:disabled {
-  background: #f1f5f9;
-  color: #64748b;
-  cursor: not-allowed;
-}
-
-.dialogue-item select[data-dependent-select] {
+/* Compact inline dropdowns for short gap choices (at / in / on). */
+.sentence-gaps .gap-select {
+  width: auto;
+  min-width: 76px;
+  max-width: 110px;
   display: inline-block;
-  width: min(100%, 520px);
-  min-height: 40px;
+  vertical-align: baseline;
   margin: 0 4px;
-  padding: 6px 10px;
-  vertical-align: middle;
 }
 
-.dialogue-item.is-correct select[data-dependent-select] {
-  border-color: #16a34a;
-  background: #f0fdf4;
-}
-
-.dialogue-item.is-wrong select[data-dependent-select] {
-  border-color: #e11d48;
-  background: #fff1f2;
-}
-
-/* Lesson 3 replacement: real matching without dropdowns. */
-.match-card .exercise-heading {
-  padding-bottom: 18px;
-}
-
-.match-connect {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(230px, .92fr);
-  gap: clamp(28px, 6vw, 76px);
-  padding: 18px;
-  border-top: 1px solid var(--border);
-  background: #f8fafc;
-}
-
-.match-lines {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: visible;
-}
-
-.match-line {
-  stroke: #6366f1;
-  stroke-width: 3;
-  stroke-linecap: round;
-  opacity: .88;
-}
-
-.match-line.is-example-line {
-  stroke: #94a3b8;
-  stroke-dasharray: 6 6;
-  opacity: .75;
-}
-
-.match-column {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: 12px;
-  align-content: start;
-}
-
-.match-left-item,
-.match-right-item {
-  width: 100%;
-  min-height: 58px;
-  border: 1px solid #dbeafe;
-  border-radius: 15px;
-  background: #fff;
-  color: var(--dark);
-  box-shadow: 0 6px 18px rgba(15, 23, 42, .04);
-  font: inherit;
-  font-weight: 750;
-  text-align: left;
-}
-
-.match-left-item {
-  display: grid;
-  grid-template-columns: 31px minmax(0, 1fr) auto;
-  gap: 11px;
-  align-items: center;
-  padding: 13px 14px;
-  cursor: pointer;
-}
-
-.match-right-item {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  padding: 13px 14px;
-  cursor: pointer;
-}
-
-.match-left-item:hover:not(.is-example),
-.match-left-item.is-active,
-.match-right-item:hover:not(:disabled) {
-  border-color: #818cf8;
-  background: #eef2ff;
-}
-
-.match-left-item.is-connected:not(.is-example) {
-  border-color: #a5b4fc;
-}
-
-.match-left-item.is-correct {
-  border-color: #86efac;
-  background: #f0fdf4;
-}
-
-.match-left-item.is-wrong {
-  border-color: #fecaca;
-  background: #fef2f2;
-}
-
-.match-left-item.is-example,
-.match-right-item.is-example-used {
-  cursor: default;
-  opacity: .78;
-}
-
-.match-right-item.is-selected:not(.is-example-used) {
-  border-color: #818cf8;
-  background: #eef2ff;
-}
-
-.match-answer-chip,
-.match-option-letter {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 999px;
-  background: #eef2ff;
-  color: #4f46e5;
-  font-size: .86rem;
-  font-weight: 900;
-  text-transform: lowercase;
-}
-
-.match-option-letter {
-  flex: 0 0 auto;
-}
-
-@media (max-width: 760px) {
-  .match-connect {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 14px;
-  }
-
-  .match-lines {
-    display: none;
-  }
-
-  .match-left-item,
-  .match-right-item {
-    min-height: 54px;
+@media (max-width: 700px) {
+  .sentence-gaps .gap-select {
+    width: auto;
+    min-width: 76px;
+    max-width: 112px;
   }
 }

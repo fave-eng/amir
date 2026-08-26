@@ -1081,70 +1081,50 @@
         {
           "id": "2",
           "number": 2,
-          "input": "bank-select",
+          "input": "text",
           "prompt": "try to find the exit",
           "hideAnswersOnError": true,
           "acceptedAnswers": [
             "We were trying to find the exit.",
             "We were trying to find the exit"
           ],
-          "options": [
-            "We were trying to find the exit.",
-            "I was closing the windows.",
-            "We were washing the coffee cups.",
-            "I was counting the money."
-          ]
+          "answer": "We were trying to find the exit."
         },
         {
           "id": "3",
           "number": 3,
-          "input": "bank-select",
+          "input": "text",
           "prompt": "close the windows",
           "hideAnswersOnError": true,
           "acceptedAnswers": [
             "I was closing the windows.",
             "I was closing the windows"
           ],
-          "options": [
-            "We were trying to find the exit.",
-            "I was closing the windows.",
-            "We were washing the coffee cups.",
-            "I was counting the money."
-          ]
+          "answer": "I was closing the windows."
         },
         {
           "id": "4",
           "number": 4,
-          "input": "bank-select",
+          "input": "text",
           "prompt": "wash the coffee cups",
           "hideAnswersOnError": true,
           "acceptedAnswers": [
             "We were washing the coffee cups.",
             "We were washing the coffee cups"
           ],
-          "options": [
-            "We were trying to find the exit.",
-            "I was closing the windows.",
-            "We were washing the coffee cups.",
-            "I was counting the money."
-          ]
+          "answer": "We were washing the coffee cups."
         },
         {
           "id": "5",
           "number": 5,
-          "input": "bank-select",
+          "input": "text",
           "prompt": "count the money",
           "hideAnswersOnError": true,
           "acceptedAnswers": [
             "I was counting the money.",
             "I was counting the money"
           ],
-          "options": [
-            "We were trying to find the exit.",
-            "I was closing the windows.",
-            "We were washing the coffee cups.",
-            "I was counting the money."
-          ]
+          "answer": "I was counting the money."
         },
         {
           "id": "6",
