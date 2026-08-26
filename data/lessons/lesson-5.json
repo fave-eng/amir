@@ -58,7 +58,19 @@
               "in"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "3",
@@ -74,7 +86,14 @@
               "on"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "4",
@@ -90,7 +109,14 @@
               "in"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "5",
@@ -122,7 +148,34 @@
               "on"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "6",
@@ -142,7 +195,19 @@
               "on"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "7",
@@ -167,7 +232,24 @@
               "on"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "8",
@@ -191,7 +273,24 @@
               "in"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         }
       ]
     },
@@ -231,7 +330,19 @@
               "in"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "3",
@@ -255,7 +366,24 @@
               "on"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "4",
@@ -275,7 +403,19 @@
               "on"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "5",
@@ -291,7 +431,14 @@
               "at"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "6",
@@ -307,7 +454,14 @@
               "on"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "7",
@@ -327,7 +481,19 @@
               "in"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ],
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "8",
@@ -343,7 +509,14 @@
               "at"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         }
       ]
     },
@@ -381,7 +554,14 @@
             ]
           ],
           "hideAnswersOnError": true,
-          "dependencyTemplate": "{0} 1948"
+          "dependencyTemplate": "{0} 1948",
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "c",
@@ -398,7 +578,14 @@
             ]
           ],
           "hideAnswersOnError": true,
-          "dependencyTemplate": "{0} Amsterdam"
+          "dependencyTemplate": "{0} Amsterdam",
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "d",
@@ -415,7 +602,14 @@
             ]
           ],
           "hideAnswersOnError": true,
-          "dependencyTemplate": "{0} 9th May"
+          "dependencyTemplate": "{0} 9th May",
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "e",
@@ -432,7 +626,14 @@
             ]
           ],
           "hideAnswersOnError": true,
-          "dependencyTemplate": "{0} Saturday and Sunday"
+          "dependencyTemplate": "{0} Saturday and Sunday",
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "f",
@@ -449,7 +650,14 @@
             ]
           ],
           "hideAnswersOnError": true,
-          "dependencyTemplate": "{0} the bus stop"
+          "dependencyTemplate": "{0} the bus stop",
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "g",
@@ -466,7 +674,14 @@
             ]
           ],
           "hideAnswersOnError": true,
-          "dependencyTemplate": "{0} the table"
+          "dependencyTemplate": "{0} the table",
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         },
         {
           "id": "h",
@@ -483,7 +698,14 @@
             ]
           ],
           "hideAnswersOnError": true,
-          "dependencyTemplate": "{0} 7.15"
+          "dependencyTemplate": "{0} 7.15",
+          "gapOptions": [
+            [
+              "at",
+              "in",
+              "on"
+            ]
+          ]
         }
       ]
     },
@@ -644,7 +866,19 @@
               "working"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "Was",
+              "Were"
+            ],
+            [
+              "walking",
+              "working",
+              "doing",
+              "getting"
+            ]
+          ]
         },
         {
           "id": "3",
@@ -660,7 +894,15 @@
               "were you doing"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "were you doing",
+              "was you doing",
+              "were doing",
+              "you were doing"
+            ]
+          ]
         },
         {
           "id": "4",
@@ -677,7 +919,15 @@
               "was not raining"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "was raining",
+              "wasn't raining",
+              "were raining",
+              "weren't raining"
+            ]
+          ]
         },
         {
           "id": "5",
@@ -694,7 +944,15 @@
               "was not living"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "was living",
+              "wasn't living",
+              "were living",
+              "weren't living"
+            ]
+          ]
         },
         {
           "id": "6",
@@ -710,7 +968,15 @@
               "was getting"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "was getting",
+              "were getting",
+              "was get",
+              "got"
+            ]
+          ]
         }
       ]
     },
@@ -730,48 +996,68 @@
         {
           "id": "2",
           "number": 2,
-          "input": "text",
+          "input": "bank-select",
           "prompt": "Mark / talk on the phone / get a text",
           "hideAnswersOnError": true,
-          "answer": "Mark was talking on the phone when he got a text.",
           "acceptedAnswers": [
-            "Mark was talking on the phone when he got a text",
-            "Mark was talking on the phone when he got a text."
+            "Mark was talking on the phone when he got a text.",
+            "Mark was talking on the phone when he got a text"
+          ],
+          "options": [
+            "Mark was talking on the phone when he got a text.",
+            "The children were playing computer games when the visitors arrived.",
+            "We were having a barbecue when it started to rain.",
+            "I was writing a report when my computer crashed."
           ]
         },
         {
           "id": "3",
           "number": 3,
-          "input": "text",
+          "input": "bank-select",
           "prompt": "The children / play computer games / the visitors arrive",
           "hideAnswersOnError": true,
-          "answer": "The children were playing computer games when the visitors arrived.",
           "acceptedAnswers": [
-            "The children were playing computer games when the visitors arrived",
-            "The children were playing computer games when the visitors arrived."
+            "The children were playing computer games when the visitors arrived.",
+            "The children were playing computer games when the visitors arrived"
+          ],
+          "options": [
+            "Mark was talking on the phone when he got a text.",
+            "The children were playing computer games when the visitors arrived.",
+            "We were having a barbecue when it started to rain.",
+            "I was writing a report when my computer crashed."
           ]
         },
         {
           "id": "4",
           "number": 4,
-          "input": "text",
+          "input": "bank-select",
           "prompt": "We / have a barbecue / it start to rain",
           "hideAnswersOnError": true,
-          "answer": "We were having a barbecue when it started to rain.",
           "acceptedAnswers": [
-            "We were having a barbecue when it started to rain",
-            "We were having a barbecue when it started to rain."
+            "We were having a barbecue when it started to rain.",
+            "We were having a barbecue when it started to rain"
+          ],
+          "options": [
+            "Mark was talking on the phone when he got a text.",
+            "The children were playing computer games when the visitors arrived.",
+            "We were having a barbecue when it started to rain.",
+            "I was writing a report when my computer crashed."
           ]
         },
         {
           "id": "5",
           "number": 5,
-          "input": "text",
+          "input": "bank-select",
           "prompt": "I / write a report / my computer crash",
           "hideAnswersOnError": true,
-          "answer": "I was writing a report when my computer crashed.",
           "acceptedAnswers": [
-            "I was writing a report when my computer crashed",
+            "I was writing a report when my computer crashed.",
+            "I was writing a report when my computer crashed"
+          ],
+          "options": [
+            "Mark was talking on the phone when he got a text.",
+            "The children were playing computer games when the visitors arrived.",
+            "We were having a barbecue when it started to rain.",
             "I was writing a report when my computer crashed."
           ]
         }
@@ -781,8 +1067,8 @@
       "type": "exercise",
       "id": "grammar-2c",
       "title": "2c. The police are at an art gallery because someone stole a famous painting at 5.30 yesterday afternoon. What were the people in the pictures doing at the time? Write sentences.",
-      "image": "images/lesson-5/art-gallery.svg",
-      "imageAlt": "Six art gallery scenes for past continuous sentences",
+      "image": "images/lesson-5/art-gallery.png",
+      "imageAlt": "Original workbook art gallery picture for exercise 2c",
       "hideAnswersOnError": true,
       "items": [
         {
@@ -795,48 +1081,68 @@
         {
           "id": "2",
           "number": 2,
-          "input": "text",
+          "input": "bank-select",
           "prompt": "try to find the exit",
           "hideAnswersOnError": true,
-          "answer": "We were trying to find the exit.",
           "acceptedAnswers": [
-            "We were trying to find the exit",
-            "We were trying to find the exit."
+            "We were trying to find the exit.",
+            "We were trying to find the exit"
+          ],
+          "options": [
+            "We were trying to find the exit.",
+            "I was closing the windows.",
+            "We were washing the coffee cups.",
+            "I was counting the money."
           ]
         },
         {
           "id": "3",
           "number": 3,
-          "input": "text",
+          "input": "bank-select",
           "prompt": "close the windows",
           "hideAnswersOnError": true,
-          "answer": "I was closing the windows.",
           "acceptedAnswers": [
-            "I was closing the windows",
-            "I was closing the windows."
+            "I was closing the windows.",
+            "I was closing the windows"
+          ],
+          "options": [
+            "We were trying to find the exit.",
+            "I was closing the windows.",
+            "We were washing the coffee cups.",
+            "I was counting the money."
           ]
         },
         {
           "id": "4",
           "number": 4,
-          "input": "text",
+          "input": "bank-select",
           "prompt": "wash the coffee cups",
           "hideAnswersOnError": true,
-          "answer": "We were washing the coffee cups.",
           "acceptedAnswers": [
-            "We were washing the coffee cups",
-            "We were washing the coffee cups."
+            "We were washing the coffee cups.",
+            "We were washing the coffee cups"
+          ],
+          "options": [
+            "We were trying to find the exit.",
+            "I was closing the windows.",
+            "We were washing the coffee cups.",
+            "I was counting the money."
           ]
         },
         {
           "id": "5",
           "number": 5,
-          "input": "text",
+          "input": "bank-select",
           "prompt": "count the money",
           "hideAnswersOnError": true,
-          "answer": "I was counting the money.",
           "acceptedAnswers": [
-            "I was counting the money",
+            "I was counting the money.",
+            "I was counting the money"
+          ],
+          "options": [
+            "We were trying to find the exit.",
+            "I was closing the windows.",
+            "We were washing the coffee cups.",
             "I was counting the money."
           ]
         },
@@ -890,7 +1196,13 @@
               "u"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "S",
+              "U"
+            ]
+          ]
         },
         {
           "id": "3",
@@ -907,7 +1219,13 @@
               "u"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "S",
+              "U"
+            ]
+          ]
         },
         {
           "id": "4",
@@ -929,7 +1247,17 @@
               "s"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "S",
+              "U"
+            ],
+            [
+              "S",
+              "U"
+            ]
+          ]
         },
         {
           "id": "5",
@@ -956,7 +1284,21 @@
               "s"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "S",
+              "U"
+            ],
+            [
+              "S",
+              "U"
+            ],
+            [
+              "S",
+              "U"
+            ]
+          ]
         },
         {
           "id": "6",
@@ -973,7 +1315,13 @@
               "u"
             ]
           ],
-          "hideAnswersOnError": true
+          "hideAnswersOnError": true,
+          "gapOptions": [
+            [
+              "S",
+              "U"
+            ]
+          ]
         }
       ]
     }
