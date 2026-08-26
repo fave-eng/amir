@@ -1506,5 +1506,418 @@ window.GRAMMAR_DATA = [
         ]
       }
     ]
+  },
+  {
+    "id": "grammar-past-simple-regular-irregular",
+    "order": 4,
+    "title": "Past Simple: regular and irregular verbs",
+    "level": "A2",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-past-simple-regular-irregular",
+    "passed": false,
+    "attempts": 0,
+    "publishedAt": "2026-08-26",
+    "linkedLessonId": "lesson-4",
+    "revealAnswersOnError": false,
+    "lockOnPass": true,
+    "explanation": "Past Simple нужен, когда мы говорим о завершённых действиях в прошлом: last year, yesterday, four years ago, at two o’clock, on my last holiday. У правильных глаголов обычно добавляется -ed: arrive → arrived, ask → asked. У неправильных глаголов форма меняется: go → went, buy → bought, can → could. В отрицаниях и вопросах используем did / didn’t, а основной глагол возвращается в обычную форму: They didn’t buy souvenirs. Where did you go? С глаголом be формы другие: was / were, wasn’t / weren’t.",
+    "formula": "Positive: subject + past form · Negative: subject + didn’t + verb · Question: Did + subject + verb? · Be: was / were",
+    "glanceCards": [
+      {
+        "title": "Когда использовать",
+        "text": "Для законченных действий в прошлом: Four years ago, we decided to go away."
+      },
+      {
+        "title": "Regular verbs",
+        "text": "Обычно добавляем -ed: book → booked, ask → asked, arrive → arrived."
+      },
+      {
+        "title": "Irregular verbs",
+        "text": "Форму нужно запомнить: go → went, buy → bought, take → took, can → could."
+      },
+      {
+        "title": "Questions and negatives",
+        "text": "Did / didn’t + обычный глагол: Did they book it? They didn’t buy anything."
+      }
+    ],
+    "anchorLinks": [
+      {
+        "label": "Rule map",
+        "target": "grammar-rule-map"
+      },
+      {
+        "label": "Forms",
+        "target": "grammar-tables"
+      },
+      {
+        "label": "Examples",
+        "target": "grammar-examples"
+      },
+      {
+        "label": "Practice",
+        "target": "grammar-practice-section"
+      }
+    ],
+    "miniRules": [
+      {
+        "title": "Утверждение",
+        "text": "Для обычных глаголов ставим Past Simple форму: We booked a flat. They went home."
+      },
+      {
+        "title": "Отрицание",
+        "text": "didn’t + обычный глагол: We didn’t rent a car. He didn’t spend a week there."
+      },
+      {
+        "title": "Вопрос",
+        "text": "Did + subject + обычный глагол: Where did they go? What did you do?"
+      },
+      {
+        "title": "Be в Past Simple",
+        "text": "I / he / she / it was; you / we / they were. Отрицание: wasn’t / weren’t."
+      }
+    ],
+    "tables": [
+      {
+        "title": "Regular verbs",
+        "headers": [
+          "Base verb",
+          "Past Simple"
+        ],
+        "rows": [
+          [
+            "arrive",
+            "arrived"
+          ],
+          [
+            "ask",
+            "asked"
+          ],
+          [
+            "study",
+            "studied"
+          ],
+          [
+            "rent",
+            "rented"
+          ]
+        ]
+      },
+      {
+        "title": "Irregular verbs",
+        "headers": [
+          "Base verb",
+          "Past Simple"
+        ],
+        "rows": [
+          [
+            "go",
+            "went"
+          ],
+          [
+            "buy",
+            "bought"
+          ],
+          [
+            "take",
+            "took"
+          ],
+          [
+            "choose",
+            "chose"
+          ],
+          [
+            "can",
+            "could"
+          ]
+        ]
+      },
+      {
+        "title": "Question pattern",
+        "headers": [
+          "Question word",
+          "did",
+          "subject",
+          "verb"
+        ],
+        "rows": [
+          [
+            "Where",
+            "did",
+            "you",
+            "go?"
+          ],
+          [
+            "How",
+            "did",
+            "they",
+            "book it?"
+          ],
+          [
+            "What",
+            "did",
+            "she",
+            "do?"
+          ]
+        ]
+      }
+    ],
+    "exampleGroups": [
+      {
+        "title": "Positive",
+        "examples": [
+          "We booked a beautiful apartment online.",
+          "I went swimming every day.",
+          "They arrived at two o’clock."
+        ]
+      },
+      {
+        "title": "Negative",
+        "examples": [
+          "They didn’t buy any souvenirs.",
+          "We didn’t rent a car.",
+          "The people weren’t very helpful."
+        ]
+      },
+      {
+        "title": "Questions",
+        "examples": [
+          "Where did you stay?",
+          "How did you get there?",
+          "What was the weather like?"
+        ]
+      }
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "Where did you went?",
+        "right": "Where did you go?",
+        "note": "После did используем обычный глагол, не went."
+      },
+      {
+        "wrong": "They didn’t bought souvenirs.",
+        "right": "They didn’t buy souvenirs.",
+        "note": "После didn’t тоже обычный глагол."
+      },
+      {
+        "wrong": "The people was friendly.",
+        "right": "The people were friendly.",
+        "note": "People = they, поэтому were."
+      },
+      {
+        "wrong": "We staied in a hotel.",
+        "right": "We stayed in a hotel.",
+        "note": "stay оканчивается на vowel + y, поэтому просто +ed: stayed."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "exercise",
+        "id": "past-simple-step-1",
+        "title": "1. Easy · Choose the correct past form",
+        "difficulty": "Easy",
+        "instructions": "Выбери правильную форму Past Simple.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "single",
+            "prompt": "go → ___",
+            "options": [
+              "goed",
+              "went",
+              "goes"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "single",
+            "prompt": "book → ___",
+            "options": [
+              "booked",
+              "bookt",
+              "booking"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "single",
+            "prompt": "buy → ___",
+            "options": [
+              "buyed",
+              "bought",
+              "buys"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "single",
+            "prompt": "stay → ___",
+            "options": [
+              "staied",
+              "stayed",
+              "stayes"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "past-simple-step-2",
+        "title": "2. Medium · Complete the sentences",
+        "difficulty": "Medium",
+        "instructions": "Напиши глагол в Past Simple.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "text",
+            "prompt": "We ___ a beautiful apartment online. (book)",
+            "answer": "booked"
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "text",
+            "prompt": "They ___ a taxi to the airport. (take)",
+            "answer": "took"
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "text",
+            "prompt": "The woman ___ for their passports. (ask)",
+            "answer": "asked"
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "text",
+            "prompt": "We ___ home again. (go)",
+            "answer": "went"
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "past-simple-step-3",
+        "title": "3. Harder · Choose the correct sentence",
+        "difficulty": "Harder",
+        "instructions": "Выбери правильный вариант по смыслу и форме.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "single",
+            "prompt": "Negative: They bought some postcards. →",
+            "options": [
+              "They didn’t bought souvenirs.",
+              "They didn’t buy souvenirs.",
+              "They weren’t buy souvenirs."
+            ],
+            "answer": 1
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "single",
+            "prompt": "Question: you / stay / where?",
+            "options": [
+              "Where did you stay?",
+              "Where you stayed?",
+              "Where did you stayed?"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "single",
+            "prompt": "Past of can:",
+            "options": [
+              "canned",
+              "could",
+              "caned"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "single",
+            "prompt": "The people were unfriendly. → The people ___ very helpful.",
+            "options": [
+              "didn’t be",
+              "weren’t",
+              "wasn’t"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "past-simple-step-4",
+        "title": "4. Challenge · Build the sentence",
+        "difficulty": "Challenge",
+        "instructions": "Напиши полное предложение или вопрос.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "text",
+            "prompt": "Where / you / go?",
+            "answer": "Where did you go?",
+            "acceptedAnswers": [
+              "Where did you go",
+              "Where did you go?"
+            ]
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "text",
+            "prompt": "I / not / swim / in the pool.",
+            "answer": "I didn’t swim in the pool.",
+            "acceptedAnswers": [
+              "I didn’t swim in the pool",
+              "I didn't swim in the pool",
+              "I did not swim in the pool",
+              "I didn’t swim in the pool.",
+              "I didn't swim in the pool.",
+              "I did not swim in the pool."
+            ]
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "text",
+            "prompt": "How / they / get there?",
+            "answer": "How did they get there?",
+            "acceptedAnswers": [
+              "How did they get there",
+              "How did they get there?"
+            ]
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "text",
+            "prompt": "It / be / sunny / every day.",
+            "answer": "It was sunny every day.",
+            "acceptedAnswers": [
+              "It was sunny every day",
+              "It was sunny every day."
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];

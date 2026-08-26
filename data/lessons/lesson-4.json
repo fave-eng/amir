@@ -1,0 +1,1346 @@
+{
+  "id": "lesson-4",
+  "number": 4,
+  "title": "Unit 2A · OMG! Where’s my passport?",
+  "subtitle": "English File Pre-Intermediate · Workbook · Past Simple, holidays vocabulary and -ed endings",
+  "status": "available",
+  "page": "lesson.html?id=lesson-4",
+  "vocabularyId": "vocab-lesson-2a",
+  "grammarIds": [
+    "grammar-past-simple-regular-irregular"
+  ],
+  "publishedAt": "2026-08-26",
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "totalPoints": 63,
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "2A · 1",
+      "title": "GRAMMAR · past simple: regular and irregular verbs",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-1a",
+      "layout": "word-chart",
+      "title": "1a. Write the past simple of these verbs in the correct column.",
+      "wordBank": [
+        "argue",
+        "begin",
+        "arrive",
+        "ask",
+        "buy",
+        "can",
+        "choose",
+        "eat",
+        "feel",
+        "invite",
+        "rent",
+        "say",
+        "stay",
+        "study"
+      ],
+      "chartColumns": [
+        {
+          "id": "regular",
+          "label": "Regular",
+          "example": "argued"
+        },
+        {
+          "id": "irregular",
+          "label": "Irregular",
+          "example": "began"
+        }
+      ],
+      "items": [
+        {
+          "id": "regular-1",
+          "number": "",
+          "input": "bank-select",
+          "group": "regular",
+          "options": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied",
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ],
+          "acceptedAnswers": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied"
+          ]
+        },
+        {
+          "id": "regular-2",
+          "number": "",
+          "input": "bank-select",
+          "group": "regular",
+          "options": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied",
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ],
+          "acceptedAnswers": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied"
+          ]
+        },
+        {
+          "id": "regular-3",
+          "number": "",
+          "input": "bank-select",
+          "group": "regular",
+          "options": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied",
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ],
+          "acceptedAnswers": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied"
+          ]
+        },
+        {
+          "id": "regular-4",
+          "number": "",
+          "input": "bank-select",
+          "group": "regular",
+          "options": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied",
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ],
+          "acceptedAnswers": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied"
+          ]
+        },
+        {
+          "id": "regular-5",
+          "number": "",
+          "input": "bank-select",
+          "group": "regular",
+          "options": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied",
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ],
+          "acceptedAnswers": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied"
+          ]
+        },
+        {
+          "id": "regular-6",
+          "number": "",
+          "input": "bank-select",
+          "group": "regular",
+          "options": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied",
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ],
+          "acceptedAnswers": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied"
+          ]
+        },
+        {
+          "id": "irregular-1",
+          "number": "",
+          "input": "bank-select",
+          "group": "irregular",
+          "options": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied",
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ],
+          "acceptedAnswers": [
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ]
+        },
+        {
+          "id": "irregular-2",
+          "number": "",
+          "input": "bank-select",
+          "group": "irregular",
+          "options": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied",
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ],
+          "acceptedAnswers": [
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ]
+        },
+        {
+          "id": "irregular-3",
+          "number": "",
+          "input": "bank-select",
+          "group": "irregular",
+          "options": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied",
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ],
+          "acceptedAnswers": [
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ]
+        },
+        {
+          "id": "irregular-4",
+          "number": "",
+          "input": "bank-select",
+          "group": "irregular",
+          "options": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied",
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ],
+          "acceptedAnswers": [
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ]
+        },
+        {
+          "id": "irregular-5",
+          "number": "",
+          "input": "bank-select",
+          "group": "irregular",
+          "options": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied",
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ],
+          "acceptedAnswers": [
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ]
+        },
+        {
+          "id": "irregular-6",
+          "number": "",
+          "input": "bank-select",
+          "group": "irregular",
+          "options": [
+            "arrived",
+            "asked",
+            "invited",
+            "rented",
+            "stayed",
+            "studied",
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ],
+          "acceptedAnswers": [
+            "bought",
+            "could",
+            "chose",
+            "ate",
+            "felt",
+            "said"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-1b",
+      "title": "1b. Rewrite the sentences with a negative verb.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "We stayed in a hostel. We didn’t stay in a hotel.",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "They bought some postcards. They ________ any souvenirs.",
+          "segments": [
+            "They ",
+            " any souvenirs."
+          ],
+          "answers": [
+            [
+              "didn't buy",
+              "did not buy"
+            ]
+          ],
+          "placeholders": [
+            "didn’t buy"
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "The people were unfriendly. The people ________ very helpful.",
+          "segments": [
+            "The people ",
+            " very helpful."
+          ],
+          "answers": [
+            [
+              "weren't",
+              "were not"
+            ]
+          ],
+          "placeholders": [
+            "weren’t"
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "I swam in the sea. I ________ in the swimming pool.",
+          "segments": [
+            "I ",
+            " in the swimming pool."
+          ],
+          "answers": [
+            [
+              "didn't swim",
+              "did not swim"
+            ]
+          ],
+          "placeholders": [
+            "didn’t swim"
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "We rented a flat. We ________ a car.",
+          "segments": [
+            "We ",
+            " a car."
+          ],
+          "answers": [
+            [
+              "didn't rent",
+              "did not rent"
+            ]
+          ],
+          "placeholders": [
+            "didn’t rent"
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "He spent a month in Bangkok. He ________ a week there.",
+          "segments": [
+            "He ",
+            " a week there."
+          ],
+          "answers": [
+            [
+              "didn't spend",
+              "did not spend"
+            ]
+          ],
+          "placeholders": [
+            "didn’t spend"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-1c",
+      "layout": "cloze",
+      "title": "1c. Complete the text with the past simple form of verbs from the list.",
+      "wordBank": [
+        "arrive",
+        "ask",
+        "book",
+        "cannot",
+        "decide",
+        "go (x2)",
+        "look",
+        "take",
+        "want"
+      ],
+      "introTitle": "THE HOLIDAY THAT WASN’T",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "exampleAnswer": "decided"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "answer": "wanted"
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "answer": "booked"
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "answer": "took"
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "answer": "arrived"
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "text",
+          "answer": "asked"
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "text",
+          "answer": "asked"
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "text",
+          "answer": "looked"
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "text",
+          "answer": "couldn’t",
+          "acceptedAnswers": [
+            "couldn’t",
+            "couldn't",
+            "could not"
+          ]
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "text",
+          "answer": "went"
+        }
+      ],
+      "clozeParagraphs": [
+        [
+          "Four years ago, we ",
+          {
+            "itemId": "1"
+          },
+          " to go away for the weekend. We ",
+          {
+            "itemId": "2"
+          },
+          " to go to Portugal, so we ",
+          {
+            "itemId": "3"
+          },
+          " a beautiful apartment online. A week later, we ",
+          {
+            "itemId": "4"
+          },
+          " a taxi to the airport. We ",
+          {
+            "itemId": "5"
+          },
+          " at the airport at two o’clock, and we ",
+          {
+            "itemId": "6"
+          },
+          " to check-in. The woman at the desk ",
+          {
+            "itemId": "7"
+          },
+          " us for our passports. We ",
+          {
+            "itemId": "8"
+          },
+          " in our bags and in our coat pockets, but we ",
+          {
+            "itemId": "9"
+          },
+          " find them. So we ",
+          {
+            "itemId": "10"
+          },
+          " home again! It was a miserable weekend!"
+        ]
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-1d",
+      "title": "1d. Read the text in c again. Complete the questions.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "When did they decide to go away for the weekend? Four years ago.",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "Where ________ to go? Portugal.",
+          "segments": [
+            "Where ",
+            " to go? Portugal."
+          ],
+          "answers": [
+            [
+              "did they want"
+            ]
+          ],
+          "placeholders": [
+            "did they want"
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "How ________ the apartment? They booked it online.",
+          "segments": [
+            "How ",
+            " the apartment? They booked it online."
+          ],
+          "answers": [
+            [
+              "did they book"
+            ]
+          ],
+          "placeholders": [
+            "did they book"
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "What time ________ at the airport? At two o’clock.",
+          "segments": [
+            "What time ",
+            " at the airport? At two o’clock."
+          ],
+          "answers": [
+            [
+              "did they arrive"
+            ]
+          ],
+          "placeholders": [
+            "did they arrive"
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "What ________ at check-in ask for? The woman asked for their passports.",
+          "segments": [
+            "What ",
+            " at check-in ask for? The woman asked for their passports."
+          ],
+          "answers": [
+            [
+              "did the woman"
+            ]
+          ],
+          "placeholders": [
+            "did the woman"
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "Where ________ in the end? They went home.",
+          "segments": [
+            "Where ",
+            " in the end? They went home."
+          ],
+          "answers": [
+            [
+              "did they go"
+            ]
+          ],
+          "placeholders": [
+            "did they go"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "2A · 2",
+      "title": "PRONUNCIATION · -ed endings",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "pronunciation-2a",
+      "title": "2a. Circle the verb which has a different -ed sound.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "walked · asked · rented",
+          "options": [
+            "walked",
+            "asked",
+            "rented"
+          ],
+          "answer": 2,
+          "example": true,
+          "exampleAnswer": "rented"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "argued · wanted · stayed",
+          "options": [
+            "argued",
+            "wanted",
+            "stayed"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "booked · started · decided",
+          "options": [
+            "booked",
+            "started",
+            "decided"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "arrived · invited · phoned",
+          "options": [
+            "arrived",
+            "invited",
+            "phoned"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "waited · cooked · watched",
+          "options": [
+            "waited",
+            "cooked",
+            "watched"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "2A · 3",
+      "title": "VOCABULARY · holidays",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-3a",
+      "layout": "media-list",
+      "title": "3a. Complete the phrases.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "go camping",
+          "example": true,
+          "exampleTextOnly": true,
+          "image": "images/lesson-4/camping.png",
+          "imageAlt": "Go camping"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "go ________ a ________",
+          "segments": [
+            "go ",
+            " a ",
+            ""
+          ],
+          "answers": [
+            [
+              "for"
+            ],
+            [
+              "walk"
+            ]
+          ],
+          "image": "images/lesson-4/walk.png",
+          "imageAlt": "Go for a walk"
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "________ a flight online",
+          "segments": [
+            "",
+            " a flight online"
+          ],
+          "answers": [
+            [
+              "book"
+            ]
+          ],
+          "image": "images/lesson-4/book-flight.png",
+          "imageAlt": "Book a flight online"
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "go ________",
+          "segments": [
+            "go ",
+            ""
+          ],
+          "answers": [
+            [
+              "abroad"
+            ]
+          ],
+          "image": "images/lesson-4/abroad.png",
+          "imageAlt": "Go abroad"
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "________ swimming",
+          "segments": [
+            "",
+            " swimming"
+          ],
+          "answers": [
+            [
+              "go"
+            ]
+          ],
+          "image": "images/lesson-4/swimming.png",
+          "imageAlt": "Go swimming"
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "go ________ at night",
+          "segments": [
+            "go ",
+            " at night"
+          ],
+          "answers": [
+            [
+              "out"
+            ]
+          ],
+          "image": "images/lesson-4/night.png",
+          "imageAlt": "Go out at night"
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "prompt": "________ in a hotel",
+          "segments": [
+            "",
+            " in a hotel"
+          ],
+          "answers": [
+            [
+              "stay"
+            ]
+          ],
+          "image": "images/lesson-4/hotel.png",
+          "imageAlt": "Stay in a hotel"
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "prompt": "go ________",
+          "segments": [
+            "go ",
+            ""
+          ],
+          "answers": [
+            [
+              "sightseeing"
+            ]
+          ],
+          "image": "images/lesson-4/sightseeing.png",
+          "imageAlt": "Go sightseeing"
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "gaps",
+          "prompt": "________ on the beach",
+          "segments": [
+            "",
+            " on the beach"
+          ],
+          "answers": [
+            [
+              "sunbathe"
+            ]
+          ],
+          "image": "images/lesson-4/beach.png",
+          "imageAlt": "Sunbathe on the beach"
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "gaps",
+          "prompt": "go ________ for the weekend",
+          "segments": [
+            "go ",
+            " for the weekend"
+          ],
+          "answers": [
+            [
+              "away"
+            ]
+          ],
+          "image": "images/lesson-4/weekend.png",
+          "imageAlt": "Go away for the weekend"
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-3b",
+      "title": "3b. Complete the sentences with an adjective.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "We loved our room. It was very comfortable.",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "The weather was warm and s________ every day.",
+          "segments": [
+            "The weather was warm and ",
+            " every day."
+          ],
+          "answers": [
+            [
+              "sunny"
+            ]
+          ],
+          "placeholders": [
+            "s________"
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "There were a lot of people on the beach. It was very cr________.",
+          "segments": [
+            "There were a lot of people on the beach. It was very ",
+            "."
+          ],
+          "answers": [
+            [
+              "crowded"
+            ]
+          ],
+          "placeholders": [
+            "cr________"
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "The hotel was on a busy road, so it was really n________.",
+          "segments": [
+            "The hotel was on a busy road, so it was really ",
+            "."
+          ],
+          "answers": [
+            [
+              "noisy"
+            ]
+          ],
+          "placeholders": [
+            "n________"
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "The staff in the hotel were very unh________ and sometimes quite unfriendly.",
+          "segments": [
+            "The staff in the hotel were very ",
+            " and sometimes quite unfriendly."
+          ],
+          "answers": [
+            [
+              "unhelpful"
+            ]
+          ],
+          "placeholders": [
+            "unh________"
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "There wasn’t much in the apartment. It was very b________. It didn’t even have a fridge.",
+          "segments": [
+            "There wasn’t much in the apartment. It was very ",
+            ". It didn’t even have a fridge."
+          ],
+          "answers": [
+            [
+              "basic"
+            ]
+          ],
+          "placeholders": [
+            "b________"
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "prompt": "The other people on the trip were very fr________. We made some good friends.",
+          "segments": [
+            "The other people on the trip were very ",
+            ". We made some good friends."
+          ],
+          "answers": [
+            [
+              "friendly"
+            ]
+          ],
+          "placeholders": [
+            "fr________"
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "prompt": "The town was l________. All the houses had flowers on the balcony and were painted different colours.",
+          "segments": [
+            "The town was ",
+            ". All the houses had flowers on the balcony and were painted different colours."
+          ],
+          "answers": [
+            [
+              "lovely"
+            ]
+          ],
+          "placeholders": [
+            "l________"
+          ]
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "gaps",
+          "prompt": "It was cl________ all day, so we couldn’t sunbathe.",
+          "segments": [
+            "It was ",
+            " all day, so we couldn’t sunbathe."
+          ],
+          "answers": [
+            [
+              "cloudy"
+            ]
+          ],
+          "placeholders": [
+            "cl________"
+          ]
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "gaps",
+          "prompt": "The apartment was very l________ – it was full of expensive furniture and very comfortable!",
+          "segments": [
+            "The apartment was very ",
+            " – it was full of expensive furniture and very comfortable!"
+          ],
+          "answers": [
+            [
+              "luxurious"
+            ]
+          ],
+          "placeholders": [
+            "l________"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-3c",
+      "title": "3c. Look at the chart. Write the questions and Lucy’s answers.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "Where / you / go — Lucy: Greece — Where did you go? I went to Greece.",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2q",
+          "number": "2 question",
+          "input": "text",
+          "prompt": "How / you / get there — write the question.",
+          "answer": "How did you get there?",
+          "acceptedAnswers": [
+            "How did you get there",
+            "How did you get there?"
+          ]
+        },
+        {
+          "id": "2a",
+          "number": "2 Lucy",
+          "input": "text",
+          "prompt": "Lucy: plane — write Lucy’s answer.",
+          "answer": "I went by plane.",
+          "acceptedAnswers": [
+            "I went by plane",
+            "I went by plane."
+          ]
+        },
+        {
+          "id": "3q",
+          "number": "3 question",
+          "input": "text",
+          "prompt": "Where / you / stay — write the question.",
+          "answer": "Where did you stay?",
+          "acceptedAnswers": [
+            "Where did you stay",
+            "Where did you stay?"
+          ]
+        },
+        {
+          "id": "3a",
+          "number": "3 Lucy",
+          "input": "text",
+          "prompt": "Lucy: hotel — write Lucy’s answer.",
+          "answer": "I stayed in a hotel.",
+          "acceptedAnswers": [
+            "I stayed in a hotel",
+            "I stayed in a hotel."
+          ]
+        },
+        {
+          "id": "4q",
+          "number": "4 question",
+          "input": "text",
+          "prompt": "How long / you / stay — write the question.",
+          "answer": "How long did you stay?",
+          "acceptedAnswers": [
+            "How long did you stay",
+            "How long did you stay?"
+          ]
+        },
+        {
+          "id": "4a",
+          "number": "4 Lucy",
+          "input": "text",
+          "prompt": "Lucy: ten days — write Lucy’s answer.",
+          "answer": "I stayed for ten days.",
+          "acceptedAnswers": [
+            "I stayed for ten days",
+            "I stayed for ten days."
+          ]
+        },
+        {
+          "id": "5q",
+          "number": "5 question",
+          "input": "text",
+          "prompt": "What / you / do — write the question.",
+          "answer": "What did you do?",
+          "acceptedAnswers": [
+            "What did you do",
+            "What did you do?"
+          ]
+        },
+        {
+          "id": "5a",
+          "number": "5 Lucy",
+          "input": "text",
+          "prompt": "Lucy: went swimming — write Lucy’s answer.",
+          "answer": "I went swimming.",
+          "acceptedAnswers": [
+            "I went swimming",
+            "I went swimming."
+          ]
+        },
+        {
+          "id": "6q",
+          "number": "6 question",
+          "input": "text",
+          "prompt": "What / be / weather like — write the question.",
+          "answer": "What was the weather like?",
+          "acceptedAnswers": [
+            "What was the weather like",
+            "What was the weather like?"
+          ]
+        },
+        {
+          "id": "6a",
+          "number": "6 Lucy",
+          "input": "text",
+          "prompt": "Lucy: sunny — write Lucy’s answer.",
+          "answer": "It was sunny.",
+          "acceptedAnswers": [
+            "It was sunny",
+            "It was sunny."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-3d",
+      "title": "3d. Write sentences about your last holiday in the You column in c.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "textarea",
+          "prompt": "Where did you go?",
+          "placeholder": "On my last holiday, I went to...",
+          "scored": false
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "textarea",
+          "prompt": "How did you get there?",
+          "scored": false
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "textarea",
+          "prompt": "Where did you stay?",
+          "scored": false
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "textarea",
+          "prompt": "How long did you stay?",
+          "scored": false
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "textarea",
+          "prompt": "What did you do?",
+          "scored": false
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "textarea",
+          "prompt": "What was the weather like?",
+          "scored": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 /**
- * Amir's vocabulary topics. Duplicate English words are removed automatically.
+ * Amir's published vocabulary topics.
  */
 window.VOCABULARY_DATA = [
   {
@@ -758,6 +758,259 @@ window.VOCABULARY_DATA = [
         "transcription": "/əˈraʊnd/",
         "exampleEn": "Think about the world around you.",
         "exampleRu": "Подумай о мире вокруг тебя."
+      }
+    ]
+  },
+  {
+    "id": "vocab-lesson-2a",
+    "order": 4,
+    "title": "Holidays & travel problems",
+    "label": "Unit 2A",
+    "icon": "🧳",
+    "type": "lesson",
+    "linkedLessonId": "lesson-4",
+    "page": "vocabulary.html?id=vocab-lesson-2a",
+    "publishedAt": "2026-08-26",
+    "words": [
+      {
+        "id": "lesson-2a-go-camping",
+        "en": "go camping",
+        "ru": "ездить / ходить в поход с палаткой",
+        "transcription": "/ɡəʊ ˈkæmpɪŋ/",
+        "exampleEn": "We went camping near the lake.",
+        "exampleRu": "Мы ездили в поход с палаткой у озера."
+      },
+      {
+        "id": "lesson-2a-go-for-a-walk",
+        "en": "go for a walk",
+        "ru": "пойти на прогулку",
+        "transcription": "/ɡəʊ fər ə wɔːk/",
+        "exampleEn": "Let’s go for a walk after lunch.",
+        "exampleRu": "Давай пойдём на прогулку после обеда."
+      },
+      {
+        "id": "lesson-2a-book-a-flight",
+        "en": "book a flight",
+        "ru": "забронировать авиабилет",
+        "transcription": "/bʊk ə flaɪt/",
+        "exampleEn": "I booked a flight online.",
+        "exampleRu": "Я забронировал авиабилет онлайн."
+      },
+      {
+        "id": "lesson-2a-go-abroad",
+        "en": "go abroad",
+        "ru": "ехать за границу",
+        "transcription": "/ɡəʊ əˈbrɔːd/",
+        "exampleEn": "They went abroad last summer.",
+        "exampleRu": "Они ездили за границу прошлым летом."
+      },
+      {
+        "id": "lesson-2a-go-swimming",
+        "en": "go swimming",
+        "ru": "ходить / ездить плавать",
+        "transcription": "/ɡəʊ ˈswɪmɪŋ/",
+        "exampleEn": "We went swimming every day.",
+        "exampleRu": "Мы ходили плавать каждый день."
+      },
+      {
+        "id": "lesson-2a-go-out-at-night",
+        "en": "go out at night",
+        "ru": "выходить куда-то вечером / ночью",
+        "transcription": "/ɡəʊ aʊt ət naɪt/",
+        "exampleEn": "We went out at night in the city centre.",
+        "exampleRu": "Мы выходили вечером в центр города."
+      },
+      {
+        "id": "lesson-2a-stay-in-a-hotel",
+        "en": "stay in a hotel",
+        "ru": "остановиться в отеле",
+        "transcription": "/steɪ ɪn ə həʊˈtel/",
+        "exampleEn": "Lucy stayed in a hotel.",
+        "exampleRu": "Люси остановилась в отеле."
+      },
+      {
+        "id": "lesson-2a-go-sightseeing",
+        "en": "go sightseeing",
+        "ru": "осматривать достопримечательности",
+        "transcription": "/ɡəʊ ˈsaɪtsiːɪŋ/",
+        "exampleEn": "We went sightseeing in the old town.",
+        "exampleRu": "Мы осматривали достопримечательности в старом городе."
+      },
+      {
+        "id": "lesson-2a-sunbathe",
+        "en": "sunbathe",
+        "ru": "загорать",
+        "transcription": "/ˈsʌnbeɪð/",
+        "exampleEn": "They sunbathed on the beach.",
+        "exampleRu": "Они загорали на пляже."
+      },
+      {
+        "id": "lesson-2a-go-away-for-the-weekend",
+        "en": "go away for the weekend",
+        "ru": "уехать на выходные",
+        "transcription": "/ɡəʊ əˈweɪ fə ðə ˌwiːkˈend/",
+        "exampleEn": "We went away for the weekend.",
+        "exampleRu": "Мы уехали на выходные."
+      },
+      {
+        "id": "lesson-2a-passport",
+        "en": "passport",
+        "ru": "паспорт",
+        "transcription": "/ˈpɑːspɔːt/",
+        "exampleEn": "The woman asked for their passports.",
+        "exampleRu": "Женщина попросила их паспорта."
+      },
+      {
+        "id": "lesson-2a-airport",
+        "en": "airport",
+        "ru": "аэропорт",
+        "transcription": "/ˈeəpɔːt/",
+        "exampleEn": "We arrived at the airport at two o’clock.",
+        "exampleRu": "Мы приехали в аэропорт в два часа."
+      },
+      {
+        "id": "lesson-2a-check-in",
+        "en": "check-in",
+        "ru": "регистрация на рейс / в отель",
+        "transcription": "/ˈtʃek ɪn/",
+        "exampleEn": "They asked to check in at the airport.",
+        "exampleRu": "Они попросили зарегистрироваться в аэропорту."
+      },
+      {
+        "id": "lesson-2a-desk",
+        "en": "desk",
+        "ru": "стойка; стол",
+        "transcription": "/desk/",
+        "exampleEn": "The woman at the desk asked for our passports.",
+        "exampleRu": "Женщина за стойкой попросила наши паспорта."
+      },
+      {
+        "id": "lesson-2a-apartment",
+        "en": "apartment",
+        "ru": "апартаменты; квартира",
+        "transcription": "/əˈpɑːtmənt/",
+        "exampleEn": "We booked a beautiful apartment online.",
+        "exampleRu": "Мы забронировали красивые апартаменты онлайн."
+      },
+      {
+        "id": "lesson-2a-online",
+        "en": "online",
+        "ru": "онлайн; через интернет",
+        "transcription": "/ˌɒnˈlaɪn/",
+        "exampleEn": "I booked the hotel online.",
+        "exampleRu": "Я забронировал отель онлайн."
+      },
+      {
+        "id": "lesson-2a-taxi",
+        "en": "taxi",
+        "ru": "такси",
+        "transcription": "/ˈtæksi/",
+        "exampleEn": "We took a taxi to the airport.",
+        "exampleRu": "Мы взяли такси до аэропорта."
+      },
+      {
+        "id": "lesson-2a-miserable",
+        "en": "miserable",
+        "ru": "ужасный; несчастный; miserable",
+        "transcription": "/ˈmɪzrəbl/",
+        "exampleEn": "It was a miserable weekend.",
+        "exampleRu": "Это были ужасные выходные."
+      },
+      {
+        "id": "lesson-2a-holiday",
+        "en": "holiday",
+        "ru": "отпуск; каникулы; поездка на отдых",
+        "transcription": "/ˈhɒlədeɪ/",
+        "exampleEn": "Where did you go on holiday?",
+        "exampleRu": "Куда ты ездил в отпуск?"
+      },
+      {
+        "id": "lesson-2a-flight",
+        "en": "flight",
+        "ru": "рейс; перелёт",
+        "transcription": "/flaɪt/",
+        "exampleEn": "The flight was very early.",
+        "exampleRu": "Рейс был очень рано."
+      },
+      {
+        "id": "lesson-2a-beach",
+        "en": "beach",
+        "ru": "пляж",
+        "transcription": "/biːtʃ/",
+        "exampleEn": "There were a lot of people on the beach.",
+        "exampleRu": "На пляже было много людей."
+      },
+      {
+        "id": "lesson-2a-sunny",
+        "en": "sunny",
+        "ru": "солнечный",
+        "transcription": "/ˈsʌni/",
+        "exampleEn": "The weather was sunny every day.",
+        "exampleRu": "Погода была солнечной каждый день."
+      },
+      {
+        "id": "lesson-2a-crowded",
+        "en": "crowded",
+        "ru": "многолюдный; переполненный",
+        "transcription": "/ˈkraʊdɪd/",
+        "exampleEn": "The beach was very crowded.",
+        "exampleRu": "Пляж был очень многолюдным."
+      },
+      {
+        "id": "lesson-2a-noisy",
+        "en": "noisy",
+        "ru": "шумный",
+        "transcription": "/ˈnɔɪzi/",
+        "exampleEn": "The hotel was really noisy.",
+        "exampleRu": "Отель был очень шумным."
+      },
+      {
+        "id": "lesson-2a-unhelpful",
+        "en": "unhelpful",
+        "ru": "неотзывчивый; бесполезный",
+        "transcription": "/ʌnˈhelpfl/",
+        "exampleEn": "The staff were very unhelpful.",
+        "exampleRu": "Персонал был совсем неотзывчивым."
+      },
+      {
+        "id": "lesson-2a-basic",
+        "en": "basic",
+        "ru": "простой; без удобств",
+        "transcription": "/ˈbeɪsɪk/",
+        "exampleEn": "The apartment was very basic.",
+        "exampleRu": "Апартаменты были очень простыми."
+      },
+      {
+        "id": "lesson-2a-lovely",
+        "en": "lovely",
+        "ru": "очень приятный; красивый",
+        "transcription": "/ˈlʌvli/",
+        "exampleEn": "The town was lovely.",
+        "exampleRu": "Городок был очень красивым."
+      },
+      {
+        "id": "lesson-2a-cloudy",
+        "en": "cloudy",
+        "ru": "облачный",
+        "transcription": "/ˈklaʊdi/",
+        "exampleEn": "It was cloudy all day.",
+        "exampleRu": "Весь день было облачно."
+      },
+      {
+        "id": "lesson-2a-luxurious",
+        "en": "luxurious",
+        "ru": "роскошный",
+        "transcription": "/lʌɡˈʒʊəriəs/",
+        "exampleEn": "The apartment was very luxurious.",
+        "exampleRu": "Апартаменты были очень роскошными."
+      },
+      {
+        "id": "lesson-2a-regular-verb",
+        "en": "regular verb",
+        "ru": "правильный глагол",
+        "transcription": "/ˈreɡjələ vɜːb/",
+        "exampleEn": "Arrive is a regular verb.",
+        "exampleRu": "Arrive — правильный глагол."
       }
     ]
   }
