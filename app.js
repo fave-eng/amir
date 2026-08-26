@@ -943,7 +943,7 @@
   }
 
   function renderExampleNotice() {
-    return `<div class="example-notice"><span class="example-badge">Пример</span></div>`;
+    return `<div class="example-notice"><span class="example-badge">Example</span></div>`;
   }
 
   function escapeRegExp(value) {
@@ -965,6 +965,18 @@
     return html;
   }
 
+  function toIngForm(value) {
+    const base = safeText(value).trim().toLowerCase();
+    if (!base) return '';
+    if (base === 'be') return 'being';
+    if (base === 'run') return 'running';
+    if (base === 'get') return 'getting';
+    if (base === 'swim') return 'swimming';
+    if (base.endsWith('ie')) return `${base.slice(0, -2)}ying`;
+    if (base.endsWith('e') && !base.endsWith('ee')) return `${base.slice(0, -1)}ing`;
+    return `${base}ing`;
+  }
+
   function findExampleAnswers(item, block) {
     const answers = [];
     if (item.exampleAnswer) answers.push(item.exampleAnswer);
@@ -975,17 +987,38 @@
         else if (entry !== undefined && entry !== null) answers.push(entry);
       });
     }
+
+    const text = safeText(item.prompt || '');
+    const lower = text.toLowerCase();
     const wordBank = Array.isArray(block?.wordBank) ? block.wordBank : [];
+
     if (!answers.length && wordBank.length) {
-      const textKey = ` ${normalizeWordKey(item.prompt || '')} `;
       wordBank.forEach((word) => {
         const clean = safeText(word).replace(/\s*\(x\d+\)\s*/i, '').trim();
         if (!clean) return;
-        const cleanKey = normalizeWordKey(clean);
-        if (cleanKey && textKey.includes(` ${cleanKey} `)) answers.push(clean);
+        const cleanLower = clean.toLowerCase();
+
+        if (/^[a-z]+$/i.test(cleanLower)) {
+          const ing = toIngForm(cleanLower);
+          const pastContinuousPattern = new RegExp(`\\b(?:was|were|wasn[’']t|weren[’']t)\\s+${escapeRegExp(ing)}\\b`, 'iu');
+          const pastContinuousMatch = text.match(pastContinuousPattern);
+          if (pastContinuousMatch) answers.push(pastContinuousMatch[0]);
+        }
+
+        if (!answers.length && clean.length > 2) {
+          const exactPattern = new RegExp(`\\b${escapeRegExp(clean)}\\b`, 'iu');
+          const exactMatch = text.match(exactPattern);
+          if (exactMatch) answers.push(exactMatch[0]);
+        }
       });
     }
-    return answers;
+
+    if (!answers.length && Array.isArray(block?.wordBank) && block.wordBank.join('|').toLowerCase() === 'at|in|on') {
+      const prepPhrase = text.match(/\b(?:at|in|on)\s+(?:February|August|Monday|Wednesday|Thursday|Christmas|New Year[’']s Day|night|the morning|weekends|Easter|the summer|July|the party|the bus|a car|the wall|the living room|the shelves|New York|the 11th floor|the station|the floor|the museum|the park|school)\b/iu);
+      if (prepPhrase) answers.push(prepPhrase[0]);
+    }
+
+    return unique(answers);
   }
 
   function renderExampleGapLine(item) {
@@ -1009,7 +1042,7 @@
       const selected = safeText(item.answer || item.exampleAnswer || 'a').trim().toLowerCase();
       return `<div class="example-choice-prompt">
         <p>${escapeHtml(choiceMatch[1]).trim()}${choiceMatch[1].trim().endsWith(',') ? '' : ','}</p>
-        <div class="example-choice-list" aria-label="Пример выбора">
+        <div class="example-choice-list" aria-label="Example choice">
           <span class="example-choice${selected === 'a' || selected === '0' ? ' selected' : ''}"><b>a</b> ${escapeHtml(choiceMatch[2]).trim()}.</span>
           <span class="example-choice${selected === 'b' || selected === '1' ? ' selected' : ''}"><b>b</b> ${escapeHtml(choiceMatch[3]).trim()}.</span>
         </div>
@@ -1053,7 +1086,7 @@
         ? renderExampleGapLine(item) || renderExamplePrompt(rawPrompt, prompt, item, block)
         : (item.exampleTextOnly ? renderExamplePrompt(rawPrompt, prompt, item, block) : prompt);
       const answerBox = !item.exampleTextOnly && item.input !== 'gaps' && item.exampleAnswer
-        ? `<div class="example-answer"><span>Ответ в примере</span><strong>${escapeHtml(item.exampleAnswer || '')}</strong></div>`
+        ? `<div class="example-answer"><span>Example answer</span><strong>${escapeHtml(item.exampleAnswer || '')}</strong></div>`
         : '';
       return `<div class="exercise-item exercise-example${mediaClass}" data-exercise-item="${escapeHtml(itemId)}">
         ${itemMedia}
@@ -1066,7 +1099,7 @@
     let control = '';
     if (item.input === 'example-gap') {
       const segments = Array.isArray(item.segments) ? item.segments : [];
-      control = `<div class="sentence-gaps numbered-example-gap"><span>${escapeHtml(segments[0] || '')}</span><span class="inline-example-label">Пример</span><span class="inline-example-answer"><b>${escapeHtml(item.exampleNumber || 1)}</b> ${escapeHtml(item.exampleAnswer || '')}</span><span>${inlineHtml(segments[1] || '')}</span><span class="inline-task-label">Теперь заполни</span><span class="inline-gap-number">${escapeHtml(item.gapNumber || 2)}</span><input class="gap-input" data-example-gap autocomplete="off"><span>${inlineHtml(segments[2] || '')}</span></div>`;
+      control = `<div class="sentence-gaps numbered-example-gap"><span>${escapeHtml(segments[0] || '')}</span><span class="inline-example-label">Example</span><span class="inline-example-answer"><b>${escapeHtml(item.exampleNumber || 1)}</b> ${escapeHtml(item.exampleAnswer || '')}</span><span>${inlineHtml(segments[1] || '')}</span><span class="inline-task-label">Теперь заполни</span><span class="inline-gap-number">${escapeHtml(item.gapNumber || 2)}</span><input class="gap-input" data-example-gap autocomplete="off"><span>${inlineHtml(segments[2] || '')}</span></div>`;
     } else if (item.input === 'odd-one-out') {
       control = `<div class="odd-one-out-control"><div class="odd-options">${(item.options || []).map((option, optionIndex) => `<label class="odd-option"><input type="radio" name="${escapeHtml(inputId)}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('')}</div><label class="odd-reason" for="${escapeHtml(inputId)}-reason">The others are all <input class="gap-input odd-reason-input" id="${escapeHtml(inputId)}-reason" data-odd-reason autocomplete="off">.</label></div>`;
     } else if (item.input === 'multiple' || item.input === 'single') {
@@ -1117,7 +1150,7 @@
     const gapNumber = number === '' || number === null ? '' : `<sup class="cloze-gap-number">${escapeHtml(number)}</sup>`;
 
     if (item.example) {
-      return `<span class="cloze-inline-item cloze-example" data-exercise-item="${escapeHtml(itemId)}"><span class="inline-example-label">Пример</span>${gapNumber}<span class="cloze-example-answer">${escapeHtml(item.exampleAnswer || '')}</span></span>`;
+      return `<span class="cloze-inline-item cloze-example" data-exercise-item="${escapeHtml(itemId)}"><span class="inline-example-label">Example</span>${gapNumber}<span class="cloze-example-answer">${escapeHtml(item.exampleAnswer || '')}</span></span>`;
     }
 
     let control = '';
@@ -1165,9 +1198,9 @@
 
     if (item.example) {
       if (segments.length >= 2) {
-        return `<span class="dialogue-item dialogue-example" data-exercise-item="${escapeHtml(itemId)}"><span class="inline-example-label">Пример</span><span>${escapeHtml(segments[0])}</span>${gapNumber}<span class="dialogue-example-answer">${escapeHtml(item.exampleAnswer || '')}</span><span>${escapeHtml(segments[1])}</span></span>`;
+        return `<span class="dialogue-item dialogue-example" data-exercise-item="${escapeHtml(itemId)}"><span class="inline-example-label">Example</span><span>${escapeHtml(segments[0])}</span>${gapNumber}<span class="dialogue-example-answer">${escapeHtml(item.exampleAnswer || '')}</span><span>${escapeHtml(segments[1])}</span></span>`;
       }
-      return `<span class="dialogue-item dialogue-example" data-exercise-item="${escapeHtml(itemId)}"><span class="inline-example-label">Пример</span>${gapNumber}<span>${escapeHtml(item.prompt || '')}</span></span>`;
+      return `<span class="dialogue-item dialogue-example" data-exercise-item="${escapeHtml(itemId)}"><span class="inline-example-label">Example</span>${gapNumber}<span>${escapeHtml(item.prompt || '')}</span></span>`;
     }
 
     if (item.input === 'dependent-select') {
@@ -1219,7 +1252,7 @@
     return `<div class="pronunciation-word-chart">${columns.map((column) => {
       const columnItems = items.filter((item) => safeText(item.group) === safeText(column.id));
       return `<section class="pronunciation-word-column" aria-label="${escapeHtml(column.label || '')}">
-        <div class="pronunciation-word-column-head"><strong>${escapeHtml(column.label || '')}</strong>${column.example ? `<span class="pronunciation-word-example"><span>Пример</span>${escapeHtml(column.example)}</span>` : ''}</div>
+        <div class="pronunciation-word-column-head"><strong>${escapeHtml(column.label || '')}</strong>${column.example ? `<span class="pronunciation-word-example"><span>Example</span>${escapeHtml(column.example)}</span>` : ''}</div>
         <div class="pronunciation-word-slots">${columnItems.map((item, itemIndex) => {
           const itemId = safeText(item.id, `${itemIndex + 1}`);
           const inputId = `exercise-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
@@ -1256,7 +1289,7 @@
       const answerText = preset && optionMap.has(preset) ? `${preset}` : '';
       return `<div class="match-left-item${pair.example ? ' is-example' : ''}" role="button" tabindex="${pair.example ? '-1' : '0'}" data-match-left data-pair-id="${escapeHtml(pairId)}" ${pair.example ? 'aria-disabled="true"' : ''}>
         <span class="exercise-number">${escapeHtml(number)}</span>
-        <span class="match-left-text">${pair.example ? '<span class="match-example-label">Пример</span>' : ''}${escapeHtml(pair.left || pair.prompt || '')}</span>
+        <span class="match-left-text">${pair.example ? '<span class="match-example-label">Example</span>' : ''}${escapeHtml(pair.left || pair.prompt || '')}</span>
         <span class="match-answer-chip" data-match-answer-label>${escapeHtml(answerText || '—')}</span>
         <input type="hidden" data-match-value value="${escapeHtml(preset)}" ${pair.example ? 'disabled' : ''}>
       </div>`;
