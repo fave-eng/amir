@@ -507,5 +507,258 @@ window.VOCABULARY_DATA = [
         "exampleRu": "На ней платье и кардиган."
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-practical-1",
+    "order": 3,
+    "title": "Hotel problems & review vocabulary",
+    "label": "Lesson 3 · Practical English · Hotel problems & Can you remember…? 1",
+    "icon": "🏨",
+    "type": "lesson",
+    "linkedLessonId": "lesson-3",
+    "page": "vocabulary.html?id=vocab-lesson-practical-1",
+    "publishedAt": "2026-08-26",
+    "words": [
+      {
+        "id": "lesson-3-reception",
+        "en": "reception",
+        "ru": "ресепшен; стойка регистрации",
+        "transcription": "/rɪˈsepʃn/",
+        "exampleEn": "I called reception from my hotel room.",
+        "exampleRu": "Я позвонил на ресепшен из номера."
+      },
+      {
+        "id": "lesson-3-bother",
+        "en": "bother",
+        "ru": "беспокоить; тревожить",
+        "transcription": "/ˈbɒðə/",
+        "exampleEn": "I’m sorry to bother you.",
+        "exampleRu": "Извините, что беспокою вас."
+      },
+      {
+        "id": "lesson-3-put-through",
+        "en": "put somebody through",
+        "ru": "соединить кого-либо по телефону",
+        "transcription": "/pʊt ˈsʌmbədi θruː/",
+        "exampleEn": "I’ll put you through to IT.",
+        "exampleRu": "Я соединю вас с IT-отделом."
+      },
+      {
+        "id": "lesson-3-send-up",
+        "en": "send somebody up",
+        "ru": "отправить кого-либо наверх / в номер",
+        "transcription": "/send ˈsʌmbədi ʌp/",
+        "exampleEn": "I’ll send somebody up right now.",
+        "exampleRu": "Я сейчас отправлю кого-нибудь к вам."
+      },
+      {
+        "id": "lesson-3-right-now",
+        "en": "right now",
+        "ru": "прямо сейчас",
+        "transcription": "/raɪt naʊ/",
+        "exampleEn": "I’ll send somebody up right now.",
+        "exampleRu": "Я прямо сейчас отправлю кого-нибудь к вам."
+      },
+      {
+        "id": "lesson-3-shower",
+        "en": "shower",
+        "ru": "душ",
+        "transcription": "/ˈʃaʊə/",
+        "exampleEn": "There’s a problem with the shower.",
+        "exampleRu": "Есть проблема с душем."
+      },
+      {
+        "id": "lesson-3-noisy",
+        "en": "noisy",
+        "ru": "шумный",
+        "transcription": "/ˈnɔɪzi/",
+        "exampleEn": "This room is very noisy.",
+        "exampleRu": "Этот номер очень шумный."
+      },
+      {
+        "id": "lesson-3-manager",
+        "en": "manager",
+        "ru": "менеджер; управляющий",
+        "transcription": "/ˈmænɪdʒə/",
+        "exampleEn": "I want to talk to the manager.",
+        "exampleRu": "Я хочу поговорить с менеджером."
+      },
+      {
+        "id": "lesson-3-mini-bar",
+        "en": "mini-bar",
+        "ru": "мини-бар",
+        "transcription": "/ˈmɪni bɑː/",
+        "exampleEn": "There’s no water in my mini-bar.",
+        "exampleRu": "В моём мини-баре нет воды."
+      },
+      {
+        "id": "lesson-3-bottle",
+        "en": "bottle",
+        "ru": "бутылка",
+        "transcription": "/ˈbɒtl/",
+        "exampleEn": "I’ll send two bottles to your room.",
+        "exampleRu": "Я отправлю две бутылки в ваш номер."
+      },
+      {
+        "id": "lesson-3-signal",
+        "en": "signal",
+        "ru": "сигнал; связь",
+        "transcription": "/ˈsɪɡnəl/",
+        "exampleEn": "I can’t get a signal.",
+        "exampleRu": "У меня нет сигнала / связи."
+      },
+      {
+        "id": "lesson-3-view",
+        "en": "view",
+        "ru": "вид из окна",
+        "transcription": "/vjuː/",
+        "exampleEn": "Do you have a good view?",
+        "exampleRu": "У вас хороший вид из окна?"
+      },
+      {
+        "id": "lesson-3-be-tired",
+        "en": "be tired",
+        "ru": "быть уставшим",
+        "transcription": "/bi ˈtaɪəd/",
+        "exampleEn": "You must be really tired.",
+        "exampleRu": "Ты, должно быть, очень устал."
+      },
+      {
+        "id": "lesson-3-by-the-way",
+        "en": "by the way",
+        "ru": "кстати; между прочим",
+        "transcription": "/baɪ ðə weɪ/",
+        "exampleEn": "By the way, Martha wants to see you.",
+        "exampleRu": "Кстати, Марта хочет тебя увидеть."
+      },
+      {
+        "id": "lesson-3-guess",
+        "en": "guess",
+        "ru": "полагать; догадываться",
+        "transcription": "/ɡes/",
+        "exampleEn": "I guess you’re right.",
+        "exampleRu": "Думаю, ты прав."
+      },
+      {
+        "id": "lesson-3-invisible",
+        "en": "invisible",
+        "ru": "невидимый",
+        "transcription": "/ɪnˈvɪzəbl/",
+        "exampleEn": "He’s called the Invisible Man.",
+        "exampleRu": "Его называют Невидимым человеком."
+      },
+      {
+        "id": "lesson-3-artist",
+        "en": "artist",
+        "ru": "художник; артист",
+        "transcription": "/ˈɑːtɪst/",
+        "exampleEn": "Liu Bolin is an artist from China.",
+        "exampleRu": "Лю Болин — художник из Китая."
+      },
+      {
+        "id": "lesson-3-be-born",
+        "en": "be born",
+        "ru": "родиться",
+        "transcription": "/bi bɔːn/",
+        "exampleEn": "He was born in Shandong.",
+        "exampleRu": "Он родился в Шаньдуне."
+      },
+      {
+        "id": "lesson-3-hardly-ever",
+        "en": "hardly ever",
+        "ru": "почти никогда",
+        "transcription": "/ˌhɑːdli ˈevə/",
+        "exampleEn": "He hardly ever travels alone.",
+        "exampleRu": "Он почти никогда не путешествует один."
+      },
+      {
+        "id": "lesson-3-log",
+        "en": "log",
+        "ru": "бревно",
+        "transcription": "/lɒɡ/",
+        "exampleEn": "He is standing in front of some logs.",
+        "exampleRu": "Он стоит перед брёвнами."
+      },
+      {
+        "id": "lesson-3-in-the-middle-of",
+        "en": "in the middle of",
+        "ru": "в середине; посередине",
+        "transcription": "/ɪn ðə ˈmɪdl əv/",
+        "exampleEn": "He’s in the middle of the photo.",
+        "exampleRu": "Он находится посередине фотографии."
+      },
+      {
+        "id": "lesson-3-carefully",
+        "en": "carefully",
+        "ru": "внимательно; осторожно",
+        "transcription": "/ˈkeəfəli/",
+        "exampleEn": "If you look carefully, you can see him.",
+        "exampleRu": "Если посмотреть внимательно, его можно увидеть."
+      },
+      {
+        "id": "lesson-3-assistant",
+        "en": "assistant",
+        "ru": "помощник; ассистент",
+        "transcription": "/əˈsɪstənt/",
+        "exampleEn": "His assistant takes the photo.",
+        "exampleRu": "Его помощник делает фотографию."
+      },
+      {
+        "id": "lesson-3-prepare",
+        "en": "prepare",
+        "ru": "готовить; подготавливать",
+        "transcription": "/prɪˈpeə/",
+        "exampleEn": "His photos can take ten hours to prepare.",
+        "exampleRu": "На подготовку его фотографий может уйти десять часов."
+      },
+      {
+        "id": "lesson-3-paint",
+        "en": "paint",
+        "ru": "красить; рисовать краской",
+        "transcription": "/peɪnt/",
+        "exampleEn": "His assistant helps him paint his clothes.",
+        "exampleRu": "Его помощник помогает ему раскрасить одежду."
+      },
+      {
+        "id": "lesson-3-result",
+        "en": "result",
+        "ru": "результат",
+        "transcription": "/rɪˈzʌlt/",
+        "exampleEn": "The results are amazing.",
+        "exampleRu": "Результаты потрясающие."
+      },
+      {
+        "id": "lesson-3-amazing",
+        "en": "amazing",
+        "ru": "потрясающий; удивительный",
+        "transcription": "/əˈmeɪzɪŋ/",
+        "exampleEn": "The results are amazing.",
+        "exampleRu": "Результаты потрясающие."
+      },
+      {
+        "id": "lesson-3-popular",
+        "en": "popular",
+        "ru": "популярный",
+        "transcription": "/ˈpɒpjələ/",
+        "exampleEn": "His work is popular because it’s different.",
+        "exampleRu": "Его работа популярна, потому что она отличается от других."
+      },
+      {
+        "id": "lesson-3-message",
+        "en": "message",
+        "ru": "сообщение; послание",
+        "transcription": "/ˈmesɪdʒ/",
+        "exampleEn": "His work has a serious message.",
+        "exampleRu": "В его работе есть серьёзное послание."
+      },
+      {
+        "id": "lesson-3-around",
+        "en": "around",
+        "ru": "вокруг; вокруг себя",
+        "transcription": "/əˈraʊnd/",
+        "exampleEn": "Think about the world around you.",
+        "exampleRu": "Подумай о мире вокруг тебя."
+      }
+    ]
   }
 ];

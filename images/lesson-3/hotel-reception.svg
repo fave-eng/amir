@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Hotel room call</title>
+  <desc id="desc">A clean digital illustration of a hotel guest calling reception from a room with a laptop.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" x2="1">
+      <stop offset="0" stop-color="#cbd5e1"/>
+      <stop offset="1" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" rx="36" fill="url(#bg)"/>
+  <rect x="70" y="75" width="760" height="470" rx="32" fill="#ffffff" stroke="#cbd5e1" stroke-width="8"/>
+  <rect x="110" y="345" width="680" height="92" rx="22" fill="url(#desk)"/>
+  <rect x="180" y="430" width="540" height="36" rx="18" fill="#64748b" opacity=".16"/>
+  <circle cx="315" cy="210" r="60" fill="#475569"/>
+  <path d="M244 345c6-70 36-112 88-112s82 42 88 112z" fill="#334155"/>
+  <path d="M278 206c19 19 69 25 99-6 2 52-17 79-49 79-31 0-50-26-50-73z" fill="#f1c7a6"/>
+  <path d="M235 168c21-59 101-82 151-35 28 26 30 66 7 94-5-57-67-51-91-93-14 28-43 31-67 34z" fill="#1e293b"/>
+  <path d="M390 268c34 20 51 50 41 81" fill="none" stroke="#334155" stroke-width="26" stroke-linecap="round"/>
+  <path d="M432 345c20-8 44-2 54 17" fill="none" stroke="#f1c7a6" stroke-width="20" stroke-linecap="round"/>
+  <rect x="490" y="215" width="70" height="154" rx="17" fill="#1e293b"/>
+  <rect x="508" y="235" width="34" height="72" rx="10" fill="#94a3b8" opacity=".5"/>
+  <path d="M522 370c24-83 27-158 0-224" fill="none" stroke="#475569" stroke-width="10" stroke-linecap="round"/>
+  <rect x="545" y="274" width="180" height="118" rx="18" fill="#e0f2fe" stroke="#64748b" stroke-width="8"/>
+  <path d="M510 395h260l-35 52H470z" fill="#334155"/>
+  <path d="M544 407h154" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="690" cy="170" r="28" fill="#facc15"/>
+  <path d="M690 198v147" stroke="#94a3b8" stroke-width="10" stroke-linecap="round"/>
+  <path d="M648 345h84" stroke="#94a3b8" stroke-width="12" stroke-linecap="round"/>
+  <path d="M650 170c7-48 73-48 80 0z" fill="#fde68a" stroke="#f59e0b" stroke-width="7"/>
+  <rect x="125" y="92" width="250" height="54" rx="27" fill="#eef2ff"/>
+  <text x="150" y="128" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#3730a3">Room 315</text>
+  <rect x="123" y="483" width="654" height="36" rx="18" fill="#e2e8f0"/>
+</svg>

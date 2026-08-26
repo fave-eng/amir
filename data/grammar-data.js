@@ -1103,5 +1103,408 @@ window.GRAMMAR_DATA = [
         ]
       }
     ]
+  },
+  {
+    "id": "grammar-will-offers",
+    "order": 3,
+    "title": "I’ll for offers and quick decisions",
+    "level": "A2",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-will-offers",
+    "passed": false,
+    "attempts": 0,
+    "publishedAt": "2026-08-26",
+    "linkedLessonId": "lesson-3",
+    "revealAnswersOnError": false,
+    "lockOnPass": true,
+    "explanation": "I’ll — это короткая форма от I will. В Practical English она часто нужна, когда мы быстро решаем помочь человеку или предлагаем действие прямо сейчас: I’ll send somebody up. I’ll put you through to IT. Это не заранее запланированное действие, а реакция на проблему или просьбу.",
+    "formula": "I’ll + verb · I won’t + verb · Will you...? · короткие ответы: Yes, I will. / No, I won’t.",
+    "glanceCards": [
+      {
+        "icon": "🤝",
+        "label": "Предложение помощи",
+        "hint": "реакция на проблему",
+        "pattern": "I’ll + verb",
+        "example": "I’ll send somebody up right now."
+      },
+      {
+        "icon": "⚡",
+        "label": "Быстрое решение",
+        "hint": "решение принято сейчас",
+        "pattern": "I’ll do it now",
+        "example": "I’ll call you later."
+      },
+      {
+        "icon": "🚫",
+        "label": "Отрицание",
+        "hint": "когда говорим, что не сделаем",
+        "pattern": "I won’t + verb",
+        "example": "I won’t be late."
+      },
+      {
+        "icon": "❓",
+        "label": "Вопрос",
+        "hint": "когда спрашиваем о будущем действии",
+        "pattern": "Will + subject + verb?",
+        "example": "Will you call reception?"
+      }
+    ],
+    "anchorLinks": [
+      {
+        "id": "grammar-at-a-glance",
+        "title": "Краткая схема"
+      },
+      {
+        "id": "grammar-rule-map",
+        "title": "Правила"
+      },
+      {
+        "id": "grammar-tables",
+        "title": "Таблицы"
+      },
+      {
+        "id": "grammar-examples",
+        "title": "Примеры"
+      },
+      {
+        "id": "grammar-mistakes",
+        "title": "Типичные ошибки"
+      },
+      {
+        "id": "grammar-practice-section",
+        "title": "Задания"
+      }
+    ],
+    "miniRules": [
+      {
+        "title": "1. Используй I’ll, когда решение принято сейчас",
+        "text": "Если человек сообщает о проблеме, а ты сразу предлагаешь помощь, естественно использовать I’ll + глагол.",
+        "example": "There’s no water in my mini-bar. — I’ll send two bottles to your room."
+      },
+      {
+        "title": "2. После I’ll глагол без to и без -s",
+        "text": "Не добавляй to, -s или -ing после I’ll. Нужна базовая форма глагола.",
+        "example": "I’ll send. Не: I’ll to send / I’ll sends."
+      },
+      {
+        "title": "3. Отрицание — won’t",
+        "text": "Will not почти всегда сокращается до won’t в разговорной речи.",
+        "example": "I won’t forget."
+      },
+      {
+        "title": "4. В вопросе will идёт перед подлежащим",
+        "text": "Для вопросов используй Will + subject + verb. Краткий ответ: Yes, I will. / No, I won’t.",
+        "example": "Will you ask the manager? — Yes, I will."
+      }
+    ],
+    "tables": [
+      {
+        "title": "Форма will",
+        "headers": [
+          "Тип",
+          "Форма",
+          "Пример"
+        ],
+        "rows": [
+          [
+            "Утверждение",
+            "subject + will / ’ll + verb",
+            "I’ll help you."
+          ],
+          [
+            "Отрицание",
+            "subject + won’t + verb",
+            "I won’t be late."
+          ],
+          [
+            "Вопрос",
+            "Will + subject + verb?",
+            "Will you call me?"
+          ],
+          [
+            "Краткий ответ",
+            "Yes, subject + will. / No, subject + won’t.",
+            "Yes, I will. / No, I won’t."
+          ]
+        ]
+      },
+      {
+        "title": "I’ll vs Present Continuous",
+        "headers": [
+          "I’ll",
+          "Present Continuous"
+        ],
+        "rows": [
+          [
+            "Решение принято сейчас",
+            "План уже есть"
+          ],
+          [
+            "I’ll call reception. (= решил сейчас)",
+            "I’m meeting the manager at 5. (= план)"
+          ],
+          [
+            "I’ll send somebody up right now.",
+            "I’m staying at this hotel tonight."
+          ]
+        ]
+      }
+    ],
+    "exampleGroups": [
+      {
+        "title": "Hotel problems",
+        "items": [
+          "I’ll put you through to IT.",
+          "I’ll send somebody up right now.",
+          "I’ll ask her to call you.",
+          "I’ll see if we have a quieter one."
+        ]
+      },
+      {
+        "title": "Everyday offers",
+        "items": [
+          "I’ll open the window.",
+          "I’ll help you with your bag.",
+          "I’ll call you later.",
+          "I’ll check it now."
+        ]
+      }
+    ],
+    "commonMistakes": [
+      "I’ll to call you ✗ → I’ll call you ✓. После I’ll не ставим to.",
+      "I’ll sends somebody up ✗ → I’ll send somebody up ✓. После I’ll глагол без -s.",
+      "I don’t will help ✗ → I won’t help ✓. Отрицание — won’t.",
+      "You will call me? ✗ → Will you call me? ✓. В вопросе will стоит перед подлежащим."
+    ],
+    "exercises": [
+      {
+        "type": "exercise",
+        "id": "will-offers-step-1",
+        "title": "1. Easy · Choose the correct form",
+        "difficulty": "Easy",
+        "instructions": "Выбери правильную форму.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "single",
+            "prompt": "I ___ send somebody up right now.",
+            "options": [
+              "will",
+              "am",
+              "do"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "single",
+            "prompt": "I’ll ___ you through to IT.",
+            "options": [
+              "put",
+              "to put",
+              "putting"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "single",
+            "prompt": "I ___ ask her to call you.",
+            "options": [
+              "’ll",
+              "am",
+              "do"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "single",
+            "prompt": "I won’t ___ late.",
+            "options": [
+              "be",
+              "am",
+              "being"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "will-offers-step-2",
+        "title": "2. Medium · Complete the offers",
+        "difficulty": "Medium",
+        "instructions": "Впиши I’ll + глагол.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "text",
+            "prompt": "There’s a problem with the shower. — ___ somebody up.",
+            "answer": "I'll send",
+            "acceptedAnswers": [
+              "I'll send",
+              "I will send",
+              "I’ll send"
+            ]
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "text",
+            "prompt": "I can’t get a signal. — ___ you through to IT.",
+            "answer": "I'll put",
+            "acceptedAnswers": [
+              "I'll put",
+              "I will put",
+              "I’ll put"
+            ]
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "text",
+            "prompt": "The room is very noisy. — ___ if we have a quieter one.",
+            "answer": "I'll see",
+            "acceptedAnswers": [
+              "I'll see",
+              "I will see",
+              "I’ll see"
+            ]
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "text",
+            "prompt": "I want to talk to the manager. — ___ her to call you.",
+            "answer": "I'll ask",
+            "acceptedAnswers": [
+              "I'll ask",
+              "I will ask",
+              "I’ll ask"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "will-offers-step-3",
+        "title": "3. Harder · Choose the best response",
+        "difficulty": "Harder",
+        "instructions": "Выбери естественную реакцию на проблему.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "single",
+            "prompt": "There’s no water in my mini-bar.",
+            "options": [
+              "I’ll send two bottles to your room.",
+              "I’m sending two bottles yesterday.",
+              "I send two bottles every day."
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "single",
+            "prompt": "This room is very noisy.",
+            "options": [
+              "I’ll see if we have a quieter one.",
+              "I see if we have a quieter one yesterday.",
+              "I’m see a quieter one."
+            ],
+            "answer": 0
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "single",
+            "prompt": "I want to talk to the manager.",
+            "options": [
+              "I’ll ask her to call you.",
+              "I ask her yesterday.",
+              "I’ll to ask her."
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "single",
+            "prompt": "I have a problem with the wi-fi.",
+            "options": [
+              "I’ll put you through to IT.",
+              "I putted you through to IT.",
+              "I’ll putting you through to IT."
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "will-offers-step-4",
+        "title": "4. Challenge · Build the sentence",
+        "difficulty": "Challenge",
+        "instructions": "Составь полное предложение с I’ll. Не забывай: после I’ll глагол в базовой форме.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "text",
+            "prompt": "send / somebody / up / right now",
+            "answer": "I'll send somebody up right now.",
+            "acceptedAnswers": [
+              "I'll send somebody up right now",
+              "I’ll send somebody up right now",
+              "I will send somebody up right now"
+            ]
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "text",
+            "prompt": "put / you / through / to IT",
+            "answer": "I'll put you through to IT.",
+            "acceptedAnswers": [
+              "I'll put you through to IT",
+              "I’ll put you through to IT",
+              "I will put you through to IT"
+            ]
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "text",
+            "prompt": "ask / her / to call you",
+            "answer": "I'll ask her to call you.",
+            "acceptedAnswers": [
+              "I'll ask her to call you",
+              "I’ll ask her to call you",
+              "I will ask her to call you"
+            ]
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "text",
+            "prompt": "see / if we have / a quieter one",
+            "answer": "I'll see if we have a quieter one.",
+            "acceptedAnswers": [
+              "I'll see if we have a quieter one",
+              "I’ll see if we have a quieter one",
+              "I will see if we have a quieter one"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];

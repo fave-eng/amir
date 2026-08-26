@@ -919,6 +919,15 @@
     </section>`).join('')}</div>`;
   }
 
+  function dependentSelectOptions(item) {
+    const sourceIds = Array.isArray(item.sourceItemIds) ? item.sourceItemIds : [];
+    return sourceIds.map((sourceId, sourceIndex) => `<option value="${escapeHtml(sourceId)}">${escapeHtml(item.optionPlaceholderPrefix || 'Sentence')} ${sourceIndex + 1}</option>`).join('');
+  }
+
+  function renderDependentSelectControl(item, inputId) {
+    return `<select id="${escapeHtml(inputId)}" data-dependent-select data-source-block-id="${escapeHtml(item.sourceBlockId || '')}" data-placeholder-ready="${escapeHtml(item.readyPlaceholder || '— выбери предложение —')}" data-placeholder-waiting="${escapeHtml(item.waitingPlaceholder || 'Complete the previous part first')}"><option value="">${escapeHtml(item.waitingPlaceholder || 'Complete the previous part first')}</option>${dependentSelectOptions(item)}</select>`;
+  }
+
   function renderExerciseItem(item, blockId, index) {
     const itemId = safeText(item.id, `${index + 1}`);
     const number = item.number === undefined ? index + 1 : item.number;
@@ -963,6 +972,8 @@
       control = `<div class="option-list compact-options">${(item.options || []).map((option, optionIndex) => `<label class="option"><input type="${inputType}" name="${escapeHtml(inputId)}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('')}</div>`;
     } else if (item.input === 'select') {
       control = `<select id="${escapeHtml(inputId)}"><option value="">Выбери ответ</option>${(item.options || []).map((option, optionIndex) => `<option value="${optionIndex}">${escapeHtml(option)}</option>`).join('')}</select>`;
+    } else if (item.input === 'dependent-select') {
+      control = renderDependentSelectControl(item, inputId);
     } else if (item.input === 'bank-select') {
       control = `<select id="${escapeHtml(inputId)}" data-bank-select><option value="">— выбери —</option>${(item.options || []).map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join('')}</select>`;
     } else if (item.input === 'textarea') {
@@ -1055,6 +1066,12 @@
         return `<span class="dialogue-item dialogue-example" data-exercise-item="${escapeHtml(itemId)}"><span>${escapeHtml(segments[0])}</span>${gapNumber}<span class="dialogue-example-answer">${escapeHtml(item.exampleAnswer || '')}</span><span>${escapeHtml(segments[1])}</span></span>`;
       }
       return `<span class="dialogue-item dialogue-example" data-exercise-item="${escapeHtml(itemId)}">${gapNumber}<span>${escapeHtml(item.prompt || '')}</span></span>`;
+    }
+
+    if (item.input === 'dependent-select') {
+      const prefix = segments[0] ? `<span>${escapeHtml(segments[0])}</span>` : '';
+      const suffix = segments[1] ? `<span>${escapeHtml(segments[1])}</span>` : '';
+      return `<span class="dialogue-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="dependent-select">${prefix}${gapNumber}${renderDependentSelectControl(item, inputId)}${suffix}<span class="feedback" aria-live="polite"></span></span>`;
     }
 
     if (item.input !== 'gaps') {
@@ -1238,6 +1255,9 @@
       correct = selected !== ''
         && Number(selected) === Number(item.answer)
         && normalizeAnswer(reason) === normalizeAnswer(item.reasonAnswer);
+    } else if (inputType === 'dependent-select') {
+      actual = itemNode.querySelector('select')?.value ?? '';
+      correct = actual !== '' && normalizeAnswer(actual) === normalizeAnswer(item.answer);
     } else if (inputType === 'multiple') {
       actual = [...itemNode.querySelectorAll('input:checked')].map((input) => Number(input.value)).sort((a, b) => a - b);
       const expected = [...(item.answer || [])].map(Number).sort((a, b) => a - b);
@@ -1373,7 +1393,7 @@
       } else if (inputType === 'single') {
         const input = itemNode.querySelector(`input[value="${CSS.escape(safeText(value))}"]`);
         if (input) input.checked = true;
-      } else if (inputType === 'select' || inputType === 'bank-select') {
+      } else if (inputType === 'select' || inputType === 'bank-select' || inputType === 'dependent-select') {
         const select = itemNode.querySelector('select');
         if (select) select.value = safeText(value);
       } else if (inputType === 'gaps') {
@@ -1444,6 +1464,73 @@
     return answers;
   }
 
+  function readExerciseItemValues(item, itemNode) {
+    const inputType = item.input || 'text';
+    if (!itemNode) return [];
+    if (inputType === 'gaps') return [...itemNode.querySelectorAll('[data-gap-index]')].map((input) => input.value || '');
+    if (inputType === 'single') return [itemNode.querySelector('input:checked')?.parentElement?.textContent?.trim() || ''];
+    if (inputType === 'select' || inputType === 'bank-select' || inputType === 'dependent-select') return [itemNode.querySelector('select')?.selectedOptions?.[0]?.textContent?.trim() || ''];
+    return [itemNode.querySelector('input, textarea')?.value || ''];
+  }
+
+  function buildDependencyText(item, itemNode) {
+    if (item.example && item.dependentText) return safeText(item.dependentText);
+    const values = readExerciseItemValues(item, itemNode);
+    if (!values.length || values.some((value) => normalizeAnswer(value) === '')) return '';
+    const template = safeText(item.dependencyTemplate || '');
+    if (!template) return values.join(' ');
+    return template.replace(/\{(\d+)\}/g, (match, rawIndex) => safeText(values[Number(rawIndex)]));
+  }
+
+  function updateLessonDependentSelects(root, blocks) {
+    const blockMap = new Map((Array.isArray(blocks) ? blocks : []).map((block, index) => [safeText(block.id, `task-${index}`), { block, index }]));
+    (Array.isArray(blocks) ? blocks : []).forEach((block, blockIndex) => {
+      if (block.type !== 'exercise') return;
+      const taskId = safeText(block.id, `task-${blockIndex}`);
+      const node = root.querySelector(`[data-task="${CSS.escape(taskId)}"]`);
+      if (!node) return;
+      (Array.isArray(block.items) ? block.items : []).forEach((item, itemIndex) => {
+        if (item.input !== 'dependent-select') return;
+        const itemId = safeText(item.id, `${itemIndex + 1}`);
+        const itemNode = node.querySelector(`[data-exercise-item="${CSS.escape(itemId)}"]`);
+        const select = itemNode?.querySelector('select[data-dependent-select]');
+        if (!select) return;
+        const sourceEntry = blockMap.get(safeText(item.sourceBlockId));
+        const sourceBlock = sourceEntry?.block;
+        const sourceNode = sourceEntry ? root.querySelector(`[data-task="${CSS.escape(safeText(sourceBlock.id, `task-${sourceEntry.index}`))}"]`) : null;
+        const sourceItems = Array.isArray(sourceBlock?.items) ? sourceBlock.items : [];
+        const sourceIds = Array.isArray(item.sourceItemIds) ? item.sourceItemIds : [];
+        const labels = new Map();
+        let ready = Boolean(sourceBlock && sourceNode && sourceIds.length);
+        sourceIds.forEach((sourceId) => {
+          const sourceIndex = sourceItems.findIndex((candidate) => safeText(candidate.id) === safeText(sourceId));
+          const sourceItem = sourceItems[sourceIndex];
+          const sourceItemId = safeText(sourceItem?.id, `${sourceIndex + 1}`);
+          const sourceItemNode = sourceNode?.querySelector(`[data-exercise-item="${CSS.escape(sourceItemId)}"]`);
+          const label = sourceItem ? buildDependencyText(sourceItem, sourceItemNode) : '';
+          if (!label) ready = false;
+          labels.set(safeText(sourceId), label);
+        });
+        [...select.options].forEach((option) => {
+          if (!option.value) {
+            option.textContent = ready ? (select.dataset.placeholderReady || '— выбери предложение —') : (select.dataset.placeholderWaiting || 'Complete the previous part first');
+            return;
+          }
+          const label = labels.get(option.value);
+          if (label) option.textContent = label;
+        });
+        select.disabled = !ready;
+      });
+    });
+  }
+
+  function initLessonDependencies(root, blocks) {
+    const refresh = () => updateLessonDependentSelects(root, blocks);
+    refresh();
+    root.addEventListener('input', refresh);
+    root.addEventListener('change', refresh);
+  }
+
   async function renderLesson() {
     const id = queryParam('id');
     const lessonRecord = HOMEWORK_DATA.find((item) => item.id === id && item.status !== 'draft');
@@ -1495,6 +1582,7 @@
       <div class="card section lesson-actions"><div id="lesson-result" aria-live="polite"></div><div class="button-row"><button class="btn btn-primary" id="check-lesson" type="button">Проверить ответы</button><button class="btn btn-secondary" id="submit-lesson" type="button" ${Number(savedResult?.total || 0) > 0 ? '' : 'disabled'}>Отправить преподавателю</button></div><p class="muted save-note">Черновик сохраняется автоматически. После проверки станет доступна отправка преподавателю.</p></div>`;
 
     restoreLessonAnswers(root, blocks, savedResult?.answers);
+    initLessonDependencies(root, blocks);
 
     let draftSaveTimer = 0;
     const saveDraft = () => {

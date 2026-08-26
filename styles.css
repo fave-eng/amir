@@ -2407,3 +2407,33 @@ label.odd-option {
     height: 170px;
   }
 }
+
+/* Dependent sentence selects: used when part b must reuse the student's answers from part a. */
+select[data-dependent-select] {
+  font-weight: 750;
+}
+
+select[data-dependent-select]:disabled {
+  background: #f1f5f9;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.dialogue-item select[data-dependent-select] {
+  display: inline-block;
+  width: min(100%, 520px);
+  min-height: 40px;
+  margin: 0 4px;
+  padding: 6px 10px;
+  vertical-align: middle;
+}
+
+.dialogue-item.is-correct select[data-dependent-select] {
+  border-color: #16a34a;
+  background: #f0fdf4;
+}
+
+.dialogue-item.is-wrong select[data-dependent-select] {
+  border-color: #e11d48;
+  background: #fff1f2;
+}

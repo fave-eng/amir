@@ -1,0 +1,1044 @@
+{
+  "id": "lesson-3",
+  "number": 3,
+  "title": "Practical English · Hotel problems & Can you remember…? 1",
+  "subtitle": "English File Pre-Intermediate · Workbook · Practical English, review grammar, vocabulary and pronunciation",
+  "status": "available",
+  "page": "lesson.html?id=lesson-3",
+  "vocabularyId": "vocab-lesson-practical-1",
+  "grammarIds": [
+    "grammar-will-offers",
+    "grammar-present-simple",
+    "grammar-present-continuous"
+  ],
+  "publishedAt": "2026-08-26",
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "totalPoints": 49,
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "Practical English · Episode 1",
+      "title": "Practical English · Hotel problems",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "calling-reception-1a",
+      "title": "1a. Complete the sentences with a word from the list.",
+      "image": "images/lesson-3/hotel-reception.svg",
+      "imageAlt": "A hotel guest calling reception from a room with a laptop.",
+      "wordBank": [
+        "bother",
+        "have",
+        "’s",
+        "put",
+        "send",
+        "this"
+      ],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "I have a problem with the wi-fi.",
+          "example": true,
+          "exampleTextOnly": true,
+          "dependentText": "I have a problem with the wi-fi."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "I’ll _____ you through to IT.",
+          "segments": [
+            "I’ll ",
+            " you through to IT."
+          ],
+          "answers": [
+            [
+              "put"
+            ]
+          ],
+          "placeholders": [
+            "put"
+          ],
+          "dependencyTemplate": "I’ll {0} you through to IT."
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "I’ll _____ somebody up right now.",
+          "segments": [
+            "I’ll ",
+            " somebody up right now."
+          ],
+          "answers": [
+            [
+              "send"
+            ]
+          ],
+          "placeholders": [
+            "send"
+          ],
+          "dependencyTemplate": "I’ll {0} somebody up right now."
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "I’m sorry to _____ you.",
+          "segments": [
+            "I’m sorry to ",
+            " you."
+          ],
+          "answers": [
+            [
+              "bother"
+            ]
+          ],
+          "placeholders": [
+            "bother"
+          ],
+          "dependencyTemplate": "I’m sorry to {0} you."
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "Hello. _____ is room 315.",
+          "segments": [
+            "Hello. ",
+            " is room 315."
+          ],
+          "answers": [
+            [
+              "this"
+            ]
+          ],
+          "placeholders": [
+            "This"
+          ],
+          "dependencyTemplate": "Hello. {0} is room 315."
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "There _____ a problem with the shower.",
+          "segments": [
+            "There",
+            " a problem with the shower."
+          ],
+          "answers": [
+            [
+              "'s",
+              "’s"
+            ]
+          ],
+          "placeholders": [
+            "’s"
+          ],
+          "dependencyTemplate": "There{0} a problem with the shower."
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "calling-reception-1b",
+      "layout": "dialogue",
+      "title": "1b. Complete the conversations with sentences 1–6 from a.",
+      "items": [
+        {
+          "id": "2",
+          "number": 2,
+          "input": "dependent-select",
+          "sourceBlockId": "calling-reception-1a",
+          "sourceItemIds": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "answer": "6",
+          "readyPlaceholder": "— choose a sentence —",
+          "waitingPlaceholder": "Complete 1a first"
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "dependent-select",
+          "sourceBlockId": "calling-reception-1a",
+          "sourceItemIds": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "answer": "3",
+          "readyPlaceholder": "— choose a sentence —",
+          "waitingPlaceholder": "Complete 1a first"
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "dependent-select",
+          "sourceBlockId": "calling-reception-1a",
+          "sourceItemIds": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "answer": "4",
+          "segments": [
+            "Hello, this is room 315 again. ",
+            ", but there’s one more thing."
+          ],
+          "readyPlaceholder": "— choose a sentence —",
+          "waitingPlaceholder": "Complete 1a first"
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "dependent-select",
+          "sourceBlockId": "calling-reception-1a",
+          "sourceItemIds": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "answer": "1",
+          "readyPlaceholder": "— choose a sentence —",
+          "waitingPlaceholder": "Complete 1a first"
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "dependent-select",
+          "sourceBlockId": "calling-reception-1a",
+          "sourceItemIds": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "answer": "2",
+          "readyPlaceholder": "— choose a sentence —",
+          "waitingPlaceholder": "Complete 1a first"
+        }
+      ],
+      "dialogueLines": [
+        {
+          "speaker": "1",
+          "text": ""
+        },
+        {
+          "speaker": "A",
+          "text": "Hello, reception."
+        },
+        {
+          "speaker": "B",
+          "text": "Hello. This is room 315."
+        },
+        {
+          "speaker": "A",
+          "text": "How can I help you?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "2"
+          ]
+        },
+        {
+          "speaker": "",
+          "text": "There isn’t any hot water."
+        },
+        {
+          "speaker": "A",
+          "text": "I’m sorry, madam.",
+          "itemIds": [
+            "3"
+          ]
+        },
+        {
+          "speaker": "B",
+          "text": "Thank you."
+        },
+        {
+          "speaker": "2",
+          "text": ""
+        },
+        {
+          "speaker": "A",
+          "text": "Hello, reception."
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "4"
+          ]
+        },
+        {
+          "speaker": "A",
+          "text": "How can I help you?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "5"
+          ]
+        },
+        {
+          "speaker": "",
+          "text": "I can’t get a signal."
+        },
+        {
+          "speaker": "A",
+          "text": "I’m sorry, madam.",
+          "itemIds": [
+            "6"
+          ]
+        },
+        {
+          "speaker": "B",
+          "text": "Thanks."
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "ill-2",
+      "title": "2. I’LL · Match problems 1–4 to offers a–d.",
+      "wordBank": [
+        "a I’ll see if we have a quieter one.",
+        "b I’ll send two bottles to your room right now.",
+        "c I’ll put you through to IT.",
+        "d I’ll ask her to call you."
+      ],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "I have a problem with the wi-fi.",
+          "example": true,
+          "exampleAnswer": "c"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select",
+          "prompt": "This room is very noisy.",
+          "options": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select",
+          "prompt": "I want to talk to the manager.",
+          "options": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select",
+          "prompt": "There’s no water in my mini-bar.",
+          "options": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "social-english-3a",
+      "title": "3a. Circle the correct words.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "What’s your room like? Do you have a good view / look?",
+          "example": true,
+          "exampleAnswer": "view"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "It’s great to be / be here.",
+          "options": [
+            "be",
+            "to be"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "You can / must be really tired.",
+          "options": [
+            "can",
+            "must"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "I want / guess you’re right.",
+          "options": [
+            "want",
+            "guess"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "It’s great to see you, you, too / two.",
+          "options": [
+            "you, too",
+            "two"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "By the way / On the way, Martha wants to see you while you’re here.",
+          "options": [
+            "By the way",
+            "On the way"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "social-english-3b",
+      "title": "3b. Complete the conversation with the missing words.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "A Welcome to New York. B Thanks. It’s great to be here.",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "A Do you have a good view? B Yes. I can see the Empire State Building from my window.",
+          "segments": [
+            "A Do you have a ",
+            " ",
+            "? B Yes. I can see the Empire State Building from my window."
+          ],
+          "answers": [
+            [
+              "good"
+            ],
+            [
+              "view"
+            ]
+          ],
+          "placeholders": [
+            "g_____",
+            "v_______"
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "A It’s time to go. You must be really tired. B I guess you’re right.",
+          "segments": [
+            "A It’s time to go. You ",
+            " really tired. B I ",
+            " you’re right."
+          ],
+          "answers": [
+            [
+              "must be"
+            ],
+            [
+              "guess"
+            ]
+          ],
+          "placeholders": [
+            "m_____ b_____",
+            "g_______"
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "A By the way, it’s great to see you again. B Yes. It’s great to see you, too.",
+          "segments": [
+            "A ",
+            ", it’s great to see you again. B Yes. It’s great to see you, ",
+            "."
+          ],
+          "answers": [
+            [
+              "By the way"
+            ],
+            [
+              "too"
+            ]
+          ],
+          "placeholders": [
+            "B__ t__ w__",
+            "t___"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "Can you remember…? 1",
+      "title": "Can you remember…? 1",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "remember-grammar-1",
+      "title": "1. GRAMMAR · Circle the correct form.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "It’s great to see you! But what you are doing / are you doing here in London?",
+          "options": [
+            "you are doing",
+            "are you doing"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "Dan really likes that restaurant, but I think not / don’t think the food’s very good.",
+          "options": [
+            "think not",
+            "don’t think"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "Excuse me, can I / I can sit here?",
+          "options": [
+            "can I",
+            "I can"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "Don’t worry about Anna. She’s always / She always is late.",
+          "options": [
+            "She’s always",
+            "She always is"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "My dad’s a teacher. What does / do your parents do?",
+          "options": [
+            "does",
+            "do"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "Ask Jamie to help you. He works / work in IT, so he’s really good with computers.",
+          "options": [
+            "works",
+            "work"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "remember-vocabulary-2",
+      "title": "2. VOCABULARY · Circle the word that is different.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "long · curly · straight · slim",
+          "options": [
+            "long",
+            "curly",
+            "straight",
+            "slim"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "hair · height · beard · moustache",
+          "options": [
+            "hair",
+            "height",
+            "beard",
+            "moustache"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "stupid · lazy · unkind · generous",
+          "options": [
+            "stupid",
+            "lazy",
+            "unkind",
+            "generous"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "kind · behind · above · between",
+          "options": [
+            "kind",
+            "behind",
+            "above",
+            "between"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "boots · trainers · jeans · sandals",
+          "options": [
+            "boots",
+            "trainers",
+            "jeans",
+            "sandals"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "bracelet · earrings · tights · necklace",
+          "options": [
+            "bracelet",
+            "earrings",
+            "tights",
+            "necklace"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "remember-pronunciation-3",
+      "title": "3. PRONUNCIATION · Circle the word or letter with a different sound.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "computer · shirt · trousers · sweater · cardigan",
+          "options": [
+            "shirt",
+            "trousers",
+            "sweater",
+            "cardigan"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "bird · university · work · curly · painter",
+          "options": [
+            "university",
+            "work",
+            "curly",
+            "painter"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "tree · A · B · C · D",
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "zebra · meals · clothes · balls · dates",
+          "options": [
+            "meals",
+            "clothes",
+            "balls",
+            "dates"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "/ɪz/ · likes · washes · uses · watches",
+          "options": [
+            "likes",
+            "washes",
+            "uses",
+            "watches"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "snake · concerts · hats · glasses · coats",
+          "options": [
+            "concerts",
+            "hats",
+            "glasses",
+            "coats"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "remember-grammar-vocab-4",
+      "layout": "cloze",
+      "title": "4. GRAMMAR & VOCABULARY · Read the article. Circle a, b or c.",
+      "image": "images/lesson-3/invisible-man.svg",
+      "imageAlt": "A clean digital illustration of a camouflaged person standing in front of logs.",
+      "wordBanks": [
+        {
+          "label": "1",
+          "words": [
+            "a under",
+            "b in",
+            "c on"
+          ]
+        },
+        {
+          "label": "2",
+          "words": [
+            "a was born",
+            "b was from",
+            "c is born"
+          ]
+        },
+        {
+          "label": "3",
+          "words": [
+            "a live",
+            "b living",
+            "c lives"
+          ]
+        },
+        {
+          "label": "4",
+          "words": [
+            "a hardly ever",
+            "b often",
+            "c never"
+          ]
+        },
+        {
+          "label": "5",
+          "words": [
+            "a standing",
+            "b stands",
+            "c is standing"
+          ]
+        },
+        {
+          "label": "6",
+          "words": [
+            "a middle",
+            "b left",
+            "c front"
+          ]
+        },
+        {
+          "label": "7",
+          "words": [
+            "a shorts",
+            "b trousers",
+            "c sweater"
+          ]
+        },
+        {
+          "label": "8",
+          "words": [
+            "a is helping",
+            "b helps",
+            "c helping"
+          ]
+        },
+        {
+          "label": "9",
+          "words": [
+            "a walking",
+            "b walk",
+            "c walks"
+          ]
+        },
+        {
+          "label": "10",
+          "words": [
+            "a serious",
+            "b generous",
+            "c funny"
+          ]
+        }
+      ],
+      "introTitle": "THE INVISIBLE MAN",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "select",
+          "options": [
+            "under",
+            "in",
+            "on"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select",
+          "options": [
+            "was born",
+            "was from",
+            "is born"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select",
+          "options": [
+            "live",
+            "living",
+            "lives"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select",
+          "options": [
+            "hardly ever",
+            "often",
+            "never"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select",
+          "options": [
+            "standing",
+            "stands",
+            "is standing"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select",
+          "options": [
+            "middle",
+            "left",
+            "front"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select",
+          "options": [
+            "shorts",
+            "trousers",
+            "sweater"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select",
+          "options": [
+            "is helping",
+            "helps",
+            "helping"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "select",
+          "options": [
+            "walking",
+            "walk",
+            "walks"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "select",
+          "options": [
+            "serious",
+            "generous",
+            "funny"
+          ],
+          "answer": 0
+        }
+      ],
+      "clozeParagraphs": [
+        [
+          "Liu Bolin is an artist from China who is now famous ",
+          {
+            "itemId": "1"
+          },
+          " countries all over the world. He’s called the ‘Invisible Man’ because in his pictures it’s very hard to see him."
+        ],
+        [
+          "Liu ",
+          {
+            "itemId": "2"
+          },
+          " in Shandong, China, in 1973. He studied at the Shandong College of Art, and then he went to the Central Academy of Fine Arts in Beijing."
+        ],
+        [
+          "He ",
+          {
+            "itemId": "3"
+          },
+          " and works in Beijing, but he ",
+          {
+            "itemId": "4"
+          },
+          " travels to other countries and he’s shown his work in Asia, Europe and America. In this photo, Liu ",
+          {
+            "itemId": "5"
+          },
+          " in front of some logs. He’s in the ",
+          {
+            "itemId": "6"
+          },
+          " of the photo, and if you look carefully, you can see his ",
+          {
+            "itemId": "7"
+          },
+          " and jacket."
+        ],
+        [
+          "Liu’s photos can take ten hours to prepare. He chooses a place to stand, and then his assistant ",
+          {
+            "itemId": "8"
+          },
+          " him paint his clothes and his face. When everything is ready, his assistant takes the photo. The results are amazing – sometimes people who are ",
+          {
+            "itemId": "9"
+          },
+          " past him in the street don’t know that he’s there."
+        ],
+        [
+          "Liu’s work is popular because it’s different and fun, but his work also has a ",
+          {
+            "itemId": "10"
+          },
+          " message: he wants people to think about the world around them."
+        ]
+      ]
+    }
+  ]
+}
