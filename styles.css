@@ -2725,3 +2725,36 @@ label.odd-option {
     padding-left: 0;
   }
 }
+
+
+.example-choice-prompt { display: grid; gap: 10px; }
+.example-choice-prompt p { margin: 0; }
+.example-choice-list { display: grid; gap: 8px; align-items: start; }
+.example-choice { display: inline-flex; align-items: center; gap: 8px; width: fit-content; padding: 7px 12px; border: 1px solid var(--border); border-radius: 999px; background: rgba(255,255,255,.85); color: var(--muted); font-weight: 700; }
+.example-choice.selected { border-color: rgba(99, 102, 241, .8); background: rgba(99, 102, 241, .12); color: var(--ink); box-shadow: inset 0 0 0 1px rgba(99, 102, 241, .22); }
+.example-choice.selected::after { content: "выбран в примере"; font-size: .78rem; color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: .04em; }
+@media (max-width: 640px) { .example-choice-list { gap: 6px; } .example-choice { border-radius: 16px; } .example-choice.selected::after { display: block; margin-left: 2px; } }
+
+/* Contextual examples: show what was done in the sample, without extra teacher notes. */
+.example-notice { margin-bottom: 8px; }
+.exercise-example .exercise-prompt { width: 100%; }
+.example-completed-text { line-height: 1.65; }
+.example-filled-answer {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 2px 8px;
+  border-radius: 9px;
+  border-bottom: 2px solid #6366f1;
+  background: #eef2ff;
+  color: #312e81;
+  font-weight: 900;
+}
+.example-gap-line {
+  align-items: center;
+  gap: 6px;
+  line-height: 1.7;
+}
+.example-choice-list { gap: 6px; }
+.example-choice.selected::after { content: "выбрано в примере"; }
+.exercise-example .example-answer span { text-transform: none; letter-spacing: 0; }

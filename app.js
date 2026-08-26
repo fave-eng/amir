@@ -942,11 +942,85 @@
     return `<select id="${escapeHtml(inputId)}" data-dependent-select data-source-block-id="${escapeHtml(item.sourceBlockId || '')}" data-placeholder-ready="${escapeHtml(item.readyPlaceholder || '— выбери предложение —')}" data-placeholder-waiting="${escapeHtml(item.waitingPlaceholder || 'Complete the previous part first')}"><option value="">${escapeHtml(item.waitingPlaceholder || 'Complete the previous part first')}</option>${dependentSelectOptions(item)}</select>`;
   }
 
-  function renderExampleNotice(extraText = '') {
-    return `<div class="example-notice"><span class="example-badge">Пример</span><span class="example-note">${escapeHtml(extraText || 'Уже сделано в учебнике — ученику не нужно заполнять этот пункт.')}</span></div>`;
+  function renderExampleNotice() {
+    return `<div class="example-notice"><span class="example-badge">Пример</span></div>`;
   }
 
-  function renderExerciseItem(item, blockId, index) {
+  function escapeRegExp(value) {
+    return safeText(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function highlightExampleAnswer(text, answers = []) {
+    let html = escapeHtml(text);
+    const prepared = unique(answers)
+      .map((answer) => safeText(answer).trim())
+      .filter(Boolean)
+      .sort((a, b) => b.length - a.length);
+    prepared.forEach((answer) => {
+      const escapedAnswer = escapeHtml(answer);
+      if (!escapedAnswer) return;
+      const pattern = new RegExp(`(^|[^A-Za-zА-Яа-я0-9])(${escapeRegExp(escapedAnswer)})(?=$|[^A-Za-zА-Яа-я0-9])`, 'iu');
+      html = html.replace(pattern, `$1<span class="example-filled-answer">$2</span>`);
+    });
+    return html;
+  }
+
+  function findExampleAnswers(item, block) {
+    const answers = [];
+    if (item.exampleAnswer) answers.push(item.exampleAnswer);
+    if (item.answer !== undefined && typeof item.answer !== 'object') answers.push(item.answer);
+    if (Array.isArray(item.answers)) {
+      item.answers.forEach((entry) => {
+        if (Array.isArray(entry)) answers.push(entry[0]);
+        else if (entry !== undefined && entry !== null) answers.push(entry);
+      });
+    }
+    const wordBank = Array.isArray(block?.wordBank) ? block.wordBank : [];
+    if (!answers.length && wordBank.length) {
+      const textKey = ` ${normalizeWordKey(item.prompt || '')} `;
+      wordBank.forEach((word) => {
+        const clean = safeText(word).replace(/\s*\(x\d+\)\s*/i, '').trim();
+        if (!clean) return;
+        const cleanKey = normalizeWordKey(clean);
+        if (cleanKey && textKey.includes(` ${cleanKey} `)) answers.push(clean);
+      });
+    }
+    return answers;
+  }
+
+  function renderExampleGapLine(item) {
+    const segments = Array.isArray(item.segments) ? item.segments : [];
+    const answers = Array.isArray(item.answers) ? item.answers : [];
+    if (!segments.length || !answers.length) return '';
+    const parts = answers.map((answer, gapIndex) => {
+      const answerText = Array.isArray(answer) ? answer[0] : answer;
+      return `${gapIndex < segments.length ? `<span>${inlineHtml(segments[gapIndex])}</span>` : ''}<span class="example-filled-answer">${escapeHtml(answerText || '')}</span>`;
+    }).join('');
+    const tail = segments.length > answers.length ? `<span>${inlineHtml(segments[segments.length - 1])}</span>` : '';
+    return `<div class="sentence-gaps example-gap-line">${parts}${tail}</div>`;
+  }
+
+  function renderExamplePrompt(rawPrompt, fallbackPromptHtml, item = {}, block = {}) {
+    const text = safeText(rawPrompt).trim();
+    if (!text) return fallbackPromptHtml;
+
+    const choiceMatch = text.match(/^(.*?)(?:,|;)?\s*a\s+(.+?)\.\s*b\s+(.+?)\.?$/i);
+    if (choiceMatch) {
+      const selected = safeText(item.answer || item.exampleAnswer || 'a').trim().toLowerCase();
+      return `<div class="example-choice-prompt">
+        <p>${escapeHtml(choiceMatch[1]).trim()}${choiceMatch[1].trim().endsWith(',') ? '' : ','}</p>
+        <div class="example-choice-list" aria-label="Пример выбора">
+          <span class="example-choice${selected === 'a' || selected === '0' ? ' selected' : ''}"><b>a</b> ${escapeHtml(choiceMatch[2]).trim()}.</span>
+          <span class="example-choice${selected === 'b' || selected === '1' ? ' selected' : ''}"><b>b</b> ${escapeHtml(choiceMatch[3]).trim()}.</span>
+        </div>
+      </div>`;
+    }
+
+    const answers = findExampleAnswers(item, block);
+    return `<span class="example-completed-text">${highlightExampleAnswer(text, answers)}</span>`;
+  }
+
+  function renderExerciseItem(item, blockId, index, block = {}) {
     const itemId = safeText(item.id, `${index + 1}`);
     const number = item.number === undefined ? index + 1 : item.number;
     const rawPrompt = safeText(item.prompt || '');
@@ -975,11 +1049,17 @@
     }
 
     if (item.example) {
+      const examplePrompt = item.input === 'gaps'
+        ? renderExampleGapLine(item) || renderExamplePrompt(rawPrompt, prompt, item, block)
+        : (item.exampleTextOnly ? renderExamplePrompt(rawPrompt, prompt, item, block) : prompt);
+      const answerBox = !item.exampleTextOnly && item.input !== 'gaps' && item.exampleAnswer
+        ? `<div class="example-answer"><span>Ответ в примере</span><strong>${escapeHtml(item.exampleAnswer || '')}</strong></div>`
+        : '';
       return `<div class="exercise-item exercise-example${mediaClass}" data-exercise-item="${escapeHtml(itemId)}">
         ${itemMedia}
         ${renderExampleNotice()}
-        <div class="exercise-item-header">${numberMarkup}<div class="exercise-prompt">${prompt}</div></div>
-        ${item.exampleTextOnly ? '' : `<div class="example-answer"><span>Ответ в примере</span><strong>${escapeHtml(item.exampleAnswer || '')}</strong></div>`}
+        <div class="exercise-item-header">${numberMarkup}<div class="exercise-prompt">${examplePrompt}</div></div>
+        ${answerBox}
       </div>`;
     }
 
@@ -1056,7 +1136,7 @@
     const paragraphs = Array.isArray(block.clozeParagraphs) ? block.clozeParagraphs : [];
 
     if (!paragraphs.length) {
-      return `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, blockId, itemIndex)).join('')}</div>`;
+      return `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, blockId, itemIndex, block)).join('')}</div>`;
     }
 
     const title = block.introTitle ? `<h4 class="cloze-title">${escapeHtml(block.introTitle)}</h4>` : '';
@@ -1117,7 +1197,7 @@
     const lines = Array.isArray(block.dialogueLines) ? block.dialogueLines : [];
 
     if (!lines.length) {
-      return `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, blockId, itemIndex)).join('')}</div>`;
+      return `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, blockId, itemIndex, block)).join('')}</div>`;
     }
 
     return `<div class="dialogue-exercise" role="group" aria-label="Conversation exercise">${lines.map((line) => {
@@ -1134,7 +1214,7 @@
   function renderWordChartExercise(block, blockId) {
     const items = Array.isArray(block.items) ? block.items : [];
     const columns = Array.isArray(block.chartColumns) ? block.chartColumns : [];
-    if (!columns.length) return `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, blockId, itemIndex)).join('')}</div>`;
+    if (!columns.length) return `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, blockId, itemIndex, block)).join('')}</div>`;
 
     return `<div class="pronunciation-word-chart">${columns.map((column) => {
       const columnItems = items.filter((item) => safeText(item.group) === safeText(column.id));
@@ -1245,7 +1325,7 @@
           ? renderClozeExercise(block, id)
           : block.layout === 'word-chart'
             ? renderWordChartExercise(block, id)
-            : `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex)).join('')}</div>`;
+            : `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex, block)).join('')}</div>`;
       const layoutClass = block.layout === 'dialogue'
         ? ' dialogue-card'
         : block.layout === 'cloze'
@@ -2018,7 +2098,7 @@
         ${block.instructions ? `<p class="muted exercise-instructions">${escapeHtml(block.instructions)}</p>` : ''}
         ${wordBank}
       </div>
-      <div class="exercise-items">${(Array.isArray(block.items) ? block.items : []).map((item, itemIndex) => renderExerciseItem(item, id, itemIndex)).join('')}</div>
+      <div class="exercise-items">${(Array.isArray(block.items) ? block.items : []).map((item, itemIndex) => renderExerciseItem(item, id, itemIndex, block)).join('')}</div>
     </article>`;
   }
 
