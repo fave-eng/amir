@@ -4,7 +4,7 @@
   const config = window.APP_CONFIG || {};
   const student = config.student || {};
   const studentId = String(student.id || 'amir').trim().toLowerCase();
-  const TEST_LESSON_ID = 'telegram-report-test';
+  const TEST_LESSON_ID_PREFIX = 'telegram-report-test';
   const DB_PROBE_LESSON_ID = '__diagnostic_probe__';
 
   const checksEl = document.getElementById('checks');
@@ -53,7 +53,7 @@
     telegramInfoEl.innerHTML = '';
     addKV(telegramInfoEl, 'Endpoint', functionUrl() || '—', true);
     addKV(telegramInfoEl, 'Проверка без отправки', 'через служебный ping');
-    addKV(telegramInfoEl, 'Отправка сообщения', `через ${TEST_LESSON_ID}`, true);
+    addKV(telegramInfoEl, 'Отправка сообщения', `через ${TEST_LESSON_ID_PREFIX}-...`, true);
   }
 
   function resetChecks() {
@@ -141,7 +141,7 @@
 
   async function checkFunctionPing() {
     try {
-      const result = await invokeFunction({ eventType: '__diagnostics_ping__', studentId });
+      const result = await invokeFunction({ action: 'homework_report', studentId, lessonId: '', submissionId: '' });
       lastReport.functionProbe = result;
       const version = result.data?.functionVersion || 'версия не указана';
 
@@ -149,7 +149,7 @@
         addCheck(`8. Supabase Edge Function ${notifyFunctionName()}`, 'ok', `Функция отвечает (${version}). Ping отклонён из-за secret — это нормально, сообщение не отправлялось.`);
         return true;
       }
-      if (result.status === 400 && /Missing|invalid notification identity/i.test(String(result.data?.error || ''))) {
+      if (result.status === 400 && /Некорректные параметры отчёта|Missing|invalid notification identity/i.test(String(result.data?.error || ''))) {
         addCheck(`8. Supabase Edge Function ${notifyFunctionName()}`, 'ok', `Функция отвечает (${version}). Ping не отправлял Telegram-сообщение.`);
         return true;
       }
@@ -236,7 +236,7 @@
       addKV(telegramInfoEl, 'Endpoint', functionUrl(), true);
       addKV(telegramInfoEl, 'Function version', lastReport.functionProbe?.data?.functionVersion || '—', true);
       addKV(telegramInfoEl, 'Получатель Telegram', 'проверяется тестовой отправкой');
-      addKV(telegramInfoEl, 'Тестовая работа', TEST_LESSON_ID, true);
+      addKV(telegramInfoEl, 'Тестовая работа', `${TEST_LESSON_ID_PREFIX}-...`, true);
 
       const bad = lastReport.checks.filter((item) => item.status === 'bad');
       const warn = lastReport.checks.filter((item) => item.status === 'warn');
@@ -352,12 +352,13 @@
     const client = getClient();
     const table = config.supabase?.tables?.homework || 'homework_progress';
     const submittedAt = new Date().toISOString();
+    const testLessonId = `${TEST_LESSON_ID_PREFIX}-${Date.now()}`;
 
     try {
       const testRow = {
         student_id: studentId,
         student_name: String(student.nameEn || student.nameRu || studentId),
-        lesson_id: TEST_LESSON_ID,
+        lesson_id: testLessonId,
         lesson_title: 'ТЕСТ: проверка Telegram-отчёта',
         status: 'submitted_pending_report',
         answers: { test: true, note: 'Служебная проверка отправки Telegram-отчёта', submittedAt },
@@ -372,14 +373,21 @@
         report_error: null
       };
 
-      const { error: upsertError } = await client.from(table).upsert(testRow, { onConflict: 'student_id,lesson_id' });
-      if (upsertError) throw new Error(`test_row_upsert: ${formatError(upsertError)}`);
+      const { data: insertedRow, error: insertError } = await client
+        .from(table)
+        .insert(testRow)
+        .select('lesson_id,submission_id,status,report_status,report_sent_at,report_error')
+        .single();
+      if (insertError) throw new Error(`test_row_insert: ${formatError(insertError)}`);
+      if (!insertedRow?.submission_id) throw new Error('test_row_insert: submission_id не вернулся из Supabase.');
 
       const result = await invokeFunction({
-        eventType: 'homework_report',
+        action: 'homework_report',
         studentId,
-        lessonId: TEST_LESSON_ID,
-        lessonUrl: new URL('homework.html', window.location.href).href
+        lessonId: testLessonId,
+        submissionId: insertedRow.submission_id,
+        homeworkTitle: 'ТЕСТ: проверка Telegram-отчёта',
+        homeworkSubtitle: 'Диагностика Амира'
       });
 
       if (!result.ok || !result.data?.ok) {
@@ -390,9 +398,9 @@
 
       const { data: finalRow, error: finalReadError } = await client
         .from(table)
-        .select('status,report_status,report_sent_at,report_error')
+        .select('lesson_id,status,report_status,report_sent_at,report_error')
         .eq('student_id', studentId)
-        .eq('lesson_id', TEST_LESSON_ID)
+        .eq('lesson_id', testLessonId)
         .single();
       if (finalReadError) throw new Error(`final_row_read: ${formatError(finalReadError)}`);
 
@@ -400,16 +408,16 @@
         throw new Error(`После отправки ожидалось submitted / sent. Получено: ${finalRow?.status || '—'} / ${finalRow?.report_status || '—'}.`);
       }
 
-      const threadPart = result.data.threadId !== undefined ? `; thread_id=${esc(result.data.threadId ?? 'NULL')}` : '';
+      const sentAtPart = result.data.reportSentAt ? `; sent_at=${esc(result.data.reportSentAt)}` : '';
       sendResultEl.innerHTML = result.data.skipped
-        ? `<div class="summary warn">Функция ответила успешно, но отчёт уже был зарегистрирован как отправленный. message_id=${esc(result.data.telegramMessageId || '—')}${threadPart}.</div>`
-        : `<div class="summary ok">✓ Telegram принял тестовый отчёт. message_id=${esc(result.data.telegramMessageId || '—')}${threadPart}.</div>`;
-      lastReport.telegramSendProbe = { ok: true, response: result.data, finalRow };
+        ? `<div class="summary warn">Функция ответила успешно, но отчёт уже был зарегистрирован как отправленный. lesson_id=${esc(testLessonId)}${sentAtPart}.</div>`
+        : `<div class="summary ok">✓ Telegram принял тестовый отчёт. message_id=${esc(result.data.telegramMessageId || '—')}; lesson_id=${esc(testLessonId)}${sentAtPart}.</div>`;
+      lastReport.telegramSendProbe = { ok: true, lessonId: testLessonId, response: result.data, finalRow };
     } catch (error) {
       const status = Number(error?.httpStatus || 0);
       const detail = formatError(error);
       sendResultEl.innerHTML = `<div class="summary bad">✕ Тестовый отчёт не отправлен: ${esc(explainSendError(detail, status))}</div>`;
-      lastReport.errors.push({ stage: 'telegram_test_send', status: status || null, error: detail });
+      lastReport.errors.push({ stage: 'telegram_test_send', status: status || null, error: detail, lessonId: testLessonId });
     } finally {
       rawEl.textContent = JSON.stringify(lastReport, null, 2);
       sendBtn.disabled = false;

@@ -276,6 +276,17 @@
         return { ok: false, skipped: true, reason: 'not_configured' };
       }
 
+      if (!CloudService.client) await CloudService.init();
+      const { data: submissionRow, error: submissionError } = await CloudService.client
+        .from(tables.homework)
+        .select('submission_id,lesson_title')
+        .eq('student_id', studentId)
+        .eq('lesson_id', lessonId)
+        .single();
+      if (submissionError) throw submissionError;
+      if (!submissionRow?.submission_id) throw new Error('Homework submission_id was not saved in Supabase');
+
+      const lesson = HOMEWORK_DATA.find((item) => item.id === lessonId) || {};
       const baseUrl = safeText(config.supabase?.url).replace(/\/+$/, '');
       const anonKey = safeText(config.supabase?.anonKey).trim();
       const endpoint = `${baseUrl}/functions/v1/notify-telegram`;
@@ -287,10 +298,12 @@
           authorization: `Bearer ${anonKey}`
         },
         body: JSON.stringify({
-          eventType: 'homework_report',
+          action: 'homework_report',
           studentId,
           lessonId,
-          lessonUrl: window.location.href
+          submissionId: submissionRow.submission_id,
+          homeworkTitle: safeText(lesson.title || submissionRow.lesson_title || lessonId),
+          homeworkSubtitle: safeText(lesson.subtitle || '')
         })
       });
 
