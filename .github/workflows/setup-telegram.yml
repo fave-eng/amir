@@ -18,9 +18,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: supabase/setup-cli@v1
+      - uses: supabase/setup-cli@v2
         with:
-          version: latest
+          version: 2.115.0
+          github-token: ${{ github.token }}
 
       - name: Check settings
         shell: bash
