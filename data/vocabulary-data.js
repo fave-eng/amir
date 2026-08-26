@@ -1236,5 +1236,228 @@ window.VOCABULARY_DATA = [
         "exampleRu": "Was и were часто имеют слабые формы произношения."
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-2c",
+    "order": 6,
+    "title": "Time connectors and verb phrases",
+    "label": "Lesson 6 · Unit 2C · One dark October evening",
+    "icon": "🌙",
+    "type": "lesson",
+    "linkedLessonId": "lesson-6",
+    "page": "vocabulary.html?id=vocab-lesson-2c",
+    "publishedAt": "2026-08-26",
+    "words": [
+      {
+        "id": "lesson-2c-time-sequencer",
+        "en": "time sequencer",
+        "ru": "временной маркер / фраза последовательности",
+        "exampleEn": "Use time sequencers to tell a story in order.",
+        "exampleRu": "Используй временные маркеры, чтобы рассказать историю по порядку."
+      },
+      {
+        "id": "lesson-2c-connector",
+        "en": "connector",
+        "ru": "союз / связующее слово",
+        "exampleEn": "Because, although, but, and so are connectors.",
+        "exampleRu": "Because, although, but и so — связующие слова."
+      },
+      {
+        "id": "lesson-2c-after-that",
+        "en": "after that",
+        "ru": "после этого",
+        "exampleEn": "After that, we decided to travel together.",
+        "exampleRu": "После этого мы решили путешествовать вместе."
+      },
+      {
+        "id": "lesson-2c-suddenly",
+        "en": "suddenly",
+        "ru": "вдруг; неожиданно",
+        "exampleEn": "Suddenly, I saw a man from my university.",
+        "exampleRu": "Вдруг я увидел человека из моего университета."
+      },
+      {
+        "id": "lesson-2c-the-next-day",
+        "en": "the next day",
+        "ru": "на следующий день",
+        "exampleEn": "The next day, I climbed the mountain.",
+        "exampleRu": "На следующий день я поднялся на гору."
+      },
+      {
+        "id": "lesson-2c-two-minutes-later",
+        "en": "two minutes later",
+        "ru": "через две минуты",
+        "exampleEn": "Two minutes later, he came over to speak to me.",
+        "exampleRu": "Через две минуты он подошёл поговорить со мной."
+      },
+      {
+        "id": "lesson-2c-when",
+        "en": "when",
+        "ru": "когда",
+        "exampleEn": "I was quite tired when I reached the top.",
+        "exampleRu": "Я очень устал, когда добрался до вершины."
+      },
+      {
+        "id": "lesson-2c-although",
+        "en": "although",
+        "ru": "хотя",
+        "exampleEn": "Although my flat is small, it’s perfect for me.",
+        "exampleRu": "Хотя моя квартира маленькая, она идеально мне подходит."
+      },
+      {
+        "id": "lesson-2c-because",
+        "en": "because",
+        "ru": "потому что",
+        "exampleEn": "Mandy cancelled her credit cards because she couldn’t find her purse.",
+        "exampleRu": "Мэнди заблокировала карты, потому что не могла найти кошелёк."
+      },
+      {
+        "id": "lesson-2c-so",
+        "en": "so",
+        "ru": "поэтому",
+        "exampleEn": "I got up late, so I didn’t have time for breakfast.",
+        "exampleRu": "Я поздно встал, поэтому у меня не было времени на завтрак."
+      },
+      {
+        "id": "lesson-2c-but",
+        "en": "but",
+        "ru": "но",
+        "exampleEn": "The tickets were expensive, but I bought one.",
+        "exampleRu": "Билеты были дорогие, но я купил один."
+      },
+      {
+        "id": "lesson-2c-carry-on",
+        "en": "carry on",
+        "ru": "продолжать",
+        "exampleEn": "We carried on seeing each other.",
+        "exampleRu": "Мы продолжили встречаться."
+      },
+      {
+        "id": "lesson-2c-get-married",
+        "en": "get married",
+        "ru": "пожениться",
+        "exampleEn": "They got married two years later.",
+        "exampleRu": "Они поженились через два года."
+      },
+      {
+        "id": "lesson-2c-daughter",
+        "en": "daughter",
+        "ru": "дочь",
+        "exampleEn": "They have a daughter called Beth.",
+        "exampleRu": "У них есть дочь по имени Бет."
+      },
+      {
+        "id": "lesson-2c-across",
+        "en": "across",
+        "ru": "через; поперёк",
+        "exampleEn": "The cat ran across the road.",
+        "exampleRu": "Кот перебежал через дорогу."
+      },
+      {
+        "id": "lesson-2c-along",
+        "en": "along",
+        "ru": "по; вдоль",
+        "exampleEn": "He was driving along the high street.",
+        "exampleRu": "Он ехал по главной улице."
+      },
+      {
+        "id": "lesson-2c-awful",
+        "en": "awful",
+        "ru": "ужасный",
+        "exampleEn": "The weather was awful.",
+        "exampleRu": "Погода была ужасной."
+      },
+      {
+        "id": "lesson-2c-hurry",
+        "en": "hurry",
+        "ru": "спешка; спешить",
+        "exampleEn": "I’m in a hurry.",
+        "exampleRu": "Я спешу."
+      },
+      {
+        "id": "lesson-2c-quickly",
+        "en": "quickly",
+        "ru": "быстро",
+        "exampleEn": "She answered quickly.",
+        "exampleRu": "Она быстро ответила."
+      },
+      {
+        "id": "lesson-2c-invite-someone-to-dinner",
+        "en": "invite someone to dinner",
+        "ru": "пригласить кого-то на ужин",
+        "exampleEn": "He invited her to dinner.",
+        "exampleRu": "Он пригласил её на ужин."
+      },
+      {
+        "id": "lesson-2c-play-a-song",
+        "en": "play a song",
+        "ru": "поставить / сыграть песню",
+        "exampleEn": "The DJ played her favourite song.",
+        "exampleRu": "Диджей поставил её любимую песню."
+      },
+      {
+        "id": "lesson-2c-leave-the-club",
+        "en": "leave the club",
+        "ru": "уйти из клуба",
+        "exampleEn": "She left the club very late.",
+        "exampleRu": "Она ушла из клуба очень поздно."
+      },
+      {
+        "id": "lesson-2c-wait-for-somebody",
+        "en": "wait for somebody",
+        "ru": "ждать кого-то",
+        "exampleEn": "He waited for her at the door.",
+        "exampleRu": "Он ждал её у двери."
+      },
+      {
+        "id": "lesson-2c-give-someone-your-phone-number",
+        "en": "give someone your phone number",
+        "ru": "дать кому-то свой номер телефона",
+        "exampleEn": "I gave her my phone number.",
+        "exampleRu": "Я дал ей свой номер телефона."
+      },
+      {
+        "id": "lesson-2c-take-someone-to-a-restaurant",
+        "en": "take someone to a restaurant",
+        "ru": "сводить кого-то в ресторан",
+        "exampleEn": "He took her to a nice restaurant.",
+        "exampleRu": "Он сводил её в хороший ресторан."
+      },
+      {
+        "id": "lesson-2c-have-a-great-time",
+        "en": "have a great time",
+        "ru": "отлично провести время",
+        "exampleEn": "They had a great time.",
+        "exampleRu": "Они отлично провели время."
+      },
+      {
+        "id": "lesson-2c-stay-in-touch",
+        "en": "stay in touch",
+        "ru": "оставаться на связи",
+        "exampleEn": "Jane wanted to stay in touch.",
+        "exampleRu": "Джейн хотела оставаться на связи."
+      },
+      {
+        "id": "lesson-2c-date",
+        "en": "date",
+        "ru": "свидание",
+        "exampleEn": "I went on a date with him.",
+        "exampleRu": "Я сходила с ним на свидание."
+      },
+      {
+        "id": "lesson-2c-meal",
+        "en": "meal",
+        "ru": "приём пищи; еда",
+        "exampleEn": "We wanted to go for a meal.",
+        "exampleRu": "Мы хотели пойти поесть."
+      },
+      {
+        "id": "lesson-2c-word-stress",
+        "en": "word stress",
+        "ru": "словесное ударение",
+        "exampleEn": "Word stress is important in pronunciation.",
+        "exampleRu": "Словесное ударение важно в произношении."
+      }
+    ]
   }
 ];

@@ -2218,5 +2218,445 @@ window.GRAMMAR_DATA = [
         ]
       }
     ]
+  },
+  {
+    "id": "grammar-time-sequencers-connectors",
+    "order": 6,
+    "title": "Time sequencers and connectors",
+    "level": "A2",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-time-sequencers-connectors",
+    "passed": false,
+    "attempts": 0,
+    "publishedAt": "2026-08-26",
+    "linkedLessonId": "lesson-6",
+    "revealAnswersOnError": false,
+    "lockOnPass": true,
+    "explanation": "Time sequencers помогают рассказывать события по порядку: сначала, на следующий день, через две минуты, после этого. Connectors связывают идеи и показывают причину, результат или контраст: because, so, but, although. Они делают историю понятной и логичной.",
+    "formula": "time sequencer + comma + sentence · sentence + because/so/but + sentence · Although + sentence, sentence",
+    "glanceCards": [
+      {
+        "icon": "⏱️",
+        "label": "Sequence",
+        "hint": "показывает порядок событий",
+        "pattern": "One summer / The next day / After that, ...",
+        "example": "The next day, I climbed the mountain."
+      },
+      {
+        "icon": "⚡",
+        "label": "Sudden event",
+        "hint": "что-то случилось неожиданно",
+        "pattern": "Suddenly, ...",
+        "example": "Suddenly, I saw a man from my university."
+      },
+      {
+        "icon": "➡️",
+        "label": "Reason and result",
+        "hint": "because = причина, so = результат",
+        "pattern": "because / so",
+        "example": "I got up late, so I missed breakfast."
+      },
+      {
+        "icon": "↔️",
+        "label": "Contrast",
+        "hint": "but и although показывают противопоставление",
+        "pattern": "but / although",
+        "example": "Although it was expensive, I bought it."
+      }
+    ],
+    "anchorLinks": [
+      {
+        "id": "grammar-at-a-glance",
+        "title": "Краткая схема"
+      },
+      {
+        "id": "grammar-rule-map",
+        "title": "Правила"
+      },
+      {
+        "id": "grammar-tables",
+        "title": "Таблица"
+      },
+      {
+        "id": "grammar-examples",
+        "title": "Примеры"
+      },
+      {
+        "id": "grammar-mistakes",
+        "title": "Типичные ошибки"
+      },
+      {
+        "id": "grammar-practice-section",
+        "title": "Задания"
+      }
+    ],
+    "miniRules": [
+      {
+        "title": "1. Time sequencers ставятся в начале части истории",
+        "text": "После фразы обычно ставится запятая. Они помогают читателю понять порядок событий.",
+        "example": "After that, we decided to travel together."
+      },
+      {
+        "title": "2. Suddenly показывает неожиданное событие",
+        "text": "Используй suddenly, когда что-то произошло внезапно.",
+        "example": "Suddenly, I saw an old friend."
+      },
+      {
+        "title": "3. Because объясняет причину, so показывает результат",
+        "text": "Because отвечает на вопрос why? So показывает, что произошло из-за этого.",
+        "example": "I was tired because I climbed the mountain. I was tired, so I went to bed."
+      },
+      {
+        "title": "4. But и although показывают контраст",
+        "text": "But чаще соединяет две части внутри предложения. Although часто стоит в начале и требует запятую после первой части.",
+        "example": "Although it was hot, I had a great time."
+      }
+    ],
+    "tables": [
+      {
+        "title": "How to use them",
+        "headers": [
+          "Meaning",
+          "Connector / sequencer",
+          "Example"
+        ],
+        "rows": [
+          [
+            "order",
+            "The next day / After that",
+            "The next day, I climbed the mountain."
+          ],
+          [
+            "sudden event",
+            "Suddenly",
+            "Suddenly, I saw a man."
+          ],
+          [
+            "reason",
+            "because",
+            "I called the police because the door was open."
+          ],
+          [
+            "result",
+            "so",
+            "The door was open, so I called the police."
+          ],
+          [
+            "contrast",
+            "but / although",
+            "Although it was expensive, I bought it."
+          ]
+        ]
+      }
+    ],
+    "exampleGroups": [
+      {
+        "title": "In a story",
+        "items": [
+          "One summer, I decided to travel to Peru.",
+          "The next day, I climbed the mountain.",
+          "Suddenly, I saw a man from my university.",
+          "After that, we decided to travel together."
+        ]
+      },
+      {
+        "title": "Connectors in sentences",
+        "items": [
+          "I didn’t have time, so I didn’t have breakfast.",
+          "I cancelled my card because I couldn’t find my purse.",
+          "Although my flat is small, it’s perfect for me.",
+          "The tickets were expensive, but I bought one."
+        ]
+      }
+    ],
+    "commonMistakes": [
+      "Не путай because и so: because даёт причину, so даёт результат.",
+      "После although в начале предложения обычно нужна запятая после первой части.",
+      "Не ставь but и although вместе: Although it was late, I went. / It was late, but I went.",
+      "Time sequencers в начале истории обычно отделяются запятой: Suddenly, ..."
+    ],
+    "exercises": [
+      {
+        "type": "exercise",
+        "id": "time-connectors-step-1",
+        "title": "1. Easy · Choose the meaning",
+        "difficulty": "Easy",
+        "instructions": "Выбери значение слова или фразы.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "single",
+            "prompt": "The next day means…",
+            "options": [
+              "the day before",
+              "the day after",
+              "the same day"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "single",
+            "prompt": "Suddenly means…",
+            "options": [
+              "unexpectedly",
+              "slowly",
+              "every day"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "single",
+            "prompt": "Because introduces…",
+            "options": [
+              "a result",
+              "a reason",
+              "a contrast"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "single",
+            "prompt": "Although introduces…",
+            "options": [
+              "a contrast",
+              "a place",
+              "a time"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "time-connectors-step-2",
+        "title": "2. Medium · Complete the sentence",
+        "difficulty": "Medium",
+        "instructions": "Выбери подходящее слово.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "gaps",
+            "prompt": "I was hungry,  I made a sandwich.",
+            "segments": [
+              "I was hungry, ",
+              " I made a sandwich."
+            ],
+            "answers": [
+              [
+                "so"
+              ]
+            ],
+            "hideAnswersOnError": true,
+            "gapOptions": [
+              [
+                "although",
+                "because",
+                "but",
+                "so"
+              ]
+            ]
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "gaps",
+            "prompt": "I made a sandwich  I was hungry.",
+            "segments": [
+              "I made a sandwich ",
+              " I was hungry."
+            ],
+            "answers": [
+              [
+                "because"
+              ]
+            ],
+            "hideAnswersOnError": true,
+            "gapOptions": [
+              [
+                "although",
+                "because",
+                "but",
+                "so"
+              ]
+            ]
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "gaps",
+            "prompt": " it was raining, we went for a walk.",
+            "segments": [
+              "",
+              " it was raining, we went for a walk."
+            ],
+            "answers": [
+              [
+                "although"
+              ]
+            ],
+            "hideAnswersOnError": true,
+            "gapOptions": [
+              [
+                "although",
+                "because",
+                "but",
+                "so"
+              ]
+            ]
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "gaps",
+            "prompt": "The film was long,  I enjoyed it.",
+            "segments": [
+              "The film was long, ",
+              " I enjoyed it."
+            ],
+            "answers": [
+              [
+                "but"
+              ]
+            ],
+            "hideAnswersOnError": true,
+            "gapOptions": [
+              [
+                "although",
+                "because",
+                "but",
+                "so"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "time-connectors-step-3",
+        "title": "3. Harder · Choose the best connector",
+        "difficulty": "Harder",
+        "instructions": "Выбери правильное продолжение.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "select",
+            "prompt": "I missed the bus, so…",
+            "options": [
+              "I was late for class.",
+              "I left home on time.",
+              "I wasn’t in a hurry."
+            ],
+            "answer": 0,
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "select",
+            "prompt": "Although the restaurant was expensive,…",
+            "options": [
+              "we had dinner there.",
+              "because we had dinner there.",
+              "so we had dinner there."
+            ],
+            "answer": 0,
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "select",
+            "prompt": "I called the police because…",
+            "options": [
+              "the door was open.",
+              "I called the police.",
+              "so the door was open."
+            ],
+            "answer": 0,
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "select",
+            "prompt": "Suddenly,…",
+            "options": [
+              "I saw an old friend.",
+              "the next day.",
+              "after that."
+            ],
+            "answer": 0,
+            "hideAnswersOnError": true
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "time-connectors-step-4",
+        "title": "4. Challenge · Build the sentence",
+        "difficulty": "Challenge",
+        "instructions": "Напиши полное предложение с правильным словом или фразой.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "text",
+            "prompt": "Use so: I got up late. I didn’t have breakfast.",
+            "answer": "I got up late, so I didn’t have breakfast.",
+            "acceptedAnswers": [
+              "I got up late, so I didn’t have breakfast",
+              "I got up late, so I didn't have breakfast",
+              "I got up late so I didn’t have breakfast",
+              "I got up late so I didn't have breakfast"
+            ]
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "text",
+            "prompt": "Use because: Mandy cancelled her credit cards. She couldn’t find her purse.",
+            "answer": "Mandy cancelled her credit cards because she couldn’t find her purse.",
+            "acceptedAnswers": [
+              "Mandy cancelled her credit cards because she couldn’t find her purse",
+              "Mandy cancelled her credit cards because she couldn't find her purse",
+              "Mandy cancelled her credit cards because she could not find her purse"
+            ]
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "text",
+            "prompt": "Use Although: My flat is small. It’s perfect for me.",
+            "answer": "Although my flat is small, it’s perfect for me.",
+            "acceptedAnswers": [
+              "Although my flat is small, it’s perfect for me",
+              "Although my flat is small, it's perfect for me",
+              "Although my flat is small it’s perfect for me",
+              "Although my flat is small it's perfect for me"
+            ]
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "text",
+            "prompt": "Use After that: We spoke for an hour. We decided to travel together.",
+            "answer": "After that, we decided to travel together.",
+            "acceptedAnswers": [
+              "After that, we decided to travel together",
+              "After that we decided to travel together"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];
