@@ -1639,6 +1639,8 @@
       const sourceIds = Array.isArray(block.sourceItemIds) ? block.sourceItemIds : [];
       const { ready, labels } = collectDependencyLabels(root, blocks, block.sourceBlockId, sourceIds);
       const waiting = safeText(block.waitingPlaceholder || 'Complete the previous part first');
+      node.classList.toggle('is-waiting', !ready);
+      node.classList.toggle('is-ready', ready);
 
       node.querySelectorAll('[data-match-option]').forEach((option) => {
         const optionId = safeText(option.dataset.matchOption);
