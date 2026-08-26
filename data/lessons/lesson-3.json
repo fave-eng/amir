@@ -28,8 +28,6 @@
       "type": "exercise",
       "id": "calling-reception-1a",
       "title": "1a. Complete the sentences with a word from the list.",
-      "image": "images/lesson-3/hotel-reception.svg",
-      "imageAlt": "A hotel guest calling reception from a room with a laptop.",
       "wordBank": [
         "bother",
         "have",
@@ -785,8 +783,6 @@
       "id": "remember-grammar-vocab-4",
       "layout": "cloze",
       "title": "4. GRAMMAR & VOCABULARY · Read the article. Circle a, b or c.",
-      "image": "images/lesson-3/invisible-man.svg",
-      "imageAlt": "A clean digital illustration of a camouflaged person standing in front of logs.",
       "wordBanks": [
         {
           "label": "1",
