@@ -615,6 +615,13 @@
       ]
     },
     {
+      "type": "audio",
+      "id": "pronunciation-2b",
+      "title": "2b. Listen and check. Then listen again and repeat the words.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_2.1.mp3",
+      "response": false
+    },
+    {
       "type": "section",
       "eyebrow": "2A · 3",
       "title": "VOCABULARY · holidays",

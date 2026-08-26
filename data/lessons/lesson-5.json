@@ -1324,6 +1324,13 @@
           ]
         }
       ]
+    },
+    {
+      "type": "audio",
+      "id": "pronunciation-3b",
+      "title": "3b. Listen and check. Then listen again and repeat the sentences.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_2.2.mp3",
+      "response": false
     }
   ]
 }
