@@ -60,7 +60,7 @@
             ]
           ],
           "placeholders": [
-            "put"
+            ""
           ],
           "dependencyTemplate": "I’ll {0} you through to IT."
         },
@@ -79,7 +79,7 @@
             ]
           ],
           "placeholders": [
-            "send"
+            ""
           ],
           "dependencyTemplate": "I’ll {0} somebody up right now."
         },
@@ -98,7 +98,7 @@
             ]
           ],
           "placeholders": [
-            "bother"
+            ""
           ],
           "dependencyTemplate": "I’m sorry to {0} you."
         },
@@ -117,7 +117,7 @@
             ]
           ],
           "placeholders": [
-            "This"
+            ""
           ],
           "dependencyTemplate": "Hello. {0} is room 315."
         },
@@ -137,7 +137,7 @@
             ]
           ],
           "placeholders": [
-            "’s"
+            ""
           ],
           "dependencyTemplate": "There{0} a problem with the shower."
         }
@@ -319,63 +319,55 @@
       ]
     },
     {
-      "type": "exercise",
+      "type": "match",
       "id": "ill-2",
       "title": "2. I’LL · Match problems 1–4 to offers a–d.",
-      "wordBank": [
-        "a I’ll see if we have a quieter one.",
-        "b I’ll send two bottles to your room right now.",
-        "c I’ll put you through to IT.",
-        "d I’ll ask her to call you."
+      "options": [
+        {
+          "id": "a",
+          "text": "I’ll see if we have a quieter one."
+        },
+        {
+          "id": "b",
+          "text": "I’ll send two bottles to your room right now."
+        },
+        {
+          "id": "c",
+          "text": "I’ll put you through to IT."
+        },
+        {
+          "id": "d",
+          "text": "I’ll ask her to call you."
+        }
       ],
-      "items": [
+      "pairs": [
         {
           "id": "1",
           "number": 1,
-          "prompt": "I have a problem with the wi-fi.",
-          "example": true,
-          "exampleAnswer": "c"
+          "left": "I have a problem with the wi-fi.",
+          "answer": "c",
+          "example": true
         },
         {
           "id": "2",
           "number": 2,
-          "input": "select",
-          "prompt": "This room is very noisy.",
-          "options": [
-            "a",
-            "b",
-            "c",
-            "d"
-          ],
-          "answer": 0
+          "left": "This room is very noisy.",
+          "answer": "a"
         },
         {
           "id": "3",
           "number": 3,
-          "input": "select",
-          "prompt": "I want to talk to the manager.",
-          "options": [
-            "a",
-            "b",
-            "c",
-            "d"
-          ],
-          "answer": 3
+          "left": "I want to talk to the manager.",
+          "answer": "d"
         },
         {
           "id": "4",
           "number": 4,
-          "input": "select",
-          "prompt": "There’s no water in my mini-bar.",
-          "options": [
-            "a",
-            "b",
-            "c",
-            "d"
-          ],
-          "answer": 1
+          "left": "There’s no water in my mini-bar.",
+          "answer": "b"
         }
-      ]
+      ],
+      "hideAnswersOnError": true
     },
     {
       "type": "exercise",
@@ -783,88 +775,6 @@
       "id": "remember-grammar-vocab-4",
       "layout": "cloze",
       "title": "4. GRAMMAR & VOCABULARY · Read the article. Circle a, b or c.",
-      "wordBanks": [
-        {
-          "label": "1",
-          "words": [
-            "a under",
-            "b in",
-            "c on"
-          ]
-        },
-        {
-          "label": "2",
-          "words": [
-            "a was born",
-            "b was from",
-            "c is born"
-          ]
-        },
-        {
-          "label": "3",
-          "words": [
-            "a live",
-            "b living",
-            "c lives"
-          ]
-        },
-        {
-          "label": "4",
-          "words": [
-            "a hardly ever",
-            "b often",
-            "c never"
-          ]
-        },
-        {
-          "label": "5",
-          "words": [
-            "a standing",
-            "b stands",
-            "c is standing"
-          ]
-        },
-        {
-          "label": "6",
-          "words": [
-            "a middle",
-            "b left",
-            "c front"
-          ]
-        },
-        {
-          "label": "7",
-          "words": [
-            "a shorts",
-            "b trousers",
-            "c sweater"
-          ]
-        },
-        {
-          "label": "8",
-          "words": [
-            "a is helping",
-            "b helps",
-            "c helping"
-          ]
-        },
-        {
-          "label": "9",
-          "words": [
-            "a walking",
-            "b walk",
-            "c walks"
-          ]
-        },
-        {
-          "label": "10",
-          "words": [
-            "a serious",
-            "b generous",
-            "c funny"
-          ]
-        }
-      ],
       "introTitle": "THE INVISIBLE MAN",
       "items": [
         {
@@ -872,9 +782,9 @@
           "number": 1,
           "input": "select",
           "options": [
-            "under",
-            "in",
-            "on"
+            "a under",
+            "b in",
+            "c on"
           ],
           "answer": 1
         },
@@ -883,9 +793,9 @@
           "number": 2,
           "input": "select",
           "options": [
-            "was born",
-            "was from",
-            "is born"
+            "a was born",
+            "b was from",
+            "c is born"
           ],
           "answer": 0
         },
@@ -894,9 +804,9 @@
           "number": 3,
           "input": "select",
           "options": [
-            "live",
-            "living",
-            "lives"
+            "a live",
+            "b living",
+            "c lives"
           ],
           "answer": 2
         },
@@ -905,9 +815,9 @@
           "number": 4,
           "input": "select",
           "options": [
-            "hardly ever",
-            "often",
-            "never"
+            "a hardly ever",
+            "b often",
+            "c never"
           ],
           "answer": 1
         },
@@ -916,9 +826,9 @@
           "number": 5,
           "input": "select",
           "options": [
-            "standing",
-            "stands",
-            "is standing"
+            "a standing",
+            "b stands",
+            "c is standing"
           ],
           "answer": 2
         },
@@ -927,9 +837,9 @@
           "number": 6,
           "input": "select",
           "options": [
-            "middle",
-            "left",
-            "front"
+            "a middle",
+            "b left",
+            "c front"
           ],
           "answer": 0
         },
@@ -938,9 +848,9 @@
           "number": 7,
           "input": "select",
           "options": [
-            "shorts",
-            "trousers",
-            "sweater"
+            "a shorts",
+            "b trousers",
+            "c sweater"
           ],
           "answer": 1
         },
@@ -949,9 +859,9 @@
           "number": 8,
           "input": "select",
           "options": [
-            "is helping",
-            "helps",
-            "helping"
+            "a is helping",
+            "b helps",
+            "c helping"
           ],
           "answer": 1
         },
@@ -960,9 +870,9 @@
           "number": 9,
           "input": "select",
           "options": [
-            "walking",
-            "walk",
-            "walks"
+            "a walking",
+            "b walk",
+            "c walks"
           ],
           "answer": 0
         },
@@ -971,9 +881,9 @@
           "number": 10,
           "input": "select",
           "options": [
-            "serious",
-            "generous",
-            "funny"
+            "a serious",
+            "b generous",
+            "c funny"
           ],
           "answer": 0
         }

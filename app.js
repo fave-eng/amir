@@ -1127,6 +1127,52 @@
     }).join('')}</div>`;
   }
 
+
+  function resolveMatchOptions(block) {
+    const options = Array.isArray(block.options) && block.options.length
+      ? block.options
+      : (block.pairs || []).map((pair, index) => ({ id: safeText(pair.id || pair.key || String.fromCharCode(97 + index)), text: pair.right || '' }));
+    return options.map((option, index) => ({
+      id: safeText(option.id || option.value || String.fromCharCode(97 + index)),
+      text: safeText(option.text || option.label || option.right || option)
+    }));
+  }
+
+  function renderMatchBlock(block, id, title) {
+    const pairs = Array.isArray(block.pairs) ? block.pairs : [];
+    const options = resolveMatchOptions(block);
+    const exampleAnswers = new Set(pairs.filter((pair) => pair.example).map((pair) => safeText(pair.answer || pair.key || pair.rightId)));
+    const optionMap = new Map(options.map((option) => [option.id, option]));
+    const left = pairs.map((pair, pairIndex) => {
+      const pairId = safeText(pair.id, `${pairIndex + 1}`);
+      const number = pair.number === undefined ? pairIndex + 1 : pair.number;
+      const preset = pair.example ? safeText(pair.answer || pair.key || pair.rightId) : '';
+      const answerText = preset && optionMap.has(preset) ? `${preset}` : '';
+      return `<div class="match-left-item${pair.example ? ' is-example' : ''}" role="button" tabindex="${pair.example ? '-1' : '0'}" data-match-left data-pair-id="${escapeHtml(pairId)}" ${pair.example ? 'aria-disabled="true"' : ''}>
+        <span class="exercise-number">${escapeHtml(number)}</span>
+        <span class="match-left-text">${escapeHtml(pair.left || pair.prompt || '')}</span>
+        <span class="match-answer-chip" data-match-answer-label>${escapeHtml(answerText || '—')}</span>
+        <input type="hidden" data-match-value value="${escapeHtml(preset)}" ${pair.example ? 'disabled' : ''}>
+      </div>`;
+    }).join('');
+    const right = options.map((option) => {
+      const exampleUsed = exampleAnswers.has(option.id);
+      return `<button class="match-right-item${exampleUsed ? ' is-example-used' : ''}" type="button" data-match-option="${escapeHtml(option.id)}" ${exampleUsed ? 'disabled' : ''}>
+        <span class="match-option-letter">${escapeHtml(option.id)}</span>
+        <span>${escapeHtml(option.text)}</span>
+      </button>`;
+    }).join('');
+    return `<article class="card lesson-block match-card" data-task="${escapeHtml(id)}" data-type="match">
+      <div class="exercise-heading"><span class="eyebrow">Exercise</span><h3>${title}</h3>${block.instructions ? `<p class="muted exercise-instructions">${escapeHtml(block.instructions)}</p>` : ''}</div>
+      <div class="match-connect" data-match-connect>
+        <svg class="match-lines" aria-hidden="true"></svg>
+        <div class="match-column match-left-column" aria-label="Problems">${left}</div>
+        <div class="match-column match-right-column" aria-label="Offers">${right}</div>
+      </div>
+      <div class="feedback"></div>
+    </article>`;
+  }
+
   function renderLessonBlock(block, index) {
     const id = safeText(block.id, `task-${index}`);
     const title = escapeHtml(block.title || block.prompt || `Task ${index + 1}`);
@@ -1206,9 +1252,7 @@
       return `<article class="card lesson-block" data-task="${escapeHtml(id)}" data-type="select"><label class="field-label" for="${escapeHtml(id)}">${title}</label><select id="${escapeHtml(id)}"><option value="">Выбери ответ</option>${options}</select><div class="feedback"></div></article>`;
     }
     if (block.type === 'match') {
-      const rights = (block.pairs || []).map((pair) => pair.right);
-      const rows = (block.pairs || []).map((pair, pairIndex) => `<div>${escapeHtml(pair.left)}</div><select data-match-index="${pairIndex}"><option value="">Выбери пару</option>${rights.map((right, rightIndex) => `<option value="${rightIndex}">${escapeHtml(right)}</option>`).join('')}</select>`).join('');
-      return `<article class="card lesson-block" data-task="${escapeHtml(id)}" data-type="match"><h3>${title}</h3><div class="match-grid">${rows}</div><div class="feedback"></div></article>`;
+      return renderMatchBlock(block, id, title);
     }
     if (block.type === 'reorder') {
       const chips = shuffled(block.words || []).map((word) => `<button class="word-chip" type="button" data-word="${escapeHtml(word)}">${escapeHtml(word)}</button>`).join('');
@@ -1358,8 +1402,23 @@
       actual = node.querySelector('select')?.value;
       correct = Number(actual) === Number(block.answer);
     } else if (block.type === 'match') {
-      actual = [...node.querySelectorAll('[data-match-index]')].map((select) => Number(select.value));
-      correct = actual.length > 0 && actual.every((value, index) => value === index);
+      actual = {};
+      let matchTotal = 0;
+      let matchCorrect = 0;
+      (Array.isArray(block.pairs) ? block.pairs : []).forEach((pair, pairIndex) => {
+        if (pair.example) return;
+        const pairId = safeText(pair.id, `${pairIndex + 1}`);
+        const row = node.querySelector(`[data-match-left][data-pair-id="${CSS.escape(pairId)}"]`);
+        const value = safeText(row?.querySelector('[data-match-value]')?.value);
+        const expected = safeText(pair.answer || pair.key || pair.rightId);
+        actual[pairId] = value;
+        matchTotal += 1;
+        const isCorrect = value !== '' && normalizeAnswer(value) === normalizeAnswer(expected);
+        if (isCorrect) matchCorrect += 1;
+        row?.classList.toggle('is-correct', isCorrect);
+        row?.classList.toggle('is-wrong', !isCorrect);
+      });
+      return { correctCount: matchCorrect, total: matchTotal, actual };
     } else {
       actual = node.querySelector('input, textarea')?.value || '';
       if (Array.isArray(block.answer)) correct = block.answer.some((answer) => normalizeAnswer(answer) === normalizeAnswer(actual));
@@ -1426,8 +1485,18 @@
         const select = node.querySelector('select');
         if (select) select.value = safeText(value);
       } else if (block.type === 'match') {
-        const values = Array.isArray(value) ? value : [];
-        node.querySelectorAll('[data-match-index]').forEach((select, matchIndex) => { select.value = safeText(values[matchIndex]); });
+        if (Array.isArray(value)) {
+          node.querySelectorAll('[data-match-left]:not(.is-example)').forEach((row, matchIndex) => {
+            const input = row.querySelector('[data-match-value]');
+            if (input) input.value = safeText(value[matchIndex]);
+          });
+        } else if (value && typeof value === 'object') {
+          Object.entries(value).forEach(([pairId, selected]) => {
+            const row = node.querySelector(`[data-match-left][data-pair-id="${CSS.escape(safeText(pairId))}"]`);
+            const input = row?.querySelector('[data-match-value]');
+            if (input) input.value = safeText(selected);
+          });
+        }
       } else {
         const input = node.querySelector('input, textarea');
         if (input) input.value = safeText(value);
@@ -1531,6 +1600,94 @@
     root.addEventListener('change', refresh);
   }
 
+
+  function refreshMatchConnect(container) {
+    const svg = container.querySelector('.match-lines');
+    if (!svg) return;
+    const box = container.getBoundingClientRect();
+    svg.setAttribute('viewBox', `0 0 ${Math.max(1, box.width)} ${Math.max(1, box.height)}`);
+    svg.innerHTML = '';
+    const used = new Map();
+    container.querySelectorAll('[data-match-left]').forEach((left) => {
+      const value = safeText(left.querySelector('[data-match-value]')?.value);
+      const label = left.querySelector('[data-match-answer-label]');
+      if (label) label.textContent = value || '—';
+      left.classList.toggle('is-connected', Boolean(value));
+      if (value) used.set(value, left.dataset.pairId || '');
+      const right = value ? container.querySelector(`[data-match-option="${CSS.escape(value)}"]`) : null;
+      if (!right) return;
+      const leftRect = left.getBoundingClientRect();
+      const rightRect = right.getBoundingClientRect();
+      const x1 = leftRect.right - box.left;
+      const y1 = leftRect.top + leftRect.height / 2 - box.top;
+      const x2 = rightRect.left - box.left;
+      const y2 = rightRect.top + rightRect.height / 2 - box.top;
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', x1);
+      line.setAttribute('y1', y1);
+      line.setAttribute('x2', x2);
+      line.setAttribute('y2', y2);
+      line.setAttribute('class', left.classList.contains('is-example') ? 'match-line is-example-line' : 'match-line');
+      svg.appendChild(line);
+    });
+    container.querySelectorAll('[data-match-option]').forEach((option) => {
+      const selected = used.has(safeText(option.dataset.matchOption));
+      option.classList.toggle('is-selected', selected);
+    });
+  }
+
+  function clearDuplicateMatchChoice(container, value, exceptRow) {
+    if (!value) return;
+    container.querySelectorAll('[data-match-left]').forEach((row) => {
+      if (row === exceptRow || row.classList.contains('is-example')) return;
+      const input = row.querySelector('[data-match-value]');
+      if (input && safeText(input.value) === safeText(value)) input.value = '';
+    });
+  }
+
+  function initMatchingBlocks(root) {
+    const containers = [...root.querySelectorAll('[data-match-connect]')];
+    if (!containers.length) return;
+    let activeLeft = null;
+    const redrawAll = () => containers.forEach(refreshMatchConnect);
+    containers.forEach((container) => {
+      refreshMatchConnect(container);
+      container.addEventListener('click', (event) => {
+        const left = event.target.closest('[data-match-left]:not(.is-example)');
+        const option = event.target.closest('[data-match-option]:not(:disabled)');
+        if (left) {
+          if (activeLeft === left) {
+            activeLeft.classList.remove('is-active');
+            activeLeft = null;
+          } else {
+            container.querySelectorAll('[data-match-left]').forEach((item) => item.classList.remove('is-active'));
+            left.classList.add('is-active');
+            activeLeft = left;
+          }
+          return;
+        }
+        if (option) {
+          const targetLeft = activeLeft && container.contains(activeLeft)
+            ? activeLeft
+            : container.querySelector('[data-match-left]:not(.is-example):not(.is-connected)');
+          if (!targetLeft) return;
+          const value = safeText(option.dataset.matchOption);
+          clearDuplicateMatchChoice(container, value, targetLeft);
+          const input = targetLeft.querySelector('[data-match-value]');
+          if (input) {
+            input.value = value;
+            input.dispatchEvent(new Event('change', { bubbles: true }));
+          }
+          targetLeft.classList.remove('is-active', 'is-correct', 'is-wrong');
+          activeLeft = null;
+          refreshMatchConnect(container);
+        }
+      });
+    });
+    window.addEventListener('resize', redrawAll);
+    requestAnimationFrame(redrawAll);
+  }
+
   async function renderLesson() {
     const id = queryParam('id');
     const lessonRecord = HOMEWORK_DATA.find((item) => item.id === id && item.status !== 'draft');
@@ -1583,6 +1740,7 @@
 
     restoreLessonAnswers(root, blocks, savedResult?.answers);
     initLessonDependencies(root, blocks);
+    initMatchingBlocks(root);
 
     let draftSaveTimer = 0;
     const saveDraft = () => {
