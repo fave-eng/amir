@@ -1,0 +1,981 @@
+{
+  "id": "lesson-5",
+  "number": 5,
+  "title": "Unit 2B · That’s me in the picture!",
+  "subtitle": "English File Pre-Intermediate · Workbook · Past Continuous, at/in/on and weak forms",
+  "status": "available",
+  "page": "lesson.html?id=lesson-5",
+  "vocabularyId": "vocab-lesson-2b",
+  "grammarIds": [
+    "grammar-past-continuous"
+  ],
+  "publishedAt": "2026-08-26",
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "totalPoints": 46,
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "2B · 1",
+      "title": "VOCABULARY · at, in, on",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1a",
+      "title": "1a. Complete the sentences with prepositions of time: at, in, or on.",
+      "wordBank": [
+        "at",
+        "in",
+        "on"
+      ],
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "This photo shows me in Berlin in February – it was really cold.",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "Henri Cartier-Bresson was born ___ 1908, and he died ___ August 2004.",
+          "segments": [
+            "Henri Cartier-Bresson was born ",
+            " 1908, and he died ",
+            " August 2004."
+          ],
+          "answers": [
+            [
+              "in"
+            ],
+            [
+              "in"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "We have an exam ___ Monday morning.",
+          "segments": [
+            "We have an exam ",
+            " Monday morning."
+          ],
+          "answers": [
+            [
+              "on"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "We never get any snow ___ the winter.",
+          "segments": [
+            "We never get any snow ",
+            " the winter."
+          ],
+          "answers": [
+            [
+              "in"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "Our flight is leaving ___ Wednesday ___ 9.30 ___ the evening and arriving ___ 12.00 ___ Thursday.",
+          "segments": [
+            "Our flight is leaving ",
+            " Wednesday ",
+            " 9.30 ",
+            " the evening and arriving ",
+            " 12.00 ",
+            " Thursday."
+          ],
+          "answers": [
+            [
+              "on"
+            ],
+            [
+              "at"
+            ],
+            [
+              "in"
+            ],
+            [
+              "at"
+            ],
+            [
+              "on"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "In the UK, offices are closed ___ Christmas and ___ New Year’s Day.",
+          "segments": [
+            "In the UK, offices are closed ",
+            " Christmas and ",
+            " New Year’s Day."
+          ],
+          "answers": [
+            [
+              "at"
+            ],
+            [
+              "on"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "prompt": "I hate driving ___ night, getting up early ___ the morning, and working ___ weekends.",
+          "segments": [
+            "I hate driving ",
+            " night, getting up early ",
+            " the morning, and working ",
+            " weekends."
+          ],
+          "answers": [
+            [
+              "at"
+            ],
+            [
+              "in"
+            ],
+            [
+              "at",
+              "on"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "prompt": "___ Easter, we went to Greece, and we’re going again ___ the summer, probably the last two weeks ___ July.",
+          "segments": [
+            "",
+            " Easter, we went to Greece, and we’re going again ",
+            " the summer, probably the last two weeks ",
+            " July."
+          ],
+          "answers": [
+            [
+              "at"
+            ],
+            [
+              "in"
+            ],
+            [
+              "in"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1b",
+      "title": "1b. Complete the sentences with prepositions of place: at, in, or on.",
+      "wordBank": [
+        "at",
+        "in",
+        "on"
+      ],
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "We took some great photos at the party.",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "I can’t read books ___ the bus or ___ a car.",
+          "segments": [
+            "I can’t read books ",
+            " the bus or ",
+            " a car."
+          ],
+          "answers": [
+            [
+              "on"
+            ],
+            [
+              "in"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "We want to put some shelves ___ the wall ___ the living room. We’re going to put all our old books ___ the shelves.",
+          "segments": [
+            "We want to put some shelves ",
+            " the wall ",
+            " the living room. We’re going to put all our old books ",
+            " the shelves."
+          ],
+          "answers": [
+            [
+              "on"
+            ],
+            [
+              "in"
+            ],
+            [
+              "on"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "My family are from Ireland, but we live ___ New York, ___ the 11th floor of a tall building.",
+          "segments": [
+            "My family are from Ireland, but we live ",
+            " New York, ",
+            " the 11th floor of a tall building."
+          ],
+          "answers": [
+            [
+              "in"
+            ],
+            [
+              "on"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "I’ll meet you ___ the station.",
+          "segments": [
+            "I’ll meet you ",
+            " the station."
+          ],
+          "answers": [
+            [
+              "at"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "The children all sat ___ the floor.",
+          "segments": [
+            "The children all sat ",
+            " the floor."
+          ],
+          "answers": [
+            [
+              "on"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "prompt": "They spent the morning ___ the museum and then went for a walk ___ the park.",
+          "segments": [
+            "They spent the morning ",
+            " the museum and then went for a walk ",
+            " the park."
+          ],
+          "answers": [
+            [
+              "at"
+            ],
+            [
+              "in"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "prompt": "I met my boyfriend ___ school.",
+          "segments": [
+            "I met my boyfriend ",
+            " school."
+          ],
+          "answers": [
+            [
+              "at"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1c",
+      "title": "1c. Complete the phrases with at, in, or on.",
+      "wordBank": [
+        "at",
+        "in",
+        "on"
+      ],
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "a",
+          "number": "a",
+          "prompt": "at work",
+          "example": true,
+          "exampleTextOnly": true,
+          "dependentText": "at work"
+        },
+        {
+          "id": "b",
+          "number": "b",
+          "input": "gaps",
+          "prompt": "___ 1948",
+          "segments": [
+            "",
+            " 1948"
+          ],
+          "answers": [
+            [
+              "in"
+            ]
+          ],
+          "hideAnswersOnError": true,
+          "dependencyTemplate": "{0} 1948"
+        },
+        {
+          "id": "c",
+          "number": "c",
+          "input": "gaps",
+          "prompt": "___ Amsterdam",
+          "segments": [
+            "",
+            " Amsterdam"
+          ],
+          "answers": [
+            [
+              "in"
+            ]
+          ],
+          "hideAnswersOnError": true,
+          "dependencyTemplate": "{0} Amsterdam"
+        },
+        {
+          "id": "d",
+          "number": "d",
+          "input": "gaps",
+          "prompt": "___ 9th May",
+          "segments": [
+            "",
+            " 9th May"
+          ],
+          "answers": [
+            [
+              "on"
+            ]
+          ],
+          "hideAnswersOnError": true,
+          "dependencyTemplate": "{0} 9th May"
+        },
+        {
+          "id": "e",
+          "number": "e",
+          "input": "gaps",
+          "prompt": "___ Saturday and Sunday",
+          "segments": [
+            "",
+            " Saturday and Sunday"
+          ],
+          "answers": [
+            [
+              "on"
+            ]
+          ],
+          "hideAnswersOnError": true,
+          "dependencyTemplate": "{0} Saturday and Sunday"
+        },
+        {
+          "id": "f",
+          "number": "f",
+          "input": "gaps",
+          "prompt": "___ the bus stop",
+          "segments": [
+            "",
+            " the bus stop"
+          ],
+          "answers": [
+            [
+              "at"
+            ]
+          ],
+          "hideAnswersOnError": true,
+          "dependencyTemplate": "{0} the bus stop"
+        },
+        {
+          "id": "g",
+          "number": "g",
+          "input": "gaps",
+          "prompt": "___ the table",
+          "segments": [
+            "",
+            " the table"
+          ],
+          "answers": [
+            [
+              "on"
+            ]
+          ],
+          "hideAnswersOnError": true,
+          "dependencyTemplate": "{0} the table"
+        },
+        {
+          "id": "h",
+          "number": "h",
+          "input": "gaps",
+          "prompt": "___ 7.15",
+          "segments": [
+            "",
+            " 7.15"
+          ],
+          "answers": [
+            [
+              "at"
+            ]
+          ],
+          "hideAnswersOnError": true,
+          "dependencyTemplate": "{0} 7.15"
+        }
+      ]
+    },
+    {
+      "type": "match",
+      "id": "vocabulary-1d",
+      "title": "1d. Match the beginnings of the sentences 1–8 to the endings in c.",
+      "instructions": "Click a sentence beginning, then click the correct ending from exercise c.",
+      "pairs": [
+        {
+          "id": "1",
+          "number": 1,
+          "left": "I think Jen’s birthday is",
+          "answer": "d",
+          "example": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "left": "Between 9.00 and 5.00, my dad’s usually",
+          "answer": "a"
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "left": "I usually get up",
+          "answer": "h"
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "left": "The office is closed",
+          "answer": "e"
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "left": "I come from Brussels, but I live",
+          "answer": "c"
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "left": "My grandfather was born",
+          "answer": "b"
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "left": "I saw you yesterday. You were waiting",
+          "answer": "f"
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "left": "There’s a letter for you. I put it",
+          "answer": "g"
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "at work",
+          "sourceItemId": "a"
+        },
+        {
+          "id": "b",
+          "text": "in 1948",
+          "sourceItemId": "b"
+        },
+        {
+          "id": "c",
+          "text": "in Amsterdam",
+          "sourceItemId": "c"
+        },
+        {
+          "id": "d",
+          "text": "on 9th May",
+          "sourceItemId": "d"
+        },
+        {
+          "id": "e",
+          "text": "on Saturday and Sunday",
+          "sourceItemId": "e"
+        },
+        {
+          "id": "f",
+          "text": "at the bus stop",
+          "sourceItemId": "f"
+        },
+        {
+          "id": "g",
+          "text": "on the table",
+          "sourceItemId": "g"
+        },
+        {
+          "id": "h",
+          "text": "at 7.15",
+          "sourceItemId": "h"
+        }
+      ],
+      "sourceBlockId": "vocabulary-1c",
+      "sourceItemIds": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h"
+      ],
+      "waitingPlaceholder": "Complete exercise 1c first",
+      "readyPlaceholder": "Choose an ending from 1c"
+    },
+    {
+      "type": "section",
+      "eyebrow": "2B · 2",
+      "title": "GRAMMAR · past continuous",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-2a",
+      "title": "2a. Complete the sentences with a verb from the list in the correct past continuous form.",
+      "wordBank": [
+        "do",
+        "get",
+        "not live",
+        "not rain",
+        "walk",
+        "work"
+      ],
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "Amy was walking in the park at 10.30 yesterday.",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "___ you and Jack ___ in the same office when you first met?",
+          "segments": [
+            "",
+            " you and Jack ",
+            " in the same office when you first met?"
+          ],
+          "answers": [
+            [
+              "were"
+            ],
+            [
+              "working"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "Why didn’t you answer the phone last night? What ___?",
+          "segments": [
+            "Why didn’t you answer the phone last night? What ",
+            "?"
+          ],
+          "answers": [
+            [
+              "were you doing"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "It ___ when I left home this morning.",
+          "segments": [
+            "It ",
+            " when I left home this morning."
+          ],
+          "answers": [
+            [
+              "wasn't raining",
+              "was not raining"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "I ___ in Prague in 2017.",
+          "segments": [
+            "I ",
+            " in Prague in 2017."
+          ],
+          "answers": [
+            [
+              "wasn't living",
+              "was not living"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "I dropped my passport when I ___ into the taxi.",
+          "segments": [
+            "I dropped my passport when I ",
+            " into the taxi."
+          ],
+          "answers": [
+            [
+              "was getting"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-2b",
+      "title": "2b. Write sentences with when. Use the past simple and past continuous.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "Tommy / fall off his bike / cycle home\nTommy fell off his bike when he was cycling home.",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "prompt": "Mark / talk on the phone / get a text",
+          "hideAnswersOnError": true,
+          "answer": "Mark was talking on the phone when he got a text.",
+          "acceptedAnswers": [
+            "Mark was talking on the phone when he got a text",
+            "Mark was talking on the phone when he got a text."
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "prompt": "The children / play computer games / the visitors arrive",
+          "hideAnswersOnError": true,
+          "answer": "The children were playing computer games when the visitors arrived.",
+          "acceptedAnswers": [
+            "The children were playing computer games when the visitors arrived",
+            "The children were playing computer games when the visitors arrived."
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "prompt": "We / have a barbecue / it start to rain",
+          "hideAnswersOnError": true,
+          "answer": "We were having a barbecue when it started to rain.",
+          "acceptedAnswers": [
+            "We were having a barbecue when it started to rain",
+            "We were having a barbecue when it started to rain."
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "prompt": "I / write a report / my computer crash",
+          "hideAnswersOnError": true,
+          "answer": "I was writing a report when my computer crashed.",
+          "acceptedAnswers": [
+            "I was writing a report when my computer crashed",
+            "I was writing a report when my computer crashed."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-2c",
+      "title": "2c. The police are at an art gallery because someone stole a famous painting at 5.30 yesterday afternoon. What were the people in the pictures doing at the time? Write sentences.",
+      "image": "images/lesson-5/art-gallery.svg",
+      "imageAlt": "Six art gallery scenes for past continuous sentences",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "clean Gallery 6\nI was cleaning Gallery 6.",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "prompt": "try to find the exit",
+          "hideAnswersOnError": true,
+          "answer": "We were trying to find the exit.",
+          "acceptedAnswers": [
+            "We were trying to find the exit",
+            "We were trying to find the exit."
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "prompt": "close the windows",
+          "hideAnswersOnError": true,
+          "answer": "I was closing the windows.",
+          "acceptedAnswers": [
+            "I was closing the windows",
+            "I was closing the windows."
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "prompt": "wash the coffee cups",
+          "hideAnswersOnError": true,
+          "answer": "We were washing the coffee cups.",
+          "acceptedAnswers": [
+            "We were washing the coffee cups",
+            "We were washing the coffee cups."
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "prompt": "count the money",
+          "hideAnswersOnError": true,
+          "answer": "I was counting the money.",
+          "acceptedAnswers": [
+            "I was counting the money",
+            "I was counting the money."
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "textarea",
+          "prompt": "What were you doing at 5.30 yesterday?",
+          "hideAnswersOnError": true,
+          "answer": "",
+          "scored": false,
+          "placeholder": "I ..."
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "2B · 3",
+      "title": "PRONUNCIATION · weak forms: was, were",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "pronunciation-3a",
+      "title": "3a. Read the sentences. Are was and were stressed or unstressed? Write S for stressed and U for unstressed.",
+      "wordBank": [
+        "S",
+        "U"
+      ],
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "My mum took this photo when we were travelling in Malaysia. U",
+          "example": true,
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "We met our new neighbours yesterday – they weren’t very friendly. ___",
+          "segments": [
+            "We met our new neighbours yesterday – they weren’t very friendly. ",
+            ""
+          ],
+          "answers": [
+            [
+              "U",
+              "u"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "What were you doing when I phoned you? ___",
+          "segments": [
+            "What were you doing when I phoned you? ",
+            ""
+          ],
+          "answers": [
+            [
+              "U",
+              "u"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "A Was Matt at home last night? ___\nB No, he wasn’t. ___",
+          "segments": [
+            "A Was Matt at home last night? ",
+            "\nB No, he wasn’t. ",
+            ""
+          ],
+          "answers": [
+            [
+              "S",
+              "s"
+            ],
+            [
+              "S",
+              "s"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "A It was a great party. ___\nB Was it at Kim’s house? ___\nA Yes, it was. ___",
+          "segments": [
+            "A It was a great party. ",
+            "\nB Was it at Kim’s house? ",
+            "\nA Yes, it was. ",
+            ""
+          ],
+          "answers": [
+            [
+              "U",
+              "u"
+            ],
+            [
+              "S",
+              "s"
+            ],
+            [
+              "S",
+              "s"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "There were lots of people at the supermarket. ___",
+          "segments": [
+            "There were lots of people at the supermarket. ",
+            ""
+          ],
+          "answers": [
+            [
+              "U",
+              "u"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    }
+  ]
+}

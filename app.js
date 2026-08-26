@@ -15,6 +15,7 @@
   const escapeHtml = (value) => safeText(value)
     .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;').replaceAll("'", '&#039;');
+  const inlineHtml = (value) => escapeHtml(value).replaceAll('\n', '<br>');
   const byId = (id) => document.getElementById(id);
   const queryParam = (name) => new URLSearchParams(window.location.search).get(name) || '';
   const unique = (items) => [...new Set(Array.isArray(items) ? items : [])];
@@ -944,7 +945,9 @@
   function renderExerciseItem(item, blockId, index) {
     const itemId = safeText(item.id, `${index + 1}`);
     const number = item.number === undefined ? index + 1 : item.number;
-    const prompt = escapeHtml(item.prompt || '');
+    const rawPrompt = safeText(item.prompt || '');
+    const prompt = inlineHtml(rawPrompt);
+    const ariaPrompt = escapeHtml(rawPrompt);
     const inputId = `exercise-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
     const numberMarkup = number === '' || number === null ? '' : `<span class="exercise-number">${escapeHtml(number)}</span>`;
     const itemMedia = item.image
@@ -977,7 +980,7 @@
     let control = '';
     if (item.input === 'example-gap') {
       const segments = Array.isArray(item.segments) ? item.segments : [];
-      control = `<div class="sentence-gaps numbered-example-gap"><span>${escapeHtml(segments[0] || '')}</span><span class="inline-example-answer"><b>${escapeHtml(item.exampleNumber || 1)}</b> ${escapeHtml(item.exampleAnswer || '')}</span><span>${escapeHtml(segments[1] || '')}</span><span class="inline-gap-number">${escapeHtml(item.gapNumber || 2)}</span><input class="gap-input" data-example-gap autocomplete="off"><span>${escapeHtml(segments[2] || '')}</span></div>`;
+      control = `<div class="sentence-gaps numbered-example-gap"><span>${escapeHtml(segments[0] || '')}</span><span class="inline-example-answer"><b>${escapeHtml(item.exampleNumber || 1)}</b> ${escapeHtml(item.exampleAnswer || '')}</span><span>${inlineHtml(segments[1] || '')}</span><span class="inline-gap-number">${escapeHtml(item.gapNumber || 2)}</span><input class="gap-input" data-example-gap autocomplete="off"><span>${inlineHtml(segments[2] || '')}</span></div>`;
     } else if (item.input === 'odd-one-out') {
       control = `<div class="odd-one-out-control"><div class="odd-options">${(item.options || []).map((option, optionIndex) => `<label class="odd-option"><input type="radio" name="${escapeHtml(inputId)}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('')}</div><label class="odd-reason" for="${escapeHtml(inputId)}-reason">The others are all <input class="gap-input odd-reason-input" id="${escapeHtml(inputId)}-reason" data-odd-reason autocomplete="off">.</label></div>`;
     } else if (item.input === 'multiple' || item.input === 'single') {
@@ -996,13 +999,13 @@
       const segments = Array.isArray(item.segments) ? item.segments : [];
       const placeholders = Array.isArray(item.placeholders) ? item.placeholders : [];
       const gapOptions = Array.isArray(item.gapOptions) ? item.gapOptions : [];
-      control = `<div class="sentence-gaps" role="group" aria-label="${prompt}">${answers.map((answer, gapIndex) => {
+      control = `<div class="sentence-gaps" role="group" aria-label="${ariaPrompt}">${answers.map((answer, gapIndex) => {
         const options = Array.isArray(gapOptions[gapIndex]) ? gapOptions[gapIndex] : null;
         const gapControl = options
-          ? `<select class="gap-select" data-gap-index="${gapIndex}" aria-label="Пропуск ${gapIndex + 1}: ${prompt}"><option value="">— выбери —</option>${options.map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join('')}</select>`
-          : `<input class="gap-input" data-gap-index="${gapIndex}" aria-label="Пропуск ${gapIndex + 1}: ${prompt}" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="${escapeHtml(placeholders[gapIndex] || '')}">`;
-        return `${gapIndex < segments.length ? `<span>${escapeHtml(segments[gapIndex])}</span>` : ''}${gapControl}`;
-      }).join('')}${segments.length > answers.length ? `<span>${escapeHtml(segments[segments.length - 1])}</span>` : ''}</div>`;
+          ? `<select class="gap-select" data-gap-index="${gapIndex}" aria-label="Пропуск ${gapIndex + 1}: ${ariaPrompt}"><option value="">— выбери —</option>${options.map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join('')}</select>`
+          : `<input class="gap-input" data-gap-index="${gapIndex}" aria-label="Пропуск ${gapIndex + 1}: ${ariaPrompt}" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="${escapeHtml(placeholders[gapIndex] || '')}">`;
+        return `${gapIndex < segments.length ? `<span>${inlineHtml(segments[gapIndex])}</span>` : ''}${gapControl}`;
+      }).join('')}${segments.length > answers.length ? `<span>${inlineHtml(segments[segments.length - 1])}</span>` : ''}</div>`;
     } else {
       control = `<input class="text-field" id="${escapeHtml(inputId)}" autocomplete="off" placeholder="${escapeHtml(item.placeholder || '')}">`;
     }
@@ -1176,7 +1179,7 @@
       const exampleUsed = exampleAnswers.has(option.id);
       return `<button class="match-right-item${exampleUsed ? ' is-example-used' : ''}" type="button" data-match-option="${escapeHtml(option.id)}" ${exampleUsed ? 'disabled' : ''}>
         <span class="match-option-letter">${escapeHtml(option.id)}</span>
-        <span>${escapeHtml(option.text)}</span>
+        <span data-match-option-text>${escapeHtml(option.text)}</span>
       </button>`;
     }).join('');
     return `<article class="card lesson-block match-card" data-task="${escapeHtml(id)}" data-type="match">
@@ -1577,8 +1580,30 @@
     return template.replace(/\{(\d+)\}/g, (match, rawIndex) => safeText(values[Number(rawIndex)]));
   }
 
-  function updateLessonDependentSelects(root, blocks) {
+  function collectDependencyLabels(root, blocks, sourceBlockId, sourceIds) {
     const blockMap = new Map((Array.isArray(blocks) ? blocks : []).map((block, index) => [safeText(block.id, `task-${index}`), { block, index }]));
+    const sourceEntry = blockMap.get(safeText(sourceBlockId));
+    const sourceBlock = sourceEntry?.block;
+    const sourceTaskId = sourceEntry ? safeText(sourceBlock.id, `task-${sourceEntry.index}`) : '';
+    const sourceNode = sourceEntry ? root.querySelector(`[data-task="${CSS.escape(sourceTaskId)}"]`) : null;
+    const sourceItems = Array.isArray(sourceBlock?.items) ? sourceBlock.items : [];
+    const labels = new Map();
+    let ready = Boolean(sourceBlock && sourceNode && Array.isArray(sourceIds) && sourceIds.length);
+
+    (Array.isArray(sourceIds) ? sourceIds : []).forEach((sourceId) => {
+      const sourceIndex = sourceItems.findIndex((candidate) => safeText(candidate.id) === safeText(sourceId));
+      const sourceItem = sourceItems[sourceIndex];
+      const sourceItemId = safeText(sourceItem?.id, `${sourceIndex + 1}`);
+      const sourceItemNode = sourceNode?.querySelector(`[data-exercise-item="${CSS.escape(sourceItemId)}"]`);
+      const label = sourceItem ? buildDependencyText(sourceItem, sourceItemNode) : '';
+      if (!label) ready = false;
+      labels.set(safeText(sourceId), label);
+    });
+
+    return { ready, labels };
+  }
+
+  function updateLessonDependentSelects(root, blocks) {
     (Array.isArray(blocks) ? blocks : []).forEach((block, blockIndex) => {
       if (block.type !== 'exercise') return;
       const taskId = safeText(block.id, `task-${blockIndex}`);
@@ -1590,22 +1615,8 @@
         const itemNode = node.querySelector(`[data-exercise-item="${CSS.escape(itemId)}"]`);
         const select = itemNode?.querySelector('select[data-dependent-select]');
         if (!select) return;
-        const sourceEntry = blockMap.get(safeText(item.sourceBlockId));
-        const sourceBlock = sourceEntry?.block;
-        const sourceNode = sourceEntry ? root.querySelector(`[data-task="${CSS.escape(safeText(sourceBlock.id, `task-${sourceEntry.index}`))}"]`) : null;
-        const sourceItems = Array.isArray(sourceBlock?.items) ? sourceBlock.items : [];
         const sourceIds = Array.isArray(item.sourceItemIds) ? item.sourceItemIds : [];
-        const labels = new Map();
-        let ready = Boolean(sourceBlock && sourceNode && sourceIds.length);
-        sourceIds.forEach((sourceId) => {
-          const sourceIndex = sourceItems.findIndex((candidate) => safeText(candidate.id) === safeText(sourceId));
-          const sourceItem = sourceItems[sourceIndex];
-          const sourceItemId = safeText(sourceItem?.id, `${sourceIndex + 1}`);
-          const sourceItemNode = sourceNode?.querySelector(`[data-exercise-item="${CSS.escape(sourceItemId)}"]`);
-          const label = sourceItem ? buildDependencyText(sourceItem, sourceItemNode) : '';
-          if (!label) ready = false;
-          labels.set(safeText(sourceId), label);
-        });
+        const { ready, labels } = collectDependencyLabels(root, blocks, item.sourceBlockId, sourceIds);
         [...select.options].forEach((option) => {
           if (!option.value) {
             option.textContent = ready ? (select.dataset.placeholderReady || '— выбери предложение —') : (select.dataset.placeholderWaiting || 'Complete the previous part first');
@@ -1619,8 +1630,49 @@
     });
   }
 
+  function updateLessonDynamicMatches(root, blocks) {
+    (Array.isArray(blocks) ? blocks : []).forEach((block, blockIndex) => {
+      if (block.type !== 'match' || !block.sourceBlockId) return;
+      const taskId = safeText(block.id, `task-${blockIndex}`);
+      const node = root.querySelector(`[data-task="${CSS.escape(taskId)}"]`);
+      if (!node) return;
+      const sourceIds = Array.isArray(block.sourceItemIds) ? block.sourceItemIds : [];
+      const { ready, labels } = collectDependencyLabels(root, blocks, block.sourceBlockId, sourceIds);
+      const waiting = safeText(block.waitingPlaceholder || 'Complete the previous part first');
+
+      node.querySelectorAll('[data-match-option]').forEach((option) => {
+        const optionId = safeText(option.dataset.matchOption);
+        const label = option.querySelector('[data-match-option-text]');
+        if (label) label.textContent = ready ? safeText(labels.get(optionId) || optionId) : waiting;
+        option.disabled = !ready || option.classList.contains('is-example-used');
+      });
+
+      const feedback = node.querySelector('.feedback');
+      if (!ready) {
+        node.querySelectorAll('[data-match-left]:not(.is-example)').forEach((row) => {
+          const input = row.querySelector('[data-match-value]');
+          if (input) input.value = '';
+          row.classList.remove('is-connected', 'is-correct', 'is-wrong', 'is-active');
+        });
+        if (feedback) {
+          feedback.className = 'feedback show neutral';
+          feedback.textContent = waiting;
+        }
+      } else if (feedback && feedback.classList.contains('neutral')) {
+        feedback.className = 'feedback';
+        feedback.textContent = '';
+      }
+      const container = node.querySelector('[data-match-connect]');
+      if (container) refreshMatchConnect(container);
+    });
+  }
+
+
   function initLessonDependencies(root, blocks) {
-    const refresh = () => updateLessonDependentSelects(root, blocks);
+    const refresh = () => {
+      updateLessonDependentSelects(root, blocks);
+      updateLessonDynamicMatches(root, blocks);
+    };
     refresh();
     root.addEventListener('input', refresh);
     root.addEventListener('change', refresh);

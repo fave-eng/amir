@@ -1013,5 +1013,228 @@ window.VOCABULARY_DATA = [
         "exampleRu": "Arrive — правильный глагол."
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-2b",
+    "order": 5,
+    "title": "Prepositions and photo descriptions",
+    "label": "Lesson 5 · Unit 2B · That’s me in the picture!",
+    "icon": "📷",
+    "type": "lesson",
+    "linkedLessonId": "lesson-5",
+    "page": "vocabulary.html?id=vocab-lesson-2b",
+    "publishedAt": "2026-08-26",
+    "words": [
+      {
+        "id": "lesson-2b-preposition",
+        "en": "preposition",
+        "ru": "предлог",
+        "exampleEn": "Use the correct preposition: at, in, or on.",
+        "exampleRu": "Используй правильный предлог: at, in или on."
+      },
+      {
+        "id": "lesson-2b-photo",
+        "en": "photo",
+        "ru": "фотография",
+        "exampleEn": "This photo shows me in Berlin.",
+        "exampleRu": "На этой фотографии я в Берлине."
+      },
+      {
+        "id": "lesson-2b-arrive",
+        "en": "arrive",
+        "ru": "прибывать",
+        "exampleEn": "We are arriving at 12.00 on Thursday.",
+        "exampleRu": "Мы прибываем в 12:00 в четверг."
+      },
+      {
+        "id": "lesson-2b-christmas",
+        "en": "Christmas",
+        "ru": "Рождество",
+        "exampleEn": "Offices are closed at Christmas.",
+        "exampleRu": "Офисы закрыты на Рождество."
+      },
+      {
+        "id": "lesson-2b-new-year-s-day",
+        "en": "New Year’s Day",
+        "ru": "Новый год; 1 января",
+        "exampleEn": "Offices are closed on New Year’s Day.",
+        "exampleRu": "Офисы закрыты 1 января."
+      },
+      {
+        "id": "lesson-2b-easter",
+        "en": "Easter",
+        "ru": "Пасха",
+        "exampleEn": "At Easter, we went to Greece.",
+        "exampleRu": "На Пасху мы ездили в Грецию."
+      },
+      {
+        "id": "lesson-2b-shelves",
+        "en": "shelves",
+        "ru": "полки",
+        "exampleEn": "We want to put some shelves on the wall.",
+        "exampleRu": "Мы хотим повесить полки на стену."
+      },
+      {
+        "id": "lesson-2b-floor",
+        "en": "floor",
+        "ru": "пол",
+        "exampleEn": "The children all sat on the floor.",
+        "exampleRu": "Все дети сидели на полу."
+      },
+      {
+        "id": "lesson-2b-museum",
+        "en": "museum",
+        "ru": "музей",
+        "exampleEn": "They spent the morning at the museum.",
+        "exampleRu": "Они провели утро в музее."
+      },
+      {
+        "id": "lesson-2b-bus-stop",
+        "en": "bus stop",
+        "ru": "автобусная остановка",
+        "exampleEn": "You were waiting at the bus stop.",
+        "exampleRu": "Ты ждал на автобусной остановке."
+      },
+      {
+        "id": "lesson-2b-table",
+        "en": "table",
+        "ru": "стол",
+        "exampleEn": "I put the letter on the table.",
+        "exampleRu": "Я положил письмо на стол."
+      },
+      {
+        "id": "lesson-2b-drop",
+        "en": "drop",
+        "ru": "ронять",
+        "exampleEn": "I dropped my phone in the street.",
+        "exampleRu": "Я уронил телефон на улице."
+      },
+      {
+        "id": "lesson-2b-get-into",
+        "en": "get into",
+        "ru": "садиться в; входить в",
+        "exampleEn": "I was getting into the taxi.",
+        "exampleRu": "Я садился в такси."
+      },
+      {
+        "id": "lesson-2b-past-continuous",
+        "en": "past continuous",
+        "ru": "прошедшее длительное время",
+        "exampleEn": "We use the past continuous for an action in progress in the past.",
+        "exampleRu": "Past Continuous используется для действия в процессе в прошлом."
+      },
+      {
+        "id": "lesson-2b-cycle-home",
+        "en": "cycle home",
+        "ru": "ехать домой на велосипеде",
+        "exampleEn": "Tommy was cycling home.",
+        "exampleRu": "Томми ехал домой на велосипеде."
+      },
+      {
+        "id": "lesson-2b-fall-off",
+        "en": "fall off",
+        "ru": "упасть с",
+        "exampleEn": "Tommy fell off his bike.",
+        "exampleRu": "Томми упал с велосипеда."
+      },
+      {
+        "id": "lesson-2b-get-a-text",
+        "en": "get a text",
+        "ru": "получить сообщение",
+        "exampleEn": "Mark got a text.",
+        "exampleRu": "Марк получил сообщение."
+      },
+      {
+        "id": "lesson-2b-visitor",
+        "en": "visitor",
+        "ru": "гость; посетитель",
+        "exampleEn": "The visitors arrived.",
+        "exampleRu": "Гости пришли."
+      },
+      {
+        "id": "lesson-2b-barbecue",
+        "en": "barbecue",
+        "ru": "барбекю",
+        "exampleEn": "We were having a barbecue.",
+        "exampleRu": "Мы устраивали барбекю."
+      },
+      {
+        "id": "lesson-2b-crash",
+        "en": "crash",
+        "ru": "сломаться; аварийно завершиться",
+        "exampleEn": "My computer crashed.",
+        "exampleRu": "Мой компьютер сломался."
+      },
+      {
+        "id": "lesson-2b-art-gallery",
+        "en": "art gallery",
+        "ru": "художественная галерея",
+        "exampleEn": "The police are at an art gallery.",
+        "exampleRu": "Полиция находится в художественной галерее."
+      },
+      {
+        "id": "lesson-2b-steal",
+        "en": "steal",
+        "ru": "красть",
+        "exampleEn": "Someone stole a famous painting.",
+        "exampleRu": "Кто-то украл известную картину."
+      },
+      {
+        "id": "lesson-2b-painting",
+        "en": "painting",
+        "ru": "картина",
+        "exampleEn": "Someone stole a famous painting.",
+        "exampleRu": "Кто-то украл известную картину."
+      },
+      {
+        "id": "lesson-2b-exit",
+        "en": "exit",
+        "ru": "выход",
+        "exampleEn": "They were trying to find the exit.",
+        "exampleRu": "Они пытались найти выход."
+      },
+      {
+        "id": "lesson-2b-count-the-money",
+        "en": "count the money",
+        "ru": "считать деньги",
+        "exampleEn": "I was counting the money.",
+        "exampleRu": "Я считала деньги."
+      },
+      {
+        "id": "lesson-2b-neighbour",
+        "en": "neighbour",
+        "ru": "сосед",
+        "exampleEn": "We met our new neighbours yesterday.",
+        "exampleRu": "Вчера мы встретили новых соседей."
+      },
+      {
+        "id": "lesson-2b-supermarket",
+        "en": "supermarket",
+        "ru": "супермаркет",
+        "exampleEn": "There were lots of people at the supermarket.",
+        "exampleRu": "В супермаркете было много людей."
+      },
+      {
+        "id": "lesson-2b-stressed",
+        "en": "stressed",
+        "ru": "ударный; выделенный голосом",
+        "exampleEn": "Was is stressed in this sentence.",
+        "exampleRu": "Was выделяется голосом в этом предложении."
+      },
+      {
+        "id": "lesson-2b-unstressed",
+        "en": "unstressed",
+        "ru": "безударный; невыделенный голосом",
+        "exampleEn": "Were is unstressed in this sentence.",
+        "exampleRu": "Were не выделяется голосом в этом предложении."
+      },
+      {
+        "id": "lesson-2b-weak-form",
+        "en": "weak form",
+        "ru": "слабая форма произношения",
+        "exampleEn": "Was and were often have weak forms.",
+        "exampleRu": "Was и were часто имеют слабые формы произношения."
+      }
+    ]
   }
 ];

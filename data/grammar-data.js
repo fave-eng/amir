@@ -1919,5 +1919,304 @@ window.GRAMMAR_DATA = [
         ]
       }
     ]
+  },
+  {
+    "id": "grammar-past-continuous",
+    "order": 5,
+    "title": "Past Continuous: actions in progress in the past",
+    "level": "A2",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-past-continuous",
+    "passed": false,
+    "attempts": 0,
+    "publishedAt": "2026-08-26",
+    "linkedLessonId": "lesson-5",
+    "revealAnswersOnError": false,
+    "lockOnPass": true,
+    "explanation": "Past Continuous нужен, когда мы говорим о действии, которое было в процессе в конкретный момент в прошлом. Часто это фон: что человек делал, когда произошло другое короткое действие. Например: I was writing a report when my computer crashed. Долгое действие — was writing, короткое событие — crashed.",
+    "formula": "was / were + verb-ing · I/he/she/it was working · you/we/they were working · was not / were not + verb-ing · Was/Were + subject + verb-ing?",
+    "glanceCards": [
+      {
+        "title": "Значение",
+        "text": "Действие было в процессе в прошлом: at 5.30 yesterday, when I phoned you."
+      },
+      {
+        "title": "Утверждение",
+        "text": "I was counting the money. We were washing the coffee cups."
+      },
+      {
+        "title": "Отрицание",
+        "text": "It wasn’t raining. They weren’t working."
+      },
+      {
+        "title": "Вопрос",
+        "text": "What were you doing? Was Matt at home?"
+      }
+    ],
+    "exampleGroups": [
+      {
+        "title": "At a time in the past",
+        "examples": [
+          "I was closing the windows at 5.30.",
+          "They were trying to find the exit."
+        ]
+      },
+      {
+        "title": "With when",
+        "examples": [
+          "Mark was talking on the phone when he got a text.",
+          "We were having a barbecue when it started to rain."
+        ]
+      },
+      {
+        "title": "Negative and question",
+        "examples": [
+          "It wasn’t raining.",
+          "What were you doing?"
+        ]
+      }
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "I was count the money.",
+        "right": "I was counting the money.",
+        "note": "После was/were нужен глагол с -ing."
+      },
+      {
+        "wrong": "They was playing.",
+        "right": "They were playing.",
+        "note": "Для they/we/you используем were."
+      },
+      {
+        "wrong": "What you were doing?",
+        "right": "What were you doing?",
+        "note": "В вопросе was/were ставим перед подлежащим."
+      },
+      {
+        "wrong": "I was write a report when my computer crashed.",
+        "right": "I was writing a report when my computer crashed.",
+        "note": "Не забывай -ing в Past Continuous."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "exercise",
+        "id": "past-cont-step-1",
+        "title": "1. Easy · Choose was or were",
+        "difficulty": "Easy",
+        "instructions": "Выбери правильную форму was/were.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "single",
+            "prompt": "I ___ closing the windows.",
+            "options": [
+              "was",
+              "were"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "single",
+            "prompt": "We ___ washing the coffee cups.",
+            "options": [
+              "was",
+              "were"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "single",
+            "prompt": "It ___ raining.",
+            "options": [
+              "was",
+              "were"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "single",
+            "prompt": "They ___ trying to find the exit.",
+            "options": [
+              "was",
+              "were"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "past-cont-step-2",
+        "title": "2. Medium · Complete the form",
+        "difficulty": "Medium",
+        "instructions": "Напиши Past Continuous.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "text",
+            "prompt": "I ___ the money. (count)",
+            "answer": "was counting",
+            "acceptedAnswers": [
+              "was counting"
+            ]
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "text",
+            "prompt": "They ___ computer games. (play)",
+            "answer": "were playing",
+            "acceptedAnswers": [
+              "were playing"
+            ]
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "text",
+            "prompt": "It ___ when I left home. (not rain)",
+            "answer": "wasn’t raining",
+            "acceptedAnswers": [
+              "wasn’t raining",
+              "wasn't raining",
+              "was not raining"
+            ]
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "text",
+            "prompt": "You ___ in the same office. (work)",
+            "answer": "were working",
+            "acceptedAnswers": [
+              "were working"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "past-cont-step-3",
+        "title": "3. Harder · Choose the correct sentence",
+        "difficulty": "Harder",
+        "instructions": "Выбери правильный вариант.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "single",
+            "prompt": "Question:",
+            "options": [
+              "What were you doing?",
+              "What you were doing?",
+              "What did you doing?"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "single",
+            "prompt": "Negative:",
+            "options": [
+              "I wasn’t living in Prague.",
+              "I didn’t living in Prague.",
+              "I weren’t living in Prague."
+            ],
+            "answer": 0
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "single",
+            "prompt": "With when:",
+            "options": [
+              "Mark talked on the phone when he was getting a text.",
+              "Mark was talking on the phone when he got a text.",
+              "Mark were talking on the phone when he got a text."
+            ],
+            "answer": 1
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "single",
+            "prompt": "They / try / find the exit:",
+            "options": [
+              "They were trying to find the exit.",
+              "They was trying to find the exit.",
+              "They were try to find the exit."
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "past-cont-step-4",
+        "title": "4. Challenge · Build the sentence",
+        "difficulty": "Challenge",
+        "instructions": "Напиши полное предложение или вопрос.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "text",
+            "prompt": "What / you / do / at 5.30 yesterday?",
+            "answer": "What were you doing at 5.30 yesterday?",
+            "acceptedAnswers": [
+              "What were you doing at 5.30 yesterday",
+              "What were you doing at 5.30 yesterday?"
+            ]
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "text",
+            "prompt": "We / wash / the coffee cups.",
+            "answer": "We were washing the coffee cups.",
+            "acceptedAnswers": [
+              "We were washing the coffee cups",
+              "We were washing the coffee cups."
+            ]
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "text",
+            "prompt": "I / not / live / in Prague in 2017.",
+            "answer": "I wasn’t living in Prague in 2017.",
+            "acceptedAnswers": [
+              "I wasn’t living in Prague in 2017",
+              "I wasn't living in Prague in 2017",
+              "I was not living in Prague in 2017",
+              "I wasn’t living in Prague in 2017.",
+              "I wasn't living in Prague in 2017.",
+              "I was not living in Prague in 2017."
+            ]
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "text",
+            "prompt": "I / write / a report / when / my computer / crash.",
+            "answer": "I was writing a report when my computer crashed.",
+            "acceptedAnswers": [
+              "I was writing a report when my computer crashed",
+              "I was writing a report when my computer crashed."
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];
