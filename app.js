@@ -1134,7 +1134,11 @@
         <div class="pronunciation-word-slots">${columnItems.map((item, itemIndex) => {
           const itemId = safeText(item.id, `${itemIndex + 1}`);
           const inputId = `exercise-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
-          return `<div class="pronunciation-word-slot" data-exercise-item="${escapeHtml(itemId)}" data-input-type="bank-select"><select id="${escapeHtml(inputId)}" data-bank-select aria-label="${escapeHtml(column.label || '')}"><option value="">— выбери —</option>${(item.options || []).map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join('')}</select><div class="feedback" aria-live="polite"></div></div>`;
+          const inputType = item.input || 'text';
+          const control = inputType === 'bank-select'
+            ? `<select id="${escapeHtml(inputId)}" data-bank-select aria-label="${escapeHtml(column.label || '')}"><option value="">— выбери —</option>${(item.options || []).map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join('')}</select>`
+            : `<input class="text-field" id="${escapeHtml(inputId)}" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="${escapeHtml(column.label || '')}">`;
+          return `<div class="pronunciation-word-slot" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(inputType)}">${control}<div class="feedback" aria-live="polite"></div></div>`;
         }).join('')}</div>
       </section>`;
     }).join('')}</div>`;
@@ -1350,11 +1354,20 @@
     let total = 0;
     const items = Array.isArray(block.items) ? block.items : [];
     const bankValueCounts = {};
+    const shouldPreventDuplicate = (item) => item.input === 'bank-select' || (
+      item.group &&
+      (!item.input || item.input === 'text') &&
+      Array.isArray(item.acceptedAnswers) &&
+      item.acceptedAnswers.length > 1
+    );
     items.forEach((item, index) => {
-      if (item.example || item.displayOnly || item.input !== 'bank-select') return;
+      if (item.example || item.displayOnly || !shouldPreventDuplicate(item)) return;
       const itemId = safeText(item.id, `${index + 1}`);
       const itemNode = node.querySelector(`[data-exercise-item="${CSS.escape(itemId)}"]`);
-      const value = normalizeAnswer(itemNode?.querySelector('select')?.value || '');
+      const control = item.input === 'bank-select'
+        ? itemNode?.querySelector('select')
+        : itemNode?.querySelector('input, textarea');
+      const value = normalizeAnswer(control?.value || '');
       if (value) bankValueCounts[value] = (bankValueCounts[value] || 0) + 1;
     });
 
@@ -1364,7 +1377,7 @@
       const itemNode = node.querySelector(`[data-exercise-item="${CSS.escape(itemId)}"]`);
       if (!itemNode) return;
       const result = checkExerciseItem(item, itemNode);
-      if (item.input === 'bank-select') {
+      if (shouldPreventDuplicate(item)) {
         const normalized = normalizeAnswer(result.actual);
         if (normalized && bankValueCounts[normalized] > 1) result.correct = false;
       }

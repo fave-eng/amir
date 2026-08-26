@@ -59,22 +59,8 @@
         {
           "id": "regular-1",
           "number": "",
-          "input": "bank-select",
+          "input": "text",
           "group": "regular",
-          "options": [
-            "arrived",
-            "asked",
-            "invited",
-            "rented",
-            "stayed",
-            "studied",
-            "bought",
-            "could",
-            "chose",
-            "ate",
-            "felt",
-            "said"
-          ],
           "acceptedAnswers": [
             "arrived",
             "asked",
@@ -87,22 +73,8 @@
         {
           "id": "regular-2",
           "number": "",
-          "input": "bank-select",
+          "input": "text",
           "group": "regular",
-          "options": [
-            "arrived",
-            "asked",
-            "invited",
-            "rented",
-            "stayed",
-            "studied",
-            "bought",
-            "could",
-            "chose",
-            "ate",
-            "felt",
-            "said"
-          ],
           "acceptedAnswers": [
             "arrived",
             "asked",
@@ -115,22 +87,8 @@
         {
           "id": "regular-3",
           "number": "",
-          "input": "bank-select",
+          "input": "text",
           "group": "regular",
-          "options": [
-            "arrived",
-            "asked",
-            "invited",
-            "rented",
-            "stayed",
-            "studied",
-            "bought",
-            "could",
-            "chose",
-            "ate",
-            "felt",
-            "said"
-          ],
           "acceptedAnswers": [
             "arrived",
             "asked",
@@ -143,22 +101,8 @@
         {
           "id": "regular-4",
           "number": "",
-          "input": "bank-select",
+          "input": "text",
           "group": "regular",
-          "options": [
-            "arrived",
-            "asked",
-            "invited",
-            "rented",
-            "stayed",
-            "studied",
-            "bought",
-            "could",
-            "chose",
-            "ate",
-            "felt",
-            "said"
-          ],
           "acceptedAnswers": [
             "arrived",
             "asked",
@@ -171,22 +115,8 @@
         {
           "id": "regular-5",
           "number": "",
-          "input": "bank-select",
+          "input": "text",
           "group": "regular",
-          "options": [
-            "arrived",
-            "asked",
-            "invited",
-            "rented",
-            "stayed",
-            "studied",
-            "bought",
-            "could",
-            "chose",
-            "ate",
-            "felt",
-            "said"
-          ],
           "acceptedAnswers": [
             "arrived",
             "asked",
@@ -199,22 +129,8 @@
         {
           "id": "regular-6",
           "number": "",
-          "input": "bank-select",
+          "input": "text",
           "group": "regular",
-          "options": [
-            "arrived",
-            "asked",
-            "invited",
-            "rented",
-            "stayed",
-            "studied",
-            "bought",
-            "could",
-            "chose",
-            "ate",
-            "felt",
-            "said"
-          ],
           "acceptedAnswers": [
             "arrived",
             "asked",
@@ -227,22 +143,8 @@
         {
           "id": "irregular-1",
           "number": "",
-          "input": "bank-select",
+          "input": "text",
           "group": "irregular",
-          "options": [
-            "arrived",
-            "asked",
-            "invited",
-            "rented",
-            "stayed",
-            "studied",
-            "bought",
-            "could",
-            "chose",
-            "ate",
-            "felt",
-            "said"
-          ],
           "acceptedAnswers": [
             "bought",
             "could",
@@ -255,22 +157,8 @@
         {
           "id": "irregular-2",
           "number": "",
-          "input": "bank-select",
+          "input": "text",
           "group": "irregular",
-          "options": [
-            "arrived",
-            "asked",
-            "invited",
-            "rented",
-            "stayed",
-            "studied",
-            "bought",
-            "could",
-            "chose",
-            "ate",
-            "felt",
-            "said"
-          ],
           "acceptedAnswers": [
             "bought",
             "could",
@@ -283,22 +171,8 @@
         {
           "id": "irregular-3",
           "number": "",
-          "input": "bank-select",
+          "input": "text",
           "group": "irregular",
-          "options": [
-            "arrived",
-            "asked",
-            "invited",
-            "rented",
-            "stayed",
-            "studied",
-            "bought",
-            "could",
-            "chose",
-            "ate",
-            "felt",
-            "said"
-          ],
           "acceptedAnswers": [
             "bought",
             "could",
@@ -311,22 +185,8 @@
         {
           "id": "irregular-4",
           "number": "",
-          "input": "bank-select",
+          "input": "text",
           "group": "irregular",
-          "options": [
-            "arrived",
-            "asked",
-            "invited",
-            "rented",
-            "stayed",
-            "studied",
-            "bought",
-            "could",
-            "chose",
-            "ate",
-            "felt",
-            "said"
-          ],
           "acceptedAnswers": [
             "bought",
             "could",
@@ -339,22 +199,8 @@
         {
           "id": "irregular-5",
           "number": "",
-          "input": "bank-select",
+          "input": "text",
           "group": "irregular",
-          "options": [
-            "arrived",
-            "asked",
-            "invited",
-            "rented",
-            "stayed",
-            "studied",
-            "bought",
-            "could",
-            "chose",
-            "ate",
-            "felt",
-            "said"
-          ],
           "acceptedAnswers": [
             "bought",
             "could",
@@ -367,22 +213,8 @@
         {
           "id": "irregular-6",
           "number": "",
-          "input": "bank-select",
+          "input": "text",
           "group": "irregular",
-          "options": [
-            "arrived",
-            "asked",
-            "invited",
-            "rented",
-            "stayed",
-            "studied",
-            "bought",
-            "could",
-            "chose",
-            "ate",
-            "felt",
-            "said"
-          ],
           "acceptedAnswers": [
             "bought",
             "could",
@@ -420,9 +252,6 @@
               "didn't buy",
               "did not buy"
             ]
-          ],
-          "placeholders": [
-            "didn’t buy"
           ]
         },
         {
@@ -439,9 +268,6 @@
               "weren't",
               "were not"
             ]
-          ],
-          "placeholders": [
-            "weren’t"
           ]
         },
         {
@@ -458,9 +284,6 @@
               "didn't swim",
               "did not swim"
             ]
-          ],
-          "placeholders": [
-            "didn’t swim"
           ]
         },
         {
@@ -477,9 +300,6 @@
               "didn't rent",
               "did not rent"
             ]
-          ],
-          "placeholders": [
-            "didn’t rent"
           ]
         },
         {
@@ -496,9 +316,6 @@
               "didn't spend",
               "did not spend"
             ]
-          ],
-          "placeholders": [
-            "didn’t spend"
           ]
         }
       ]
@@ -658,9 +475,6 @@
             [
               "did they want"
             ]
-          ],
-          "placeholders": [
-            "did they want"
           ]
         },
         {
@@ -676,9 +490,6 @@
             [
               "did they book"
             ]
-          ],
-          "placeholders": [
-            "did they book"
           ]
         },
         {
@@ -694,9 +505,6 @@
             [
               "did they arrive"
             ]
-          ],
-          "placeholders": [
-            "did they arrive"
           ]
         },
         {
@@ -712,9 +520,6 @@
             [
               "did the woman"
             ]
-          ],
-          "placeholders": [
-            "did the woman"
           ]
         },
         {
@@ -730,9 +535,6 @@
             [
               "did they go"
             ]
-          ],
-          "placeholders": [
-            "did they go"
           ]
         }
       ]
