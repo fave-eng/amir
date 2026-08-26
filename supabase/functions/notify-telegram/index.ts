@@ -1,7 +1,7 @@
 import { withSupabase } from 'npm:@supabase/server@^1'
 
 const encoder = new TextEncoder()
-const FUNCTION_VERSION = 'homework-reports-v4'
+const FUNCTION_VERSION = 'homework-reports-v5-english'
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-notify-secret',
@@ -45,24 +45,44 @@ function escapeHtml(value: unknown): string {
     .replaceAll('"', '&quot;')
 }
 
-function buildMaterialMessage(hasVocabulary: boolean): string {
-  if (hasVocabulary) {
-    return [
-      '🚀 <b>Опубликованы новые учебные материалы!</b>',
-      '',
-      'Начни со слов к уроку — так домашняя работа будет легче. Затем переходи к заданию.',
-      '',
-      'Удачи! Запиши вопросы, и мы разберём их на следующем уроке ✨',
-    ].join('\n')
-  }
+const MOTIVATION_LINES = [
+  'Small steps still move you forward.',
+  'Keep going — every lesson counts.',
+  'You are building real English skills.',
+  'One task at a time. You’ve got this.',
+  'Progress is made by showing up.',
+  'Mistakes are part of learning. Keep going.',
+  'Today’s practice makes tomorrow easier.',
+  'Stay consistent — it works.',
+  'Your English is getting stronger.',
+  'Good work starts with one completed task.',
+]
+
+function randomMotivation(): string {
+  return MOTIVATION_LINES[Math.floor(Math.random() * MOTIVATION_LINES.length)] || 'Keep going — every lesson counts.'
+}
+
+function buildMaterialMessage(hasVocabulary: boolean, homeworkTitle: unknown): string {
+  const title = String(homeworkTitle || 'New homework').trim()
+  const steps = hasVocabulary
+    ? [
+        'First, learn the new words.',
+        'Next, review the grammar.',
+        'Then, do the homework.',
+      ]
+    : [
+        'Open the homework and complete it when you are ready.',
+      ]
 
   return [
-    '🚀 <b>Опубликованы новые учебные материалы!</b>',
+    '📘 <b>Your new English homework is ready.</b>',
     '',
-    'Переходи к домашнему заданию. Запиши вопросы, и мы разберём их на следующем уроке.',
+    `📝 <b>${escapeHtml(title)}</b>`,
     '',
-    'Удачи! ✨',
-  ].join('\n')
+    ...steps,
+    '',
+    `✨ ${escapeHtml(randomMotivation())}`,
+  ].join('\\n')
 }
 
 function buildHomeworkReport(row: any): string {
@@ -72,25 +92,27 @@ function buildHomeworkReport(row: any): string {
   const mistakes = Math.max(0, total - correct)
   const submittedAt = row.submitted_at || row.updated_at || row.checked_at
   const submittedLabel = submittedAt
-    ? new Date(submittedAt).toLocaleString('ru-RU', { timeZone: 'Asia/Yekaterinburg' })
-    : 'не указано'
+    ? new Date(submittedAt).toLocaleString('en-GB', { timeZone: 'Asia/Yekaterinburg' })
+    : 'not specified'
 
   return [
-    '📩 <b>Получен отчёт по домашней работе</b>',
+    '📩 <b>Homework report received</b>',
     '',
-    `👨‍🎓 Ученик: <b>${escapeHtml(row.student_name || 'Амир')}</b>`,
-    `📝 Работа: <b>${escapeHtml(row.lesson_title || row.lesson_id)}</b>`,
-    `✅ Результат: <b>${correct} из ${total} (${percent}%)</b>`,
-    `❌ Ошибок: <b>${mistakes}</b>`,
-    `🕒 Отправлено: ${escapeHtml(submittedLabel)}`,
+    `📝 Homework: <b>${escapeHtml(row.lesson_title || row.lesson_id)}</b>`,
+    `✅ Score: <b>${correct}/${total} (${percent}%)</b>`,
+    `❌ Mistakes: <b>${mistakes}</b>`,
+    `🕒 Submitted: ${escapeHtml(submittedLabel)}`,
     '',
-    'Ответы и результат сохранены в Supabase.',
-  ].join('\n')
+    'Answers and results are saved in Supabase.',
+    '',
+    `✨ ${escapeHtml(randomMotivation())}`,
+  ].join('\\n')
 }
 
 async function sendTelegramMessage(
   token: string,
   chatId: number,
+  messageThreadId: number | null | undefined,
   text: string,
   inlineKeyboard: Array<Array<{ text: string; url: string }>> = [],
 ) {
@@ -98,6 +120,9 @@ async function sendTelegramMessage(
     chat_id: chatId,
     text,
     parse_mode: 'HTML',
+  }
+  if (Number.isInteger(messageThreadId) && Number(messageThreadId) > 0) {
+    payload.message_thread_id = Number(messageThreadId)
   }
   if (inlineKeyboard.length) payload.reply_markup = { inline_keyboard: inlineKeyboard }
 
@@ -119,7 +144,7 @@ async function sendTelegramMessage(
 async function getRecipient(ctx: any, studentId: string) {
   const { data: recipient, error } = await ctx.supabaseAdmin
     .from('telegram_recipients')
-    .select('chat_id, enabled')
+    .select('chat_id, message_thread_id, enabled')
     .eq('student_id', studentId)
     .maybeSingle()
 
@@ -266,7 +291,7 @@ async function handleHomeworkReport(payload: any, ctx: any, botToken: string) {
   }
 
   const keyboard = lessonUrl
-    ? [[{ text: '📝 Открыть домашнюю работу', url: lessonUrl }]]
+    ? [[{ text: '📝 Open homework', url: lessonUrl }]]
     : []
 
   let telegramMessage
@@ -274,6 +299,7 @@ async function handleHomeworkReport(payload: any, ctx: any, botToken: string) {
     telegramMessage = await sendTelegramMessage(
       botToken,
       Number(recipient.chat_id),
+      Number(recipient.message_thread_id) || null,
       buildHomeworkReport(row),
       keyboard,
     )
@@ -412,10 +438,10 @@ async function handleMaterialNotification(payload: any, req: Request, ctx: any, 
   }
 
   const keyboard: Array<Array<{ text: string; url: string }>> = []
-  if (vocabulary) keyboard.push([{ text: '💥 Открыть слова', url: vocabulary.url }])
-  keyboard.push([{ text: '📝 Открыть домашнюю работу', url: homework.url }])
+  if (vocabulary) keyboard.push([{ text: '📚 Learn new words', url: vocabulary.url }])
+  keyboard.push([{ text: '📝 Do the homework', url: homework.url }])
   grammar.forEach((item: any, index: number) => {
-    const label = grammar.length === 1 ? '📐 Повторить грамматику' : `📐 ${String(item.title || `Grammar ${index + 1}`).slice(0, 48)}`
+    const label = `📖 ${String(item.title || `Grammar ${index + 1}`).slice(0, 48)}`
     keyboard.push([{ text: label, url: item.url }])
   })
 
@@ -423,7 +449,8 @@ async function handleMaterialNotification(payload: any, req: Request, ctx: any, 
     const telegramMessage = await sendTelegramMessage(
       botToken,
       Number(recipient.chat_id),
-      buildMaterialMessage(Boolean(vocabulary)),
+      Number(recipient.message_thread_id) || null,
+      buildMaterialMessage(Boolean(vocabulary), homework.title),
       keyboard,
     )
 
@@ -464,7 +491,7 @@ export default {
       return json({ ok: false, error: 'Invalid JSON' }, 400)
     }
 
-    if (payload?.eventType === 'homework_report') {
+    if (payload?.eventType === 'homework_report' || payload?.action === 'homework_report') {
       return handleHomeworkReport(payload, ctx, botToken)
     }
     return handleMaterialNotification(payload, req, ctx, botToken)
