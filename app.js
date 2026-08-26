@@ -942,6 +942,10 @@
     return `<select id="${escapeHtml(inputId)}" data-dependent-select data-source-block-id="${escapeHtml(item.sourceBlockId || '')}" data-placeholder-ready="${escapeHtml(item.readyPlaceholder || '— выбери предложение —')}" data-placeholder-waiting="${escapeHtml(item.waitingPlaceholder || 'Complete the previous part first')}"><option value="">${escapeHtml(item.waitingPlaceholder || 'Complete the previous part first')}</option>${dependentSelectOptions(item)}</select>`;
   }
 
+  function renderExampleNotice(extraText = '') {
+    return `<div class="example-notice"><span class="example-badge">Пример</span><span class="example-note">${escapeHtml(extraText || 'Уже сделано в учебнике — ученику не нужно заполнять этот пункт.')}</span></div>`;
+  }
+
   function renderExerciseItem(item, blockId, index) {
     const itemId = safeText(item.id, `${index + 1}`);
     const number = item.number === undefined ? index + 1 : item.number;
@@ -964,6 +968,7 @@
       const selectedIndex = Number(item.answer);
       const options = (item.options || []).map((option, optionIndex) => `<span class="odd-option ${optionIndex === selectedIndex ? 'selected' : ''}">${escapeHtml(option)}</span>`).join('');
       return `<div class="exercise-item exercise-example" data-exercise-item="${escapeHtml(itemId)}">
+        ${renderExampleNotice()}
         <div class="exercise-item-header">${numberMarkup}<div class="exercise-prompt">${prompt}</div></div>
         <div class="exercise-control"><div class="odd-options">${options}</div><div class="odd-reason">The others are all <strong>${escapeHtml(item.reasonAnswer || '')}</strong>.</div></div>
       </div>`;
@@ -972,15 +977,16 @@
     if (item.example) {
       return `<div class="exercise-item exercise-example${mediaClass}" data-exercise-item="${escapeHtml(itemId)}">
         ${itemMedia}
+        ${renderExampleNotice()}
         <div class="exercise-item-header">${numberMarkup}<div class="exercise-prompt">${prompt}</div></div>
-        ${item.exampleTextOnly ? '' : `<div class="example-answer"><span>Example</span><strong>${escapeHtml(item.exampleAnswer || '')}</strong></div>`}
+        ${item.exampleTextOnly ? '' : `<div class="example-answer"><span>Ответ в примере</span><strong>${escapeHtml(item.exampleAnswer || '')}</strong></div>`}
       </div>`;
     }
 
     let control = '';
     if (item.input === 'example-gap') {
       const segments = Array.isArray(item.segments) ? item.segments : [];
-      control = `<div class="sentence-gaps numbered-example-gap"><span>${escapeHtml(segments[0] || '')}</span><span class="inline-example-answer"><b>${escapeHtml(item.exampleNumber || 1)}</b> ${escapeHtml(item.exampleAnswer || '')}</span><span>${inlineHtml(segments[1] || '')}</span><span class="inline-gap-number">${escapeHtml(item.gapNumber || 2)}</span><input class="gap-input" data-example-gap autocomplete="off"><span>${inlineHtml(segments[2] || '')}</span></div>`;
+      control = `<div class="sentence-gaps numbered-example-gap"><span>${escapeHtml(segments[0] || '')}</span><span class="inline-example-label">Пример</span><span class="inline-example-answer"><b>${escapeHtml(item.exampleNumber || 1)}</b> ${escapeHtml(item.exampleAnswer || '')}</span><span>${inlineHtml(segments[1] || '')}</span><span class="inline-task-label">Теперь заполни</span><span class="inline-gap-number">${escapeHtml(item.gapNumber || 2)}</span><input class="gap-input" data-example-gap autocomplete="off"><span>${inlineHtml(segments[2] || '')}</span></div>`;
     } else if (item.input === 'odd-one-out') {
       control = `<div class="odd-one-out-control"><div class="odd-options">${(item.options || []).map((option, optionIndex) => `<label class="odd-option"><input type="radio" name="${escapeHtml(inputId)}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('')}</div><label class="odd-reason" for="${escapeHtml(inputId)}-reason">The others are all <input class="gap-input odd-reason-input" id="${escapeHtml(inputId)}-reason" data-odd-reason autocomplete="off">.</label></div>`;
     } else if (item.input === 'multiple' || item.input === 'single') {
@@ -1031,7 +1037,7 @@
     const gapNumber = number === '' || number === null ? '' : `<sup class="cloze-gap-number">${escapeHtml(number)}</sup>`;
 
     if (item.example) {
-      return `<span class="cloze-inline-item cloze-example" data-exercise-item="${escapeHtml(itemId)}">${gapNumber}<span class="cloze-example-answer">${escapeHtml(item.exampleAnswer || '')}</span></span>`;
+      return `<span class="cloze-inline-item cloze-example" data-exercise-item="${escapeHtml(itemId)}"><span class="inline-example-label">Пример</span>${gapNumber}<span class="cloze-example-answer">${escapeHtml(item.exampleAnswer || '')}</span></span>`;
     }
 
     let control = '';
@@ -1079,9 +1085,9 @@
 
     if (item.example) {
       if (segments.length >= 2) {
-        return `<span class="dialogue-item dialogue-example" data-exercise-item="${escapeHtml(itemId)}"><span>${escapeHtml(segments[0])}</span>${gapNumber}<span class="dialogue-example-answer">${escapeHtml(item.exampleAnswer || '')}</span><span>${escapeHtml(segments[1])}</span></span>`;
+        return `<span class="dialogue-item dialogue-example" data-exercise-item="${escapeHtml(itemId)}"><span class="inline-example-label">Пример</span><span>${escapeHtml(segments[0])}</span>${gapNumber}<span class="dialogue-example-answer">${escapeHtml(item.exampleAnswer || '')}</span><span>${escapeHtml(segments[1])}</span></span>`;
       }
-      return `<span class="dialogue-item dialogue-example" data-exercise-item="${escapeHtml(itemId)}">${gapNumber}<span>${escapeHtml(item.prompt || '')}</span></span>`;
+      return `<span class="dialogue-item dialogue-example" data-exercise-item="${escapeHtml(itemId)}"><span class="inline-example-label">Пример</span>${gapNumber}<span>${escapeHtml(item.prompt || '')}</span></span>`;
     }
 
     if (item.input === 'dependent-select') {
@@ -1133,7 +1139,7 @@
     return `<div class="pronunciation-word-chart">${columns.map((column) => {
       const columnItems = items.filter((item) => safeText(item.group) === safeText(column.id));
       return `<section class="pronunciation-word-column" aria-label="${escapeHtml(column.label || '')}">
-        <div class="pronunciation-word-column-head"><strong>${escapeHtml(column.label || '')}</strong>${column.example ? `<span class="pronunciation-word-example">${escapeHtml(column.example)}</span>` : ''}</div>
+        <div class="pronunciation-word-column-head"><strong>${escapeHtml(column.label || '')}</strong>${column.example ? `<span class="pronunciation-word-example"><span>Пример</span>${escapeHtml(column.example)}</span>` : ''}</div>
         <div class="pronunciation-word-slots">${columnItems.map((item, itemIndex) => {
           const itemId = safeText(item.id, `${itemIndex + 1}`);
           const inputId = `exercise-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
@@ -1170,7 +1176,7 @@
       const answerText = preset && optionMap.has(preset) ? `${preset}` : '';
       return `<div class="match-left-item${pair.example ? ' is-example' : ''}" role="button" tabindex="${pair.example ? '-1' : '0'}" data-match-left data-pair-id="${escapeHtml(pairId)}" ${pair.example ? 'aria-disabled="true"' : ''}>
         <span class="exercise-number">${escapeHtml(number)}</span>
-        <span class="match-left-text">${escapeHtml(pair.left || pair.prompt || '')}</span>
+        <span class="match-left-text">${pair.example ? '<span class="match-example-label">Пример</span>' : ''}${escapeHtml(pair.left || pair.prompt || '')}</span>
         <span class="match-answer-chip" data-match-answer-label>${escapeHtml(answerText || '—')}</span>
         <input type="hidden" data-match-value value="${escapeHtml(preset)}" ${pair.example ? 'disabled' : ''}>
       </div>`;
