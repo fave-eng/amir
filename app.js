@@ -1312,6 +1312,37 @@
     </article>`;
   }
 
+  function renderLetterGridExercise(block, blockId) {
+    const items = Array.isArray(block.items) ? block.items : [];
+    const rows = items.map((item, itemIndex) => {
+      const itemId = safeText(item.id, `${itemIndex + 1}`);
+      const number = item.number === undefined ? itemIndex + 1 : item.number;
+      const answer = safeText(item.answer || '');
+      const start = Math.max(1, Number(item.gridStart) || 1);
+      const highlightIndex = Math.max(0, Number(item.highlightIndex) || 0);
+      const letters = [...answer];
+      const cells = letters.map((letter, letterIndex) => {
+        const classes = ['letter-grid-cell'];
+        if (letterIndex === highlightIndex) classes.push('is-hidden-letter');
+        if (item.example) classes.push('is-example-cell');
+        const numberMarkup = letterIndex === 0 ? `<span class="letter-grid-number">${escapeHtml(number)}</span>` : '';
+        if (item.example) {
+          return `<span class="${classes.join(' ')}">${numberMarkup}<span class="letter-grid-example-letter">${escapeHtml(letter.toUpperCase())}</span></span>`;
+        }
+        return `<label class="${classes.join(' ')}">${numberMarkup}<input class="letter-cell-input" data-letter-index="${letterIndex}" maxlength="1" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="${escapeHtml(`Word ${number}, letter ${letterIndex + 1}`)}"></label>`;
+      }).join('');
+      return `<div class="letter-grid-row${item.example ? ' is-example' : ''}" data-exercise-item="${escapeHtml(itemId)}" data-input-type="letter-word" style="--grid-start:${start}">
+        <div class="letter-grid-cells">${cells}</div>
+        <div class="feedback letter-grid-feedback" aria-live="polite"></div>
+      </div>`;
+    }).join('');
+    const clues = items.map((item, itemIndex) => {
+      const number = item.number === undefined ? itemIndex + 1 : item.number;
+      return `<li class="letter-grid-clue${item.example ? ' is-example' : ''}"><span class="letter-grid-clue-number">${escapeHtml(number)}</span><span>${escapeHtml(item.prompt || '')}</span>${item.example ? '<span class="match-example-label">Example</span>' : ''}</li>`;
+    }).join('');
+    return `<div class="letter-grid-layout"><div class="letter-grid-board" aria-label="Interactive word puzzle">${rows}</div><ol class="letter-grid-clues">${clues}</ol></div>`;
+  }
+
   function renderLessonBlock(block, index) {
     const id = safeText(block.id, `task-${index}`);
     const title = escapeHtml(block.title || block.prompt || `Task ${index + 1}`);
@@ -1358,7 +1389,9 @@
           ? renderClozeExercise(block, id)
           : block.layout === 'word-chart'
             ? renderWordChartExercise(block, id)
-            : `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex, block)).join('')}</div>`;
+            : block.layout === 'letter-grid'
+              ? renderLetterGridExercise(block, id)
+              : `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex, block)).join('')}</div>`;
       const layoutClass = block.layout === 'dialogue'
         ? ' dialogue-card'
         : block.layout === 'cloze'
@@ -1367,7 +1400,9 @@
             ? ' word-chart-card'
             : block.layout === 'media-list'
               ? ' media-list-card'
-              : '';
+              : block.layout === 'letter-grid'
+                ? ' letter-grid-card'
+                : '';
       const referenceBody = image
         ? `<div class="exercise-reference-layout">
             <aside class="exercise-reference-media" aria-label="Reference image">${image}</aside>
@@ -1428,7 +1463,10 @@
     let actual;
     let correct = false;
 
-    if (inputType === 'example-gap') {
+    if (inputType === 'letter-word') {
+      actual = [...itemNode.querySelectorAll('[data-letter-index]')].map((input) => input.value || '').join('');
+      correct = textAnswerMatches(item, actual);
+    } else if (inputType === 'example-gap') {
       actual = itemNode.querySelector('[data-example-gap]')?.value ?? '';
       correct = textAnswerMatches(item, actual);
     } else if (inputType === 'odd-one-out') {
@@ -1585,7 +1623,10 @@
       const itemNode = node.querySelector(`[data-exercise-item="${CSS.escape(itemId)}"]`);
       if (!itemNode) return;
       const inputType = item.input || 'text';
-      if (inputType === 'example-gap') {
+      if (inputType === 'letter-word') {
+        const letters = [...safeText(value)];
+        itemNode.querySelectorAll('[data-letter-index]').forEach((input, letterIndex) => { input.value = letters[letterIndex] || ''; });
+      } else if (inputType === 'example-gap') {
         const input = itemNode.querySelector('[data-example-gap]');
         if (input) input.value = safeText(value);
       } else if (inputType === 'odd-one-out') {
@@ -1685,6 +1726,7 @@
     const inputType = item.input || 'text';
     if (!itemNode) return [];
     if (inputType === 'gaps') return [...itemNode.querySelectorAll('[data-gap-index]')].map((input) => input.value || '');
+    if (inputType === 'letter-word') return [[...itemNode.querySelectorAll('[data-letter-index]')].map((input) => input.value || '').join('')];
     if (inputType === 'single') return [itemNode.querySelector('input:checked')?.parentElement?.textContent?.trim() || ''];
     if (inputType === 'select' || inputType === 'bank-select' || inputType === 'dependent-select') return [itemNode.querySelector('select')?.selectedOptions?.[0]?.textContent?.trim() || ''];
     return [itemNode.querySelector('input, textarea')?.value || ''];
@@ -2470,6 +2512,31 @@
       showToast(detail ? `Supabase error: ${detail}` : 'Supabase временно недоступен.');
     }
   }
+
+  document.addEventListener('input', (event) => {
+    const input = event.target.closest?.('.letter-cell-input');
+    if (!input) return;
+    input.value = safeText(input.value).replace(/[^a-zA-Z]/g, '').slice(-1).toUpperCase();
+    if (!input.value) return;
+    const row = input.closest('.letter-grid-row');
+    const cells = [...(row?.querySelectorAll('.letter-cell-input') || [])];
+    const index = cells.indexOf(input);
+    if (index >= 0 && index < cells.length - 1) cells[index + 1].focus();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    const input = event.target.closest?.('.letter-cell-input');
+    if (!input || event.key !== 'Backspace' || input.value) return;
+    const row = input.closest('.letter-grid-row');
+    const cells = [...(row?.querySelectorAll('.letter-cell-input') || [])];
+    const index = cells.indexOf(input);
+    if (index > 0) {
+      event.preventDefault();
+      cells[index - 1].focus();
+      cells[index - 1].value = '';
+      cells[index - 1].dispatchEvent(new Event('input', { bubbles: true }));
+    }
+  });
 
   document.addEventListener('DOMContentLoaded', init);
 })();

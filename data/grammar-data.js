@@ -3509,5 +3509,430 @@ window.GRAMMAR_DATA = [
         ]
       }
     ]
+  },
+  {
+    "id": "grammar-defining-relative-clauses",
+    "order": 9,
+    "title": "Defining relative clauses",
+    "level": "A2",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-defining-relative-clauses",
+    "passed": false,
+    "attempts": 0,
+    "publishedAt": "2026-09-29",
+    "linkedLessonId": "lesson-10",
+    "revealAnswersOnError": false,
+    "lockOnPass": true,
+    "explanation": "Defining relative clauses дают необходимую информацию о человеке, вещи или месте. Без этой части предложения часто непонятно, о ком или о чём именно мы говорим. Обычно используем who для людей, which для вещей и where для мест. That часто может заменить who или which в defining relative clauses.",
+    "formula": "person + who/that · thing + which/that · place + where",
+    "glanceCards": [
+      {
+        "icon": "👤",
+        "label": "Who",
+        "hint": "для людей",
+        "pattern": "person + who + clause",
+        "example": "She’s the woman who lives next door."
+      },
+      {
+        "icon": "📦",
+        "label": "Which",
+        "hint": "для вещей и животных",
+        "pattern": "thing + which + clause",
+        "example": "I need a phone which has a good camera."
+      },
+      {
+        "icon": "📍",
+        "label": "Where",
+        "hint": "для мест",
+        "pattern": "place + where + clause",
+        "example": "That’s the church where we got married."
+      },
+      {
+        "icon": "🔁",
+        "label": "That",
+        "hint": "может заменить who или which",
+        "pattern": "person/thing + that + clause",
+        "example": "Maria is the woman that bought my old car."
+      }
+    ],
+    "anchorLinks": [
+      {
+        "id": "grammar-at-a-glance",
+        "title": "Краткая схема"
+      },
+      {
+        "id": "grammar-rule-map",
+        "title": "Правила"
+      },
+      {
+        "id": "grammar-tables",
+        "title": "Таблица"
+      },
+      {
+        "id": "grammar-examples",
+        "title": "Примеры"
+      },
+      {
+        "id": "grammar-mistakes",
+        "title": "Типичные ошибки"
+      },
+      {
+        "id": "grammar-practice-section",
+        "title": "Задания"
+      }
+    ],
+    "miniRules": [
+      {
+        "title": "1. Who — люди",
+        "text": "Используй who, когда относительная часть описывает человека.",
+        "example": "He’s the man who works at the airport."
+      },
+      {
+        "title": "2. Which — вещи",
+        "text": "Используй which для предметов, вещей и животных.",
+        "example": "This is the book which won the prize."
+      },
+      {
+        "title": "3. Where — места",
+        "text": "Используй where после места, если дальше говорится, что происходит в этом месте.",
+        "example": "That’s the restaurant where we had dinner."
+      },
+      {
+        "title": "4. That",
+        "text": "В defining relative clauses that часто может заменить who или which, но не where.",
+        "example": "The bus that goes to the airport is number 10."
+      },
+      {
+        "title": "5. Нужная информация",
+        "text": "Defining relative clause не отделяется запятыми: информация нужна, чтобы точно определить человека, вещь или место.",
+        "example": "The woman who called you is my aunt."
+      },
+      {
+        "title": "6. Не дублируй местоимение",
+        "text": "После who / which / that не добавляй ещё he, she, it или they, если относительное слово уже является подлежащим.",
+        "example": "The man who lives here ✓ · The man who he lives here ✗"
+      }
+    ],
+    "tables": [
+      {
+        "title": "Relative words",
+        "headers": [
+          "Word",
+          "Use",
+          "Example"
+        ],
+        "rows": [
+          [
+            "who",
+            "people",
+            "The woman who lives next door."
+          ],
+          [
+            "which",
+            "things / animals",
+            "The phone which has a good camera."
+          ],
+          [
+            "where",
+            "places",
+            "The café where we met."
+          ],
+          [
+            "that",
+            "people or things",
+            "The bus that goes to the airport."
+          ]
+        ]
+      },
+      {
+        "title": "Can I use that?",
+        "headers": [
+          "Original",
+          "With that",
+          "Possible?"
+        ],
+        "rows": [
+          [
+            "the woman who called",
+            "the woman that called",
+            "Yes"
+          ],
+          [
+            "the book which won",
+            "the book that won",
+            "Yes"
+          ],
+          [
+            "the place where we met",
+            "the place that we met",
+            "Not in this pattern"
+          ]
+        ]
+      }
+    ],
+    "exampleGroups": [
+      {
+        "title": "People, things, places",
+        "items": [
+          "She’s the person who remembers my birthday.",
+          "I love the picture which is on your wall.",
+          "This is the place where they have the festival.",
+          "Maria is the woman that bought my car."
+        ]
+      },
+      {
+        "title": "Useful for paraphrasing",
+        "items": [
+          "A waiter is someone who works in a restaurant.",
+          "A cinema is somewhere where you can see a film.",
+          "A wallet is something which you use to keep money in.",
+          "A campsite is a place where you can sleep in a tent."
+        ]
+      }
+    ],
+    "commonMistakes": [
+      "Не используй who для вещей: a phone which/that has a good camera ✓",
+      "Не используй which для людей, если речь о человеке: the man who/that lives next door ✓",
+      "После названия места обычно используй where, если смысл — «где»: the café where we met ✓",
+      "Не повторяй подлежащее: the woman who knows me ✓ · the woman who she knows me ✗",
+      "That может заменить who/which в defining clauses, но не используется как обычная замена where в конструкции place + where."
+    ],
+    "exercises": [
+      {
+        "type": "exercise",
+        "id": "relative-step-1",
+        "title": "1. Easy · Choose who, which, or where",
+        "difficulty": "Easy",
+        "instructions": "Выбери подходящее относительное слово.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "single",
+            "prompt": "A waiter is someone ___ works in a restaurant.",
+            "options": [
+              "who",
+              "which",
+              "where"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "single",
+            "prompt": "A cinema is a place ___ you can see a film.",
+            "options": [
+              "who",
+              "which",
+              "where"
+            ],
+            "answer": 2
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "single",
+            "prompt": "I need a phone ___ has a good camera.",
+            "options": [
+              "who",
+              "which",
+              "where"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "single",
+            "prompt": "She’s the woman ___ lives next door.",
+            "options": [
+              "who",
+              "which",
+              "where"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "relative-step-2",
+        "title": "2. Medium · Complete the relative clause",
+        "difficulty": "Medium",
+        "instructions": "Напиши who, which или where.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "gaps",
+            "segments": [
+              "That’s the restaurant ",
+              " we had dinner."
+            ],
+            "answers": [
+              [
+                "where"
+              ]
+            ],
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "gaps",
+            "segments": [
+              "The bus ",
+              " goes to the airport is late."
+            ],
+            "answers": [
+              [
+                "which"
+              ]
+            ],
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "gaps",
+            "segments": [
+              "He’s the artist ",
+              " painted this picture."
+            ],
+            "answers": [
+              [
+                "who"
+              ]
+            ],
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "gaps",
+            "segments": [
+              "This is the shop ",
+              " I bought my jacket."
+            ],
+            "answers": [
+              [
+                "where"
+              ]
+            ],
+            "hideAnswersOnError": true
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "relative-step-3",
+        "title": "3. Harder · Choose the correct relative form",
+        "difficulty": "Harder",
+        "instructions": "Выбери правильный вариант.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "single",
+            "prompt": "The woman ___ won the prize is my neighbour.",
+            "options": [
+              "who",
+              "where"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "single",
+            "prompt": "The café ___ we met has closed.",
+            "options": [
+              "which",
+              "where"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "single",
+            "prompt": "The book ___ I’m reading is excellent.",
+            "options": [
+              "which",
+              "who"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "single",
+            "prompt": "The man ___ called me didn’t leave a message.",
+            "options": [
+              "that",
+              "where"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "relative-step-4",
+        "title": "4. Challenge · Join the sentences",
+        "difficulty": "Challenge",
+        "instructions": "Соедини два предложения в одно с who, which или where.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "text",
+            "prompt": "That’s the woman. She teaches my sister.",
+            "answer": "That’s the woman who teaches my sister.",
+            "acceptedAnswers": [
+              "That’s the woman who teaches my sister",
+              "That's the woman who teaches my sister",
+              "That’s the woman that teaches my sister",
+              "That's the woman that teaches my sister"
+            ]
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "text",
+            "prompt": "I bought a phone. It has a very good camera.",
+            "answer": "I bought a phone which has a very good camera.",
+            "acceptedAnswers": [
+              "I bought a phone which has a very good camera",
+              "I bought a phone that has a very good camera"
+            ]
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "text",
+            "prompt": "This is the hotel. We stayed there last year.",
+            "answer": "This is the hotel where we stayed last year.",
+            "acceptedAnswers": [
+              "This is the hotel where we stayed last year"
+            ]
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "text",
+            "prompt": "That’s the bus. It goes to the city centre.",
+            "answer": "That’s the bus which goes to the city centre.",
+            "acceptedAnswers": [
+              "That’s the bus which goes to the city centre",
+              "That's the bus which goes to the city centre",
+              "That’s the bus that goes to the city centre",
+              "That's the bus that goes to the city centre"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];

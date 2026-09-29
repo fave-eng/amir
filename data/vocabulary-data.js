@@ -1939,5 +1939,158 @@ window.VOCABULARY_DATA = [
         "exampleRu": "Напиши о своих планах и договорённостях на следующую неделю."
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-3c",
+    "order": 10,
+    "title": "Word games · paraphrasing",
+    "label": "Lesson 10 · Unit 3C · Word games",
+    "icon": "🧩",
+    "type": "lesson",
+    "linkedLessonId": "lesson-10",
+    "page": "vocabulary.html?id=vocab-lesson-3c",
+    "publishedAt": "2026-09-29",
+    "words": [
+      {
+        "id": "lesson-3c-paraphrase",
+        "en": "paraphrase",
+        "ru": "перефразировать",
+        "exampleEn": "Can you paraphrase this sentence?",
+        "exampleRu": "Можешь перефразировать это предложение?"
+      },
+      {
+        "id": "lesson-3c-opposite",
+        "en": "opposite",
+        "ru": "противоположность; противоположный",
+        "exampleEn": "Mean is the opposite of generous.",
+        "exampleRu": "Mean — противоположность generous."
+      },
+      {
+        "id": "lesson-3c-similar",
+        "en": "similar",
+        "ru": "похожий",
+        "exampleEn": "Hire is similar to rent.",
+        "exampleRu": "Hire похоже по значению на rent."
+      },
+      {
+        "id": "lesson-3c-wallet",
+        "en": "wallet",
+        "ru": "кошелёк",
+        "exampleEn": "He keeps his money in his wallet.",
+        "exampleRu": "Он хранит деньги в кошельке."
+      },
+      {
+        "id": "lesson-3c-church",
+        "en": "church",
+        "ru": "церковь",
+        "exampleEn": "That’s the church where we got married.",
+        "exampleRu": "Это церковь, где мы поженились."
+      },
+      {
+        "id": "lesson-3c-exhibition",
+        "en": "exhibition",
+        "ru": "выставка",
+        "exampleEn": "They had an exhibition at the gallery.",
+        "exampleRu": "В галерее проходила выставка."
+      },
+      {
+        "id": "lesson-3c-lottery",
+        "en": "lottery",
+        "ru": "лотерея",
+        "exampleEn": "They won the lottery last year.",
+        "exampleRu": "Они выиграли в лотерею в прошлом году."
+      },
+      {
+        "id": "lesson-3c-petrol",
+        "en": "petrol",
+        "ru": "бензин",
+        "exampleEn": "This car doesn’t use too much petrol.",
+        "exampleRu": "Эта машина расходует не слишком много бензина."
+      },
+      {
+        "id": "lesson-3c-rent",
+        "en": "rent",
+        "ru": "арендовать",
+        "exampleEn": "We rented a car for the weekend.",
+        "exampleRu": "Мы арендовали машину на выходные."
+      },
+      {
+        "id": "lesson-3c-handsome",
+        "en": "handsome",
+        "ru": "красивый, привлекательный (о мужчине)",
+        "exampleEn": "He’s a handsome man.",
+        "exampleRu": "Он привлекательный мужчина."
+      },
+      {
+        "id": "lesson-3c-souvenir",
+        "en": "souvenir",
+        "ru": "сувенир",
+        "exampleEn": "I bought a souvenir to remind me of my holiday.",
+        "exampleRu": "Я купил сувенир на память об отпуске."
+      },
+      {
+        "id": "lesson-3c-waiter",
+        "en": "waiter",
+        "ru": "официант",
+        "exampleEn": "A waiter works in a restaurant.",
+        "exampleRu": "Официант работает в ресторане."
+      },
+      {
+        "id": "lesson-3c-cinema",
+        "en": "cinema",
+        "ru": "кинотеатр",
+        "exampleEn": "The cinema is where you can see a film.",
+        "exampleRu": "Кинотеатр — место, где можно посмотреть фильм."
+      },
+      {
+        "id": "lesson-3c-campsite",
+        "en": "campsite",
+        "ru": "кемпинг; место для палаток",
+        "exampleEn": "A campsite is somewhere you can sleep in tents.",
+        "exampleRu": "Кемпинг — место, где можно спать в палатках."
+      },
+      {
+        "id": "lesson-3c-menu",
+        "en": "menu",
+        "ru": "меню",
+        "exampleEn": "The menu tells you what you can eat in a restaurant.",
+        "exampleRu": "Меню показывает, что можно заказать в ресторане."
+      },
+      {
+        "id": "lesson-3c-next-door",
+        "en": "next door",
+        "ru": "по соседству",
+        "exampleEn": "Do you know the man who lives next door?",
+        "exampleRu": "Ты знаешь мужчину, который живёт по соседству?"
+      },
+      {
+        "id": "lesson-3c-music-festival",
+        "en": "music festival",
+        "ru": "музыкальный фестиваль",
+        "exampleEn": "They have a famous music festival there.",
+        "exampleRu": "Там проходит известный музыкальный фестиваль."
+      },
+      {
+        "id": "lesson-3c-fresh-fish",
+        "en": "fresh fish",
+        "ru": "свежая рыба",
+        "exampleEn": "That restaurant has fresh fish.",
+        "exampleRu": "В этом ресторане есть свежая рыба."
+      },
+      {
+        "id": "lesson-3c-local-food",
+        "en": "local food",
+        "ru": "местная еда",
+        "exampleEn": "You can get interesting local food there.",
+        "exampleRu": "Там можно попробовать интересную местную еду."
+      },
+      {
+        "id": "lesson-3c-remind-somebody-of-something",
+        "en": "remind somebody of something",
+        "ru": "напоминать кому-то о чём-то",
+        "exampleEn": "This souvenir reminds me of my holiday.",
+        "exampleRu": "Этот сувенир напоминает мне об отпуске."
+      }
+    ]
   }
 ];
