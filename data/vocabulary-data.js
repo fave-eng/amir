@@ -1723,5 +1723,221 @@ window.VOCABULARY_DATA = [
         "exampleRu": "На телефоне Джейсона есть напоминание."
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-3b",
+    "order": 9,
+    "title": "Verbs + prepositions & arrangements",
+    "label": "Lesson 9 · Unit 3B · Put it in your calendar!",
+    "icon": "🗓️",
+    "type": "lesson",
+    "linkedLessonId": "lesson-9",
+    "page": "vocabulary.html?id=vocab-lesson-3b",
+    "publishedAt": "2026-09-29",
+    "words": [
+      {
+        "id": "lesson-3b-think-of",
+        "en": "think of",
+        "ru": "думать о; иметь мнение о",
+        "exampleEn": "What do you think of Jenny’s new boyfriend?",
+        "exampleRu": "Что ты думаешь о новом парне Дженни?"
+      },
+      {
+        "id": "lesson-3b-talk-about",
+        "en": "talk about",
+        "ru": "говорить о",
+        "exampleEn": "What do you talk about when you go out with your friends?",
+        "exampleRu": "О чём вы говорите, когда встречаетесь с друзьями?"
+      },
+      {
+        "id": "lesson-3b-depend-on",
+        "en": "depend on",
+        "ru": "зависеть от",
+        "exampleEn": "It depends on the weather.",
+        "exampleRu": "Это зависит от погоды."
+      },
+      {
+        "id": "lesson-3b-pay-for",
+        "en": "pay for",
+        "ru": "платить за",
+        "exampleEn": "Who paid for the meal?",
+        "exampleRu": "Кто заплатил за еду?"
+      },
+      {
+        "id": "lesson-3b-ask-for",
+        "en": "ask for",
+        "ru": "просить; заказывать",
+        "exampleEn": "I asked for the fish, not the pasta.",
+        "exampleRu": "Я заказал рыбу, а не пасту."
+      },
+      {
+        "id": "lesson-3b-arrive-at",
+        "en": "arrive at",
+        "ru": "прибывать в (место/точку)",
+        "exampleEn": "We arrived at the station in time.",
+        "exampleRu": "Мы вовремя прибыли на станцию."
+      },
+      {
+        "id": "lesson-3b-believe-in",
+        "en": "believe in",
+        "ru": "верить в",
+        "exampleEn": "I don’t believe in ghosts.",
+        "exampleRu": "Я не верю в привидений."
+      },
+      {
+        "id": "lesson-3b-listen-to",
+        "en": "listen to",
+        "ru": "слушать",
+        "exampleEn": "What’s the name of the song you were listening to?",
+        "exampleRu": "Как называется песня, которую ты слушал?"
+      },
+      {
+        "id": "lesson-3b-arrive-in",
+        "en": "arrive in",
+        "ru": "прибывать в (город/страну)",
+        "exampleEn": "He arrived in Paris yesterday.",
+        "exampleRu": "Он прибыл в Париж вчера."
+      },
+      {
+        "id": "lesson-3b-be-worried-about",
+        "en": "be worried about",
+        "ru": "беспокоиться о",
+        "exampleEn": "I’m worried about Amy.",
+        "exampleRu": "Я беспокоюсь об Эми."
+      },
+      {
+        "id": "lesson-3b-agree-with",
+        "en": "agree with",
+        "ru": "соглашаться с",
+        "exampleEn": "I agree with you.",
+        "exampleRu": "Я с тобой согласен."
+      },
+      {
+        "id": "lesson-3b-wait-for",
+        "en": "wait for",
+        "ru": "ждать кого-то / что-то",
+        "exampleEn": "I’m waiting for Sebastian.",
+        "exampleRu": "Я жду Себастьяна."
+      },
+      {
+        "id": "lesson-3b-spend-money-on",
+        "en": "spend money on",
+        "ru": "тратить деньги на",
+        "exampleEn": "She spends a lot of money on clothes.",
+        "exampleRu": "Она тратит много денег на одежду."
+      },
+      {
+        "id": "lesson-3b-speak-to",
+        "en": "speak to",
+        "ru": "разговаривать с",
+        "exampleEn": "I’m going to speak to my boss after lunch.",
+        "exampleRu": "Я собираюсь поговорить с начальником после обеда."
+      },
+      {
+        "id": "lesson-3b-belong-to",
+        "en": "belong to",
+        "ru": "принадлежать",
+        "exampleEn": "Does this book belong to you?",
+        "exampleRu": "Эта книга принадлежит тебе?"
+      },
+      {
+        "id": "lesson-3b-forget-about",
+        "en": "forget about",
+        "ru": "забыть о",
+        "exampleEn": "I completely forgot about the meeting.",
+        "exampleRu": "Я совсем забыл о встрече."
+      },
+      {
+        "id": "lesson-3b-at-the-moment",
+        "en": "at the moment",
+        "ru": "в данный момент",
+        "exampleEn": "They’re playing well at the moment.",
+        "exampleRu": "Сейчас они хорошо играют."
+      },
+      {
+        "id": "lesson-3b-as-usual",
+        "en": "as usual",
+        "ru": "как обычно",
+        "exampleEn": "He’s late as usual.",
+        "exampleRu": "Он опаздывает, как обычно."
+      },
+      {
+        "id": "lesson-3b-sales-conference",
+        "en": "sales conference",
+        "ru": "конференция по продажам",
+        "exampleEn": "Where are you having your sales conference this year?",
+        "exampleRu": "Где в этом году проходит ваша конференция по продажам?"
+      },
+      {
+        "id": "lesson-3b-cycling-holiday",
+        "en": "cycling holiday",
+        "ru": "велопутешествие; отпуск на велосипеде",
+        "exampleEn": "How’s Ian’s cycling holiday going?",
+        "exampleRu": "Как проходит велопутешествие Иэна?"
+      },
+      {
+        "id": "lesson-3b-go-on-holiday",
+        "en": "go on holiday",
+        "ru": "ехать в отпуск",
+        "exampleEn": "We’re going on holiday next month.",
+        "exampleRu": "В следующем месяце мы едем в отпуск."
+      },
+      {
+        "id": "lesson-3b-get-lost",
+        "en": "get lost",
+        "ru": "заблудиться",
+        "exampleEn": "I’m sure I’m going to get lost.",
+        "exampleRu": "Я уверен, что заблужусь."
+      },
+      {
+        "id": "lesson-3b-job-interview",
+        "en": "job interview",
+        "ru": "собеседование",
+        "exampleEn": "My brother has a job interview in London.",
+        "exampleRu": "У моего брата собеседование в Лондоне."
+      },
+      {
+        "id": "lesson-3b-recording-studio",
+        "en": "recording studio",
+        "ru": "студия звукозаписи",
+        "exampleEn": "He’s meeting Jack at the recording studio.",
+        "exampleRu": "Он встречается с Джеком в студии звукозаписи."
+      },
+      {
+        "id": "lesson-3b-pianist",
+        "en": "pianist",
+        "ru": "пианист",
+        "exampleEn": "He’s listening to a new pianist on Friday.",
+        "exampleRu": "В пятницу он слушает нового пианиста."
+      },
+      {
+        "id": "lesson-3b-hire-a-car",
+        "en": "hire a car",
+        "ru": "арендовать машину",
+        "exampleEn": "It’s easier than hiring a car.",
+        "exampleRu": "Это проще, чем арендовать машину."
+      },
+      {
+        "id": "lesson-3b-go-away",
+        "en": "go away",
+        "ru": "уехать; поехать куда-то",
+        "exampleEn": "We’d like to go away at the weekend.",
+        "exampleRu": "Мы хотели бы куда-нибудь уехать на выходные."
+      },
+      {
+        "id": "lesson-3b-catch-the-train",
+        "en": "catch the train",
+        "ru": "успеть на поезд",
+        "exampleEn": "We arrived in time to catch the train.",
+        "exampleRu": "Мы приехали вовремя, чтобы успеть на поезд."
+      },
+      {
+        "id": "lesson-3b-arrangement",
+        "en": "arrangement",
+        "ru": "договорённость; запланированная встреча",
+        "exampleEn": "Write about your arrangements for next week.",
+        "exampleRu": "Напиши о своих планах и договорённостях на следующую неделю."
+      }
+    ]
   }
 ];

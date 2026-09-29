@@ -3083,5 +3083,431 @@ window.GRAMMAR_DATA = [
         ]
       }
     ]
+  },
+  {
+    "id": "grammar-present-continuous-future-arrangements",
+    "order": 8,
+    "title": "Present Continuous · future arrangements",
+    "level": "A2",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-present-continuous-future-arrangements",
+    "passed": false,
+    "attempts": 0,
+    "publishedAt": "2026-09-29",
+    "linkedLessonId": "lesson-9",
+    "revealAnswersOnError": false,
+    "lockOnPass": true,
+    "explanation": "Present Continuous используется не только для действий, которые происходят сейчас. Мы также используем его для будущих договорённостей и уже организованных планов — когда обычно уже известны время, место или человек, с которым что-то происходит. Форма остаётся той же: am / is / are + глагол с -ing.",
+    "formula": "subject + am/is/are + verb-ing + future time",
+    "glanceCards": [
+      {
+        "icon": "📅",
+        "label": "Arrangement",
+        "hint": "план уже организован или согласован",
+        "pattern": "am/is/are + verb-ing",
+        "example": "I’m meeting Anna at 7.00 tomorrow."
+      },
+      {
+        "icon": "✅",
+        "label": "Affirmative",
+        "hint": "используй am / is / are перед -ing формой",
+        "pattern": "subject + am/is/are + verb-ing",
+        "example": "We’re having dinner with Cassie on Thursday."
+      },
+      {
+        "icon": "🚫",
+        "label": "Negative",
+        "hint": "not ставится после am / is / are",
+        "pattern": "subject + am not/isn’t/aren’t + verb-ing",
+        "example": "She isn’t coming to the conference."
+      },
+      {
+        "icon": "❓",
+        "label": "Question",
+        "hint": "am / is / are ставится перед подлежащим",
+        "pattern": "Am/Is/Are + subject + verb-ing?",
+        "example": "Are you staying in Warsaw?"
+      }
+    ],
+    "anchorLinks": [
+      {
+        "id": "grammar-at-a-glance",
+        "title": "Краткая схема"
+      },
+      {
+        "id": "grammar-rule-map",
+        "title": "Правила"
+      },
+      {
+        "id": "grammar-tables",
+        "title": "Таблица"
+      },
+      {
+        "id": "grammar-examples",
+        "title": "Примеры"
+      },
+      {
+        "id": "grammar-mistakes",
+        "title": "Типичные ошибки"
+      },
+      {
+        "id": "grammar-practice-section",
+        "title": "Задания"
+      }
+    ],
+    "miniRules": [
+      {
+        "title": "1. Будущая договорённость",
+        "text": "Используй Present Continuous, когда план уже организован: например, встреча назначена, билет куплен или время согласовано.",
+        "example": "I’m meeting Jack at the recording studio on Monday."
+      },
+      {
+        "title": "2. Утверждение",
+        "text": "Используй am / is / are + глагол с -ing. Часто указывается будущее время: tomorrow, on Friday, next week.",
+        "example": "She’s flying to London tomorrow."
+      },
+      {
+        "title": "3. Отрицание",
+        "text": "Добавь not после am / is / are. В разговорной речи обычно используются сокращения isn’t / aren’t.",
+        "example": "We aren’t working on Saturday."
+      },
+      {
+        "title": "4. Вопрос и короткий ответ",
+        "text": "Поставь am / is / are перед подлежащим. В коротком ответе повторяется только форма be.",
+        "example": "Are you leaving early? — Yes, I am. / No, I’m not."
+      },
+      {
+        "title": "5. Написание -ing",
+        "text": "Обычно добавь -ing. У глаголов на -e убери e: make → making. Короткая гласная + согласная часто удваивает согласную: sit → sitting. lie → lying.",
+        "example": "come → coming · run → running · lie → lying"
+      },
+      {
+        "title": "6. Present Continuous или be going to?",
+        "text": "Present Continuous чаще показывает уже организованную договорённость с конкретными деталями. Be going to чаще выражает намерение или план, который ещё не обязательно организован. Иногда обе формы возможны.",
+        "example": "I’m meeting Sam at 6.00. / I’m going to visit my grandparents this weekend."
+      }
+    ],
+    "tables": [
+      {
+        "title": "Forms",
+        "headers": [
+          "Type",
+          "Structure",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Affirmative",
+            "I am / he is / we are + verb-ing",
+            "We’re travelling to Krakow on Monday."
+          ],
+          [
+            "Negative",
+            "am not / isn’t / aren’t + verb-ing",
+            "She isn’t going to the conference."
+          ],
+          [
+            "Question",
+            "Am / Is / Are + subject + verb-ing?",
+            "Are you staying in Warsaw?"
+          ],
+          [
+            "Short answer",
+            "Yes, subject + am/is/are. / No, subject + am not/isn’t/aren’t.",
+            "Yes, I am. / No, I’m not."
+          ]
+        ]
+      },
+      {
+        "title": "Present Continuous vs be going to",
+        "headers": [
+          "Form",
+          "Typical use",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Present Continuous",
+            "fixed / organized future arrangement",
+            "I’m catching the 6.00 train tomorrow."
+          ],
+          [
+            "be going to",
+            "intention, plan, or prediction from evidence",
+            "I’m going to visit my grandparents this weekend."
+          ]
+        ]
+      }
+    ],
+    "exampleGroups": [
+      {
+        "title": "Future arrangements",
+        "items": [
+          "I’m meeting Jack on Monday.",
+          "We’re having dinner with Cassie on Thursday.",
+          "She’s flying to Warsaw on Sunday.",
+          "Are you getting the train to Krakow?"
+        ]
+      },
+      {
+        "title": "Negative and questions",
+        "items": [
+          "She isn’t going to the conference.",
+          "We aren’t working at home tomorrow.",
+          "Are you staying in Warsaw?",
+          "What time are you leaving tomorrow?"
+        ]
+      }
+    ],
+    "commonMistakes": [
+      "Не пропускай be: I’m meeting Sam. ✓  I meeting Sam. ✗",
+      "Не используй начальную форму после be: She’s flying. ✓  She’s fly. ✗",
+      "Не используй do / does в вопросе: Are you leaving tomorrow? ✓  Do you leaving tomorrow? ✗",
+      "Для будущего значения обычно нужен контекст времени: tomorrow, on Friday, next week и т. п.",
+      "Не путай договорённость и намерение: Present Continuous обычно означает, что детали уже организованы; be going to может быть просто намерением."
+    ],
+    "exercises": [
+      {
+        "type": "exercise",
+        "id": "pc-future-step-1",
+        "title": "1. Easy · Choose the correct form of be",
+        "difficulty": "Easy",
+        "instructions": "Выбери правильную форму am, is или are.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "single",
+            "prompt": "I ___ meeting Anna at 7.00 tomorrow.",
+            "options": [
+              "am",
+              "is",
+              "are"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "single",
+            "prompt": "Tom ___ flying to London on Friday.",
+            "options": [
+              "am",
+              "is",
+              "are"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "single",
+            "prompt": "We ___ having dinner with friends tonight.",
+            "options": [
+              "am",
+              "is",
+              "are"
+            ],
+            "answer": 2
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "single",
+            "prompt": "___ you staying in Warsaw next week?",
+            "options": [
+              "Am",
+              "Is",
+              "Are"
+            ],
+            "answer": 2
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "pc-future-step-2",
+        "title": "2. Medium · Complete the arrangement",
+        "difficulty": "Medium",
+        "instructions": "Напиши правильную форму Present Continuous.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "gaps",
+            "segments": [
+              "I ",
+              " Sam after work. (meet)"
+            ],
+            "answers": [
+              [
+                "’m meeting",
+                "'m meeting",
+                "am meeting"
+              ]
+            ],
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "gaps",
+            "segments": [
+              "She ",
+              " tonight. (not / come)"
+            ],
+            "answers": [
+              [
+                "isn’t coming",
+                "isn't coming",
+                "is not coming"
+              ]
+            ],
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "gaps",
+            "segments": [
+              "What time ",
+              " tomorrow? (you / leave)"
+            ],
+            "answers": [
+              [
+                "are you leaving"
+              ]
+            ],
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "gaps",
+            "segments": [
+              "They ",
+              " dinner with us on Friday. (have)"
+            ],
+            "answers": [
+              [
+                "’re having",
+                "'re having",
+                "are having"
+              ]
+            ],
+            "hideAnswersOnError": true
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "pc-future-step-3",
+        "title": "3. Harder · Present Continuous or be going to?",
+        "difficulty": "Harder",
+        "instructions": "Выбери форму, которая лучше подходит к контексту.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "single",
+            "prompt": "The table is booked for 8.00. We ___ at Marco’s tonight.",
+            "options": [
+              "are eating",
+              "are going to eat"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "single",
+            "prompt": "I’ve decided to learn Italian one day. I ___ Italian.",
+            "options": [
+              "am learning",
+              "am going to learn"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "single",
+            "prompt": "My train ticket says 06:00. I ___ at six tomorrow.",
+            "options": [
+              "am leaving",
+              "am going to leave"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "single",
+            "prompt": "Look at those clouds. It ___.",
+            "options": [
+              "is raining",
+              "is going to rain"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "pc-future-step-4",
+        "title": "4. Challenge · Build the sentence",
+        "difficulty": "Challenge",
+        "instructions": "Составь полное предложение или вопрос в Present Continuous.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "text",
+            "prompt": "we / meet / outside the station / at 7.30",
+            "answer": "We’re meeting outside the station at 7.30.",
+            "acceptedAnswers": [
+              "We’re meeting outside the station at 7.30",
+              "We're meeting outside the station at 7.30",
+              "We are meeting outside the station at 7.30"
+            ]
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "text",
+            "prompt": "she / not work / tomorrow",
+            "answer": "She isn’t working tomorrow.",
+            "acceptedAnswers": [
+              "She isn’t working tomorrow",
+              "She isn't working tomorrow",
+              "She is not working tomorrow"
+            ]
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "text",
+            "prompt": "what time / you / fly / to Rome / ?",
+            "answer": "What time are you flying to Rome?",
+            "acceptedAnswers": [
+              "What time are you flying to Rome",
+              "What time are you flying to Rome?"
+            ]
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "text",
+            "prompt": "I / have dinner / with Cassie / on Thursday",
+            "answer": "I’m having dinner with Cassie on Thursday.",
+            "acceptedAnswers": [
+              "I’m having dinner with Cassie on Thursday",
+              "I'm having dinner with Cassie on Thursday",
+              "I am having dinner with Cassie on Thursday"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];

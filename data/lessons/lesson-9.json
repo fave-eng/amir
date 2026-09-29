@@ -1,0 +1,963 @@
+{
+  "id": "lesson-9",
+  "number": 9,
+  "title": "Unit 3B · Put it in your calendar!",
+  "subtitle": "English File Pre-Intermediate · Workbook · Verbs + prepositions, linking and future arrangements",
+  "status": "available",
+  "page": "lesson.html?id=lesson-9",
+  "vocabularyId": "vocab-lesson-3b",
+  "grammarIds": [
+    "grammar-present-continuous-future-arrangements"
+  ],
+  "publishedAt": "2026-09-29",
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "totalPoints": 37,
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "3B · 1",
+      "title": "VOCABULARY · verbs + prepositions",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1a",
+      "title": "1a. Complete the sentences with a word from the list.",
+      "wordBank": [
+        "about",
+        "at",
+        "for (x2)",
+        "in",
+        "of",
+        "on",
+        "to"
+      ],
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "example": true,
+          "segments": [
+            "What do you think ",
+            " Jenny’s new boyfriend?"
+          ],
+          "answers": [
+            [
+              "of"
+            ]
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "What do you talk ",
+            " when you go out with your friends?"
+          ],
+          "answers": [
+            [
+              "about"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "about",
+              "at",
+              "for",
+              "in",
+              "of",
+              "on",
+              "to"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "We’d like to go away at the weekend, but it depends ",
+            " the weather."
+          ],
+          "answers": [
+            [
+              "on"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "about",
+              "at",
+              "for",
+              "in",
+              "of",
+              "on",
+              "to"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "When you and Megan went out for dinner, who paid ",
+            " the meal?"
+          ],
+          "answers": [
+            [
+              "for"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "about",
+              "at",
+              "for",
+              "in",
+              "of",
+              "on",
+              "to"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "Excuse me. I asked ",
+            " the fish, not the pasta."
+          ],
+          "answers": [
+            [
+              "for"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "about",
+              "at",
+              "for",
+              "in",
+              "of",
+              "on",
+              "to"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "We left home late, but we arrived ",
+            " the station in time to catch the train."
+          ],
+          "answers": [
+            [
+              "at"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "about",
+              "at",
+              "for",
+              "in",
+              "of",
+              "on",
+              "to"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "segments": [
+            "I don’t believe ",
+            " ghosts, but I wouldn’t like to sleep in that old house."
+          ],
+          "answers": [
+            [
+              "in"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "about",
+              "at",
+              "for",
+              "in",
+              "of",
+              "on",
+              "to"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "segments": [
+            "What’s the name of the song you were listening ",
+            "? I really liked it."
+          ],
+          "answers": [
+            [
+              "to"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "about",
+              "at",
+              "for",
+              "in",
+              "of",
+              "on",
+              "to"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1c",
+      "layout": "dialogue",
+      "title": "1c. Complete the conversations with a verb from the list and a preposition.",
+      "wordBank": [
+        "agree",
+        "arrived",
+        "asked",
+        "depends",
+        "think",
+        "waiting"
+      ],
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "example": true,
+          "segments": [
+            "No, I ",
+            " the chicken."
+          ],
+          "answers": [
+            [
+              "asked for"
+            ]
+          ],
+          "exampleAnswer": "asked for"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "Fine – he ",
+            " Paris yesterday."
+          ],
+          "answers": [
+            [
+              "arrived in"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "Maybe. It ",
+            " the day. I’m busy on Saturday."
+          ],
+          "answers": [
+            [
+              "depends on"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "I’m ",
+            " Sebastian, but he’s late as usual."
+          ],
+          "answers": [
+            [
+              "waiting for"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "I ",
+            " you. They’re playing well at the moment."
+          ],
+          "answers": [
+            [
+              "agree with"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "Maybe. I asked him, and he’s going to ",
+            " it."
+          ],
+          "answers": [
+            [
+              "think about"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ],
+      "dialogueLines": [
+        {
+          "speaker": "1 A",
+          "text": "Did you order the steak?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "1"
+          ]
+        },
+        {
+          "speaker": "2 A",
+          "text": "How’s Ian’s cycling holiday going?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "2"
+          ]
+        },
+        {
+          "speaker": "3 A",
+          "text": "Are you going to come to Sam’s party?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "3"
+          ]
+        },
+        {
+          "speaker": "4 A",
+          "text": "Hi, Jane! What are you doing here?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "4"
+          ]
+        },
+        {
+          "speaker": "5 A",
+          "text": "I think Manchester United are going to win the cup."
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "5"
+          ]
+        },
+        {
+          "speaker": "6 A",
+          "text": "Is your boss going to give you more money?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "3B · 2",
+      "title": "PRONUNCIATION · linking",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "pronunciation-2c",
+      "title": "2c. 3.4 Listen to the sentences and write the missing words.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_3.4.mp3",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "example": true,
+          "segments": [
+            "What do you ",
+            " my new scarf?"
+          ],
+          "answers": [
+            [
+              "think of"
+            ]
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "Everything ",
+            " the weather tomorrow."
+          ],
+          "answers": [
+            [
+              "depends on"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "I completely ",
+            " the meeting."
+          ],
+          "answers": [
+            [
+              "forgot about"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "I’m ",
+            " Amy."
+          ],
+          "answers": [
+            [
+              "worried about"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "Can we ",
+            " your mother?"
+          ],
+          "answers": [
+            [
+              "talk about"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "3B · 3",
+      "title": "GRAMMAR · present continuous (future arrangements)",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-3a",
+      "layout": "dialogue",
+      "title": "3a. Complete the conversation with the present continuous form of the verbs in brackets. Use contractions where possible.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "example": true,
+          "segments": [
+            "Where ",
+            " (you / have) your sales conference this year?"
+          ],
+          "answers": [
+            [
+              "are you having"
+            ]
+          ],
+          "exampleAnswer": "are you having"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "",
+            " (you / stay) in Warsaw?"
+          ],
+          "answers": [
+            [
+              "Are you staying"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "Only for a night, because ",
+            " (we / have) the conference in Krakow."
+          ],
+          "answers": [
+            [
+              "we’re having",
+              "we're having"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "So ",
+            " (I / fly) to Warsaw on Sunday,"
+          ],
+          "answers": [
+            [
+              "I’m flying",
+              "I'm flying"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "and then ",
+            " (I / travel) to Krakow the next day."
+          ],
+          "answers": [
+            [
+              "I’m travelling",
+              "I'm travelling"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "How ",
+            " (you / get) from the airport to the hotel?"
+          ],
+          "answers": [
+            [
+              "are you getting"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "segments": [
+            "",
+            " (Marika / come) to pick me up."
+          ],
+          "answers": [
+            [
+              "Marika’s coming",
+              "Marika's coming"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "segments": [
+            "",
+            " (she / go) to Krakow, too?"
+          ],
+          "answers": [
+            [
+              "Is she going"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "gaps",
+          "segments": [
+            "No, ",
+            " (she / not go) to the conference."
+          ],
+          "answers": [
+            [
+              "she isn’t going",
+              "she isn't going"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "gaps",
+          "segments": [
+            "So ",
+            " (you / get) the train to Krakow?"
+          ],
+          "answers": [
+            [
+              "are you getting"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ],
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "itemIds": [
+            "1"
+          ]
+        },
+        {
+          "speaker": "B",
+          "text": "In Poland – it’s next week actually."
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "2"
+          ]
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "3"
+          ]
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "4",
+            "5"
+          ]
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "6"
+          ]
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "7"
+          ]
+        },
+        {
+          "speaker": "A",
+          "text": "Oh, I remember Marika. Say hi to her from me."
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "8"
+          ]
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "9"
+          ]
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "10"
+          ]
+        },
+        {
+          "speaker": "B",
+          "text": "Yes. It’s easier than hiring a car."
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-3b",
+      "title": "3b. Circle the correct verb form. If both forms are possible, tick (✓) the sentence.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "multiple",
+          "example": true,
+          "exampleTextOnly": true,
+          "prompt": "A  Do you know how to get to Andrew’s house tomorrow?\nB  No. I’m sure I’m going to get / I’m getting lost.",
+          "exampleAnswer": "I’m going to get"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "multiple",
+          "prompt": "A  Do you have any plans for this weekend?\nB  Yes, I’m going to visit / I’m visiting my grandparents on Sunday.",
+          "options": [
+            "I’m going to visit",
+            "I’m visiting"
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "multiple",
+          "prompt": "A  It’s very cold tonight.\nB  Do you think it’s going to snow / it’s snowing?",
+          "options": [
+            "it’s going to snow",
+            "it’s snowing"
+          ],
+          "answer": [
+            0
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "multiple",
+          "prompt": "A  My brother has a job interview in London.\nB  Oh. Do you think he’s going to get / he’s getting the job?",
+          "options": [
+            "he’s going to get",
+            "he’s getting"
+          ],
+          "answer": [
+            0
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "multiple",
+          "prompt": "A  What time’s the train?\nB  At 7.15. Don’t worry. We aren’t going to miss / aren’t missing it.",
+          "options": [
+            "aren’t going to miss",
+            "aren’t missing"
+          ],
+          "answer": [
+            0
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "multiple",
+          "prompt": "A  We’re going on holiday next month.\nB  Are you? Where are you going to go / are you going?",
+          "options": [
+            "are you going to go",
+            "are you going"
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "multiple",
+          "prompt": "A  What time are you leaving tomorrow?\nB  Early. I’m going to catch / I’m catching the 6.00 train.",
+          "options": [
+            "I’m going to catch",
+            "I’m catching"
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "multiple",
+          "prompt": "A  Your girlfriend drives too fast.\nB  I know. I’m sure she’s going to have / she’s having an accident one day.",
+          "options": [
+            "she’s going to have",
+            "she’s having"
+          ],
+          "answer": [
+            0
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-3c",
+      "title": "3c. Stefan is a music producer. Look at Stefan’s calendar and write about what he’s doing next week. Use contractions.",
+      "image": "images/lesson-9/stefan-calendar.png",
+      "imageAlt": "Stefan’s phone calendar: Monday meet Jack at the recording studio; Tuesday go to Cambridge; Wednesday work at home; Thursday have dinner with Cassie; Friday listen to a new pianist; Saturday have a barbecue.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "example": true,
+          "segments": [
+            "On Monday, he’s ",
+            "."
+          ],
+          "answers": [
+            [
+              "meeting Jack at the recording studio"
+            ]
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "On Tuesday, ",
+            "."
+          ],
+          "answers": [
+            [
+              "he’s going to Cambridge",
+              "he's going to Cambridge"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "On Wednesday, ",
+            "."
+          ],
+          "answers": [
+            [
+              "he’s working at home",
+              "he's working at home"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "On Thursday, ",
+            "."
+          ],
+          "answers": [
+            [
+              "he’s having dinner with Cassie",
+              "he's having dinner with Cassie"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "On Friday, ",
+            "."
+          ],
+          "answers": [
+            [
+              "he’s listening to a new pianist",
+              "he's listening to a new pianist"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "On Saturday, ",
+            "."
+          ],
+          "answers": [
+            [
+              "he’s having a barbecue",
+              "he's having a barbecue"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    }
+  ]
+}
