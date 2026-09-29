@@ -26,7 +26,7 @@
       "type": "exercise",
       "id": "vocabulary-1a",
       "title": "1a. Complete the words with the missing vowels.",
-      "image": "images/lesson-7/airport-signs.svg",
+      "image": "images/lesson-7/airport-signs.png",
       "imageAlt": "Eight airport signs numbered 1 to 8: check-in desk, lifts, gate sign G5-25, trolley, customs, arrivals, terminal signs T1 and T2, and departures.",
       "hideAnswersOnError": true,
       "items": [
