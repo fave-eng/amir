@@ -1,7 +1,7 @@
 import { withSupabase } from 'npm:@supabase/server@^1'
 
 const encoder = new TextEncoder()
-const FUNCTION_VERSION = 'homework-reports-v5-english'
+const FUNCTION_VERSION = 'homework-reports-v6-english-newlines'
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-notify-secret',
@@ -82,7 +82,7 @@ function buildMaterialMessage(hasVocabulary: boolean, homeworkTitle: unknown): s
     ...steps,
     '',
     `✨ ${escapeHtml(randomMotivation())}`,
-  ].join('\\n')
+  ].join('\n')
 }
 
 function buildHomeworkReport(row: any): string {
@@ -106,7 +106,7 @@ function buildHomeworkReport(row: any): string {
     'Answers and results are saved in Supabase.',
     '',
     `✨ ${escapeHtml(randomMotivation())}`,
-  ].join('\\n')
+  ].join('\n')
 }
 
 async function sendTelegramMessage(

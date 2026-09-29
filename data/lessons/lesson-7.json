@@ -26,7 +26,7 @@
       "type": "exercise",
       "id": "vocabulary-1a",
       "title": "1a. Complete the words with the missing vowels.",
-      "image": "images/lesson-7/airport-signs.svg",
+      "image": "images/lesson-7/airport-signs.png",
       "imageAlt": "Eight airport signs numbered 1 to 8: check-in desk, lifts, gate sign G5-25, trolley, customs, arrivals, terminal signs T1 and T2, and departures.",
       "hideAnswersOnError": true,
       "items": [
@@ -635,20 +635,33 @@
       "response": false
     },
     {
-      "type": "multiple",
+      "type": "exercise",
       "id": "pronunciation-2c",
       "title": "2c. Tick (✓) the sentences where all three g sounds are the same.",
-      "options": [
-        "We organized a big party for the guests.",
-        "It’s not usually foggy in Germany in August.",
-        "This is one of the largest villages in the region.",
-        "I forgot to get George a gift."
-      ],
-      "answer": [
-        0,
-        2
-      ],
-      "hideAnswersOnError": true
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "exampleTextOnly": true,
+          "prompt": "✓ We organized a big party for the guests."
+        },
+        {
+          "id": "2-4",
+          "number": "",
+          "input": "multiple",
+          "options": [
+            "2 It’s not usually foggy in Germany in August.",
+            "3 This is one of the largest villages in the region.",
+            "4 I forgot to get George a gift."
+          ],
+          "answer": [
+            1
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
     },
     {
       "type": "audio",
