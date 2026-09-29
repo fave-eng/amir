@@ -9,53 +9,90 @@
 
   <style>
     /* Lesson images can be stored directly inside lesson JSON as data URLs. */
+    .exercise-card.exercise-layout-media-list .exercise-items {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
     .exercise-card.exercise-layout-media-list .exercise-item.has-item-media {
       display: grid;
-      grid-template-columns: 118px minmax(0, 1fr);
+      grid-template-columns: 160px minmax(0, 1fr);
       grid-template-areas: "media header" "media control" "media feedback";
       column-gap: 18px;
+      row-gap: 10px;
       align-items: start;
     }
     .exercise-card.exercise-layout-media-list .exercise-item-media {
       grid-area: media;
-      width: 118px;
+      width: 160px;
+      min-height: 0;
       margin: 0;
+      padding: 0;
       align-self: start;
+      background: transparent;
     }
     .exercise-card.exercise-layout-media-list .exercise-item-media img {
       display: block;
       width: 100%;
       height: auto;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
+      max-height: 180px;
+      aspect-ratio: auto;
+      object-fit: contain;
       border: 1px solid var(--border);
       border-radius: 14px;
-      background: #f1f5f9;
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+      background: #f8fafc;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
     }
-    .exercise-card.exercise-layout-media-list .exercise-item.has-item-media .exercise-item-header { grid-area: header; }
-    .exercise-card.exercise-layout-media-list .exercise-item.has-item-media .exercise-control { grid-area: control; padding-left: 0; }
-    .exercise-card.exercise-layout-media-list .exercise-item.has-item-media > .feedback { grid-area: feedback; }
-    @media (max-width: 620px) {
-      .exercise-card.exercise-layout-media-list .exercise-item.has-item-media { grid-template-columns: 92px minmax(0, 1fr); column-gap: 12px; }
-      .exercise-card.exercise-layout-media-list .exercise-item-media { width: 92px; }
+    .exercise-card.exercise-layout-media-list .exercise-item.has-item-media .exercise-item-header {
+      grid-area: header;
+      margin-bottom: 0;
     }
-    @media (max-width: 420px) {
+    .exercise-card.exercise-layout-media-list .exercise-item.has-item-media .exercise-control {
+      grid-area: control;
+      padding-left: 0;
+      margin-top: 0;
+    }
+    .exercise-card.exercise-layout-media-list .exercise-item.has-item-media > .feedback {
+      grid-area: feedback;
+    }
+    .exercise-card.exercise-layout-media-list .exercise-item.has-item-media .sentence-gaps {
+      gap: 10px 8px;
+      line-height: 1.8;
+    }
+    .exercise-card.exercise-layout-media-list .exercise-item.has-item-media .example-gap-line {
+      line-height: 1.8;
+    }
+    @media (max-width: 720px) {
       .exercise-card.exercise-layout-media-list .exercise-item.has-item-media {
-        grid-template-columns: 84px minmax(0, 1fr);
-        grid-template-areas: "media header" "control control" "feedback feedback";
-        row-gap: 12px;
+        grid-template-columns: 124px minmax(0, 1fr);
+        column-gap: 14px;
       }
-      .exercise-card.exercise-layout-media-list .exercise-item-media { width: 84px; }
-      .exercise-card.exercise-layout-media-list .exercise-item.has-item-media .exercise-item-header { margin-bottom: 0; }
+      .exercise-card.exercise-layout-media-list .exercise-item-media {
+        width: 124px;
+      }
+      .exercise-card.exercise-layout-media-list .exercise-item-media img {
+        max-height: 150px;
+      }
+    }
+    @media (max-width: 520px) {
+      .exercise-card.exercise-layout-media-list .exercise-item.has-item-media {
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "media" "control" "feedback";
+      }
+      .exercise-card.exercise-layout-media-list .exercise-item-media {
+        width: 100%;
+        max-width: 220px;
+      }
+      .exercise-card.exercise-layout-media-list .exercise-item.has-item-media .exercise-item-header {
+        margin-bottom: 0;
+      }
     }
 
   </style>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
   <script src="config.js" defer></script>
-  <script src="data/vocabulary-data.js?v=18" defer></script>
-  <script src="data/grammar-data.js?v=17" defer></script>
+  <script src="data/vocabulary-data.js?v=16" defer></script>
+  <script src="data/grammar-data.js?v=16" defer></script>
   <script src="app.js?v=23" defer></script>
 </head>
 <body class="has-bottom-nav" data-page="homework" data-view="lesson">

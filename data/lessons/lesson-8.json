@@ -5,7 +5,7 @@
   "subtitle": "English File Pre-Intermediate · Workbook · be going to (plans and predictions)",
   "status": "available",
   "page": "lesson.html?id=lesson-8",
-  "vocabularyId": "vocab-lesson-3a-grammar",
+  "vocabularyId": "vocab-lesson-3a",
   "grammarIds": [
     "grammar-be-going-to"
   ],
@@ -237,19 +237,31 @@
           "id": "1",
           "number": 1,
           "example": true,
-          "exampleTextOnly": true,
-          "prompt": "Jason’s going to take Suzy to the airport tomorrow.",
+          "input": "gaps",
+          "segments": [
+            "Jason’s ",
+            "."
+          ],
+          "answers": [
+            [
+              "going to take Suzy to the airport tomorrow"
+            ]
+          ],
           "image": "images/lesson-8/grammar-3c-1.png",
           "imageAlt": "Jason’s phone reminder: take Suzy to the airport tomorrow."
         },
         {
           "id": "2",
           "number": 2,
-          "input": "text",
-          "prompt": "Sam isn’t",
-          "answer": "going to buy a new suitcase today",
-          "acceptedAnswers": [
-            "going to buy a new suitcase today"
+          "input": "gaps",
+          "segments": [
+            "Sam isn’t ",
+            "."
+          ],
+          "answers": [
+            [
+              "going to buy a new suitcase today"
+            ]
           ],
           "image": "images/lesson-8/grammar-3c-2.png",
           "imageAlt": "Sam’s note about buying a new suitcase, with today crossed out.",
@@ -258,11 +270,15 @@
         {
           "id": "3",
           "number": 3,
-          "input": "text",
-          "prompt": "Dave’s",
-          "answer": "going to meet Claire at Terminal 2 at 12.30",
-          "acceptedAnswers": [
-            "going to meet Claire at Terminal 2 at 12.30"
+          "input": "gaps",
+          "segments": [
+            "Dave’s ",
+            "."
+          ],
+          "answers": [
+            [
+              "going to meet Claire at Terminal 2 at 12.30"
+            ]
           ],
           "image": "images/lesson-8/grammar-3c-3.png",
           "imageAlt": "Dave’s phone reminder: meet Claire at Terminal 2 at 12.30.",
@@ -271,11 +287,15 @@
         {
           "id": "4",
           "number": 4,
-          "input": "text",
-          "prompt": "Sally’s",
-          "answer": "going to fly from London to New York on Wednesday",
-          "acceptedAnswers": [
-            "going to fly from London to New York on Wednesday"
+          "input": "gaps",
+          "segments": [
+            "Sally’s ",
+            "."
+          ],
+          "answers": [
+            [
+              "going to fly from London to New York on Wednesday"
+            ]
           ],
           "image": "images/lesson-8/grammar-3c-4.png",
           "imageAlt": "Sally’s note: fly from London to New York on Wednesday.",
@@ -284,17 +304,22 @@
         {
           "id": "5",
           "number": 5,
-          "input": "text",
-          "prompt": "Esme’s",
-          "answer": "going to book an airport taxi this evening",
-          "acceptedAnswers": [
-            "going to book an airport taxi this evening"
+          "input": "gaps",
+          "segments": [
+            "Esme’s ",
+            "."
+          ],
+          "answers": [
+            [
+              "going to book an airport taxi this evening"
+            ]
           ],
           "image": "images/lesson-8/grammar-3c-5.png",
           "imageAlt": "Esme’s phone reminder: book an airport taxi this evening.",
           "hideAnswersOnError": true
         }
-      ]
+      ],
+      "instructions": "Look carefully at each note or reminder. Then write the sentence with going to."
     },
     {
       "type": "exercise",
