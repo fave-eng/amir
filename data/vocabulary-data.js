@@ -1626,5 +1626,102 @@ window.VOCABULARY_DATA = [
         "exampleRu": "Мы устали, когда приземлились в Нью-Йорке."
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-3a-grammar",
+    "order": 8,
+    "title": "Travel plans",
+    "label": "Lesson 8 · Unit 3A · TripAside",
+    "icon": "🧳",
+    "type": "lesson",
+    "linkedLessonId": "lesson-8",
+    "page": "vocabulary.html?id=vocab-lesson-3a-grammar",
+    "publishedAt": "2026-09-29",
+    "words": [
+      {
+        "id": "lesson-3a-grammar-warm-clothes",
+        "en": "warm clothes",
+        "ru": "тёплая одежда",
+        "exampleEn": "Take some warm clothes.",
+        "exampleRu": "Возьми с собой тёплую одежду."
+      },
+      {
+        "id": "lesson-3a-grammar-out-of-date",
+        "en": "out of date",
+        "ru": "просроченный; недействительный",
+        "exampleEn": "Your passport is nearly out of date.",
+        "exampleRu": "Срок действия твоего паспорта почти истёк."
+      },
+      {
+        "id": "lesson-3a-grammar-nearly",
+        "en": "nearly",
+        "ru": "почти",
+        "exampleEn": "Your passport is nearly out of date.",
+        "exampleRu": "Срок действия твоего паспорта почти истёк."
+      },
+      {
+        "id": "lesson-3a-grammar-traffic",
+        "en": "traffic",
+        "ru": "дорожное движение; пробки",
+        "exampleEn": "The traffic is really bad.",
+        "exampleRu": "На дорогах очень сильные пробки."
+      },
+      {
+        "id": "lesson-3a-grammar-miss-a-flight",
+        "en": "miss a flight",
+        "ru": "опоздать на рейс",
+        "exampleEn": "We’re going to miss our flight.",
+        "exampleRu": "Мы опоздаем на наш рейс."
+      },
+      {
+        "id": "lesson-3a-grammar-book-a-taxi",
+        "en": "book a taxi",
+        "ru": "заказать такси",
+        "exampleEn": "We don’t need to book a taxi.",
+        "exampleRu": "Нам не нужно заказывать такси."
+      },
+      {
+        "id": "lesson-3a-grammar-get-the-bus",
+        "en": "get the bus",
+        "ru": "поехать на автобусе; сесть на автобус",
+        "exampleEn": "I’m going to get the bus.",
+        "exampleRu": "Я поеду на автобусе."
+      },
+      {
+        "id": "lesson-3a-grammar-pick-somebody-up",
+        "en": "pick somebody up",
+        "ru": "забрать кого-то (на машине)",
+        "exampleEn": "My brother’s going to pick us up at the airport.",
+        "exampleRu": "Мой брат заберёт нас из аэропорта."
+      },
+      {
+        "id": "lesson-3a-grammar-take-somebody-to-the-airport",
+        "en": "take somebody to the airport",
+        "ru": "отвезти кого-то в аэропорт",
+        "exampleEn": "Do you want me to take you to the airport?",
+        "exampleRu": "Хочешь, я отвезу тебя в аэропорт?"
+      },
+      {
+        "id": "lesson-3a-grammar-during-the-flight",
+        "en": "during the flight",
+        "ru": "во время полёта",
+        "exampleEn": "He isn’t going to sleep during the flight.",
+        "exampleRu": "Он не собирается спать во время полёта."
+      },
+      {
+        "id": "lesson-3a-grammar-anywhere",
+        "en": "anywhere",
+        "ru": "куда-либо; где-либо",
+        "exampleEn": "That plane isn’t going to fly anywhere today.",
+        "exampleRu": "Этот самолёт сегодня никуда не полетит."
+      },
+      {
+        "id": "lesson-3a-grammar-reminder",
+        "en": "reminder",
+        "ru": "напоминание",
+        "exampleEn": "There’s a reminder on Jason’s phone.",
+        "exampleRu": "На телефоне Джейсона есть напоминание."
+      }
+    ]
   }
 ];
