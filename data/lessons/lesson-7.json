@@ -1,0 +1,661 @@
+{
+  "id": "lesson-7",
+  "number": 7,
+  "title": "Unit 3A · TripAside",
+  "subtitle": "English File Pre-Intermediate · Workbook · Airports, the letter g and be going to",
+  "status": "available",
+  "page": "lesson.html?id=lesson-7",
+  "vocabularyId": "vocab-lesson-3a",
+  "grammarIds": [
+    "grammar-be-going-to"
+  ],
+  "publishedAt": "2026-09-29",
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "totalPoints": 26,
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "3A · 1",
+      "title": "VOCABULARY · airports",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1a",
+      "title": "1a. Complete the words with the missing vowels.",
+      "image": "images/lesson-7/airport-signs.svg",
+      "imageAlt": "Eight airport signs numbered 1 to 8: check-in desk, lifts, gate sign G5-25, trolley, customs, arrivals, terminal signs T1 and T2, and departures.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "example": true,
+          "prompt": "ch_ck-_n",
+          "segments": [
+            "ch",
+            "ck-",
+            "n"
+          ],
+          "answers": [
+            [
+              "e"
+            ],
+            [
+              "i"
+            ]
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "l_fts",
+          "segments": [
+            "l",
+            "fts"
+          ],
+          "answers": [
+            [
+              "i"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "g_t_s",
+          "segments": [
+            "g",
+            "t",
+            "s"
+          ],
+          "answers": [
+            [
+              "a"
+            ],
+            [
+              "e"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "tr_ll_y",
+          "segments": [
+            "tr",
+            "ll",
+            "y"
+          ],
+          "answers": [
+            [
+              "o"
+            ],
+            [
+              "e"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "c_st_ms",
+          "segments": [
+            "c",
+            "st",
+            "ms"
+          ],
+          "answers": [
+            [
+              "u"
+            ],
+            [
+              "o"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "_rr_v_ls",
+          "segments": [
+            "",
+            "rr",
+            "v",
+            "ls"
+          ],
+          "answers": [
+            [
+              "a"
+            ],
+            [
+              "i"
+            ],
+            [
+              "a"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "prompt": "t_rm_n_l",
+          "segments": [
+            "t",
+            "rm",
+            "n",
+            "l"
+          ],
+          "answers": [
+            [
+              "e"
+            ],
+            [
+              "i"
+            ],
+            [
+              "a"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "prompt": "d_p_rt_r_s",
+          "segments": [
+            "d",
+            "p",
+            "rt",
+            "r",
+            "s"
+          ],
+          "answers": [
+            [
+              "e"
+            ],
+            [
+              "a"
+            ],
+            [
+              "u"
+            ],
+            [
+              "e"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1b",
+      "title": "1b. Complete the sentences with a word from A and a word from B.",
+      "wordBanks": [
+        {
+          "label": "A",
+          "words": [
+            "bag",
+            "baggage",
+            "gate",
+            "passport",
+            "security"
+          ]
+        },
+        {
+          "label": "B",
+          "words": [
+            "reclaim",
+            "control",
+            "check",
+            "drop",
+            "number"
+          ]
+        }
+      ],
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "example": true,
+          "prompt": "We can get a trolley in baggage reclaim when we pick up our bags.",
+          "segments": [
+            "We can get a trolley in ",
+            " ",
+            " when we pick up our bags."
+          ],
+          "answers": [
+            [
+              "baggage"
+            ],
+            [
+              "reclaim"
+            ]
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "If you have scissors in your hand luggage, you’ll have problems at the security check.",
+          "segments": [
+            "If you have scissors in your hand luggage, you’ll have problems at the ",
+            " ",
+            "."
+          ],
+          "answers": [
+            [
+              "security"
+            ],
+            [
+              "check"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "bag",
+              "baggage",
+              "gate",
+              "passport",
+              "security"
+            ],
+            [
+              "reclaim",
+              "control",
+              "check",
+              "drop",
+              "number"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "When I got to passport control, they only looked at my photo quickly.",
+          "segments": [
+            "When I got to ",
+            " ",
+            ", they only looked at my photo quickly."
+          ],
+          "answers": [
+            [
+              "passport"
+            ],
+            [
+              "control"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "bag",
+              "baggage",
+              "gate",
+              "passport",
+              "security"
+            ],
+            [
+              "reclaim",
+              "control",
+              "check",
+              "drop",
+              "number"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "In departures, the big screens show your departure time and gate number.",
+          "segments": [
+            "In departures, the big screens show your departure time and ",
+            " ",
+            "."
+          ],
+          "answers": [
+            [
+              "gate"
+            ],
+            [
+              "number"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "bag",
+              "baggage",
+              "gate",
+              "passport",
+              "security"
+            ],
+            [
+              "reclaim",
+              "control",
+              "check",
+              "drop",
+              "number"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "We’ve printed our boarding passes, so we just need to find the bag drop to leave our suitcase.",
+          "segments": [
+            "We’ve printed our boarding passes, so we just need to find the ",
+            " ",
+            " to leave our suitcase."
+          ],
+          "answers": [
+            [
+              "bag"
+            ],
+            [
+              "drop"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "bag",
+              "baggage",
+              "gate",
+              "passport",
+              "security"
+            ],
+            [
+              "reclaim",
+              "control",
+              "check",
+              "drop",
+              "number"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1c",
+      "layout": "cloze",
+      "title": "1c. Complete the text.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "exampleAnswer": "Terminal"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "answer": "lifts",
+          "acceptedAnswers": [
+            "lifts"
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "answer": "departures",
+          "acceptedAnswers": [
+            "departures"
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "answer": "bag drop",
+          "acceptedAnswers": [
+            "bag drop"
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "answer": "gate",
+          "acceptedAnswers": [
+            "gate"
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "text",
+          "answer": "passport control",
+          "acceptedAnswers": [
+            "passport control"
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "text",
+          "answer": "baggage reclaim",
+          "acceptedAnswers": [
+            "baggage reclaim"
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "text",
+          "answer": "trolley",
+          "acceptedAnswers": [
+            "trolley"
+          ]
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "text",
+          "answer": "customs",
+          "acceptedAnswers": [
+            "customs"
+          ]
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "text",
+          "answer": "arrivals",
+          "acceptedAnswers": [
+            "arrivals"
+          ]
+        }
+      ],
+      "clozeParagraphs": [
+        [
+          "Last summer, I flew to New York with my boyfriend. The flight left from ",
+          {
+            "itemId": "1"
+          },
+          " 1, and my brother dropped us outside the building. We went inside and looked for the ",
+          {
+            "itemId": "2"
+          },
+          " to take us upstairs to ",
+          {
+            "itemId": "3"
+          },
+          ". We left our suitcases at the ",
+          {
+            "itemId": "4"
+          },
+          ", and then we went to the ",
+          {
+            "itemId": "5"
+          },
+          " to board our plane. We had a good flight, but we were very tired when we landed in New York. There was a long queue at ",
+          {
+            "itemId": "6"
+          },
+          ", and they asked us a lot of questions. Finally, we went to ",
+          {
+            "itemId": "7"
+          },
+          " to pick up our bags. We needed a ",
+          {
+            "itemId": "8"
+          },
+          " this time because of all our suitcases. Nobody stopped us at ",
+          {
+            "itemId": "9"
+          },
+          ", so we went straight to ",
+          {
+            "itemId": "10"
+          },
+          ", where our friends were waiting for us."
+        ]
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "3A · 2",
+      "title": "PRONUNCIATION · the letter g",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "pronunciation-2a",
+      "title": "2a. Circle the word with a different sound.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "example": true,
+          "exampleTextOnly": true,
+          "prompt": "jazz /dʒ/: suggest · baggage · jogging",
+          "exampleAnswer": "jogging"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "girl /g/",
+          "options": [
+            "change",
+            "guess",
+            "forget"
+          ],
+          "answer": 0,
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "jazz /dʒ/",
+          "options": [
+            "digital",
+            "age",
+            "bigger"
+          ],
+          "answer": 2,
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "jazz /dʒ/",
+          "options": [
+            "general",
+            "foggy",
+            "large"
+          ],
+          "answer": 1,
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "girl /g/",
+          "options": [
+            "August",
+            "guest",
+            "region"
+          ],
+          "answer": 2,
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "jazz /dʒ/",
+          "options": [
+            "gate",
+            "village",
+            "agent"
+          ],
+          "answer": 0,
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "audio",
+      "id": "pronunciation-2b-audio",
+      "title": "2b. 3.1 Listen and check. Then listen again and repeat the words.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_3.1.mp3",
+      "response": false
+    },
+    {
+      "type": "multiple",
+      "id": "pronunciation-2c",
+      "title": "2c. Tick (✓) the sentences where all three g sounds are the same.",
+      "options": [
+        "We organized a big party for the guests.",
+        "It’s not usually foggy in Germany in August.",
+        "This is one of the largest villages in the region.",
+        "I forgot to get George a gift."
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "hideAnswersOnError": true
+    },
+    {
+      "type": "audio",
+      "id": "pronunciation-2d-audio",
+      "title": "2d. 3.2 Listen and check. Then listen again and repeat the sentences.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_3.2.mp3",
+      "response": false
+    }
+  ]
+}

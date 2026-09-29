@@ -1459,5 +1459,172 @@ window.VOCABULARY_DATA = [
         "exampleRu": "Словесное ударение важно в произношении."
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-3a",
+    "order": 7,
+    "title": "Airports",
+    "label": "Lesson 7 · Unit 3A · TripAside",
+    "icon": "✈️",
+    "type": "lesson",
+    "linkedLessonId": "lesson-7",
+    "page": "vocabulary.html?id=vocab-lesson-3a",
+    "publishedAt": "2026-09-29",
+    "words": [
+      {
+        "id": "lesson-3a-lifts",
+        "en": "lifts",
+        "ru": "лифты",
+        "exampleEn": "Take the lifts to the first floor.",
+        "exampleRu": "Поднимитесь на лифте на первый этаж."
+      },
+      {
+        "id": "lesson-3a-gates",
+        "en": "gates",
+        "ru": "выходы на посадку",
+        "exampleEn": "The departure screens show the gates.",
+        "exampleRu": "Табло вылета показывает выходы на посадку."
+      },
+      {
+        "id": "lesson-3a-trolley",
+        "en": "trolley",
+        "ru": "багажная тележка",
+        "exampleEn": "We used a trolley for our suitcases.",
+        "exampleRu": "Мы использовали тележку для чемоданов."
+      },
+      {
+        "id": "lesson-3a-customs",
+        "en": "customs",
+        "ru": "таможня",
+        "exampleEn": "Nobody stopped us at customs.",
+        "exampleRu": "Нас никто не остановил на таможне."
+      },
+      {
+        "id": "lesson-3a-arrivals",
+        "en": "arrivals",
+        "ru": "зал прилёта",
+        "exampleEn": "Our friends were waiting for us in arrivals.",
+        "exampleRu": "Наши друзья ждали нас в зале прилёта."
+      },
+      {
+        "id": "lesson-3a-terminal",
+        "en": "terminal",
+        "ru": "терминал",
+        "exampleEn": "The flight left from Terminal 1.",
+        "exampleRu": "Рейс вылетал из терминала 1."
+      },
+      {
+        "id": "lesson-3a-departures",
+        "en": "departures",
+        "ru": "зал вылета",
+        "exampleEn": "We went upstairs to departures.",
+        "exampleRu": "Мы поднялись наверх в зал вылета."
+      },
+      {
+        "id": "lesson-3a-baggage-reclaim",
+        "en": "baggage reclaim",
+        "ru": "выдача багажа",
+        "exampleEn": "We went to baggage reclaim to pick up our bags.",
+        "exampleRu": "Мы пошли к выдаче багажа, чтобы забрать сумки."
+      },
+      {
+        "id": "lesson-3a-security-check",
+        "en": "security check",
+        "ru": "досмотр безопасности",
+        "exampleEn": "Scissors can cause problems at the security check.",
+        "exampleRu": "Ножницы могут вызвать проблемы на досмотре."
+      },
+      {
+        "id": "lesson-3a-passport-control",
+        "en": "passport control",
+        "ru": "паспортный контроль",
+        "exampleEn": "There was a long queue at passport control.",
+        "exampleRu": "На паспортном контроле была длинная очередь."
+      },
+      {
+        "id": "lesson-3a-bag-drop",
+        "en": "bag drop",
+        "ru": "стойка сдачи багажа",
+        "exampleEn": "We left our suitcases at the bag drop.",
+        "exampleRu": "Мы оставили чемоданы на стойке сдачи багажа."
+      },
+      {
+        "id": "lesson-3a-hand-luggage",
+        "en": "hand luggage",
+        "ru": "ручная кладь",
+        "exampleEn": "Keep your passport in your hand luggage.",
+        "exampleRu": "Держите паспорт в ручной клади."
+      },
+      {
+        "id": "lesson-3a-departure-time",
+        "en": "departure time",
+        "ru": "время вылета",
+        "exampleEn": "The screen shows the departure time.",
+        "exampleRu": "Табло показывает время вылета."
+      },
+      {
+        "id": "lesson-3a-boarding-pass",
+        "en": "boarding pass",
+        "ru": "посадочный талон",
+        "exampleEn": "We printed our boarding passes at home.",
+        "exampleRu": "Мы распечатали посадочные талоны дома."
+      },
+      {
+        "id": "lesson-3a-gate-number",
+        "en": "gate number",
+        "ru": "номер выхода на посадку",
+        "exampleEn": "Check the gate number on the screen.",
+        "exampleRu": "Проверьте номер выхода на табло."
+      },
+      {
+        "id": "lesson-3a-board-a-plane",
+        "en": "board a plane",
+        "ru": "сесть на самолёт; пройти на посадку",
+        "exampleEn": "We went to the gate to board our plane.",
+        "exampleRu": "Мы пошли к выходу, чтобы сесть на самолёт."
+      },
+      {
+        "id": "lesson-3a-pick-up-bags",
+        "en": "pick up your bags",
+        "ru": "забрать багаж",
+        "exampleEn": "Go to baggage reclaim to pick up your bags.",
+        "exampleRu": "Идите к выдаче багажа, чтобы забрать сумки."
+      },
+      {
+        "id": "lesson-3a-suitcase",
+        "en": "suitcase",
+        "ru": "чемодан",
+        "exampleEn": "We left our suitcase at the bag drop.",
+        "exampleRu": "Мы оставили чемодан на стойке сдачи багажа."
+      },
+      {
+        "id": "lesson-3a-queue",
+        "en": "queue",
+        "ru": "очередь",
+        "exampleEn": "There was a long queue at passport control.",
+        "exampleRu": "На паспортном контроле была длинная очередь."
+      },
+      {
+        "id": "lesson-3a-upstairs",
+        "en": "upstairs",
+        "ru": "наверх; наверху",
+        "exampleEn": "The lifts took us upstairs.",
+        "exampleRu": "Лифты подняли нас наверх."
+      },
+      {
+        "id": "lesson-3a-straight-to",
+        "en": "straight to",
+        "ru": "прямо к; сразу в",
+        "exampleEn": "We went straight to arrivals.",
+        "exampleRu": "Мы сразу пошли в зал прилёта."
+      },
+      {
+        "id": "lesson-3a-land",
+        "en": "land",
+        "ru": "приземляться",
+        "exampleEn": "We were tired when we landed in New York.",
+        "exampleRu": "Мы устали, когда приземлились в Нью-Йорке."
+      }
+    ]
   }
 ];
