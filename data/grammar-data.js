@@ -650,7 +650,108 @@ window.GRAMMAR_DATA = [
         ],
         "note": ""
       }
-    ]
+    ],
+    "studySections": [
+      {
+        "kind": "exposition",
+        "title": "1. Что обозначает Present Simple",
+        "paragraphs": [
+          "Это время используется для привычек, фактов, постоянных ситуаций и расписаний. Оно не означает, что действие обязательно происходит именно в момент речи.",
+          "Вопрос для самопроверки: «Это обычно так?» Если да, чаще всего нужен Present Simple. Для процесса, происходящего сейчас, обычно понадобится Present Continuous."
+        ]
+      },
+      {
+        "kind": "diagram",
+        "title": "2. Сначала реши, какой глагол в предложении",
+        "variant": "branch",
+        "steps": [
+          {
+            "label": "Обычный глагол",
+            "form": "do / does + V1 в вопросе",
+            "example": "She works every day.",
+            "ru": "Она работает каждый день.",
+            "hint": "work, study, live, like"
+          },
+          {
+            "label": "Глагол be",
+            "form": "am / is / are",
+            "example": "She is tired.",
+            "ru": "Она устала.",
+            "hint": "be не использует do / does"
+          }
+        ],
+        "note": "Нельзя объединять две системы: Does she is tired? — неправильно. Правильно: Is she tired?",
+        "caption": ""
+      },
+      {
+        "kind": "table",
+        "title": "3. Утверждение, отрицание и вопрос: обычный глагол",
+        "index": 0
+      },
+      {
+        "kind": "rules",
+        "title": "4. Третье лицо: почему появляется -s",
+        "indices": [
+          1,
+          2
+        ]
+      },
+      {
+        "kind": "table",
+        "title": "5. Когда писать -s, -es и -ies",
+        "index": 2
+      },
+      {
+        "kind": "table",
+        "title": "6. Глагол be: отдельная конструкция",
+        "index": 1
+      },
+      {
+        "kind": "rules",
+        "title": "7. Вопросы, краткие ответы и место наречий",
+        "indices": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "kind": "table",
+        "title": "8. Наречия частоты внутри предложения",
+        "index": 3
+      },
+      {
+        "kind": "contrast",
+        "title": "9. Present Simple или Present Continuous?",
+        "pairs": [
+          {
+            "before": "He works in a café.",
+            "after": "He is working in a café today.",
+            "why": "Постоянная работа ↔ временная ситуация сегодня."
+          },
+          {
+            "before": "She usually walks to work.",
+            "after": "She is walking to work now.",
+            "why": "Обычный маршрут ↔ действие прямо сейчас."
+          }
+        ],
+        "note": "Глаголы состояния (know, like, want, need) обычно используются в Simple в своём основном значении."
+      },
+      {
+        "kind": "rules",
+        "title": "10. Когда используется Present Simple",
+        "indices": [
+          0,
+          6
+        ]
+      },
+      {
+        "kind": "mistakes",
+        "title": "Проверь себя: типичные ошибки",
+        "indices": null
+      }
+    ],
+    "studyVersion": 2
   },
   {
     "id": "grammar-present-continuous",
@@ -1247,7 +1348,140 @@ window.GRAMMAR_DATA = [
         ],
         "note": ""
       }
-    ]
+    ],
+    "studySections": [
+      {
+        "kind": "exposition",
+        "title": "1. Что происходит прямо сейчас?",
+        "paragraphs": [
+          "Present Continuous — это действие, которое уже началось и всё ещё идёт в рассматриваемый момент. Мы смотрим на процесс изнутри.",
+          "Время может обозначать не только эту секунду, но и временный период: She is staying with friends this week."
+        ]
+      },
+      {
+        "kind": "diagram",
+        "title": "2. Действие продолжается: временная линия",
+        "variant": "timeline",
+        "steps": [
+          {
+            "label": "Процесс начался",
+            "form": "past",
+            "example": "She started reading.",
+            "ru": "Она начала читать.",
+            "hint": ""
+          },
+          {
+            "label": "Мы видим процесс",
+            "form": "now",
+            "example": "She is reading now.",
+            "ru": "Она сейчас читает.",
+            "hint": ""
+          },
+          {
+            "label": "Конец ещё не обозначен",
+            "form": "later",
+            "example": "The book is not finished yet.",
+            "ru": "Книга ещё не дочитана.",
+            "hint": ""
+          }
+        ],
+        "note": "Ключевой признак — рассматривается процесс, а не факт его завершения.",
+        "caption": ""
+      },
+      {
+        "kind": "diagram",
+        "title": "3. Как собрать форму: три элемента",
+        "variant": "steps",
+        "steps": [
+          {
+            "label": "Подлежащее",
+            "form": "subject",
+            "example": "She",
+            "ru": "Она",
+            "hint": ""
+          },
+          {
+            "label": "Нужная форма be",
+            "form": "am / is / are",
+            "example": "is",
+            "ru": "",
+            "hint": ""
+          },
+          {
+            "label": "Смысловой глагол",
+            "form": "verb-ing",
+            "example": "working",
+            "ru": "работает сейчас",
+            "hint": ""
+          }
+        ],
+        "note": "",
+        "caption": ""
+      },
+      {
+        "kind": "table",
+        "title": "4. Утверждение, отрицание, вопрос и краткий ответ",
+        "index": 0
+      },
+      {
+        "kind": "rules",
+        "title": "5. Значение временного действия и особые случаи",
+        "indices": [
+          0,
+          4,
+          6
+        ]
+      },
+      {
+        "kind": "rules",
+        "title": "6. Как правильно образовать -ing",
+        "indices": [
+          3
+        ]
+      },
+      {
+        "kind": "table",
+        "title": "7. Правописание окончания -ing",
+        "index": 1
+      },
+      {
+        "kind": "contrast",
+        "title": "8. Почему Simple и Continuous не взаимозаменяемы",
+        "pairs": [
+          {
+            "before": "I work from home.",
+            "after": "I’m working from home this week.",
+            "why": "Обычно работаю дома ↔ временно работаю дома на этой неделе."
+          },
+          {
+            "before": "I know the answer.",
+            "after": "I’m thinking about the answer.",
+            "why": "know — состояние, think about — процесс обдумывания."
+          }
+        ],
+        "note": "Некоторые глаголы состояния, например know, обычно не принимают форму Continuous."
+      },
+      {
+        "kind": "table",
+        "title": "9. Present Simple vs Present Continuous",
+        "index": 2
+      },
+      {
+        "kind": "rules",
+        "title": "10. Вопросы и ограничения",
+        "indices": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "kind": "mistakes",
+        "title": "Проверь себя: типичные ошибки",
+        "indices": null
+      }
+    ],
+    "studyVersion": 2
   },
   {
     "id": "grammar-will-offers",
@@ -1725,7 +1959,128 @@ window.GRAMMAR_DATA = [
         ],
         "note": ""
       }
-    ]
+    ],
+    "studySections": [
+      {
+        "kind": "exposition",
+        "title": "1. Решение возникает в момент разговора",
+        "paragraphs": [
+          "Сокращённое I’ll = I will часто используется, когда человек прямо сейчас предлагает помощь, обещает или принимает решение.",
+          "Смысл не просто «будущее»: важен момент принятия решения. Если решение было раньше, обычно лучше be going to."
+        ]
+      },
+      {
+        "kind": "diagram",
+        "title": "2. Как возникает предложение помочь",
+        "variant": "steps",
+        "steps": [
+          {
+            "label": "Ситуация",
+            "form": "problem",
+            "example": "The bags are heavy.",
+            "ru": "Сумки тяжёлые.",
+            "hint": ""
+          },
+          {
+            "label": "Решение сейчас",
+            "form": "I’ll + verb",
+            "example": "I’ll carry them.",
+            "ru": "Я их понесу.",
+            "hint": ""
+          },
+          {
+            "label": "Реакция",
+            "form": "Thanks / OK",
+            "example": "Thank you!",
+            "ru": "Спасибо!",
+            "hint": ""
+          }
+        ],
+        "note": "После will всегда стоит начальная форма глагола без to.",
+        "caption": ""
+      },
+      {
+        "kind": "diagram",
+        "title": "3. Утверждение, отрицание и вопрос",
+        "variant": "branch",
+        "steps": [
+          {
+            "label": "Утверждение",
+            "form": "will + V1",
+            "example": "I’ll call you.",
+            "ru": "Я тебе позвоню.",
+            "hint": ""
+          },
+          {
+            "label": "Отрицание",
+            "form": "won’t + V1",
+            "example": "I won’t forget.",
+            "ru": "Я не забуду.",
+            "hint": ""
+          },
+          {
+            "label": "Вопрос",
+            "form": "Will + subject + V1?",
+            "example": "Will you help me?",
+            "ru": "Ты мне поможешь?",
+            "hint": ""
+          }
+        ],
+        "note": "",
+        "caption": ""
+      },
+      {
+        "kind": "table",
+        "title": "4. Все формы will",
+        "index": 0
+      },
+      {
+        "kind": "rules",
+        "title": "5. В каких ситуациях используется I’ll",
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "kind": "contrast",
+        "title": "6. Спонтанное решение или готовый план?",
+        "pairs": [
+          {
+            "before": "The phone is ringing. I’ll answer it.",
+            "after": "I’m going to call her tonight.",
+            "why": "I’ll: решение в момент речи. Going to: намерение уже было."
+          },
+          {
+            "before": "There is no milk. I’ll buy some.",
+            "after": "I’m going to buy milk after work.",
+            "why": "Реакция на ситуацию ↔ запланированное действие."
+          }
+        ],
+        "note": ""
+      },
+      {
+        "kind": "table",
+        "title": "7. Как выбрать будущую форму",
+        "index": 1
+      },
+      {
+        "kind": "rules",
+        "title": "8. Когда will не заменяет предварительный план",
+        "indices": [
+          5
+        ]
+      },
+      {
+        "kind": "mistakes",
+        "title": "Проверь себя: типичные ошибки",
+        "indices": null
+      }
+    ],
+    "studyVersion": 2
   },
   {
     "id": "grammar-past-simple-regular-irregular",
@@ -2252,7 +2607,122 @@ window.GRAMMAR_DATA = [
         ],
         "note": ""
       }
-    ]
+    ],
+    "studySections": [
+      {
+        "kind": "exposition",
+        "title": "1. Past Simple — завершённое событие в прошлом",
+        "paragraphs": [
+          "Past Simple описывает действия и состояния, которые относятся к завершённому времени: yesterday, last week, in 2020, two days ago.",
+          "Вопрос не в длительности действия, а в том, что говорящий представляет его как завершённый факт."
+        ]
+      },
+      {
+        "kind": "diagram",
+        "title": "2. Событие произошло до настоящего момента",
+        "variant": "timeline",
+        "steps": [
+          {
+            "label": "Вчера",
+            "form": "past",
+            "example": "We booked a flight.",
+            "ru": "Мы забронировали рейс.",
+            "hint": ""
+          },
+          {
+            "label": "Действие завершилось",
+            "form": "end",
+            "example": "We arrived at the airport.",
+            "ru": "Мы приехали в аэропорт.",
+            "hint": ""
+          },
+          {
+            "label": "Сейчас",
+            "form": "now",
+            "example": "We are at home now.",
+            "ru": "Сейчас мы дома.",
+            "hint": ""
+          }
+        ],
+        "note": "Для привычек в прошлом тоже употребляется Past Simple: We often visited our grandparents.",
+        "caption": ""
+      },
+      {
+        "kind": "diagram",
+        "title": "3. Вопрос и отрицание: куда исчезла прошедшая форма?",
+        "variant": "branch",
+        "steps": [
+          {
+            "label": "Утверждение",
+            "form": "subject + V2",
+            "example": "She bought tickets.",
+            "ru": "Она купила билеты.",
+            "hint": ""
+          },
+          {
+            "label": "Отрицание",
+            "form": "didn’t + V1",
+            "example": "She didn’t buy tickets.",
+            "ru": "Она не купила билеты.",
+            "hint": ""
+          },
+          {
+            "label": "Вопрос",
+            "form": "Did + subject + V1?",
+            "example": "Did she buy tickets?",
+            "ru": "Она купила билеты?",
+            "hint": ""
+          }
+        ],
+        "note": "В вопросе и отрицании прошедшее время уже выражает did, поэтому после него стоит V1.",
+        "caption": ""
+      },
+      {
+        "kind": "table",
+        "title": "4. Утверждение, отрицание, вопрос",
+        "index": 0
+      },
+      {
+        "kind": "rules",
+        "title": "5. Правильные и неправильные глаголы",
+        "indices": [
+          1,
+          2
+        ]
+      },
+      {
+        "kind": "table",
+        "title": "6. Как писать окончание -ed",
+        "index": 1
+      },
+      {
+        "kind": "table",
+        "title": "7. Неправильные глаголы из урока",
+        "index": 2
+      },
+      {
+        "kind": "rules",
+        "title": "8. Did / didn’t и глагол be",
+        "indices": [
+          0,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "kind": "table",
+        "title": "9. Специальные вопросы с did",
+        "index": 3
+      },
+      {
+        "kind": "mistakes",
+        "title": "Проверь себя: типичные ошибки",
+        "indices": null
+      }
+    ],
+    "studyVersion": 2
   },
   {
     "id": "grammar-past-continuous",
@@ -2732,7 +3202,134 @@ window.GRAMMAR_DATA = [
         "id": "grammar-practice-section",
         "title": "Практика"
       }
-    ]
+    ],
+    "studySections": [
+      {
+        "kind": "exposition",
+        "title": "1. Past Continuous показывает процесс в прошлом",
+        "paragraphs": [
+          "Past Continuous описывает то, что происходило в конкретный момент в прошлом. Смысл — «я был в процессе действия», а не «я закончил действие».",
+          "Другой вариант: длинный фон в прошлом, на фоне которого произошло более короткое событие."
+        ]
+      },
+      {
+        "kind": "diagram",
+        "title": "2. Процесс и событие на линии времени",
+        "variant": "timeline",
+        "steps": [
+          {
+            "label": "Действие уже шло",
+            "form": "was + verb-ing",
+            "example": "I was having dinner.",
+            "ru": "Я ужинал.",
+            "hint": ""
+          },
+          {
+            "label": "На фоне процесса",
+            "form": "when + Past Simple",
+            "example": "The phone rang.",
+            "ru": "Телефон зазвонил.",
+            "hint": ""
+          },
+          {
+            "label": "Время завершения не указано",
+            "form": "not a completed action",
+            "example": "We don’t know when dinner ended.",
+            "ru": "Мы не знаем, когда закончился ужин.",
+            "hint": ""
+          }
+        ],
+        "note": "I was having dinner when the phone rang. — Я ужинал, когда зазвонил телефон.",
+        "caption": ""
+      },
+      {
+        "kind": "diagram",
+        "title": "3. Конструкция was / were + -ing",
+        "variant": "branch",
+        "steps": [
+          {
+            "label": "I / he / she / it",
+            "form": "was + verb-ing",
+            "example": "She was working.",
+            "ru": "Она работала.",
+            "hint": ""
+          },
+          {
+            "label": "You / we / they",
+            "form": "were + verb-ing",
+            "example": "They were waiting.",
+            "ru": "Они ждали.",
+            "hint": ""
+          },
+          {
+            "label": "Вопрос",
+            "form": "Was / Were + subject + verb-ing?",
+            "example": "Were you sleeping?",
+            "ru": "Ты спал?",
+            "hint": ""
+          }
+        ],
+        "note": "",
+        "caption": ""
+      },
+      {
+        "kind": "table",
+        "title": "4. Положительные, отрицательные и вопросительные формы",
+        "index": 0
+      },
+      {
+        "kind": "contrast",
+        "title": "5. Past Simple vs Past Continuous",
+        "pairs": [
+          {
+            "before": "I cooked dinner yesterday.",
+            "after": "I was cooking dinner when he called.",
+            "why": "Факт законченного действия ↔ действие было в процессе при звонке."
+          },
+          {
+            "before": "The phone rang.",
+            "after": "I was having dinner.",
+            "why": "Короткое событие ↔ длительный фон."
+          }
+        ],
+        "note": ""
+      },
+      {
+        "kind": "table",
+        "title": "6. Сравнение времён: событие и фон",
+        "index": 1
+      },
+      {
+        "kind": "rules",
+        "title": "7. Одновременность: when и while",
+        "indices": [
+          3,
+          4
+        ]
+      },
+      {
+        "kind": "table",
+        "title": "8. Как связать два действия",
+        "index": 2
+      },
+      {
+        "kind": "rules",
+        "title": "9. Форма, -ing и ограничения",
+        "indices": [
+          0,
+          1,
+          2,
+          5,
+          6
+        ]
+      },
+      {
+        "kind": "mistakes",
+        "title": "Проверь себя: типичные ошибки",
+        "indices": null
+      }
+    ],
+    "studyVersion": 2
   },
   {
     "id": "grammar-time-sequencers-connectors",
@@ -3315,7 +3912,124 @@ window.GRAMMAR_DATA = [
         ],
         "note": ""
       }
-    ]
+    ],
+    "studySections": [
+      {
+        "kind": "exposition",
+        "title": "1. Как сделать связный рассказ",
+        "paragraphs": [
+          "Связки помогают читателю увидеть последовательность событий и отношения между ними. Разделяй две задачи: когда что произошло и почему это произошло.",
+          "Для последовательности подходят then, after that, later, suddenly. Для причины и результата — because, so, although, but."
+        ]
+      },
+      {
+        "kind": "diagram",
+        "title": "2. События в правильном порядке",
+        "variant": "steps",
+        "steps": [
+          {
+            "label": "Начало истории",
+            "form": "One summer…",
+            "example": "One summer, I went to Peru.",
+            "ru": "Однажды летом я поехал в Перу.",
+            "hint": ""
+          },
+          {
+            "label": "Следующий шаг",
+            "form": "The next day…",
+            "example": "The next day, I climbed a mountain.",
+            "ru": "На следующий день я поднялся на гору.",
+            "hint": ""
+          },
+          {
+            "label": "Неожиданное событие",
+            "form": "Suddenly…",
+            "example": "Suddenly, I saw an old friend.",
+            "ru": "Вдруг я увидел старого друга.",
+            "hint": ""
+          },
+          {
+            "label": "Позже",
+            "form": "Two minutes later…",
+            "example": "Two minutes later, we started talking.",
+            "ru": "Через две минуты мы начали разговаривать.",
+            "hint": ""
+          }
+        ],
+        "note": "",
+        "caption": ""
+      },
+      {
+        "kind": "table",
+        "title": "3. Связки времени и точное значение",
+        "index": 0
+      },
+      {
+        "kind": "rules",
+        "title": "4. Временные связки на практике",
+        "indices": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "kind": "diagram",
+        "title": "5. Причина, следствие и контраст",
+        "variant": "branch",
+        "steps": [
+          {
+            "label": "Почему?",
+            "form": "because",
+            "example": "I stayed home because it rained.",
+            "ru": "Я остался дома, потому что шёл дождь.",
+            "hint": ""
+          },
+          {
+            "label": "Что получилось?",
+            "form": "so",
+            "example": "It rained, so I stayed home.",
+            "ru": "Шёл дождь, поэтому я остался дома.",
+            "hint": ""
+          },
+          {
+            "label": "Несмотря на что?",
+            "form": "although",
+            "example": "Although it rained, I went out.",
+            "ru": "Хотя шёл дождь, я вышел.",
+            "hint": ""
+          }
+        ],
+        "note": "But соединяет противопоставленные части: It rained, but we went out.",
+        "caption": ""
+      },
+      {
+        "kind": "table",
+        "title": "6. Because, so, although, but — в чём разница",
+        "index": 1
+      },
+      {
+        "kind": "rules",
+        "title": "7. Пунктуация и порядок частей",
+        "indices": [
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "kind": "table",
+        "title": "8. Частые ошибки выбора связки",
+        "index": 2
+      },
+      {
+        "kind": "mistakes",
+        "title": "Проверь себя: типичные ошибки",
+        "indices": null
+      }
+    ],
+    "studyVersion": 2
   },
   {
     "id": "grammar-be-going-to",
@@ -3844,7 +4558,132 @@ window.GRAMMAR_DATA = [
         ],
         "note": ""
       }
-    ]
+    ],
+    "studySections": [
+      {
+        "kind": "exposition",
+        "title": "1. Два основных значения be going to",
+        "paragraphs": [
+          "Be going to применяется, когда намерение уже существует до момента речи, либо когда прогноз основан на видимых признаках.",
+          "Это не отдельное «время» с будущим вспомогательным глаголом: изменяется именно be (am/is/are), а основной глагол сохраняет V1 после to."
+        ]
+      },
+      {
+        "kind": "diagram",
+        "title": "2. План или прогноз?",
+        "variant": "branch",
+        "steps": [
+          {
+            "label": "Намерение уже есть",
+            "form": "plan → be going to",
+            "example": "I’m going to book a flight.",
+            "ru": "Я собираюсь забронировать рейс.",
+            "hint": "Решение принято раньше"
+          },
+          {
+            "label": "Есть признаки",
+            "form": "evidence → be going to",
+            "example": "Look at those clouds. It’s going to rain.",
+            "ru": "Посмотри на тучи. Сейчас пойдёт дождь.",
+            "hint": "Прогноз на основе наблюдения"
+          }
+        ],
+        "note": "В обоих значениях грамматическая форма одинаковая, но основание высказывания разное.",
+        "caption": ""
+      },
+      {
+        "kind": "diagram",
+        "title": "3. Формула: кто + be + going to + действие",
+        "variant": "steps",
+        "steps": [
+          {
+            "label": "Подлежащее",
+            "form": "subject",
+            "example": "She",
+            "ru": "Она",
+            "hint": ""
+          },
+          {
+            "label": "Форма be",
+            "form": "am / is / are",
+            "example": "is",
+            "ru": "",
+            "hint": ""
+          },
+          {
+            "label": "Модель будущего",
+            "form": "going to + V1",
+            "example": "going to travel",
+            "ru": "собирается путешествовать",
+            "hint": ""
+          }
+        ],
+        "note": "",
+        "caption": ""
+      },
+      {
+        "kind": "table",
+        "title": "4. Все формы be going to",
+        "index": 0
+      },
+      {
+        "kind": "rules",
+        "title": "5. Построение вопросов и отрицаний",
+        "indices": [
+          2,
+          3
+        ]
+      },
+      {
+        "kind": "contrast",
+        "title": "6. Going to, will и Present Continuous",
+        "pairs": [
+          {
+            "before": "I’m going to book tickets.",
+            "after": "I’m booking tickets tomorrow at six.",
+            "why": "Намерение ↔ согласованное действие с конкретным временем."
+          },
+          {
+            "before": "I’ll help you.",
+            "after": "I’m going to help my friend tomorrow.",
+            "why": "Решение сейчас ↔ уже существующий план."
+          },
+          {
+            "before": "It’s going to rain.",
+            "after": "It will probably rain next week.",
+            "why": "Видимые признаки ↔ более общий прогноз."
+          }
+        ],
+        "note": "На практике формы иногда пересекаются по смыслу, но ключевой контекст выбора всё равно важен."
+      },
+      {
+        "kind": "table",
+        "title": "7. Сравнение способов говорить о будущем",
+        "index": 1
+      },
+      {
+        "kind": "rules",
+        "title": "8. Планы, признаки и особые формы",
+        "indices": [
+          0,
+          1,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "kind": "table",
+        "title": "9. Порядок слов",
+        "index": 2
+      },
+      {
+        "kind": "mistakes",
+        "title": "Проверь себя: типичные ошибки",
+        "indices": null
+      }
+    ],
+    "studyVersion": 2
   },
   {
     "id": "grammar-present-continuous-future-arrangements",
@@ -4358,7 +5197,115 @@ window.GRAMMAR_DATA = [
         ],
         "note": ""
       }
-    ]
+    ],
+    "studySections": [
+      {
+        "kind": "exposition",
+        "title": "1. Будущее уже организовано",
+        "paragraphs": [
+          "Present Continuous для будущего обозначает личную договорённость или организованное действие: есть время, место, другой участник или конкретная подготовка.",
+          "Структура та же, что для действия «сейчас», но слова tomorrow, next week и ситуация показывают будущее значение."
+        ]
+      },
+      {
+        "kind": "diagram",
+        "title": "2. От намерения к договорённости",
+        "variant": "steps",
+        "steps": [
+          {
+            "label": "Появляется идея",
+            "form": "intention",
+            "example": "I’m going to meet Jack.",
+            "ru": "Я собираюсь встретиться с Джеком.",
+            "hint": ""
+          },
+          {
+            "label": "Согласовали детали",
+            "form": "arrangement",
+            "example": "We agreed to meet on Monday.",
+            "ru": "Мы договорились о понедельнике.",
+            "hint": ""
+          },
+          {
+            "label": "Рассказываем о плане",
+            "form": "present continuous",
+            "example": "I’m meeting Jack on Monday.",
+            "ru": "Я встречаюсь с Джеком в понедельник.",
+            "hint": ""
+          }
+        ],
+        "note": "Согласование с другим человеком — частый признак arrangement, но форма возможна и для индивидуального уже организованного действия.",
+        "caption": ""
+      },
+      {
+        "kind": "table",
+        "title": "3. Как образуется форма",
+        "index": 0
+      },
+      {
+        "kind": "contrast",
+        "title": "4. Одна форма: действие сейчас или будущее?",
+        "pairs": [
+          {
+            "before": "I’m meeting Jack now.",
+            "after": "I’m meeting Jack tomorrow.",
+            "why": "Now: действие происходит сейчас. Tomorrow: встреча запланирована."
+          },
+          {
+            "before": "She’s working at home today.",
+            "after": "She’s working from home next Wednesday.",
+            "why": "Временная ситуация сегодня ↔ согласованная работа в будущий день."
+          }
+        ],
+        "note": ""
+      },
+      {
+        "kind": "table",
+        "title": "5. Когда Present Continuous относится к будущему",
+        "index": 2
+      },
+      {
+        "kind": "contrast",
+        "title": "6. Что выбрать: going to / Continuous / Present Simple?",
+        "pairs": [
+          {
+            "before": "I’m going to visit Cambridge.",
+            "after": "I’m visiting Cambridge on Tuesday.",
+            "why": "Пока намерение ↔ конкретная организация поездки."
+          },
+          {
+            "before": "The train leaves at seven.",
+            "after": "I’m catching the seven o’clock train.",
+            "why": "Официальное расписание ↔ мой личный план воспользоваться этим рейсом/поездом."
+          }
+        ],
+        "note": ""
+      },
+      {
+        "kind": "table",
+        "title": "7. Три основных способа говорить о будущем",
+        "index": 1
+      },
+      {
+        "kind": "rules",
+        "title": "8. Договорённости, вопросы и особые случаи",
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "kind": "mistakes",
+        "title": "Проверь себя: типичные ошибки",
+        "indices": null
+      }
+    ],
+    "studyVersion": 2
   },
   {
     "id": "grammar-defining-relative-clauses",
@@ -4883,6 +5830,138 @@ window.GRAMMAR_DATA = [
         ],
         "note": ""
       }
-    ]
+    ],
+    "studySections": [
+      {
+        "kind": "exposition",
+        "title": "1. Как объяснить, о ком или о чём речь",
+        "paragraphs": [
+          "Defining relative clause — определительная часть, без которой слушатель может не понять, кого или что мы имеем в виду.",
+          "Вместо двух отдельных предложений мы объединяем информацию: This is the man. He lives next door. → This is the man who lives next door."
+        ]
+      },
+      {
+        "kind": "diagram",
+        "title": "2. Сначала определяем: человек, предмет или место?",
+        "variant": "branch",
+        "steps": [
+          {
+            "label": "Человек",
+            "form": "who / that",
+            "example": "The woman who lives next door.",
+            "ru": "Женщина, которая живёт по соседству.",
+            "hint": ""
+          },
+          {
+            "label": "Предмет / животное",
+            "form": "which / that",
+            "example": "A phone which has a camera.",
+            "ru": "Телефон, у которого есть камера.",
+            "hint": ""
+          },
+          {
+            "label": "Место",
+            "form": "where",
+            "example": "The café where we met.",
+            "ru": "Кафе, где мы встретились.",
+            "hint": ""
+          }
+        ],
+        "note": "That часто может заменить who/which в defining clauses, но не where напрямую во всех конструкциях.",
+        "caption": ""
+      },
+      {
+        "kind": "table",
+        "title": "3. Who, which, where, that — таблица выбора",
+        "index": 0
+      },
+      {
+        "kind": "diagram",
+        "title": "4. Соединяем два предложения",
+        "variant": "steps",
+        "steps": [
+          {
+            "label": "Назови предмет",
+            "form": "noun",
+            "example": "That’s the restaurant.",
+            "ru": "Это ресторан.",
+            "hint": ""
+          },
+          {
+            "label": "Уточни его",
+            "form": "relative clause",
+            "example": "It serves fresh fish.",
+            "ru": "Он подаёт свежую рыбу.",
+            "hint": ""
+          },
+          {
+            "label": "Объедини",
+            "form": "noun + which + clause",
+            "example": "That’s the restaurant which serves fresh fish.",
+            "ru": "Это ресторан, в котором подают свежую рыбу.",
+            "hint": ""
+          }
+        ],
+        "note": "",
+        "caption": ""
+      },
+      {
+        "kind": "rules",
+        "title": "5. Если относительное слово — подлежащее",
+        "indices": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "kind": "table",
+        "title": "6. Когда местоимение можно опустить",
+        "index": 1
+      },
+      {
+        "kind": "contrast",
+        "title": "7. Which или where?",
+        "pairs": [
+          {
+            "before": "That is a shop which sells bikes.",
+            "after": "That is a shop where I bought my bike.",
+            "why": "Which: магазин выполняет действие. Where: действие произошло в магазине."
+          },
+          {
+            "before": "I know the man who called you.",
+            "after": "I know the man (who) you called.",
+            "why": "В первом who — подлежащее, убрать нельзя. Во втором — дополнение, часто можно."
+          }
+        ],
+        "note": ""
+      },
+      {
+        "kind": "table",
+        "title": "8. Which и where на похожих примерах",
+        "index": 2
+      },
+      {
+        "kind": "rules",
+        "title": "9. Опущение местоимения и знаки препинания",
+        "indices": [
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "kind": "table",
+        "title": "10. Defining и non-defining clauses",
+        "index": 3
+      },
+      {
+        "kind": "mistakes",
+        "title": "Проверь себя: типичные ошибки",
+        "indices": null
+      }
+    ],
+    "studyVersion": 2
   }
 ];

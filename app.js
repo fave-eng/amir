@@ -2268,54 +2268,94 @@
     renderPractice();
   }
 
+  function grammarStudySplitExample(value) {
+    const parts = safeText(value).split(' — ');
+    return { english: parts[0] || '', translation: parts.length > 1 ? parts.slice(1).join(' — ') : '' };
+  }
+
+  function grammarStudySection(topic, section, index) {
+    const kind = safeText(section.kind);
+    const title = escapeHtml(section.title || 'Объяснение');
+    const chapterLabels = { exposition: "ЗНАЧЕНИЕ", diagram: "СХЕМА", table: "ТАБЛИЦА", rules: "ПРАВИЛА", contrast: "СРАВНЕНИЕ", worked: "РАЗБОР", mistakes: "ОШИБКИ" };
+    const prefix = `<div class="study-section-heading"><span class="study-section-index">${chapterLabels[kind] || "РАЗДЕЛ"}</span><h2>${title}</h2></div>`;
+    const text = (v) => escapeHtml(v || '');
+    const notes = section.note ? `<p class="study-note">${text(section.note)}</p>` : '';
+    let content = '';
+    if (kind === 'exposition') {
+      content = `<div class="study-prose-panel">${(section.paragraphs || []).map((p) => `<p>${text(p)}</p>`).join('')}</div>`;
+    } else if (kind === 'diagram') {
+      const variant = ['timeline','steps','branch'].includes(section.variant) ? section.variant : 'steps';
+      const steps = Array.isArray(section.steps) ? section.steps : [];
+      content = `<div class="study-visual study-visual-${variant}" aria-label="${title}">
+        ${variant === 'timeline' ? `<div class="study-timeaxis" aria-hidden="true"><span>РАНЬШЕ</span><span>МОМЕНТ / СОБЫТИЕ</span><span>ПОЗЖЕ</span></div>` : ''}
+        <div class="study-visual-grid">${steps.map((step, i) => `<div class="study-visual-step">
+          <div class="study-visual-step-heading">${variant === 'steps' ? `<span class="study-flow-number">${i + 1}</span>` : variant === 'timeline' ? `<span class="study-axis-dot" aria-hidden="true"></span>` : `<span class="study-choice-mark" aria-hidden="true"></span>`}<strong>${text(step.label)}</strong></div>
+          <p class="study-formula" lang="en">${text(step.form)}</p>
+          <p class="study-sentence" lang="en">${text(step.example)}</p>
+          ${step.ru ? `<p class="study-translation">${text(step.ru)}</p>` : ''}
+          ${step.hint ? `<p class="study-context">${text(step.hint)}</p>` : ''}
+        </div>`).join('')}</div>${notes}</div>`;
+    } else if (kind === 'table') {
+      const t = (topic.tables || [])[Number(section.index)];
+      if (!t) return '';
+      content = `<div class="study-table-wrap"><p class="study-table-caption">${text(t.title)}</p>${grammarTable(t)}</div>`;
+    } else if (kind === 'rules') {
+      const rs = (section.indices || []).map((i) => (topic.miniRules || [])[Number(i)]).filter(Boolean);
+      content = `<div class="study-rules-panel">${rs.map((rule) => {
+        const example = grammarStudySplitExample(rule.example);
+        return `<div class="study-rule-row"><h3>${text(rule.title)}</h3><p>${text(rule.text)}</p>${example.english ? `<div class="study-rule-example"><p lang="en">${text(example.english)}</p>${example.translation ? `<small>${text(example.translation)}</small>` : ''}</div>` : ''}</div>`;
+      }).join('')}</div>`;
+    } else if (kind === 'contrast') {
+      content = `<div class="study-contrast-list">${(section.pairs || []).map((pair) => `<div class="study-contrast-set"><div class="study-contrast-grid"><div class="study-contrast-example"><span class="study-contrast-label">СЛУЧАЙ 1</span><p lang="en">${text(pair.before)}</p></div><div class="study-contrast-example"><span class="study-contrast-label">СЛУЧАЙ 2</span><p lang="en">${text(pair.after)}</p></div></div><p class="study-contrast-analysis"><strong>Разница:</strong> ${text(pair.why)}</p></div>`).join('')}${notes}</div>`;
+    } else if (kind === 'worked') {
+      content = `<div class="study-rules-panel">${(section.items || []).map((item,i) => `<div class="study-rule-row"><h3>${i+1}. ${text(item.title)}</h3><p>${text(item.text)}</p></div>`).join('')}</div>`;
+    } else if (kind === 'mistakes') {
+      const all = topic.commonMistakes || [];
+      const ms = Array.isArray(section.indices) ? section.indices.map(i => all[Number(i)]).filter(Boolean) : all;
+      content = `<div class="study-error-list">${ms.map((mistake) => {
+        const raw = safeText(mistake);
+        const pieces = raw.split(/\s*→\s*/);
+        if (pieces.length === 2) {
+          const wrong = pieces[0].replace(/^✗\s*/, '');
+          const right = pieces[1].replace(/^✓\s*/, '');
+          const firstRussianWord = right.search(/\s+[А-ЯЁ]/u);
+          const correct = firstRussianWord >= 0 ? right.slice(0, firstRussianWord) : right;
+          const explanation = firstRussianWord >= 0 ? right.slice(firstRussianWord).trim() : '';
+          return `<div class="study-error"><p class="study-wrong" lang="en"><span aria-label="Неправильно">✗</span> ${text(wrong)}</p><p class="study-right" lang="en"><span aria-label="Правильно">✓</span> ${text(correct)}</p>${explanation ? `<p class="study-error-note">${text(explanation)}</p>` : ''}</div>`;
+        }
+        return `<p class="study-error study-error-text">${text(raw)}</p>`;
+      }).join('')}</div>`;
+    }
+    return `<section class="study-section study-kind-${kind}" id="study-chapter-${index+1}">${prefix}${content}</section>`;
+  }
+
   function renderGrammarTopic() {
     const id = queryParam('id');
     const topic = GRAMMAR_DATA.find((item) => item.id === id && item.status !== 'draft');
     const root = byId('grammar-topic-root');
+    if (!root) return;
     if (!topic || topic.status === 'locked') {
       root.innerHTML = emptyState('📐', 'Эта тема по грамматике ещё не опубликована', 'Материал появится после публикации преподавателем.');
       return;
     }
-
     byId('grammar-hero-title').textContent = safeText(topic.title, 'Grammar');
     byId('grammar-hero-subtitle').textContent = `Уровень ${safeText(topic.level, student.level)} · объяснение и практика`;
 
-    const glanceCards = Array.isArray(topic.glanceCards) ? topic.glanceCards : [];
-    const visualGuides = Array.isArray(topic.visualGuides) ? topic.visualGuides : [];
-    const anchorLinks = Array.isArray(topic.anchorLinks) ? topic.anchorLinks : [];
-    const miniRules = Array.isArray(topic.miniRules) ? topic.miniRules : [];
-    const tables = Array.isArray(topic.tables) ? topic.tables : (topic.table ? [topic.table] : []);
-    const exampleGroups = Array.isArray(topic.exampleGroups) ? topic.exampleGroups : [];
-    const examples = Array.isArray(topic.examples) ? topic.examples : [];
-    const mistakes = Array.isArray(topic.commonMistakes) ? topic.commonMistakes : [];
-
+    const chapters = Array.isArray(topic.studySections) ? topic.studySections : [];
+    const explanation = safeText(topic.explanation);
+    const title = escapeHtml(topic.title);
+    const sections = chapters.map((chapter, i) => grammarStudySection(topic, chapter, i)).join('');
     root.innerHTML = `
-      <article class="card grammar-intro-card">
-        <span class="eyebrow">Grammar focus</span>
-        <h2>${escapeHtml(topic.title)}</h2>
-        <p class="muted grammar-lead">${escapeHtml(topic.explanation || '')}</p>
-        ${topic.formula ? `<div class="grammar-formula-box"><strong>Quick formula</strong><p>${escapeHtml(topic.formula)}</p></div>` : ''}
-        ${anchorLinks.length ? `<div class="grammar-anchor-links">${anchorLinks.map((link) => `<a class="grammar-anchor-link" href="#${escapeHtml(link.id)}">${escapeHtml(link.title)}</a>`).join('')}</div>` : ''}
-      </article>
-
-      ${glanceCards.length ? `<section class="section" id="grammar-at-a-glance" aria-labelledby="grammar-at-a-glance-title"><div class="section-heading"><div><span class="eyebrow">Key ideas</span><h2 id="grammar-at-a-glance-title">Что важно запомнить</h2></div></div><div class="grammar-glance-grid">${glanceCards.map((card) => `<article class="card grammar-glance-card"><div class="grammar-glance-head"><span class="grammar-glance-icon">${escapeHtml(card.icon || '✦')}</span><div><h3>${escapeHtml(card.label || '')}</h3><p class="muted">${escapeHtml(card.hint || '')}</p></div></div><div class="grammar-pattern">${escapeHtml(card.pattern || '')}</div><p class="grammar-example-sentence">${escapeHtml(card.example || '')}</p></article>`).join('')}</div></section>` : ''}
-
-      ${visualGuides.length ? `<section class="section grammar-diagrams-section" id="grammar-visual-guides" aria-labelledby="grammar-visual-guides-title"><div class="section-heading"><div><span class="eyebrow">Visual grammar</span><h2 id="grammar-visual-guides-title">Схемы и логика выбора</h2></div></div><div class="grammar-guides-list">${visualGuides.map((guide) => { const mode = ['sequence','compare','choice'].includes(guide.mode) ? guide.mode : 'compare'; const steps = Array.isArray(guide.steps) ? guide.steps : []; return `<article class="card grammar-guide" data-grammar-guide="${mode}"><header class="grammar-guide-header"><h3>${escapeHtml(guide.title || 'Схема')}</h3></header><div class="grammar-guide-steps" role="list">${steps.map((step, index) => `<div class="grammar-guide-step" role="listitem"><div class="grammar-guide-step-top"><span class="grammar-guide-step-index" aria-hidden="true">${mode === 'sequence' ? index + 1 : '•'}</span><strong>${escapeHtml(step.label || '')}</strong></div><p class="grammar-guide-pattern">${escapeHtml(step.pattern || '')}</p><p class="grammar-guide-english" lang="en">${escapeHtml(step.example || '')}</p><p class="grammar-guide-translation">${escapeHtml(step.translation || '')}</p></div>`).join('')}</div>${guide.note ? `<p class="grammar-guide-note">${escapeHtml(guide.note)}</p>` : ''}</article>`; }).join('')}</div></section>` : ''}
-
-      ${miniRules.length ? `<section class="section" id="grammar-rule-map" aria-labelledby="grammar-rule-map-title"><div class="section-heading"><div><span class="eyebrow">Grammar rules</span><h2 id="grammar-rule-map-title">Как работает конструкция</h2></div></div><div class="grammar-mini-grid">${miniRules.map((rule) => `<article class="card grammar-mini-card"><h3>${escapeHtml(rule.title || '')}</h3><p>${escapeHtml(rule.text || '')}</p>${rule.example ? `<div class="grammar-mini-example">${escapeHtml(rule.example)}</div>` : ''}</article>`).join('')}</div></section>` : ''}
-
-      ${tables.length ? `<section class="section" id="grammar-tables" aria-labelledby="grammar-tables-title"><div class="section-heading"><div><span class="eyebrow">Tables</span><h2 id="grammar-tables-title">Формы, условия и сравнения</h2></div></div><div class="list">${tables.map((table) => `<article class="card lesson-block"><h3>${escapeHtml(table.title || 'Table')}</h3>${grammarTable(table)}</article>`).join('')}</div></section>` : ''}
-
-      ${exampleGroups.length || examples.length ? `<section class="section" id="grammar-examples" aria-labelledby="grammar-examples-title"><div class="section-heading"><div><span class="eyebrow">Examples</span><h2 id="grammar-examples-title">Примеры с переводом</h2></div></div><div class="list">${exampleGroups.map((group) => `<article class="card lesson-block grammar-example-group"><h3>${escapeHtml(group.title || 'Examples')}</h3><div class="list">${(group.items || []).map((item) => `<p class="grammar-example-item">• ${escapeHtml(item)}</p>`).join('')}</div></article>`).join('')}${examples.length ? `<article class="card lesson-block grammar-example-group"><h3>More examples</h3><div class="list">${examples.map((example) => `<p class="grammar-example-item">• ${escapeHtml(example)}</p>`).join('')}</div></article>` : ''}</div></section>` : ''}
-
-      ${mistakes.length ? `<section class="section" id="grammar-mistakes" aria-labelledby="grammar-mistakes-title"><div class="section-heading"><div><span class="eyebrow">Common mistakes</span><h2 id="grammar-mistakes-title">Типичные ошибки</h2></div></div><article class="card info-card lesson-block"><div class="list">${mistakes.map((mistake) => `<p>• ${escapeHtml(mistake)}</p>`).join('')}</div></article></section>` : ''}
-
-      <section class="section" id="grammar-practice-section" aria-labelledby="grammar-practice-title"><div class="section-heading"><div><span class="eyebrow">Practice</span><h2 id="grammar-practice-title">${Array.isArray(topic.exercises) ? topic.exercises.length : 0} exercises: from easier to more challenging</h2></div></div><div id="grammar-quiz"></div></section>
-    `;
-
+      <div class="study-layout">
+        <header class="study-hero"><span class="eyebrow">ОБЪЯСНЕНИЕ</span><h2>${title}</h2><p>${escapeHtml(explanation)}</p></header>
+        ${chapters.length ? sections : `<div class="study-prose-panel"><p>${escapeHtml(explanation)}</p></div>`}
+        <section class="section" id="grammar-practice-section" aria-labelledby="grammar-practice-title">
+          <div class="section-heading"><div><span class="eyebrow">PRACTICE</span><h2 id="grammar-practice-title">Проверь, как ты понял тему</h2><p class="muted">${Array.isArray(topic.exercises) ? topic.exercises.length : 0} упражнения от простого к сложному</p></div></div>
+          <div id="grammar-quiz"></div>
+        </section>
+      </div>`;
     renderGrammarPractice(topic, byId('grammar-quiz'));
   }
-
 
   function getTopicProgress(progress, topicId) {
     if (!progress.topics[topicId]) progress.topics[topicId] = { tests: [] };
