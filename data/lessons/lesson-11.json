@@ -1,0 +1,1330 @@
+{
+  "id": "lesson-11",
+  "number": 11,
+  "title": "Can you remember…? 1–3 · Practical English 2",
+  "subtitle": "English File Pre-Intermediate · Workbook · review & Restaurant problems",
+  "status": "available",
+  "page": "lesson.html?id=lesson-11",
+  "vocabularyId": "vocab-lesson-practical-2",
+  "grammarIds": [
+    "grammar-defining-relative-clauses",
+    "grammar-past-continuous",
+    "grammar-be-going-to"
+  ],
+  "publishedAt": "2026-10-17",
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "totalPoints": 57,
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "Can you remember…? 1–3 · 1",
+      "title": "GRAMMAR",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "remember-grammar-1",
+      "title": "1. Circle a, b, or c.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "I met a woman ___ went to school with you.",
+          "options": [
+            "a who",
+            "b which",
+            "c where"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "How often ___ it snow here in the winter?",
+          "options": [
+            "a is",
+            "b do",
+            "c does"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "We aren’t going on holiday this year ___ it’s too expensive.",
+          "options": [
+            "a but",
+            "b because",
+            "c although"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "I didn’t hear the phone because I ___ to music.",
+          "options": [
+            "a listened",
+            "b ’m listening",
+            "c was listening"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "In the painting, the woman ___ a long black dress.",
+          "options": [
+            "a is wearing",
+            "b wears",
+            "c wear"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "Look at those black clouds. It ___ soon.",
+          "options": [
+            "a rains",
+            "b ’s raining",
+            "c ’s going to rain"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "Can you remember…? 1–3 · 2",
+      "title": "VOCABULARY",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "remember-vocabulary-2",
+      "title": "2. Circle the word that is different.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "options": [
+            "check-in",
+            "baggage reclaim",
+            "sightseeing",
+            "passport control"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "options": [
+            "comfortable",
+            "cloudy",
+            "foggy",
+            "sunny"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "options": [
+            "blouse",
+            "shirt",
+            "top",
+            "leggings"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "options": [
+            "gate",
+            "lift",
+            "terminal",
+            "hire"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "options": [
+            "campsite",
+            "apartment",
+            "station",
+            "hotel"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "options": [
+            "clever",
+            "kind",
+            "generous",
+            "unfriendly"
+          ],
+          "answer": 3
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "Can you remember…? 1–3 · 3",
+      "title": "PRONUNCIATION",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "remember-pronunciation-3",
+      "title": "3. Circle the word or letter with a different sound.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "train",
+          "options": [
+            "A",
+            "J",
+            "K",
+            "R"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "jazz",
+          "options": [
+            "agent",
+            "forget",
+            "large",
+            "region"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "bird",
+          "options": [
+            "skirt",
+            "curly",
+            "T-shirt",
+            "clever"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "snake",
+          "options": [
+            "drinks",
+            "likes",
+            "misses",
+            "works"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "computer",
+          "options": [
+            "trousers",
+            "trainers",
+            "shirt",
+            "cardigan"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "/ɪd/",
+          "options": [
+            "arrived",
+            "invited",
+            "needed",
+            "wanted"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "Can you remember…? 1–3 · 4",
+      "title": "GRAMMAR & VOCABULARY",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "remember-grammar-vocabulary-4",
+      "layout": "cloze",
+      "title": "4. Read the article. Circle a, b, or c.",
+      "introTitle": "A question of love",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "select",
+          "options": [
+            "a had",
+            "b was having",
+            "c have"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select",
+          "options": [
+            "a don’t",
+            "b doesn’t",
+            "c didn’t"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select",
+          "options": [
+            "a to",
+            "b with",
+            "c for"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select",
+          "options": [
+            "a at",
+            "b in",
+            "c on"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select",
+          "options": [
+            "a did",
+            "b have",
+            "c was"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select",
+          "options": [
+            "a Suddenly",
+            "b After that",
+            "c When"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select",
+          "options": [
+            "a who",
+            "b which",
+            "c where"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select",
+          "options": [
+            "a similar",
+            "b opposite",
+            "c like"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "select",
+          "options": [
+            "a example",
+            "b kind",
+            "c sure"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "select",
+          "options": [
+            "a go",
+            "b went",
+            "c were going"
+          ],
+          "answer": 1
+        }
+      ],
+      "clozeParagraphs": [
+        [
+          "One day last year, when I ",
+          {
+            "itemId": "1"
+          },
+          " a coffee with my friend Jack, I told him about an interesting study. A psychologist, Dr Arthur Aron, said that two people could fall in love by asking 36 questions."
+        ],
+        [
+          "Dr Aron tested this idea on a number of men and women who ",
+          {
+            "itemId": "2"
+          },
+          " know each other. They didn’t all fall in love, but two of them later got married."
+        ],
+        [
+          "Jack and I decided to have dinner and ask each other the 36 questions, and so a few days later, we arranged to meet in a pub. I arrived a few minutes late, but Jack was waiting ",
+          {
+            "itemId": "3"
+          },
+          " me. We sat at a quiet table ",
+          {
+            "itemId": "4"
+          },
+          " the garden, and we each got out our piece of paper with the 36 questions."
+        ],
+        [
+          "We started with the easy questions, like ‘When ",
+          {
+            "itemId": "5"
+          },
+          " you last sing to yourself?’ ",
+          {
+            "itemId": "6"
+          },
+          " we asked questions ",
+          {
+            "itemId": "7"
+          },
+          " were a bit more interesting: ‘In what three ways are you ",
+          {
+            "itemId": "8"
+          },
+          " each other?’ Other questions asked what we thought about important things like relationships – for ",
+          {
+            "itemId": "9"
+          },
+          ": ‘How well do you get on with your mother?’"
+        ],
+        [
+          "When we finished, we tried the last part of the experiment. We left the pub and ",
+          {
+            "itemId": "10"
+          },
+          " for a short walk along the river. Then we stood there, looking into each other’s eyes, and we said nothing for four minutes."
+        ],
+        [
+          "So did it work? Well, yes, it did. And we are still very happy together."
+        ]
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "Practical English · Episode 2 · 1",
+      "title": "VOCABULARY · restaurants",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "restaurant-vocabulary-1",
+      "title": "1. Complete the sentences.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "example": true,
+          "segments": [
+            "Can we have a ",
+            " for two, please?"
+          ],
+          "answers": [
+            [
+              "table"
+            ]
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "What’s on the m",
+            " today?"
+          ],
+          "answers": [
+            [
+              "enu"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "I’ll have the steak for my main c",
+            "."
+          ],
+          "answers": [
+            [
+              "ourse"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "Let’s ask the w",
+            " for another bottle of water."
+          ],
+          "answers": [
+            [
+              "aiter",
+              "aitress"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "Can we have the b",
+            ", please?"
+          ],
+          "answers": [
+            [
+              "ill"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "Shall we leave a t",
+            "? The waiter was really good."
+          ],
+          "answers": [
+            [
+              "ip"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "Practical English · Episode 2 · 2",
+      "title": "AT THE RESTAURANT",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "restaurant-order-2",
+      "layout": "dialogue",
+      "title": "2. Order the conversation.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "l1",
+          "number": "",
+          "input": "gaps",
+          "example": true,
+          "segments": [
+            "Are you ready to order? ",
+            ""
+          ],
+          "answers": [
+            [
+              "1"
+            ]
+          ]
+        },
+        {
+          "id": "l2",
+          "number": "",
+          "input": "gaps",
+          "segments": [
+            "Still. ",
+            ""
+          ],
+          "answers": [
+            [
+              "12"
+            ]
+          ]
+        },
+        {
+          "id": "l3",
+          "number": "",
+          "input": "gaps",
+          "segments": [
+            "Still or sparkling? ",
+            ""
+          ],
+          "answers": [
+            [
+              "11"
+            ]
+          ]
+        },
+        {
+          "id": "l4",
+          "number": "",
+          "input": "gaps",
+          "segments": [
+            "Yes, please. ",
+            ""
+          ],
+          "answers": [
+            [
+              "2"
+            ]
+          ]
+        },
+        {
+          "id": "l5",
+          "number": "",
+          "input": "gaps",
+          "segments": [
+            "And how would you like your steak? Rare, medium or well done? ",
+            ""
+          ],
+          "answers": [
+            [
+              "5"
+            ]
+          ]
+        },
+        {
+          "id": "l6",
+          "number": "",
+          "input": "gaps",
+          "segments": [
+            "A baked potato, please. ",
+            ""
+          ],
+          "answers": [
+            [
+              "8"
+            ]
+          ]
+        },
+        {
+          "id": "l7",
+          "number": "",
+          "input": "gaps",
+          "segments": [
+            "Can I get you something to start with? ",
+            ""
+          ],
+          "answers": [
+            [
+              "3"
+            ]
+          ]
+        },
+        {
+          "id": "l8",
+          "number": "",
+          "input": "gaps",
+          "example": true,
+          "segments": [
+            "Rare, please. ",
+            ""
+          ],
+          "answers": [
+            [
+              "6"
+            ]
+          ]
+        },
+        {
+          "id": "l9",
+          "number": "",
+          "input": "gaps",
+          "segments": [
+            "Here’s your steak, madam. ",
+            ""
+          ],
+          "answers": [
+            [
+              "13"
+            ]
+          ]
+        },
+        {
+          "id": "l10",
+          "number": "",
+          "input": "gaps",
+          "segments": [
+            "Water, please. ",
+            ""
+          ],
+          "answers": [
+            [
+              "10"
+            ]
+          ]
+        },
+        {
+          "id": "l11",
+          "number": "",
+          "input": "gaps",
+          "segments": [
+            "Would you like that with fries or with a baked potato? ",
+            ""
+          ],
+          "answers": [
+            [
+              "7"
+            ]
+          ]
+        },
+        {
+          "id": "l12",
+          "number": "",
+          "input": "gaps",
+          "segments": [
+            "I’m sorry, but I asked for my steak rare, and this is well done. ",
+            ""
+          ],
+          "answers": [
+            [
+              "14"
+            ]
+          ]
+        },
+        {
+          "id": "l13",
+          "number": "",
+          "input": "gaps",
+          "segments": [
+            "OK. And to drink? ",
+            ""
+          ],
+          "answers": [
+            [
+              "9"
+            ]
+          ]
+        },
+        {
+          "id": "l14",
+          "number": "",
+          "input": "gaps",
+          "segments": [
+            "No, thank you. Just a main course. I’d like the steak, please. ",
+            ""
+          ],
+          "answers": [
+            [
+              "4"
+            ]
+          ]
+        },
+        {
+          "id": "l15",
+          "number": "",
+          "input": "gaps",
+          "example": true,
+          "segments": [
+            "I’m very sorry, madam. I’ll take it back to the kitchen. ",
+            ""
+          ],
+          "answers": [
+            [
+              "15"
+            ]
+          ]
+        }
+      ],
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "itemIds": [
+            "l1"
+          ]
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "l2"
+          ]
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "l3"
+          ]
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "l4"
+          ]
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "l5"
+          ]
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "l6"
+          ]
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "l7"
+          ]
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "l8"
+          ]
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "l9"
+          ]
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "l10"
+          ]
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "l11"
+          ]
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "l12"
+          ]
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "l13"
+          ]
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "l14"
+          ]
+        },
+        {
+          "speaker": "A",
+          "itemIds": [
+            "l15"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "Practical English · Episode 2 · 3",
+      "title": "SOCIAL ENGLISH",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "social-3a",
+      "layout": "dialogue",
+      "title": "3a. Complete the sentences with a phrase from the list.",
+      "wordBank": [
+        "a mistake",
+        "any suggestions",
+        "be great",
+        "could",
+        "start with",
+        "tell me",
+        "to go"
+      ],
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "a1-tell-me",
+          "number": "",
+          "input": "bank-select",
+          "example": true,
+          "segments": [
+            "So ",
+            ", Adam, what are your plans?"
+          ],
+          "exampleAnswer": "tell me",
+          "dependentText": "tell me"
+        },
+        {
+          "id": "a1-start-with",
+          "number": "",
+          "input": "bank-select",
+          "segments": [
+            "Well, to ",
+            ", I’d like to visit the Empire State Building."
+          ],
+          "options": [
+            "a mistake",
+            "any suggestions",
+            "be great",
+            "could",
+            "start with",
+            "to go"
+          ],
+          "acceptedAnswers": [
+            "start with"
+          ],
+          "dependencyTemplate": "to {0}"
+        },
+        {
+          "id": "a2-suggestions",
+          "number": "",
+          "input": "bank-select",
+          "segments": [
+            "I’d like to go sightseeing this afternoon. Do you have ",
+            "?"
+          ],
+          "options": [
+            "a mistake",
+            "any suggestions",
+            "be great",
+            "could",
+            "start with",
+            "to go"
+          ],
+          "acceptedAnswers": [
+            "any suggestions"
+          ],
+          "dependencyTemplate": "Do you have {0}?"
+        },
+        {
+          "id": "a2-be-great",
+          "number": "",
+          "input": "bank-select",
+          "segments": [
+            "That would ",
+            "."
+          ],
+          "options": [
+            "a mistake",
+            "any suggestions",
+            "be great",
+            "could",
+            "start with",
+            "to go"
+          ],
+          "acceptedAnswers": [
+            "be great"
+          ],
+          "dependencyTemplate": "that would {0}"
+        },
+        {
+          "id": "a3-could",
+          "number": "",
+          "input": "bank-select",
+          "segments": [
+            "",
+            " we have the bill, please?"
+          ],
+          "options": [
+            "a mistake",
+            "any suggestions",
+            "be great",
+            "could",
+            "start with",
+            "to go"
+          ],
+          "acceptedAnswers": [
+            "could"
+          ],
+          "dependencyTemplate": "{0} we have the bill, please?"
+        },
+        {
+          "id": "a4-mistake",
+          "number": "",
+          "input": "bank-select",
+          "segments": [
+            "Excuse me. I think there’s ",
+            ". I asked for tuna, not salmon."
+          ],
+          "options": [
+            "a mistake",
+            "any suggestions",
+            "be great",
+            "could",
+            "start with",
+            "to go"
+          ],
+          "acceptedAnswers": [
+            "a mistake"
+          ],
+          "dependencyTemplate": "there’s {0}"
+        },
+        {
+          "id": "a5-to-go",
+          "number": "",
+          "input": "bank-select",
+          "segments": [
+            "OK, time ",
+            "."
+          ],
+          "options": [
+            "a mistake",
+            "any suggestions",
+            "be great",
+            "could",
+            "start with",
+            "to go"
+          ],
+          "acceptedAnswers": [
+            "to go"
+          ],
+          "dependencyTemplate": "time {0}"
+        }
+      ],
+      "dialogueLines": [
+        {
+          "speaker": "1A",
+          "itemIds": [
+            "a1-tell-me"
+          ]
+        },
+        {
+          "speaker": "1B",
+          "itemIds": [
+            "a1-start-with"
+          ]
+        },
+        {
+          "speaker": "2A",
+          "itemIds": [
+            "a2-suggestions"
+          ]
+        },
+        {
+          "speaker": "2B",
+          "text": "How about going to Central Park? I could take you."
+        },
+        {
+          "speaker": "2A",
+          "itemIds": [
+            "a2-be-great"
+          ]
+        },
+        {
+          "speaker": "3A",
+          "itemIds": [
+            "a3-could"
+          ]
+        },
+        {
+          "speaker": "3B",
+          "text": "Yes, of course. Here you are."
+        },
+        {
+          "speaker": "4A",
+          "itemIds": [
+            "a4-mistake"
+          ]
+        },
+        {
+          "speaker": "4B",
+          "text": "Oh, sorry. I’ll take it back to the kitchen."
+        },
+        {
+          "speaker": "5A",
+          "text": "It’s very late."
+        },
+        {
+          "speaker": "5B",
+          "itemIds": [
+            "a5-to-go"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "social-3b",
+      "layout": "dialogue",
+      "title": "3b. Complete the conversations with a phrase from a.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "b1-example",
+          "number": "",
+          "input": "text",
+          "example": true,
+          "segments": [
+            "OK, ",
+            "."
+          ],
+          "exampleAnswer": "time to go"
+        },
+        {
+          "id": "b2-great",
+          "number": "",
+          "input": "dependent-select",
+          "segments": [
+            "Thanks, ",
+            "."
+          ],
+          "sourceBlockId": "social-3a",
+          "sourceItemIds": [
+            "a1-tell-me",
+            "a1-start-with",
+            "a2-suggestions",
+            "a2-be-great",
+            "a3-could",
+            "a4-mistake",
+            "a5-to-go"
+          ],
+          "answer": "a2-be-great",
+          "waitingPlaceholder": "Complete 3a first",
+          "readyPlaceholder": "— choose a phrase from 3a —"
+        },
+        {
+          "id": "b3-suggestions",
+          "number": "",
+          "input": "dependent-select",
+          "segments": [
+            "I don’t know. ",
+            "?"
+          ],
+          "sourceBlockId": "social-3a",
+          "sourceItemIds": [
+            "a1-tell-me",
+            "a1-start-with",
+            "a2-suggestions",
+            "a2-be-great",
+            "a3-could",
+            "a4-mistake",
+            "a5-to-go"
+          ],
+          "answer": "a2-suggestions",
+          "waitingPlaceholder": "Complete 3a first",
+          "readyPlaceholder": "— choose a phrase from 3a —"
+        },
+        {
+          "id": "b4-bill",
+          "number": "",
+          "input": "dependent-select",
+          "segments": [
+            "No, thanks. ",
+            "?"
+          ],
+          "sourceBlockId": "social-3a",
+          "sourceItemIds": [
+            "a1-tell-me",
+            "a1-start-with",
+            "a2-suggestions",
+            "a2-be-great",
+            "a3-could",
+            "a4-mistake",
+            "a5-to-go"
+          ],
+          "answer": "a3-could",
+          "waitingPlaceholder": "Complete 3a first",
+          "readyPlaceholder": "— choose a phrase from 3a —"
+        },
+        {
+          "id": "b5-mistake",
+          "number": "",
+          "input": "dependent-select",
+          "segments": [
+            "Yes, I think ",
+            "."
+          ],
+          "sourceBlockId": "social-3a",
+          "sourceItemIds": [
+            "a1-tell-me",
+            "a1-start-with",
+            "a2-suggestions",
+            "a2-be-great",
+            "a3-could",
+            "a4-mistake",
+            "a5-to-go"
+          ],
+          "answer": "a4-mistake",
+          "waitingPlaceholder": "Complete 3a first",
+          "readyPlaceholder": "— choose a phrase from 3a —"
+        },
+        {
+          "id": "b6-tell-me",
+          "number": "",
+          "input": "dependent-select",
+          "segments": [
+            "So, ",
+            ", how was your evening with Stacey?"
+          ],
+          "sourceBlockId": "social-3a",
+          "sourceItemIds": [
+            "a1-tell-me",
+            "a1-start-with",
+            "a2-suggestions",
+            "a2-be-great",
+            "a3-could",
+            "a4-mistake",
+            "a5-to-go"
+          ],
+          "answer": "a1-tell-me",
+          "waitingPlaceholder": "Complete 3a first",
+          "readyPlaceholder": "— choose a phrase from 3a —"
+        },
+        {
+          "id": "b6-start-with",
+          "number": "",
+          "input": "dependent-select",
+          "segments": [
+            "Well, ",
+            ", the food was awful."
+          ],
+          "sourceBlockId": "social-3a",
+          "sourceItemIds": [
+            "a1-tell-me",
+            "a1-start-with",
+            "a2-suggestions",
+            "a2-be-great",
+            "a3-could",
+            "a4-mistake",
+            "a5-to-go"
+          ],
+          "answer": "a1-start-with",
+          "waitingPlaceholder": "Complete 3a first",
+          "readyPlaceholder": "— choose a phrase from 3a —"
+        }
+      ],
+      "dialogueLines": [
+        {
+          "speaker": "1A",
+          "itemIds": [
+            "b1-example"
+          ]
+        },
+        {
+          "speaker": "1B",
+          "text": "Can’t we stay a little bit longer?"
+        },
+        {
+          "speaker": "2A",
+          "text": "Would you like to come to lunch on Sunday?"
+        },
+        {
+          "speaker": "2B",
+          "itemIds": [
+            "b2-great"
+          ]
+        },
+        {
+          "speaker": "3A",
+          "text": "Where are you taking Hannah for dinner?"
+        },
+        {
+          "speaker": "3B",
+          "itemIds": [
+            "b3-suggestions"
+          ]
+        },
+        {
+          "speaker": "4A",
+          "text": "Can I get you anything else? A coffee, maybe?"
+        },
+        {
+          "speaker": "4B",
+          "itemIds": [
+            "b4-bill"
+          ]
+        },
+        {
+          "speaker": "5A",
+          "text": "Is there a problem with the bill?"
+        },
+        {
+          "speaker": "5B",
+          "itemIds": [
+            "b5-mistake"
+          ]
+        },
+        {
+          "speaker": "6A",
+          "itemIds": [
+            "b6-tell-me"
+          ]
+        },
+        {
+          "speaker": "6B",
+          "itemIds": [
+            "b6-start-with"
+          ]
+        }
+      ]
+    }
+  ]
+}

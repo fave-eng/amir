@@ -939,7 +939,7 @@
   }
 
   function renderDependentSelectControl(item, inputId) {
-    return `<select id="${escapeHtml(inputId)}" data-dependent-select data-source-block-id="${escapeHtml(item.sourceBlockId || '')}" data-placeholder-ready="${escapeHtml(item.readyPlaceholder || '— выбери предложение —')}" data-placeholder-waiting="${escapeHtml(item.waitingPlaceholder || 'Complete the previous part first')}"><option value="">${escapeHtml(item.waitingPlaceholder || 'Complete the previous part first')}</option>${dependentSelectOptions(item)}</select>`;
+    return `<select class="dependent-select-control" id="${escapeHtml(inputId)}" data-dependent-select data-source-block-id="${escapeHtml(item.sourceBlockId || '')}" data-placeholder-ready="${escapeHtml(item.readyPlaceholder || '— выбери предложение —')}" data-placeholder-waiting="${escapeHtml(item.waitingPlaceholder || 'Complete the previous part first')}"><option value="">${escapeHtml(item.waitingPlaceholder || 'Complete the previous part first')}</option>${dependentSelectOptions(item)}</select>`;
   }
 
   function renderExampleNotice() {
@@ -1207,6 +1207,16 @@
       const prefix = segments[0] ? `<span>${escapeHtml(segments[0])}</span>` : '';
       const suffix = segments[1] ? `<span>${escapeHtml(segments[1])}</span>` : '';
       return `<span class="dialogue-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="dependent-select">${prefix}${gapNumber}${renderDependentSelectControl(item, inputId)}${suffix}<span class="feedback" aria-live="polite"></span></span>`;
+    }
+
+    if (item.input === 'select' || item.input === 'bank-select') {
+      const prefix = segments[0] ? `<span>${escapeHtml(segments[0])}</span>` : '';
+      const suffix = segments[1] ? `<span>${escapeHtml(segments[1])}</span>` : '';
+      const bankAttr = item.input === 'bank-select' ? ' data-bank-select' : '';
+      const options = (item.options || []).map((option, optionIndex) => item.input === 'bank-select'
+        ? `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`
+        : `<option value="${optionIndex}">${escapeHtml(option)}</option>`).join('');
+      return `<span class="dialogue-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input)}">${prefix}${gapNumber}<select class="dialogue-select" id="${escapeHtml(inputId)}"${bankAttr}><option value="">— choose —</option>${options}</select>${suffix}<span class="feedback" aria-live="polite"></span></span>`;
     }
 
     if (item.input !== 'gaps') {

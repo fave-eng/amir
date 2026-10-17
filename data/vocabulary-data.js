@@ -2092,5 +2092,165 @@ window.VOCABULARY_DATA = [
         "exampleRu": "Этот сувенир напоминает мне об отпуске."
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-practical-2",
+    "order": 11,
+    "title": "Restaurant problems & Social English",
+    "label": "Lesson 11 · Practical English · Restaurant problems & Can you remember…? 1–3",
+    "icon": "🍽️",
+    "type": "lesson",
+    "linkedLessonId": "lesson-11",
+    "page": "vocabulary.html?id=vocab-lesson-practical-2",
+    "publishedAt": "2026-10-17",
+    "words": [
+      {
+        "id": "lesson-11-table-for-two",
+        "en": "table for two",
+        "ru": "столик на двоих",
+        "exampleEn": "Can we have a table for two, please?",
+        "exampleRu": "Можно нам столик на двоих, пожалуйста?"
+      },
+      {
+        "id": "lesson-11-main-course",
+        "en": "main course",
+        "ru": "основное блюдо",
+        "exampleEn": "I’d like the steak for my main course.",
+        "exampleRu": "Я бы хотел стейк на основное блюдо."
+      },
+      {
+        "id": "lesson-11-waitress",
+        "en": "waitress",
+        "ru": "официантка",
+        "exampleEn": "Let’s ask the waitress for another bottle of water.",
+        "exampleRu": "Давай попросим официантку принести ещё одну бутылку воды."
+      },
+      {
+        "id": "lesson-11-bill",
+        "en": "bill",
+        "ru": "счёт",
+        "exampleEn": "Could we have the bill, please?",
+        "exampleRu": "Можно нам счёт, пожалуйста?"
+      },
+      {
+        "id": "lesson-11-tip",
+        "en": "tip",
+        "ru": "чаевые",
+        "exampleEn": "Shall we leave a tip?",
+        "exampleRu": "Оставим чаевые?"
+      },
+      {
+        "id": "lesson-11-rare",
+        "en": "rare",
+        "ru": "слабой прожарки; с кровью",
+        "exampleEn": "I’d like my steak rare.",
+        "exampleRu": "Я бы хотел стейк слабой прожарки."
+      },
+      {
+        "id": "lesson-11-medium",
+        "en": "medium",
+        "ru": "средней прожарки",
+        "exampleEn": "Would you like your steak rare, medium, or well done?",
+        "exampleRu": "Какой прожарки вы хотите стейк: слабой, средней или полной?"
+      },
+      {
+        "id": "lesson-11-well-done",
+        "en": "well done",
+        "ru": "хорошо прожаренный",
+        "exampleEn": "This steak is well done.",
+        "exampleRu": "Этот стейк хорошо прожарен."
+      },
+      {
+        "id": "lesson-11-baked-potato",
+        "en": "baked potato",
+        "ru": "запечённый картофель",
+        "exampleEn": "A baked potato, please.",
+        "exampleRu": "Запечённый картофель, пожалуйста."
+      },
+      {
+        "id": "lesson-11-still-water",
+        "en": "still water",
+        "ru": "негазированная вода",
+        "exampleEn": "I’d like still water, please.",
+        "exampleRu": "Я бы хотел негазированную воду, пожалуйста."
+      },
+      {
+        "id": "lesson-11-sparkling-water",
+        "en": "sparkling water",
+        "ru": "газированная вода",
+        "exampleEn": "Would you like still or sparkling water?",
+        "exampleRu": "Вы хотите негазированную или газированную воду?"
+      },
+      {
+        "id": "lesson-11-take-it-back",
+        "en": "take it back",
+        "ru": "отнести обратно; вернуть",
+        "exampleEn": "I’ll take it back to the kitchen.",
+        "exampleRu": "Я отнесу это обратно на кухню."
+      },
+      {
+        "id": "lesson-11-kitchen",
+        "en": "kitchen",
+        "ru": "кухня",
+        "exampleEn": "I’ll take it back to the kitchen.",
+        "exampleRu": "Я отнесу это обратно на кухню."
+      },
+      {
+        "id": "lesson-11-to-start-with",
+        "en": "to start with",
+        "ru": "для начала",
+        "exampleEn": "To start with, I’d like to visit the Empire State Building.",
+        "exampleRu": "Для начала я хотел бы посетить Эмпайр-стейт-билдинг."
+      },
+      {
+        "id": "lesson-11-any-suggestions",
+        "en": "any suggestions",
+        "ru": "какие-нибудь предложения; есть идеи",
+        "exampleEn": "Do you have any suggestions?",
+        "exampleRu": "У тебя есть какие-нибудь предложения?"
+      },
+      {
+        "id": "lesson-11-that-would-be-great",
+        "en": "that would be great",
+        "ru": "это было бы здорово",
+        "exampleEn": "Thanks, that would be great.",
+        "exampleRu": "Спасибо, это было бы здорово."
+      },
+      {
+        "id": "lesson-11-a-mistake",
+        "en": "a mistake",
+        "ru": "ошибка",
+        "exampleEn": "I think there’s a mistake.",
+        "exampleRu": "Думаю, здесь ошибка."
+      },
+      {
+        "id": "lesson-11-time-to-go",
+        "en": "time to go",
+        "ru": "пора идти",
+        "exampleEn": "OK, time to go.",
+        "exampleRu": "Ладно, пора идти."
+      },
+      {
+        "id": "lesson-11-tell-me",
+        "en": "tell me",
+        "ru": "скажи мне; расскажи",
+        "exampleEn": "So tell me, what are your plans?",
+        "exampleRu": "Так расскажи мне, какие у тебя планы?"
+      },
+      {
+        "id": "lesson-11-ready-to-order",
+        "en": "Are you ready to order?",
+        "ru": "Вы готовы сделать заказ?",
+        "exampleEn": "Are you ready to order?",
+        "exampleRu": "Вы готовы сделать заказ?"
+      },
+      {
+        "id": "lesson-11-something-to-start-with",
+        "en": "something to start with",
+        "ru": "что-нибудь для начала; закуска",
+        "exampleEn": "Can I get you something to start with?",
+        "exampleRu": "Принести вам что-нибудь для начала?"
+      }
+    ]
   }
 ];
