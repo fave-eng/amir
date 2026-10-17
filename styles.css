@@ -2969,3 +2969,92 @@ label.odd-option {
   }
 }
 
+
+/* Grammar-first visual explanations: compact, readable, no unrelated illustrations. */
+.grammar-diagrams-section { scroll-margin-top: 24px; }
+.grammar-guides-list { display: grid; gap: 16px; }
+.grammar-guide {
+  padding: clamp(18px, 2.6vw, 28px);
+  border-color: #d9e1f0;
+  background: #fff;
+  box-shadow: none;
+}
+.grammar-guide-header h3 { font-size: clamp(1.04rem, 1.7vw, 1.2rem); line-height: 1.35; }
+.grammar-guide-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 205px), 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.grammar-guide-step {
+  min-width: 0;
+  padding: 15px 15px 16px;
+  border: 1px solid #d9e1f0;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+.grammar-guide-step-top { display: flex; align-items: center; gap: 10px; line-height: 1.4; }
+.grammar-guide-step-index {
+  display: inline-flex; align-items: center; justify-content: center;
+  flex: 0 0 26px; width: 26px; height: 26px;
+  border-radius: 8px;
+  background: #e0e7ff; color: #3730a3;
+  font-weight: 800; font-size: .8rem;
+}
+.grammar-guide-pattern {
+  margin-top: 13px; color: #475569; font-size: .83rem;
+  font-weight: 700; line-height: 1.5;
+}
+.grammar-guide-english {
+  margin-top: 10px; color: #1e293b;
+  font-size: .98rem; font-weight: 800; line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.grammar-guide-translation {
+  margin-top: 7px; color: #475569;
+  font-size: .91rem; line-height: 1.55;
+}
+.grammar-guide-note {
+  margin-top: 14px; padding: 13px 15px;
+  border-left: 3px solid #6366f1; border-radius: 0 8px 8px 0;
+  background: #f8fafc; color: #334155; line-height: 1.65;
+}
+.grammar-guide[data-grammar-guide="compare"] .grammar-guide-steps { grid-template-columns: repeat(auto-fit, minmax(min(100%, 255px), 1fr)); }
+.grammar-guide[data-grammar-guide="choice"] .grammar-guide-step { border-top: 3px solid #818cf8; }
+.grammar-intro-card .grammar-lead { line-height: 1.75; max-width: 94ch; }
+.grammar-mini-card { padding: 18px 20px; }
+.grammar-mini-card p { line-height: 1.73; }
+.grammar-mini-example { line-height: 1.6; font-size: .94rem; }
+.grammar-mini-grid { align-items: stretch; }
+.grammar-example-item { padding-bottom: 5px; }
+.grammar-example-group { box-shadow: none; }
+.grammar-mistakes-title { line-height: 1.5; }
+@media (max-width: 620px) {
+  .grammar-guide-steps, .grammar-guide[data-grammar-guide="compare"] .grammar-guide-steps { grid-template-columns: 1fr; }
+  .grammar-guide { padding: 16px; }
+  .grammar-guide-step { padding: 14px; }
+}
+
+/* Keep wide teaching tables scrollable inside their own cards on phones. */
+#grammar-tables,
+#grammar-tables > .list,
+#grammar-tables .lesson-block {
+  min-width: 0;
+  max-width: 100%;
+}
+#grammar-tables .lesson-block {
+  width: 100%;
+  overflow: hidden;
+}
+#grammar-tables .table-wrap {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+#grammar-tables .table-wrap table { min-width: 520px; }
+#grammar-tables .table-wrap th,
+#grammar-tables .table-wrap td { overflow-wrap: anywhere; }

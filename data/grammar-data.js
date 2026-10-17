@@ -1,5 +1,5 @@
 /**
- * Amir's published grammar topics.
+ * Amir’s published grammar topics. Theory revised with topic-specific explanations, comparisons and diagrams; practice/progress IDs unchanged.
  */
 window.GRAMMAR_DATA = [
   {
@@ -15,8 +15,8 @@ window.GRAMMAR_DATA = [
     "linkedLessonId": "lesson-1",
     "revealAnswersOnError": false,
     "lockOnPass": true,
-    "explanation": "Present Simple нужен, когда мы говорим о привычках, регулярных действиях, постоянных ситуациях, фактах, предпочтениях и расписании. Главная идея простая: для I / you / we / they используется обычная форма глагола, а для he / she / it к глаголу обычно добавляется -s. В отрицаниях и вопросах появляются do / does, и смысловой глагол снова становится обычным, без -s.",
-    "formula": "I / you / we / they + verb · he / she / it + verb-s · don’t / doesn’t + verb · Do / Does + subject + verb? · am / is / are без do / does",
+    "explanation": "Present Simple описывает привычки и повторяющиеся действия, факты, устойчивые состояния и расписания. Важнее не «сейчас или не сейчас», а обычность действия. У обычных глаголов различаются he/she/it и остальные лица; у be — собственная система форм. Ниже эти две системы разобраны отдельно.",
+    "formula": "Обычный глагол: I/you/we/they work; he/she/it works. Вопрос: Do/Does + подлежащее + V1? Отрицание: don’t/doesn’t + V1. Для be: am/is/are без do/does.",
     "glanceCards": [
       {
         "icon": "🔁",
@@ -50,7 +50,11 @@ window.GRAMMAR_DATA = [
     "anchorLinks": [
       {
         "id": "grammar-at-a-glance",
-        "title": "Краткая схема"
+        "title": "Главное"
+      },
+      {
+        "id": "grammar-visual-guides",
+        "title": "Схемы"
       },
       {
         "id": "grammar-rule-map",
@@ -58,7 +62,7 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-tables",
-        "title": "Таблицы"
+        "title": "Формы и сравнения"
       },
       {
         "id": "grammar-examples",
@@ -66,163 +70,197 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-mistakes",
-        "title": "Типичные ошибки"
+        "title": "Ошибки"
       },
       {
         "id": "grammar-practice-section",
-        "title": "Задания"
+        "title": "Практика"
       }
     ],
     "miniRules": [
       {
-        "title": "1. Сначала определи смысл",
-        "text": "Present Simple используется для того, что происходит регулярно, является фактом или постоянной ситуацией. Частые маркеры: usually, often, sometimes, hardly ever, never, every day.",
-        "example": "We often have parties in our flat."
+        "title": "Когда использовать",
+        "text": "Привычки: every day, often, usually. Факты: Water boils at 100°C at standard atmospheric pressure. Состояния: I like music. Расписание: The train leaves at six. Это не просто «настоящее время» в русском понимании.",
+        "example": "I teach English twice a week. — Я преподаю английский два раза в неделю."
       },
       {
-        "title": "2. Проверь подлежащее",
-        "text": "С I / you / we / they глагол не меняется. С he / she / it обычно добавь -s: live → lives, work → works.",
-        "example": "I live in the city. Jamie lives in the country."
+        "title": "Утверждение с обычным глаголом",
+        "text": "Для I/you/we/they используем V1 (базовую форму). Для he/she/it прибавляем -s, иногда -es или меняем -y на -ies. Это правило касается обычных утвердительных предложений.",
+        "example": "I live in Ufa. / She lives in Ufa. — Я живу / Она живёт в Уфе."
       },
       {
-        "title": "3. Помни окончания",
-        "text": "После -s, -sh, -ch, -x, -o обычно добавляется -es: watch → watches, go → goes. После согласной + y: study → studies.",
-        "example": "She watches TV. He studies music."
+        "title": "Правописание -s",
+        "text": "Большинство: work → works. После -s/-sh/-ch/-x/-z/-o: watch → watches, go → goes (не каждое слово на -o регулярное). Согласная + y: study → studies. Гласная + y: play → plays. have → has.",
+        "example": "He studies, she watches, he has."
       },
       {
-        "title": "4. В отрицании убери -s у смыслового глагола",
-        "text": "Используй don’t с I / you / we / they и doesn’t с he / she / it. После них ставь базовую форму.",
-        "example": "He doesn’t live here. Не: doesn’t lives."
+        "title": "Отрицание с обычным глаголом",
+        "text": "I/you/we/they + do not (don’t) + V1; he/she/it + does not (doesn’t) + V1. Буква -s уже выражена в does, поэтому у смыслового глагола -s нет.",
+        "example": "She doesn’t like coffee. — Она не любит кофе."
       },
       {
-        "title": "5. В вопросе do / does идёт первым",
-        "text": "Смысловой глагол остаётся в базовой форме. Для глагола be используй am / is / are без do / does.",
-        "example": "Does Anna work? Are you shy?"
+        "title": "Вопрос и краткий ответ",
+        "text": "Do/Does ставим перед подлежащим, затем V1. В специальном вопросе вопросительное слово ставится перед do/does. Кратко: Yes, she does. / No, she doesn’t.",
+        "example": "Where does he work? — Где он работает?"
       },
       {
-        "title": "6. Наречия частоты имеют своё место",
-        "text": "Usually, often, sometimes, hardly ever и never ставятся перед обычным глаголом, но после am / is / are. Every day обычно ставится в конце.",
-        "example": "I hardly ever go out. She is always busy. We meet every day."
+        "title": "Глагол be — отдельная схема",
+        "text": "I am, he/she/it is, you/we/they are. Отрицание через not: isn’t/aren’t; вопрос — перестановка: Is she…? Никаких do/does.",
+        "example": "Are you ready? — Ты готов? Yes, I am."
+      },
+      {
+        "title": "Как выбрать Simple или Continuous",
+        "text": "Привычка/обычное состояние → Present Simple; действие на данный момент/временная ситуация → Present Continuous. Глаголы состояния (know, like, want, need, believe) обычно не употребляются в Continuous в своём основном значении.",
+        "example": "He works every day. / He is working now. — Он работает каждый день. / Сейчас он работает."
       }
     ],
     "tables": [
       {
-        "title": "Утверждение, отрицание и вопрос",
+        "title": "Формы обычных глаголов",
         "headers": [
-          "Тип",
+          "Форма",
           "I / you / we / they",
           "he / she / it"
         ],
         "rows": [
           [
-            "Утверждение",
-            "I work.",
-            "She works."
+            "+",
+            "I work. — Я работаю.",
+            "She works. — Она работает."
           ],
           [
-            "Отрицание",
-            "I don’t work.",
-            "She doesn’t work."
+            "−",
+            "I don’t work. — Я не работаю.",
+            "She doesn’t work. — Она не работает."
           ],
           [
-            "Вопрос",
-            "Do you work?",
-            "Does she work?"
+            "?",
+            "Do you work? — Ты работаешь?",
+            "Does she work? — Она работает?"
           ],
           [
-            "Краткий ответ",
+            "Кратко",
             "Yes, I do. / No, I don’t.",
             "Yes, she does. / No, she doesn’t."
           ]
         ]
       },
       {
-        "title": "Present Simple с глаголом be",
+        "title": "Глагол be без do/does",
         "headers": [
-          "Утверждение",
-          "Отрицание",
-          "Вопрос"
+          "Лицо",
+          "+",
+          "−",
+          "?"
         ],
         "rows": [
           [
-            "I am shy.",
-            "I’m not shy.",
-            "Am I shy?"
+            "I",
+            "I am tired.",
+            "I’m not tired.",
+            "Am I late?"
           ],
           [
-            "You / we / they are busy.",
-            "You / we / they aren’t busy.",
-            "Are you / we / they busy?"
+            "he/she/it",
+            "She is tired.",
+            "She isn’t tired.",
+            "Is she late?"
           ],
           [
-            "He / she / it is quiet.",
-            "He / she / it isn’t quiet.",
-            "Is he / she / it quiet?"
+            "you/we/they",
+            "They are tired.",
+            "They aren’t tired.",
+            "Are they late?"
           ]
         ]
       },
       {
-        "title": "Где ставить наречие частоты",
+        "title": "Окончание 3-го лица",
         "headers": [
-          "С обычным глаголом",
-          "С be",
-          "Выражение времени"
+          "Условие",
+          "Образование",
+          "Пример"
         ],
         "rows": [
           [
-            "I often see Anna.",
-            "Anna is often busy.",
-            "I see Anna every day."
+            "обычно",
+            "+s",
+            "live → lives"
           ],
           [
-            "He never goes out.",
-            "He is never late.",
-            "We meet at the weekend."
+            "-s, -sh, -ch, -x, -z; многие на -o",
+            "+es",
+            "wash → washes; go → goes"
           ],
           [
-            "We hardly ever watch TV.",
-            "They are usually at home.",
-            "She works on Saturdays."
+            "согласная + y",
+            "y → ies",
+            "study → studies"
+          ],
+          [
+            "гласная + y",
+            "+s",
+            "play → plays"
+          ],
+          [
+            "исключение",
+            "have → has",
+            "He has a car."
+          ]
+        ]
+      },
+      {
+        "title": "Маркеры времени и место наречий",
+        "headers": [
+          "Что",
+          "Схема",
+          "Пример"
+        ],
+        "rows": [
+          [
+            "usually, often, never",
+            "перед обычным глаголом",
+            "She never drives."
+          ],
+          [
+            "usually, often, never",
+            "после be",
+            "She is never late."
+          ],
+          [
+            "every day, on Mondays",
+            "часто в конце",
+            "He works on Mondays."
           ]
         ]
       }
     ],
     "exampleGroups": [
       {
-        "title": "Обычный глагол",
+        "title": "Привычка, факт или действие сейчас?",
         "items": [
-          "I share a flat with friends.",
-          "Jamie lives alone.",
-          "We don’t see each other very often.",
-          "Does your sister speak Spanish?"
+          "I read every evening. — Я читаю каждый вечер (привычка).",
+          "I’m reading now. — Сейчас я читаю (процесс).",
+          "My parents live in London. — Мои родители живут в Лондоне (устойчивая ситуация)."
         ]
       },
       {
-        "title": "Глагол be",
+        "title": "Вопросы: обычный глагол и be",
         "items": [
-          "I’m quite extrovert.",
-          "Jamie isn’t very talkative.",
-          "Are you shy or extrovert?",
-          "Is Anna quiet?"
-        ]
-      },
-      {
-        "title": "Наречия частоты",
-        "items": [
-          "We often have parties in our flat.",
-          "I hardly ever see Jamie.",
-          "Alice sometimes meets people on the internet.",
-          "Candice sees her boyfriend every day."
+          "Where do you live? — Где ты живёшь?",
+          "Where does Anna live? — Где живёт Анна?",
+          "Is Anna shy? — Анна застенчивая?",
+          "What does she do? — Кем она работает?"
         ]
       }
     ],
     "commonMistakes": [
-      "He live in London ✗ → He lives in London ✓. В утверждении с he / she / it нужен -s.",
-      "He doesn’t lives here ✗ → He doesn’t live here ✓. После doesn’t глагол без -s.",
-      "Where Anna lives? ✗ → Where does Anna live? ✓. В вопросе нужен does, а глагол — в базовой форме.",
-      "Do she work? ✗ → Does she work? ✓. Для he / she / it используй does.",
-      "Does she is shy? ✗ → Is she shy? ✓. С глаголом be do / does не используется.",
-      "I go often out ✗ → I often go out ✓. Наречие частоты ставится перед обычным глаголом."
+      "✗ He live here. → ✓ He lives here. Утверждение с he требует -s.",
+      "✗ She doesn’t likes tea. → ✓ She doesn’t like tea. После doesn’t только V1.",
+      "✗ Where she works? → ✓ Where does she work? Вопрос с обычным глаголом требует does.",
+      "✗ Does she is tired? → ✓ Is she tired? Be не использует does.",
+      "✗ She always is late. → ✓ She is always late. Наречие обычно после be.",
+      "✗ I am knowing him. → ✓ I know him. Know — глагол состояния в этом значении."
     ],
     "exercises": [
       {
@@ -566,6 +604,52 @@ window.GRAMMAR_DATA = [
           }
         ]
       }
+    ],
+    "visualGuides": [
+      {
+        "title": "Две разные модели Present Simple",
+        "mode": "choice",
+        "steps": [
+          {
+            "label": "Обычный глагол",
+            "pattern": "Подлежащее → V1 / V-s",
+            "example": "She works on Fridays.",
+            "translation": "Она работает по пятницам."
+          },
+          {
+            "label": "Вопрос",
+            "pattern": "Do/Does → подлежащее → V1?",
+            "example": "Does she work on Fridays?",
+            "translation": "Она работает по пятницам?"
+          },
+          {
+            "label": "Глагол be",
+            "pattern": "am / is / are → без do/does",
+            "example": "Is she a teacher?",
+            "translation": "Она учительница?"
+          }
+        ],
+        "note": "Сравни: Does she work? — Is she a teacher? Вопросы строятся по разным моделям."
+      },
+      {
+        "title": "Положение наречия частоты",
+        "mode": "compare",
+        "steps": [
+          {
+            "label": "С обычным глаголом",
+            "pattern": "подлежащее + usually + V",
+            "example": "I usually walk home.",
+            "translation": "Обычно я хожу домой пешком."
+          },
+          {
+            "label": "С be",
+            "pattern": "подлежащее + be + usually",
+            "example": "He is usually busy.",
+            "translation": "Обычно он занят."
+          }
+        ],
+        "note": ""
+      }
     ]
   },
   {
@@ -581,8 +665,8 @@ window.GRAMMAR_DATA = [
     "linkedLessonId": "lesson-2",
     "revealAnswersOnError": false,
     "lockOnPass": true,
-    "explanation": "Present Continuous нужен, когда действие происходит прямо сейчас или вокруг текущего момента. Удобная модель: Present Simple — это «календарь» (что бывает обычно), а Present Continuous — «камера» (что мы видим сейчас). Чтобы построить Present Continuous, всегда нужны две части: am / is / are + глагол с -ing.",
-    "formula": "I am + verb-ing · he / she / it is + verb-ing · you / we / they are + verb-ing · am / is / are + subject + verb-ing?",
+    "explanation": "Present Continuous передаёт действие в процессе: именно сейчас, в текущий период или временно. Его нельзя построить одним глаголом с -ing — обязательно нужна форма be. Сравни «обычно» (Present Simple) и «в данный момент» (Present Continuous). Для заранее согласованных будущих действий есть отдельная тема о future arrangements.",
+    "formula": "Подлежащее + am/is/are + V-ing. Отрицание: am/is/are + not + V-ing. Вопрос: Am/Is/Are + подлежащее + V-ing?",
     "glanceCards": [
       {
         "icon": "📷",
@@ -616,7 +700,11 @@ window.GRAMMAR_DATA = [
     "anchorLinks": [
       {
         "id": "grammar-at-a-glance",
-        "title": "Краткая схема"
+        "title": "Главное"
+      },
+      {
+        "id": "grammar-visual-guides",
+        "title": "Схемы"
       },
       {
         "id": "grammar-rule-map",
@@ -624,7 +712,7 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-tables",
-        "title": "Таблицы"
+        "title": "Формы и сравнения"
       },
       {
         "id": "grammar-examples",
@@ -632,167 +720,178 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-mistakes",
-        "title": "Типичные ошибки"
+        "title": "Ошибки"
       },
       {
         "id": "grammar-practice-section",
-        "title": "Задания"
+        "title": "Практика"
       }
     ],
     "miniRules": [
       {
-        "title": "1. Сначала спроси: это «сейчас» или «обычно»?",
-        "text": "Если действие происходит прямо сейчас, временно или вокруг текущего момента, выбирай Present Continuous. Маркеры: now, right now, at the moment, today; также Look! и Listen! часто показывают действие прямо сейчас.",
-        "example": "It’s raining now. They’re studying for an exam."
+        "title": "Смысл: действие в процессе",
+        "text": "Действие происходит в момент речи или около этого момента. now, right now, at the moment, today, this week часто помогают распознать контекст, но сами по себе не задают время.",
+        "example": "Look! She is running. — Смотри! Она бежит."
       },
       {
-        "title": "2. Не забывай am / is / are",
-        "text": "Без формы be Present Continuous не существует. I → am; he / she / it → is; you / we / they → are. После неё ставится глагол с -ing.",
-        "example": "I’m looking. She’s wearing a scarf. They’re sleeping."
+        "title": "Построение утверждения",
+        "text": "После I используем am, после he/she/it — is, после you/we/they — are. Затем V-ing. Можно сокращать: I’m, she’s, we’re.",
+        "example": "They’re waiting for us. — Они нас ждут."
       },
       {
-        "title": "3. Отрицание: not после be",
-        "text": "Добавь not после am / is / are. Чаще используются сокращения isn’t и aren’t; с I — I’m not.",
-        "example": "She isn’t smiling. We aren’t playing tennis."
+        "title": "Отрицание и вопрос",
+        "text": "not ставим сразу после be. В вопросе be ставим перед подлежащим. Do/does здесь не нужны.",
+        "example": "Is he sleeping? — Он спит? No, he isn’t."
       },
       {
-        "title": "4. Вопрос: перенеси be вперёд",
-        "text": "В вопросе am / is / are ставится перед подлежащим. Do / does здесь не нужны.",
-        "example": "Are the boys playing? What is the runner wearing?"
+        "title": "Правописание -ing",
+        "text": "Обычно +ing: read → reading. Немое -e отбрасываем: make → making. Сочетание -ie → -ying: lie → lying. Ударное краткое окончание «согласная–гласная–согласная» часто удваивает согласную: run → running; begin → beginning. w/x/y не удваиваются.",
+        "example": "She’s writing. They’re running."
       },
       {
-        "title": "5. Как образовать -ing",
-        "text": "Обычно просто добавь -ing: wear → wearing. Конечная e обычно исчезает: make → making. После короткой ударной гласной конечная согласная часто удваивается: run → running. У lie форма lying.",
-        "example": "do → doing · smile → smiling · run → running"
+        "title": "Временные ситуации и изменения",
+        "text": "Continuous употребляется для ситуации, которая длится в этот период, не обязательно в эту секунду, и для происходящих изменений.",
+        "example": "I’m taking an online course this month. — В этом месяце я прохожу онлайн-курс."
       },
       {
-        "title": "6. Present Simple и Present Continuous рядом",
-        "text": "Привычка или постоянный факт → Present Simple. Действие сейчас → Present Continuous. Некоторые глаголы состояния, например like, know, want, prefer, обычно не употребляются в Continuous.",
-        "example": "Fiona drinks coffee every day. The children are sleeping now."
+        "title": "Глаголы состояния",
+        "text": "Know, understand, believe, own, want, need, like обычно используют в Present Simple, когда речь о состоянии. Некоторые глаголы имеют другое значение в Continuous: I’m having lunch (= ем обед), но I have a car (= владею).",
+        "example": "I understand the question. — Я понимаю вопрос."
+      },
+      {
+        "title": "Особое always",
+        "text": "Continuous + always иногда подчёркивает раздражающую повторяемость: He’s always losing his keys! Это не нейтральная привычка как He always loses his keys.",
+        "example": "He’s always interrupting me! — Он постоянно меня перебивает!"
       }
     ],
     "tables": [
       {
-        "title": "Present Continuous: три основные формы",
+        "title": "Утверждение, отрицание, вопрос и ответ",
         "headers": [
-          "Тип",
+          "Форма",
           "I",
-          "he / she / it",
-          "you / we / they"
+          "he/she/it",
+          "you/we/they"
         ],
         "rows": [
           [
-            "Утверждение",
-            "I’m working.",
-            "She’s working.",
-            "They’re working."
+            "+",
+            "I am waiting.",
+            "She is waiting.",
+            "They are waiting."
           ],
           [
-            "Отрицание",
-            "I’m not working.",
-            "She isn’t working.",
-            "They aren’t working."
+            "−",
+            "I’m not waiting.",
+            "She isn’t waiting.",
+            "They aren’t waiting."
           ],
           [
-            "Вопрос",
-            "Am I working?",
-            "Is she working?",
-            "Are they working?"
+            "?",
+            "Am I waiting?",
+            "Is she waiting?",
+            "Are they waiting?"
+          ],
+          [
+            "Краткий ответ",
+            "Yes, I am.",
+            "No, she isn’t.",
+            "Yes, they are."
           ]
         ]
       },
       {
-        "title": "Present Simple или Present Continuous?",
+        "title": "Правописание V-ing",
         "headers": [
-          "Смысл",
-          "Present Simple",
-          "Present Continuous"
-        ],
-        "rows": [
-          [
-            "Обычно / регулярно",
-            "Charles drives to work.",
-            "—"
-          ],
-          [
-            "Прямо сейчас",
-            "—",
-            "The children are sleeping."
-          ],
-          [
-            "Постоянная ситуация",
-            "My parents live in the country.",
-            "—"
-          ],
-          [
-            "Временная ситуация",
-            "—",
-            "They’re studying for an exam."
-          ]
-        ]
-      },
-      {
-        "title": "Правописание -ing",
-        "headers": [
+          "Случай",
           "Правило",
           "Пример"
         ],
         "rows": [
           [
-            "обычно + ing",
-            "wear → wearing; read → reading"
+            "обычно",
+            "+ing",
+            "work → working"
           ],
           [
-            "конечная e исчезает",
-            "smile → smiling; make → making"
+            "конечное немое -e",
+            "убрать e",
+            "write → writing"
           ],
           [
-            "короткая гласная + согласная",
-            "run → running; sit → sitting"
-          ],
-          [
-            "ie → y + ing",
+            "-ie",
+            "заменить на y",
             "lie → lying"
+          ],
+          [
+            "короткий ударный CVC",
+            "удвоить согласную",
+            "sit → sitting; run → running"
+          ],
+          [
+            "конечное -y",
+            "не менять y",
+            "play → playing"
+          ]
+        ]
+      },
+      {
+        "title": "Present Simple vs Continuous",
+        "headers": [
+          "Ситуация",
+          "Present Simple",
+          "Present Continuous"
+        ],
+        "rows": [
+          [
+            "регулярность / сейчас",
+            "I read every day.",
+            "I am reading now."
+          ],
+          [
+            "постоянное / временное",
+            "She lives in London.",
+            "She is staying in London this week."
+          ],
+          [
+            "состояние / действие",
+            "I think it is good. (= мнение)",
+            "I am thinking about it. (= размышляю)"
+          ],
+          [
+            "обладание / действие",
+            "I have a car.",
+            "I am having dinner."
           ]
         ]
       }
     ],
     "exampleGroups": [
       {
-        "title": "Что происходит сейчас",
+        "title": "Где видно действие?",
         "items": [
-          "The man on the bench is reading a newspaper.",
-          "The boys are playing football.",
-          "The woman on the left is riding a bike.",
-          "The runner is wearing shorts, a T-shirt and trainers."
+          "What are you doing? — Что ты делаешь (сейчас)?",
+          "He is wearing a blue jacket. — На нём сейчас синяя куртка.",
+          "We aren’t working today. — Сегодня мы не работаем."
         ]
       },
       {
-        "title": "Вопросы",
+        "title": "Состояние и действие — не одно и то же",
         "items": [
-          "What are the boys playing?",
-          "What is the woman doing?",
-          "What is she wearing?",
-          "What is the man under the tree doing?"
-        ]
-      },
-      {
-        "title": "Сравнение со Present Simple",
-        "items": [
-          "Kathy always wears jeans at home.",
-          "She is wearing a dress today.",
-          "My parents live in the country.",
-          "It’s raining now."
+          "I have a dog. — У меня есть собака (владение).",
+          "I’m having breakfast. — Я завтракаю (действие).",
+          "I think you are right. — Думаю, ты прав (мнение).",
+          "I’m thinking about moving. — Я подумываю о переезде (процесс размышления)."
         ]
       }
     ],
     "commonMistakes": [
-      "She wearing a scarf ✗ → She is wearing a scarf ✓. Нужен am / is / are.",
-      "She is wear a scarf ✗ → She is wearing a scarf ✓. После be нужен глагол с -ing.",
-      "Does she wearing a scarf? ✗ → Is she wearing a scarf? ✓. В Present Continuous не используются do / does.",
-      "They is sleeping ✗ → They are sleeping ✓. С you / we / they используется are.",
-      "He is runing ✗ → He is running ✓. В коротком слове run конечная n удваивается.",
-      "I am liking this picture ✗ → I like this picture ✓. Like обычно используется в Present Simple."
+      "✗ She working now. → ✓ She is working now. Нельзя опускать be.",
+      "✗ They are work. → ✓ They are working. После be ставим V-ing.",
+      "✗ Do you listening? → ✓ Are you listening? Вопрос строится с be.",
+      "✗ He is swiming. → ✓ He is swimming. Swim → swimming.",
+      "✗ I am knowing him. → ✓ I know him. В значении «знать» обычно Simple.",
+      "✗ I am read every evening. → ✓ I read every evening. Привычка требует Present Simple."
     ],
     "exercises": [
       {
@@ -1102,6 +1201,52 @@ window.GRAMMAR_DATA = [
           }
         ]
       }
+    ],
+    "visualGuides": [
+      {
+        "title": "Собери форму из трёх частей",
+        "mode": "sequence",
+        "steps": [
+          {
+            "label": "1. Кто?",
+            "pattern": "подлежащее",
+            "example": "She",
+            "translation": "Она"
+          },
+          {
+            "label": "2. Какая форма be?",
+            "pattern": "am / is / are",
+            "example": "is",
+            "translation": "(она) есть — часть английской формы"
+          },
+          {
+            "label": "3. Что делает?",
+            "pattern": "глагол + -ing",
+            "example": "reading",
+            "translation": "читает прямо сейчас"
+          }
+        ],
+        "note": "She + is + reading = She is reading. В отрицании not ставим после be; в вопросе be переносим вперёд."
+      },
+      {
+        "title": "Обычно или в данный момент?",
+        "mode": "compare",
+        "steps": [
+          {
+            "label": "Present Simple",
+            "pattern": "обычно / факт",
+            "example": "He works in a bank.",
+            "translation": "Он работает в банке."
+          },
+          {
+            "label": "Present Continuous",
+            "pattern": "сейчас / временно",
+            "example": "He is working from home this week.",
+            "translation": "На этой неделе он работает из дома."
+          }
+        ],
+        "note": ""
+      }
     ]
   },
   {
@@ -1117,8 +1262,8 @@ window.GRAMMAR_DATA = [
     "linkedLessonId": "lesson-3",
     "revealAnswersOnError": false,
     "lockOnPass": true,
-    "explanation": "I’ll — это короткая форма от I will. В Practical English она часто нужна, когда мы быстро решаем помочь человеку или предлагаем действие прямо сейчас: I’ll send somebody up. I’ll put you through to IT. Это не заранее запланированное действие, а реакция на проблему или просьбу.",
-    "formula": "I’ll + verb · I won’t + verb · Will you...? · короткие ответы: Yes, I will. / No, I won’t.",
+    "explanation": "В Practical English форма I’ll (= I will) помогает предложить помощь или отреагировать на ситуацию решением, принятым в момент разговора. Главное — после will всегда базовая форма глагола без to, -s и -ing. Will также используется для прогнозов, обещаний и других значений, но здесь акцент на предложениях и быстрых решениях.",
+    "formula": "I’ll + V1. I won’t + V1. Will + subject + V1?  I’ll send somebody up. — Я сейчас отправлю кого-нибудь наверх.",
     "glanceCards": [
       {
         "icon": "🤝",
@@ -1152,7 +1297,11 @@ window.GRAMMAR_DATA = [
     "anchorLinks": [
       {
         "id": "grammar-at-a-glance",
-        "title": "Краткая схема"
+        "title": "Главное"
+      },
+      {
+        "id": "grammar-visual-guides",
+        "title": "Схемы"
       },
       {
         "id": "grammar-rule-map",
@@ -1160,7 +1309,7 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-tables",
-        "title": "Таблицы"
+        "title": "Формы и сравнения"
       },
       {
         "id": "grammar-examples",
@@ -1168,113 +1317,132 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-mistakes",
-        "title": "Типичные ошибки"
+        "title": "Ошибки"
       },
       {
         "id": "grammar-practice-section",
-        "title": "Задания"
+        "title": "Практика"
       }
     ],
     "miniRules": [
       {
-        "title": "1. Используй I’ll, когда решение принято сейчас",
-        "text": "Если человек сообщает о проблеме, а ты сразу предлагаешь помощь, естественно использовать I’ll + глагол.",
-        "example": "There’s no water in my mini-bar. — I’ll send two bottles to your room."
+        "title": "Предложение помощи",
+        "text": "I’ll + V1 используется для помощи и ответной реакции: проблема → действие. Решение рождается во время разговора.",
+        "example": "I’ll carry your bag. — Я понесу твою сумку."
       },
       {
-        "title": "2. После I’ll глагол без to и без -s",
-        "text": "Не добавляй to, -s или -ing после I’ll. Нужна базовая форма глагола.",
-        "example": "I’ll send. Не: I’ll to send / I’ll sends."
+        "title": "Утверждение и сокращения",
+        "text": "I will = I’ll. То же возможно с другими лицами: he’ll, we’ll, they’ll. Но предложение о помощи обычно идёт от I/we.",
+        "example": "I’ll put you through to IT. — Я соединю вас с IT-отделом."
       },
       {
-        "title": "3. Отрицание — won’t",
-        "text": "Will not почти всегда сокращается до won’t в разговорной речи.",
-        "example": "I won’t forget."
+        "title": "Отрицание",
+        "text": "will not = won’t; после won’t ставим базовую форму. Для отказа или обещания не делать что-то.",
+        "example": "I won’t forget. — Я не забуду."
       },
       {
-        "title": "4. В вопросе will идёт перед подлежащим",
-        "text": "Для вопросов используй Will + subject + verb. Краткий ответ: Yes, I will. / No, I won’t.",
-        "example": "Will you ask the manager? — Yes, I will."
+        "title": "Вопрос и короткий ответ",
+        "text": "Will you help? Yes, I will. / No, I won’t. Для предложения своей помощи часто естественнее Shall I…? или Can I…?, а не Will I…?",
+        "example": "Shall I open the window? — Мне открыть окно?"
+      },
+      {
+        "title": "Will ≠ to + infinitive",
+        "text": "После will нельзя to: will call, will send, will be. Даже в 3-м лице нет -s.",
+        "example": "She’ll call you. — Она тебе позвонит."
+      },
+      {
+        "title": "Отличие от заранее составленного плана",
+        "text": "«Я сейчас это сделаю» → I’ll; «Я уже это планирую» → going to; «Мы договорились о встрече» → Present Continuous для будущего. Эти варианты иногда пересекаются, важен контекст.",
+        "example": "I’ll book the table. / I’m going to book it tonight. — Я забронирую столик (сейчас решил). / Я собираюсь забронировать его вечером."
       }
     ],
     "tables": [
       {
-        "title": "Форма will",
+        "title": "Формы will",
         "headers": [
-          "Тип",
-          "Форма",
-          "Пример"
+          "Что",
+          "Схема",
+          "Пример / перевод"
         ],
         "rows": [
           [
-            "Утверждение",
-            "subject + will / ’ll + verb",
-            "I’ll help you."
+            "+",
+            "subject + will + V1",
+            "I’ll help you. — Я тебе помогу."
           ],
           [
-            "Отрицание",
-            "subject + won’t + verb",
-            "I won’t be late."
+            "−",
+            "subject + won’t + V1",
+            "I won’t be late. — Я не опоздаю."
           ],
           [
-            "Вопрос",
-            "Will + subject + verb?",
-            "Will you call me?"
+            "?",
+            "Will + subject + V1?",
+            "Will you call me? — Ты мне позвонишь?"
           ],
           [
-            "Краткий ответ",
-            "Yes, subject + will. / No, subject + won’t.",
-            "Yes, I will. / No, I won’t."
+            "кратко",
+            "Yes, I will. / No, I won’t.",
+            "Yes, I will. — Да, позвоню."
           ]
         ]
       },
       {
-        "title": "I’ll vs Present Continuous",
+        "title": "Разные ситуации — разные формы",
         "headers": [
-          "I’ll",
-          "Present Continuous"
+          "Ситуация",
+          "Выбор",
+          "Пример"
         ],
         "rows": [
           [
-            "Решение принято сейчас",
-            "План уже есть"
+            "спонтанное решение",
+            "will / ’ll",
+            "I’ll send someone."
           ],
           [
-            "I’ll call reception. (= решил сейчас)",
-            "I’m meeting the manager at 5. (= план)"
+            "решённое ранее намерение",
+            "be going to",
+            "I’m going to send someone tomorrow."
           ],
           [
-            "I’ll send somebody up right now.",
-            "I’m staying at this hotel tonight."
+            "договорённая встреча",
+            "Present Continuous",
+            "I’m meeting the manager at four."
+          ],
+          [
+            "вежливое предложение помощи",
+            "Shall I / Can I",
+            "Shall I help you?"
           ]
         ]
       }
     ],
     "exampleGroups": [
       {
-        "title": "Hotel problems",
+        "title": "Разговор в гостинице",
         "items": [
-          "I’ll put you through to IT.",
-          "I’ll send somebody up right now.",
-          "I’ll ask her to call you.",
-          "I’ll see if we have a quieter one."
+          "A: The Wi-Fi isn’t working. — Не работает Wi-Fi.",
+          "B: I’ll put you through to IT. — Я соединю вас с IT-отделом.",
+          "A: There’s no hot water. — Нет горячей воды.",
+          "B: I’ll send somebody up. — Я отправлю к вам сотрудника."
         ]
       },
       {
-        "title": "Everyday offers",
+        "title": "Ситуации в быту",
         "items": [
-          "I’ll open the window.",
-          "I’ll help you with your bag.",
-          "I’ll call you later.",
-          "I’ll check it now."
+          "That bag looks heavy. I’ll help you. — Сумка выглядит тяжёлой. Я тебе помогу.",
+          "Don’t worry. I won’t tell anyone. — Не волнуйся, я никому не скажу.",
+          "I’ll call you when I get home. — Я позвоню, когда вернусь домой. (В придаточном времени — Present Simple.)"
         ]
       }
     ],
     "commonMistakes": [
-      "I’ll to call you ✗ → I’ll call you ✓. После I’ll не ставим to.",
-      "I’ll sends somebody up ✗ → I’ll send somebody up ✓. После I’ll глагол без -s.",
-      "I don’t will help ✗ → I won’t help ✓. Отрицание — won’t.",
-      "You will call me? ✗ → Will you call me? ✓. В вопросе will стоит перед подлежащим."
+      "✗ I’ll to help. → ✓ I’ll help. После will нет to.",
+      "✗ She’ll helps. → ✓ She’ll help. После will нет -s.",
+      "✗ I don’t will call. → ✓ I won’t call. Отрицание won’t.",
+      "✗ Will she be coming? всегда неверно — это не так: Future Continuous возможен, но для простого предложения помощи обычно нужен will + V1.",
+      "✗ I’ll meeting Jack at six. → ✓ I’m meeting Jack at six. Заранее договорённая встреча обычно описывается Present Continuous."
     ],
     "exercises": [
       {
@@ -1505,6 +1673,58 @@ window.GRAMMAR_DATA = [
           }
         ]
       }
+    ],
+    "visualGuides": [
+      {
+        "title": "Что произошло в разговоре?",
+        "mode": "sequence",
+        "steps": [
+          {
+            "label": "Проблема",
+            "pattern": "гость сообщает",
+            "example": "There’s a problem with the shower.",
+            "translation": "Есть проблема с душем."
+          },
+          {
+            "label": "Решение в момент речи",
+            "pattern": "I’ll + V1",
+            "example": "I’ll send somebody up.",
+            "translation": "Я сейчас отправлю кого-нибудь наверх."
+          },
+          {
+            "label": "Действие / обещание",
+            "pattern": "выполнить предложение",
+            "example": "I’ll do it right now.",
+            "translation": "Я сделаю это прямо сейчас."
+          }
+        ],
+        "note": ""
+      },
+      {
+        "title": "Где решение уже было принято?",
+        "mode": "compare",
+        "steps": [
+          {
+            "label": "I’ll",
+            "pattern": "решаю сейчас",
+            "example": "The phone is ringing. I’ll answer it.",
+            "translation": "Телефон звонит. Я отвечу."
+          },
+          {
+            "label": "I’m going to",
+            "pattern": "намерение уже есть",
+            "example": "I’m going to call her tonight.",
+            "translation": "Я собираюсь ей позвонить вечером."
+          },
+          {
+            "label": "I’m meeting",
+            "pattern": "есть договорённость",
+            "example": "I’m meeting her at six.",
+            "translation": "Я встречаюсь с ней в шесть."
+          }
+        ],
+        "note": ""
+      }
     ]
   },
   {
@@ -1520,8 +1740,8 @@ window.GRAMMAR_DATA = [
     "linkedLessonId": "lesson-4",
     "revealAnswersOnError": false,
     "lockOnPass": true,
-    "explanation": "Past Simple нужен, когда мы говорим о завершённых действиях в прошлом: last year, yesterday, four years ago, at two o’clock, on my last holiday. У правильных глаголов обычно добавляется -ed: arrive → arrived, ask → asked. У неправильных глаголов форма меняется: go → went, buy → bought, can → could. В отрицаниях и вопросах используем did / didn’t, а основной глагол возвращается в обычную форму: They didn’t buy souvenirs. Where did you go? С глаголом be формы другие: was / were, wasn’t / weren’t.",
-    "formula": "Positive: subject + past form · Negative: subject + didn’t + verb · Question: Did + subject + verb? · Be: was / were",
+    "explanation": "Past Simple обозначает законченное событие или состояние в прошлом: время уже завершилось (yesterday, last year, in 2020, four years ago). В утвердительных предложениях глагол стоит во второй форме V2; у правильных глаголов это -ed, у неправильных — особая форма. В отрицаниях и большинстве вопросов используем did/didn’t + V1. Для be отдельные формы was/were.",
+    "formula": "Утверждение: subject + V2 (went / stayed). Отрицание: subject + didn’t + V1. Вопрос: Did + subject + V1? Глагол be: was / were (без did).",
     "glanceCards": [
       {
         "title": "Когда использовать",
@@ -1542,172 +1762,234 @@ window.GRAMMAR_DATA = [
     ],
     "anchorLinks": [
       {
-        "label": "Rule map",
-        "target": "grammar-rule-map"
+        "id": "grammar-at-a-glance",
+        "title": "Главное"
       },
       {
-        "label": "Forms",
-        "target": "grammar-tables"
+        "id": "grammar-visual-guides",
+        "title": "Схемы"
       },
       {
-        "label": "Examples",
-        "target": "grammar-examples"
+        "id": "grammar-rule-map",
+        "title": "Правила"
       },
       {
-        "label": "Practice",
-        "target": "grammar-practice-section"
+        "id": "grammar-tables",
+        "title": "Формы и сравнения"
+      },
+      {
+        "id": "grammar-examples",
+        "title": "Примеры"
+      },
+      {
+        "id": "grammar-mistakes",
+        "title": "Ошибки"
+      },
+      {
+        "id": "grammar-practice-section",
+        "title": "Практика"
       }
     ],
     "miniRules": [
       {
-        "title": "Утверждение",
-        "text": "Для обычных глаголов ставим Past Simple форму: We booked a flat. They went home."
+        "title": "Когда Past Simple",
+        "text": "Законченный эпизод, череда событий, привычка в прошлом в законченном периоде. Маркеры yesterday, last week, in 2017, ago — подсказки, но важно значение.",
+        "example": "We stayed in a hotel last summer. — Прошлым летом мы жили в отеле."
       },
       {
-        "title": "Отрицание",
-        "text": "didn’t + обычный глагол: We didn’t rent a car. He didn’t spend a week there."
+        "title": "Утверждение: V2",
+        "text": "Для правильных глаголов V2 = основа + -ed. Неправильные нужно учить: go → went, buy → bought, take → took. В утвердительных формах V2 одинакова для всех лиц (кроме be).",
+        "example": "I went home. / She went home. — Я пошёл домой. / Она пошла домой."
       },
       {
-        "title": "Вопрос",
-        "text": "Did + subject + обычный глагол: Where did they go? What did you do?"
+        "title": "Правописание -ed",
+        "text": "Обычно +ed: ask → asked. Немое -e: like → liked. Согласная + y: study → studied. Краткий ударный CVC: stop → stopped. У глаголов типа visit согласная не удваивается.",
+        "example": "They stayed. She studied. He stopped."
       },
       {
-        "title": "Be в Past Simple",
-        "text": "I / he / she / it was; you / we / they were. Отрицание: wasn’t / weren’t."
+        "title": "Отрицание с did not",
+        "text": "did not = didn’t. После did/ didn’t базовая форма: didn’t rent, didn’t buy. Форму V2 больше не используем.",
+        "example": "We didn’t rent a car. — Мы не арендовали машину."
+      },
+      {
+        "title": "Вопрос с did",
+        "text": "Did + subject + V1? В специальных вопросах: where/when/why + did + subject + V1? Для вопроса о подлежащем Who came? did может отсутствовать.",
+        "example": "Where did you go? — Куда ты ездил?"
+      },
+      {
+        "title": "Be в прошлом",
+        "text": "I/he/she/it was; you/we/they were. Отрицание wasn’t/weren’t; вопрос Was he…? Were they…? Нельзя использовать did с be в простой модели.",
+        "example": "They weren’t at home. — Их не было дома."
+      },
+      {
+        "title": "Произношение -ed",
+        "text": "/t/ после глухих звуков (asked /ɑːskt/), /d/ после звонких звуков (played /pleɪd/), /ɪd/ после /t/ и /d/ (wanted /ˈwɒntɪd/). Буква -ed не всегда отдельный слог.",
+        "example": "asked /t/ · played /d/ · wanted /ɪd/"
       }
     ],
     "tables": [
       {
-        "title": "Regular verbs",
+        "title": "Past Simple — три формы",
         "headers": [
-          "Base verb",
-          "Past Simple"
+          "Тип",
+          "Обычный глагол",
+          "Глагол be"
         ],
         "rows": [
           [
-            "arrive",
-            "arrived"
+            "+",
+            "We rented a flat.",
+            "We were at home."
           ],
           [
-            "ask",
-            "asked"
+            "−",
+            "We didn’t rent a flat.",
+            "We weren’t at home."
           ],
           [
-            "study",
-            "studied"
+            "?",
+            "Did you rent a flat?",
+            "Were you at home?"
           ],
           [
-            "rent",
-            "rented"
+            "Кратко",
+            "Yes, we did. / No, we didn’t.",
+            "Yes, we were. / No, we weren’t."
           ]
         ]
       },
       {
-        "title": "Irregular verbs",
+        "title": "Написание -ed",
         "headers": [
-          "Base verb",
-          "Past Simple"
+          "Правило",
+          "Форма",
+          "Пример"
+        ],
+        "rows": [
+          [
+            "обычно",
+            "+ed",
+            "ask → asked"
+          ],
+          [
+            "конечное -e",
+            "+d",
+            "invite → invited"
+          ],
+          [
+            "согласная + y",
+            "-ied",
+            "study → studied"
+          ],
+          [
+            "ударное CVC",
+            "удвоение + ed",
+            "stop → stopped"
+          ],
+          [
+            "гласная + y",
+            "+ed",
+            "stay → stayed"
+          ]
+        ]
+      },
+      {
+        "title": "Неправильные глаголы из урока",
+        "headers": [
+          "V1",
+          "V2",
+          "Перевод"
         ],
         "rows": [
           [
             "go",
-            "went"
+            "went",
+            "идти / ехать"
           ],
           [
             "buy",
-            "bought"
+            "bought",
+            "покупать"
           ],
           [
             "take",
-            "took"
+            "took",
+            "брать / ехать на транспорте"
           ],
           [
-            "choose",
-            "chose"
+            "eat",
+            "ate",
+            "есть"
+          ],
+          [
+            "feel",
+            "felt",
+            "чувствовать"
+          ],
+          [
+            "say",
+            "said",
+            "говорить"
           ],
           [
             "can",
-            "could"
+            "could",
+            "мочь (прошедшая форма модального can)"
           ]
         ]
       },
       {
-        "title": "Question pattern",
+        "title": "Вопросы с did",
         "headers": [
-          "Question word",
-          "did",
-          "subject",
-          "verb"
+          "Тип",
+          "Модель",
+          "Пример"
         ],
         "rows": [
           [
-            "Where",
-            "did",
-            "you",
-            "go?"
+            "да/нет",
+            "Did + subject + V1?",
+            "Did she arrive?"
           ],
           [
-            "How",
-            "did",
-            "they",
-            "book it?"
+            "специальный",
+            "Where + did + subject + V1?",
+            "Where did she stay?"
           ],
           [
-            "What",
-            "did",
-            "she",
-            "do?"
+            "вопрос о подлежащем",
+            "Who + V2?",
+            "Who arrived first?"
           ]
         ]
       }
     ],
     "exampleGroups": [
       {
-        "title": "Positive",
-        "examples": [
-          "We booked a beautiful apartment online.",
-          "I went swimming every day.",
-          "They arrived at two o’clock."
+        "title": "Короткая история в прошедшем",
+        "items": [
+          "We arrived at the airport, checked in and waited for our flight. — Мы приехали в аэропорт, зарегистрировались и ждали рейс.",
+          "The plane left at seven. — Самолёт вылетел в семь.",
+          "We didn’t find our passports. — Мы не нашли паспорта."
         ]
       },
       {
-        "title": "Negative",
-        "examples": [
-          "They didn’t buy any souvenirs.",
-          "We didn’t rent a car.",
-          "The people weren’t very helpful."
-        ]
-      },
-      {
-        "title": "Questions",
-        "examples": [
-          "Where did you stay?",
-          "How did you get there?",
-          "What was the weather like?"
+        "title": "Вопрос и ответ",
+        "items": [
+          "Did you stay in a hotel? — Ты останавливался в отеле?",
+          "Yes, I did. — Да.",
+          "How long did you stay? — Как долго ты там пробыл?",
+          "I stayed for three nights. — Три ночи."
         ]
       }
     ],
     "commonMistakes": [
-      {
-        "wrong": "Where did you went?",
-        "right": "Where did you go?",
-        "note": "После did используем обычный глагол, не went."
-      },
-      {
-        "wrong": "They didn’t bought souvenirs.",
-        "right": "They didn’t buy souvenirs.",
-        "note": "После didn’t тоже обычный глагол."
-      },
-      {
-        "wrong": "The people was friendly.",
-        "right": "The people were friendly.",
-        "note": "People = they, поэтому were."
-      },
-      {
-        "wrong": "We staied in a hotel.",
-        "right": "We stayed in a hotel.",
-        "note": "stay оканчивается на vowel + y, поэтому просто +ed: stayed."
-      }
+      "✗ We didn’t went. → ✓ We didn’t go. После didn’t — V1.",
+      "✗ Did she bought it? → ✓ Did she buy it? После did — V1.",
+      "✗ She studyd. → ✓ She studied. Согласная + y → ied.",
+      "✗ They was late. → ✓ They were late. С they нужен were.",
+      "✗ Did he was at home? → ✓ Was he at home? Be образует вопрос без did.",
+      "✗ I buyed it. → ✓ I bought it. Buy — неправильный глагол."
     ],
     "exercises": [
       {
@@ -1918,6 +2200,58 @@ window.GRAMMAR_DATA = [
           }
         ]
       }
+    ],
+    "visualGuides": [
+      {
+        "title": "Прошлое уже завершилось",
+        "mode": "sequence",
+        "steps": [
+          {
+            "label": "Вчера",
+            "pattern": "yesterday",
+            "example": "I booked a flight.",
+            "translation": "Я забронировал рейс."
+          },
+          {
+            "label": "Сегодня",
+            "pattern": "now",
+            "example": "I have the ticket.",
+            "translation": "Сейчас у меня есть билет."
+          },
+          {
+            "label": "Завтра",
+            "pattern": "tomorrow",
+            "example": "I’m flying tomorrow.",
+            "translation": "Завтра я лечу."
+          }
+        ],
+        "note": "Past Simple располагает действие в завершённом периоде прошлого; отдельный период можно указать датой или контекстом."
+      },
+      {
+        "title": "Куда «исчезает» прошедшая форма?",
+        "mode": "compare",
+        "steps": [
+          {
+            "label": "Утверждение",
+            "pattern": "подлежащее + V2",
+            "example": "She went to Spain.",
+            "translation": "Она ездила в Испанию."
+          },
+          {
+            "label": "Отрицание",
+            "pattern": "didn’t + V1",
+            "example": "She didn’t go to Spain.",
+            "translation": "Она не ездила в Испанию."
+          },
+          {
+            "label": "Вопрос",
+            "pattern": "Did + подлежащее + V1?",
+            "example": "Did she go to Spain?",
+            "translation": "Она ездила в Испанию?"
+          }
+        ],
+        "note": ""
+      }
     ]
   },
   {
@@ -1933,8 +2267,8 @@ window.GRAMMAR_DATA = [
     "linkedLessonId": "lesson-5",
     "revealAnswersOnError": false,
     "lockOnPass": true,
-    "explanation": "Past Continuous нужен, когда мы говорим о действии, которое было в процессе в конкретный момент в прошлом. Часто это фон: что человек делал, когда произошло другое короткое действие. Например: I was writing a report when my computer crashed. Долгое действие — was writing, короткое событие — crashed.",
-    "formula": "was / were + verb-ing · I/he/she/it was working · you/we/they were working · was not / were not + verb-ing · Was/Were + subject + verb-ing?",
+    "explanation": "Past Continuous показывает действие, которое находилось в процессе в определённый момент прошлого. Его часто используют как фон для другого, короткого события: действие длилось, когда что-то произошло. Построение: was/were + V-ing. Не путай эту форму с Past Simple, который сообщает о законченном событии.",
+    "formula": "I/he/she/it was + V-ing; you/we/they were + V-ing. Отрицание was/were not + V-ing; вопрос Was/Were + subject + V-ing?",
     "glanceCards": [
       {
         "title": "Значение",
@@ -1955,48 +2289,29 @@ window.GRAMMAR_DATA = [
     ],
     "exampleGroups": [
       {
-        "title": "At a time in the past",
-        "examples": [
-          "I was closing the windows at 5.30.",
-          "They were trying to find the exit."
+        "title": "Вопрос полицейского",
+        "items": [
+          "What were you doing at 5.30? — Что вы делали в 5:30?",
+          "I was cleaning Gallery 6. — Я убирал шестую галерею.",
+          "We were trying to find the exit. — Мы пытались найти выход.",
+          "She was counting the money. — Она считала деньги."
         ]
       },
       {
-        "title": "With when",
-        "examples": [
-          "Mark was talking on the phone when he got a text.",
-          "We were having a barbecue when it started to rain."
-        ]
-      },
-      {
-        "title": "Negative and question",
-        "examples": [
-          "It wasn’t raining.",
-          "What were you doing?"
+        "title": "Разница перспектив",
+        "items": [
+          "I broke my phone. — Я сломал телефон (событие).",
+          "I was using my phone when it broke. — Я пользовался телефоном, когда он сломался (фон + событие).",
+          "It wasn’t raining when I left. — Когда я уходил, дождь не шёл."
         ]
       }
     ],
     "commonMistakes": [
-      {
-        "wrong": "I was count the money.",
-        "right": "I was counting the money.",
-        "note": "После was/were нужен глагол с -ing."
-      },
-      {
-        "wrong": "They was playing.",
-        "right": "They were playing.",
-        "note": "Для they/we/you используем were."
-      },
-      {
-        "wrong": "What you were doing?",
-        "right": "What were you doing?",
-        "note": "В вопросе was/were ставим перед подлежащим."
-      },
-      {
-        "wrong": "I was write a report when my computer crashed.",
-        "right": "I was writing a report when my computer crashed.",
-        "note": "Не забывай -ing в Past Continuous."
-      }
+      "✗ They was playing. → ✓ They were playing. С they нужен were.",
+      "✗ I was play football. → ✓ I was playing football. После was нужен V-ing.",
+      "✗ Did you were sleeping? → ✓ Were you sleeping? Вопрос с was/were без did.",
+      "✗ When the phone was ringing, I was answering it. — Для одного короткого факта естественнее: The phone rang, and I answered it. Контекст определяет выбор.",
+      "✗ I was knew the answer. → ✓ I knew the answer. Know обычно обозначает состояние."
     ],
     "exercises": [
       {
@@ -2217,6 +2532,206 @@ window.GRAMMAR_DATA = [
           }
         ]
       }
+    ],
+    "visualGuides": [
+      {
+        "title": "Длительный фон и короткое событие",
+        "mode": "sequence",
+        "steps": [
+          {
+            "label": "Фон начался",
+            "pattern": "Past Continuous",
+            "example": "I was walking home…",
+            "translation": "Я шёл домой…"
+          },
+          {
+            "label": "Произошло событие",
+            "pattern": "Past Simple",
+            "example": "…when it started to rain.",
+            "translation": "…когда начался дождь."
+          },
+          {
+            "label": "Фон мог продолжиться",
+            "pattern": "зависит от контекста",
+            "example": "I was getting wet.",
+            "translation": "Я промокал."
+          }
+        ],
+        "note": "Past Continuous не означает, что действие непременно закончилось или продолжалось после события. Он лишь показывает процесс в тот момент."
+      },
+      {
+        "title": "Как увидеть разницу",
+        "mode": "compare",
+        "steps": [
+          {
+            "label": "Past Simple",
+            "pattern": "целое событие",
+            "example": "I wrote a report last night.",
+            "translation": "Вчера вечером я написал отчёт."
+          },
+          {
+            "label": "Past Continuous",
+            "pattern": "процесс в тот момент",
+            "example": "I was writing a report at nine.",
+            "translation": "В девять я писал отчёт."
+          }
+        ],
+        "note": ""
+      }
+    ],
+    "miniRules": [
+      {
+        "title": "Значение: процесс в прошлом",
+        "text": "В прошлом выбран момент — at 5.30 yesterday, when I called. Past Continuous говорит, что в этот момент действие происходило.",
+        "example": "At six, she was driving home. — В шесть она ехала домой."
+      },
+      {
+        "title": "Как образовать форму",
+        "text": "I/he/she/it → was; you/we/they → were. После be обязательно -ing; без was/were Continuous невозможен.",
+        "example": "They were having dinner. — Они ужинали."
+      },
+      {
+        "title": "Отрицание и вопрос",
+        "text": "Добавь not к was/were (wasn’t, weren’t). В вопросе поставь was/were перед подлежащим. Краткие ответы: Yes, I was. / No, I wasn’t.",
+        "example": "Were you sleeping? — Ты спал?"
+      },
+      {
+        "title": "Past Simple + Past Continuous",
+        "text": "Фоновый процесс часто идёт в Past Continuous, а более короткое событие — в Past Simple. Выражения when/while помогают связать две части, но это не механическая замена.",
+        "example": "I was cooking when the phone rang. — Я готовил, когда зазвонил телефон."
+      },
+      {
+        "title": "Два действия одновременно",
+        "text": "Если два процесса шли в одно время, оба могут быть в Past Continuous. While часто вводит длительный фон.",
+        "example": "While I was cooking, she was reading. — Пока я готовил, она читала."
+      },
+      {
+        "title": "Орфография V-ing",
+        "text": "Writing (make → making), running (run → running), lying (lie → lying). Изменяется смысловой глагол; was/were не меняют -ing.",
+        "example": "He was writing. — Он писал."
+      },
+      {
+        "title": "Состояния и контекст",
+        "text": "Know, want, like и другие глаголы состояния обычно остаются в Past Simple в своём основном значении: I knew, I wanted. Не смешивай was с did: Was he working? но Did he work?",
+        "example": "I knew the answer. — Я знал ответ."
+      }
+    ],
+    "tables": [
+      {
+        "title": "Формы Past Continuous",
+        "headers": [
+          "Форма",
+          "I / he / she / it",
+          "you / we / they"
+        ],
+        "rows": [
+          [
+            "+",
+            "She was working.",
+            "We were working."
+          ],
+          [
+            "−",
+            "She wasn’t working.",
+            "We weren’t working."
+          ],
+          [
+            "?",
+            "Was she working?",
+            "Were you working?"
+          ],
+          [
+            "Краткий ответ",
+            "Yes, she was.",
+            "No, we weren’t."
+          ]
+        ]
+      },
+      {
+        "title": "Simple или Continuous?",
+        "headers": [
+          "Вопрос",
+          "Past Simple",
+          "Past Continuous"
+        ],
+        "rows": [
+          [
+            "что произошло?",
+            "The phone rang.",
+            "—"
+          ],
+          [
+            "что происходило в тот момент?",
+            "—",
+            "I was watching TV."
+          ],
+          [
+            "последовательность событий",
+            "I arrived and opened the door.",
+            "—"
+          ],
+          [
+            "фон, во время которого случилось другое",
+            "It started to rain.",
+            "I was walking home when it started to rain."
+          ]
+        ]
+      },
+      {
+        "title": "when / while в сложном предложении",
+        "headers": [
+          "Вариант",
+          "Пример",
+          "Значение"
+        ],
+        "rows": [
+          [
+            "when + короткое событие",
+            "I was sleeping when he called.",
+            "Я спал, когда он позвонил."
+          ],
+          [
+            "while + процесс",
+            "He called while I was sleeping.",
+            "Он позвонил, пока я спал."
+          ],
+          [
+            "два одновременных процесса",
+            "I was reading while she was cooking.",
+            "Я читал, пока она готовила."
+          ]
+        ]
+      }
+    ],
+    "anchorLinks": [
+      {
+        "id": "grammar-at-a-glance",
+        "title": "Главное"
+      },
+      {
+        "id": "grammar-visual-guides",
+        "title": "Схемы"
+      },
+      {
+        "id": "grammar-rule-map",
+        "title": "Правила"
+      },
+      {
+        "id": "grammar-tables",
+        "title": "Формы и сравнения"
+      },
+      {
+        "id": "grammar-examples",
+        "title": "Примеры"
+      },
+      {
+        "id": "grammar-mistakes",
+        "title": "Ошибки"
+      },
+      {
+        "id": "grammar-practice-section",
+        "title": "Практика"
+      }
     ]
   },
   {
@@ -2232,8 +2747,8 @@ window.GRAMMAR_DATA = [
     "linkedLessonId": "lesson-6",
     "revealAnswersOnError": false,
     "lockOnPass": true,
-    "explanation": "Time sequencers помогают рассказывать события по порядку: сначала, на следующий день, через две минуты, после этого. Connectors связывают идеи и показывают причину, результат или контраст: because, so, but, although. Они делают историю понятной и логичной.",
-    "formula": "time sequencer + comma + sentence · sentence + because/so/but + sentence · Although + sentence, sentence",
+    "explanation": "Time sequencers помогают выстроить историю по времени; connectors объясняют причины, последствия и противопоставление. Они не взаимозаменяемы. After that и then обозначают следующий этап; suddenly подчёркивает неожиданность; because объясняет причину, so — результат; although вводит уступку, but — противопоставление. Ниже различия разобраны на примерах.",
+    "formula": "События: One summer → After that → Two minutes later → The next day. Логика: причина because результат; причина, so результат; although A, B; A, but B.",
     "glanceCards": [
       {
         "icon": "⏱️",
@@ -2267,7 +2782,11 @@ window.GRAMMAR_DATA = [
     "anchorLinks": [
       {
         "id": "grammar-at-a-glance",
-        "title": "Краткая схема"
+        "title": "Главное"
+      },
+      {
+        "id": "grammar-visual-guides",
+        "title": "Схемы"
       },
       {
         "id": "grammar-rule-map",
@@ -2275,7 +2794,7 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-tables",
-        "title": "Таблица"
+        "title": "Формы и сравнения"
       },
       {
         "id": "grammar-examples",
@@ -2283,97 +2802,178 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-mistakes",
-        "title": "Типичные ошибки"
+        "title": "Ошибки"
       },
       {
         "id": "grammar-practice-section",
-        "title": "Задания"
+        "title": "Практика"
       }
     ],
     "miniRules": [
       {
-        "title": "1. Time sequencers ставятся в начале части истории",
-        "text": "После фразы обычно ставится запятая. Они помогают читателю понять порядок событий.",
-        "example": "After that, we decided to travel together."
+        "title": "One summer / One day / At first",
+        "text": "Задают время или отправную точку рассказа. One summer = «однажды летом», at first = «сначала» в смысле первоначального впечатления/состояния, не универсальный синоним first.",
+        "example": "One summer, we travelled to Peru. — Однажды летом мы поехали в Перу."
       },
       {
-        "title": "2. Suddenly показывает неожиданное событие",
-        "text": "Используй suddenly, когда что-то произошло внезапно.",
-        "example": "Suddenly, I saw an old friend."
+        "title": "Then / After that / The next day",
+        "text": "Then и after that = следующий шаг; the next day = именно на следующий день. After that и then часто можно заменить, но they do not mean «на следующий день».",
+        "example": "We checked in. Then we went to the gate. — Мы зарегистрировались, затем пошли к выходу."
       },
       {
-        "title": "3. Because объясняет причину, so показывает результат",
-        "text": "Because отвечает на вопрос why? So показывает, что произошло из-за этого.",
-        "example": "I was tired because I climbed the mountain. I was tired, so I went to bed."
+        "title": "Two minutes later / suddenly / when",
+        "text": "Two minutes later описывает конкретный интервал; suddenly — неожиданное событие. When связывает события или процесс и момент.",
+        "example": "Two minutes later, he called. — Через две минуты он позвонил."
       },
       {
-        "title": "4. But и although показывают контраст",
-        "text": "But чаще соединяет две части внутри предложения. Although часто стоит в начале и требует запятую после первой части.",
-        "example": "Although it was hot, I had a great time."
+        "title": "Because показывает причину",
+        "text": "because + целое предложение с подлежащим и сказуемым. Because of + существительное / -ing: because of the rain. Это две разные конструкции.",
+        "example": "We stayed inside because it was raining. — Мы остались внутри, потому что шёл дождь."
+      },
+      {
+        "title": "So показывает следствие",
+        "text": "A, so B: сначала причина, затем вывод/результат. Обычно не нужно ставить because и so вместе в одной конструкции вида Because A, so B.",
+        "example": "It was late, so we left. — Было поздно, поэтому мы ушли."
+      },
+      {
+        "title": "Although vs but",
+        "text": "Although A, B = «хотя A, B». A, but B = «A, но B». Не объединяй although и but как две части одного противопоставления: Although A, but B — ошибка.",
+        "example": "Although it was cold, we went swimming. — Хотя было холодно, мы пошли купаться."
+      },
+      {
+        "title": "Пунктуация в начале предложения",
+        "text": "Вводное обстоятельство времени часто отделяется запятой: After that, we left. Придаточное although/because в начале обычно отделяется запятой: Although I was tired, I went. Если because идёт в конце, запятая часто не нужна.",
+        "example": "Because it was raining, we stayed home. — Поскольку шёл дождь, мы остались дома."
       }
     ],
     "tables": [
       {
-        "title": "How to use them",
+        "title": "Последовательность во времени",
         "headers": [
-          "Meaning",
-          "Connector / sequencer",
-          "Example"
+          "Связка",
+          "Когда использовать",
+          "Пример"
         ],
         "rows": [
           [
-            "order",
-            "The next day / After that",
-            "The next day, I climbed the mountain."
+            "One summer",
+            "начало рассказа",
+            "One summer, I went to Peru."
           ],
           [
-            "sudden event",
+            "Then / After that",
+            "следующий шаг",
+            "After that, we had dinner."
+          ],
+          [
+            "Two minutes later",
+            "через конкретный интервал",
+            "Two minutes later, he arrived."
+          ],
+          [
+            "The next day",
+            "на следующий день",
+            "The next day, we left."
+          ],
+          [
             "Suddenly",
-            "Suddenly, I saw a man."
+            "резкое неожиданное событие",
+            "Suddenly, the lights went out."
           ],
           [
-            "reason",
+            "When",
+            "одновременность / событие в момент",
+            "When I arrived, she was waiting."
+          ]
+        ]
+      },
+      {
+        "title": "Потому что, поэтому, хотя, но",
+        "headers": [
+          "Связка",
+          "Смысл / конструкция",
+          "Пример"
+        ],
+        "rows": [
+          [
             "because",
-            "I called the police because the door was open."
+            "причина; because + clause",
+            "I left because I was tired."
           ],
           [
-            "result",
+            "because of",
+            "причина; because of + noun/-ing",
+            "I left because of the noise."
+          ],
+          [
             "so",
-            "The door was open, so I called the police."
+            "результат; cause, so result",
+            "I was tired, so I left."
           ],
           [
-            "contrast",
-            "but / although",
-            "Although it was expensive, I bought it."
+            "although",
+            "уступка; although A, B",
+            "Although I was tired, I stayed."
+          ],
+          [
+            "but",
+            "контраст; A, but B",
+            "I was tired, but I stayed."
+          ]
+        ]
+      },
+      {
+        "title": "Частые ошибки выбора",
+        "headers": [
+          "Неверно",
+          "Правильно",
+          "Почему"
+        ],
+        "rows": [
+          [
+            "Because it rained, so we stayed in.",
+            "Because it rained, we stayed in.",
+            "не нужно двойного маркера причины и результата"
+          ],
+          [
+            "Although I was tired, but I went.",
+            "Although I was tired, I went.",
+            "although уже показывает уступку"
+          ],
+          [
+            "After that day, we left (если буквально «на следующий день»)",
+            "The next day, we left.",
+            "after that ≠ the next day"
           ]
         ]
       }
     ],
     "exampleGroups": [
       {
-        "title": "In a story",
+        "title": "История с последовательностью",
         "items": [
-          "One summer, I decided to travel to Peru.",
-          "The next day, I climbed the mountain.",
-          "Suddenly, I saw a man from my university.",
-          "After that, we decided to travel together."
+          "One summer, I decided to travel to Peru. — Однажды летом я решил поехать в Перу.",
+          "After that, I climbed a mountain. — После этого я поднялся на гору.",
+          "Suddenly, I saw an old classmate. — Неожиданно я увидел бывшего одноклассника.",
+          "The next day, we travelled together. — На следующий день мы поехали вместе."
         ]
       },
       {
-        "title": "Connectors in sentences",
+        "title": "Один факт — разные связи",
         "items": [
-          "I didn’t have time, so I didn’t have breakfast.",
-          "I cancelled my card because I couldn’t find my purse.",
-          "Although my flat is small, it’s perfect for me.",
-          "The tickets were expensive, but I bought one."
+          "I missed the flight because I was late. — Я опоздал на рейс, потому что задержался.",
+          "I was late, so I missed the flight. — Я задержался, поэтому опоздал на рейс.",
+          "Although I was late, I caught the flight. — Хотя я задержался, я успел на рейс.",
+          "I was late, but I caught the flight. — Я задержался, но успел на рейс."
         ]
       }
     ],
     "commonMistakes": [
-      "Не путай because и so: because даёт причину, so даёт результат.",
-      "После although в начале предложения обычно нужна запятая после первой части.",
-      "Не ставь but и although вместе: Although it was late, I went. / It was late, but I went.",
-      "Time sequencers в начале истории обычно отделяются запятой: Suddenly, ..."
+      "✗ Although it was raining, but we went out. → ✓ Although it was raining, we went out.",
+      "✗ Because of it was raining, we stayed home. → ✓ Because it was raining… / Because of the rain…",
+      "✗ I was ill, because I stayed home (если болезнь — причина). → ✓ I stayed home because I was ill.",
+      "✗ The next day = after that в любом контексте. Нет: the next day обозначает следующий день, after that — следующий этап.",
+      "✗ Suddenly I decided — возможно, но suddenly подчёркивает внезапность, а не просто следующее событие."
     ],
     "exercises": [
       {
@@ -2657,6 +3257,64 @@ window.GRAMMAR_DATA = [
           }
         ]
       }
+    ],
+    "visualGuides": [
+      {
+        "title": "Как построить историю",
+        "mode": "sequence",
+        "steps": [
+          {
+            "label": "Начало",
+            "pattern": "One summer…",
+            "example": "One summer, I visited Peru.",
+            "translation": "Однажды летом я посетил Перу."
+          },
+          {
+            "label": "Следующий шаг",
+            "pattern": "After that,…",
+            "example": "After that, I climbed a mountain.",
+            "translation": "После этого я поднялся на гору."
+          },
+          {
+            "label": "Неожиданность",
+            "pattern": "Suddenly,…",
+            "example": "Suddenly, I saw an old friend.",
+            "translation": "Вдруг я увидел старого друга."
+          },
+          {
+            "label": "Продолжение",
+            "pattern": "The next day,…",
+            "example": "The next day, we travelled together.",
+            "translation": "На следующий день мы путешествовали вместе."
+          }
+        ],
+        "note": ""
+      },
+      {
+        "title": "Одна ситуация — три отношения",
+        "mode": "compare",
+        "steps": [
+          {
+            "label": "Причина",
+            "pattern": "because",
+            "example": "I stayed home because I was tired.",
+            "translation": "Я остался дома, потому что устал."
+          },
+          {
+            "label": "Следствие",
+            "pattern": "so",
+            "example": "I was tired, so I stayed home.",
+            "translation": "Я устал, поэтому остался дома."
+          },
+          {
+            "label": "Уступка",
+            "pattern": "although",
+            "example": "Although I was tired, I went out.",
+            "translation": "Хотя я устал, я вышел."
+          }
+        ],
+        "note": ""
+      }
     ]
   },
   {
@@ -2672,8 +3330,8 @@ window.GRAMMAR_DATA = [
     "linkedLessonId": "lesson-7",
     "revealAnswersOnError": false,
     "lockOnPass": true,
-    "explanation": "Be going to используется, когда мы говорим о планах и намерениях, а также о прогнозах, которые основаны на том, что мы видим или знаем сейчас. Форма всегда строится с am / is / are + going to + глагол в начальной форме.",
-    "formula": "subject + am/is/are + going to + base verb",
+    "explanation": "Be going to описывает заранее сформированное намерение или прогноз, для которого уже есть видимые/известные основания. Эта форма состоит из am/is/are + going to + V1; going здесь часть конструкции, не самостоятельное «движение». При сравнении с will спрашивай себя, решил ли говорящий заранее или прямо сейчас, и на чём основан прогноз.",
+    "formula": "I am / he is / we are + going to + V1. Отрицание: am/is/are not going to + V1. Вопрос: Am/Is/Are + subject + going to + V1?",
     "glanceCards": [
       {
         "icon": "📅",
@@ -2707,7 +3365,11 @@ window.GRAMMAR_DATA = [
     "anchorLinks": [
       {
         "id": "grammar-at-a-glance",
-        "title": "Краткая схема"
+        "title": "Главное"
+      },
+      {
+        "id": "grammar-visual-guides",
+        "title": "Схемы"
       },
       {
         "id": "grammar-rule-map",
@@ -2715,7 +3377,7 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-tables",
-        "title": "Таблица"
+        "title": "Формы и сравнения"
       },
       {
         "id": "grammar-examples",
@@ -2723,123 +3385,171 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-mistakes",
-        "title": "Типичные ошибки"
+        "title": "Ошибки"
       },
       {
         "id": "grammar-practice-section",
-        "title": "Задания"
+        "title": "Практика"
       }
     ],
     "miniRules": [
       {
-        "title": "1. Планы и намерения",
-        "text": "Используй be going to, когда решение уже принято до момента речи.",
-        "example": "I’m going to book a flight tonight."
+        "title": "Намерение (план)",
+        "text": "Говорящий принял решение до момента речи, но это ещё не обязательно подтверждённая встреча по расписанию. Можно планировать и без точного времени.",
+        "example": "I’m going to learn Italian. — Я собираюсь учить итальянский."
       },
       {
-        "title": "2. Прогнозы по признакам",
-        "text": "Используй be going to, когда сейчас есть признаки того, что что-то произойдёт.",
-        "example": "The sky is very dark. It’s going to rain."
+        "title": "Прогноз с признаками",
+        "text": "Мы видим или знаем основания для ожидания результата. Look at…, Be careful! часто задают такой контекст.",
+        "example": "Be careful! You’re going to fall. — Осторожно! Ты сейчас упадёшь."
       },
       {
-        "title": "3. Отрицание",
-        "text": "Поставь not после формы be. Going to и основной глагол не меняются.",
-        "example": "She isn’t going to check in a bag."
+        "title": "Форма и сокращения",
+        "text": "I’m going to, he’s going to, they’re going to. После to всегда V1: going to travel, going to be, going to have.",
+        "example": "We’re going to stay in a hotel. — Мы собираемся остановиться в отеле."
       },
       {
-        "title": "4. Вопросы и короткие ответы",
-        "text": "В вопросе am / is / are ставится перед подлежащим. Короткий ответ повторяет только форму be.",
-        "example": "Are they going to leave early? — Yes, they are. / No, they aren’t."
+        "title": "Отрицание и вопросы",
+        "text": "not ставится после am/is/are: She isn’t going to buy it. В вопросе переносим be: Are you going to buy it? Кратко: Yes, I am / No, I’m not.",
+        "example": "Are they going to leave? — Они собираются уходить?"
       },
       {
-        "title": "5. После going to — только начальная форма глагола",
-        "text": "Не добавляй -s, -ed или -ing к основному глаголу после going to.",
-        "example": "He’s going to travel. ✓  He’s going to travels. ✗"
+        "title": "Когда use will",
+        "text": "Для решения, принятого сейчас, обычно I’ll. Для нейтральных предположений о будущем will тоже широко используется. Be going to не исключает другие формы будущего.",
+        "example": "A: I forgot my bag. B: I’ll get it. — Я забыл сумку. — Я её принесу."
       },
       {
-        "title": "6. Be going to и will",
-        "text": "Be going to чаще показывает уже существующий план или прогноз по признакам. Will часто используется для решения, принятого прямо сейчас, обещания или нейтрального прогноза.",
-        "example": "I’m going to study tonight. / I’ll answer the phone."
+        "title": "Когда use Present Continuous",
+        "text": "Для согласованного мероприятия (встреча, билет, точный план) часто Present Continuous: I’m meeting Jack on Friday. Be going to больше подчёркивает намерение. В некоторых контекстах оба варианта естественны.",
+        "example": "I’m going to see Jack. / I’m seeing Jack at six. — Я собираюсь увидеться с Джеком. / У меня встреча с Джеком в шесть."
+      },
+      {
+        "title": "Going to go / get / be",
+        "text": "Going to go грамматически правильно, хотя часто разговорно заменяется более коротким I’m going to London (здесь going — движение). I’m going to be busy — правильная форма с be.",
+        "example": "I’m going to go home early. — Я собираюсь пораньше уйти домой."
       }
     ],
     "tables": [
       {
-        "title": "Forms",
+        "title": "Строение be going to",
         "headers": [
-          "Type",
-          "Structure",
-          "Example"
+          "Тип",
+          "I",
+          "he/she/it",
+          "you/we/they"
         ],
         "rows": [
           [
-            "Affirmative",
-            "I am / he is / we are + going to + verb",
-            "We’re going to fly to Rome."
+            "+",
+            "I’m going to call.",
+            "He’s going to call.",
+            "They’re going to call."
           ],
           [
-            "Negative",
-            "am not / isn’t / aren’t + going to + verb",
-            "I’m not going to take a taxi."
+            "−",
+            "I’m not going to call.",
+            "He isn’t going to call.",
+            "They aren’t going to call."
           ],
           [
-            "Question",
-            "Am / Is / Are + subject + going to + verb?",
-            "Are you going to stay in a hotel?"
+            "?",
+            "Am I going to call?",
+            "Is he going to call?",
+            "Are they going to call?"
           ],
           [
-            "Short answer",
-            "Yes, subject + am/is/are. / No, subject + am not/isn’t/aren’t.",
-            "Yes, I am. / No, I’m not."
+            "Кратко",
+            "Yes, I am.",
+            "No, he isn’t.",
+            "Yes, they are."
           ]
         ]
       },
       {
-        "title": "Plan or prediction?",
+        "title": "Различай тип будущего",
         "headers": [
-          "Use",
-          "Typical idea",
-          "Example"
+          "Ситуация",
+          "Конструкция",
+          "Пример / перевод"
         ],
         "rows": [
           [
-            "Plan",
-            "an intention already decided",
-            "We’re going to visit the museum tomorrow."
+            "решил раньше",
+            "be going to",
+            "I’m going to visit my aunt. — Я собираюсь навестить тётю."
           ],
           [
-            "Prediction",
-            "evidence or signs now",
-            "That suitcase is going to fall."
+            "договорился о встрече",
+            "Present Continuous",
+            "I’m visiting my aunt on Saturday. — Я навещаю тётю в субботу."
+          ],
+          [
+            "решил прямо сейчас",
+            "will",
+            "I’ll phone her now. — Я сейчас ей позвоню."
+          ],
+          [
+            "вижу признак",
+            "be going to",
+            "It’s going to rain. — Похоже, пойдёт дождь."
+          ],
+          [
+            "нейтральное мнение/предположение",
+            "will",
+            "I think it will rain. — Думаю, будет дождь."
+          ]
+        ]
+      },
+      {
+        "title": "Порядок слов",
+        "headers": [
+          "Тип",
+          "Форма",
+          "Пример"
+        ],
+        "rows": [
+          [
+            "специальный вопрос",
+            "Where + be + subject + going to + V1?",
+            "Where are you going to stay?"
+          ],
+          [
+            "с отрицанием",
+            "subject + be not + going to + V1",
+            "He isn’t going to fly."
+          ],
+          [
+            "с when",
+            "When + be + subject + going to + V1?",
+            "When are you going to leave?"
           ]
         ]
       }
     ],
     "exampleGroups": [
       {
-        "title": "Plans",
+        "title": "Аэропорт и планы",
         "items": [
-          "I’m going to travel next month.",
-          "We’re going to stay near the airport.",
-          "She isn’t going to check in a bag.",
-          "Are you going to book the tickets tonight?"
+          "We’re going to book a taxi. — Мы собираемся заказать такси.",
+          "Sam isn’t going to buy a suitcase today. — Сэм не собирается покупать чемодан сегодня.",
+          "Are you going to check in online? — Ты собираешься зарегистрироваться онлайн?"
         ]
       },
       {
-        "title": "Predictions",
+        "title": "Прогнозы и различие с will",
         "items": [
-          "Look at the traffic. We’re going to be late.",
-          "Those clouds are very dark. It’s going to rain.",
-          "That bag is too heavy. It’s going to fall.",
-          "The queue is huge. It’s going to take a long time."
+          "That plane isn’t going to fly today. — Этот самолёт сегодня не полетит (есть основания).",
+          "The traffic is terrible. We’re going to miss our flight. — Огромные пробки. Мы опоздаем на рейс.",
+          "I think we’ll arrive on time. — Думаю, мы приедем вовремя. (предположение)"
         ]
       }
     ],
     "commonMistakes": [
-      "Не пропускай be: I’m going to travel. ✓  I going to travel. ✗",
-      "После going to нужен основной глагол: She’s going to buy a ticket. ✓  She’s going to buying a ticket. ✗",
-      "В вопросе не используй do/does: Are you going to fly? ✓  Do you going to fly? ✗",
-      "Форма be согласуется с подлежащим: I am, he/she/it is, you/we/they are.",
-      "Не путай план и спонтанное решение: заранее принятое решение обычно выражается be going to; решение прямо сейчас часто выражается will."
+      "✗ She going to travel. → ✓ She is going to travel. Нужен be.",
+      "✗ He is going to travels. → ✓ He is going to travel. После to — V1.",
+      "✗ Are they going to leaving? → ✓ Are they going to leave? После to — инфинитив без -ing.",
+      "✗ Do you going to go? → ✓ Are you going to go? Вопрос строится через be.",
+      "✗ I will going to call. → ✓ I’m going to call / I’ll call. Не смешивай две конструкции."
     ],
     "exercises": [
       {
@@ -3082,6 +3792,58 @@ window.GRAMMAR_DATA = [
           }
         ]
       }
+    ],
+    "visualGuides": [
+      {
+        "title": "План vs прогноз по признакам",
+        "mode": "choice",
+        "steps": [
+          {
+            "label": "Намерение уже есть",
+            "pattern": "be going to",
+            "example": "I’m going to book a flight.",
+            "translation": "Я собираюсь забронировать рейс."
+          },
+          {
+            "label": "Есть явные признаки",
+            "pattern": "be going to",
+            "example": "Look at the clouds. It’s going to rain.",
+            "translation": "Посмотри на тучи. Сейчас пойдёт дождь."
+          },
+          {
+            "label": "Решение прямо сейчас",
+            "pattern": "will",
+            "example": "I’ll book it for you.",
+            "translation": "Я прямо сейчас забронирую это для тебя."
+          }
+        ],
+        "note": "Will тоже используется для прогнозов, но going to часто подчёркивает основания, заметные уже сейчас."
+      },
+      {
+        "title": "Собираем предложение",
+        "mode": "sequence",
+        "steps": [
+          {
+            "label": "Кто?",
+            "pattern": "subject",
+            "example": "She",
+            "translation": "Она"
+          },
+          {
+            "label": "Форма be",
+            "pattern": "am / is / are",
+            "example": "is",
+            "translation": "is — согласуем с she"
+          },
+          {
+            "label": "Конструкция",
+            "pattern": "going to + V1",
+            "example": "going to travel",
+            "translation": "собирается путешествовать"
+          }
+        ],
+        "note": ""
+      }
     ]
   },
   {
@@ -3097,8 +3859,8 @@ window.GRAMMAR_DATA = [
     "linkedLessonId": "lesson-9",
     "revealAnswersOnError": false,
     "lockOnPass": true,
-    "explanation": "Present Continuous используется не только для действий, которые происходят сейчас. Мы также используем его для будущих договорённостей и уже организованных планов — когда обычно уже известны время, место или человек, с которым что-то происходит. Форма остаётся той же: am / is / are + глагол с -ing.",
-    "formula": "subject + am/is/are + verb-ing + future time",
+    "explanation": "Present Continuous может обозначать будущее, когда есть конкретная договорённость или организационно оформленный план: встреча согласована, билеты куплены, место/время оговорены. Это та же форма am/is/are + V-ing, что и для действий сейчас; значение будущего создаёт контекст и время (tomorrow, on Friday, next week).",
+    "formula": "subject + am/is/are + V-ing + future time. Отрицание: am/is/are not + V-ing. Вопрос: Am/Is/Are + subject + V-ing + future time?",
     "glanceCards": [
       {
         "icon": "📅",
@@ -3132,7 +3894,11 @@ window.GRAMMAR_DATA = [
     "anchorLinks": [
       {
         "id": "grammar-at-a-glance",
-        "title": "Краткая схема"
+        "title": "Главное"
+      },
+      {
+        "id": "grammar-visual-guides",
+        "title": "Схемы"
       },
       {
         "id": "grammar-rule-map",
@@ -3140,7 +3906,7 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-tables",
-        "title": "Таблица"
+        "title": "Формы и сравнения"
       },
       {
         "id": "grammar-examples",
@@ -3148,123 +3914,161 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-mistakes",
-        "title": "Типичные ошибки"
+        "title": "Ошибки"
       },
       {
         "id": "grammar-practice-section",
-        "title": "Задания"
+        "title": "Практика"
       }
     ],
     "miniRules": [
       {
-        "title": "1. Будущая договорённость",
-        "text": "Используй Present Continuous, когда план уже организован: например, встреча назначена, билет куплен или время согласовано.",
-        "example": "I’m meeting Jack at the recording studio on Monday."
+        "title": "Главная идея: arrangement",
+        "text": "Future arrangement — не только желание. Это согласованное или организованное дело: встреча, поездка, визит, бронь.",
+        "example": "We’re flying to London on Friday. — В пятницу мы летим в Лондон."
       },
       {
-        "title": "2. Утверждение",
-        "text": "Используй am / is / are + глагол с -ing. Часто указывается будущее время: tomorrow, on Friday, next week.",
-        "example": "She’s flying to London tomorrow."
+        "title": "Форма та же, что в Continuous now",
+        "text": "I am + V-ing, she is + V-ing, we are + V-ing. Отличие от действия сейчас задаёт контекст: tomorrow, next week, on Monday.",
+        "example": "I’m meeting Jack next week. — Я встречаюсь с Джеком на следующей неделе."
       },
       {
-        "title": "3. Отрицание",
-        "text": "Добавь not после am / is / are. В разговорной речи обычно используются сокращения isn’t / aren’t.",
-        "example": "We aren’t working on Saturday."
+        "title": "Отрицание и вопрос",
+        "text": "We aren’t leaving on Tuesday. Are you staying in Warsaw? Where are you staying? Коротко: Yes, I am / No, I’m not.",
+        "example": "What time are you leaving? — Во сколько ты уезжаешь?"
       },
       {
-        "title": "4. Вопрос и короткий ответ",
-        "text": "Поставь am / is / are перед подлежащим. В коротком ответе повторяется только форма be.",
-        "example": "Are you leaving early? — Yes, I am. / No, I’m not."
+        "title": "Continuous for future vs going to",
+        "text": "Be going to часто показывает намерение. Present Continuous — конкретную договорённость. Если план уже определён, возможны оба варианта: I’m going to see Anna / I’m seeing Anna tomorrow.",
+        "example": "I’m going to travel more. / I’m travelling to Riga on Monday. — Я собираюсь больше путешествовать. / В понедельник я еду в Ригу."
       },
       {
-        "title": "5. Написание -ing",
-        "text": "Обычно добавь -ing. У глаголов на -e убери e: make → making. Короткая гласная + согласная часто удваивает согласную: sit → sitting. lie → lying.",
-        "example": "come → coming · run → running · lie → lying"
+        "title": "Отличие от расписаний",
+        "text": "Для официальных расписаний (поезда, уроки, мероприятия по программе) часто Present Simple: The train leaves at 7.15. Для твоих личных arrangements — Present Continuous.",
+        "example": "The train leaves at 7.15. I’m taking it tomorrow. — Поезд отправляется в 7:15. Я еду на нём завтра."
       },
       {
-        "title": "6. Present Continuous или be going to?",
-        "text": "Present Continuous чаще показывает уже организованную договорённость с конкретными деталями. Be going to чаще выражает намерение или план, который ещё не обязательно организован. Иногда обе формы возможны.",
-        "example": "I’m meeting Sam at 6.00. / I’m going to visit my grandparents this weekend."
+        "title": "Ограничение: прогноз ≠ договорённость",
+        "text": "О погоде или случайном событии обычно не говорят как о договорённости. It’s going to snow подходит при прогнозе по признакам; It’s snowing tomorrow иногда встречается в прогнозах/разговоре, но не основная модель для обучения.",
+        "example": "Look at those clouds! It’s going to rain. — Посмотри на тучи! Сейчас пойдёт дождь."
+      },
+      {
+        "title": "Future time может быть не названо",
+        "text": "Если контекст очевиден (обсуждаем следующую неделю), можно сказать I’m meeting Jack. Но без контекста это может означать действие прямо сейчас.",
+        "example": "A: What are you doing tomorrow? B: I’m meeting my friends. — Чем занимаешься завтра? — Встречаюсь с друзьями."
       }
     ],
     "tables": [
       {
-        "title": "Forms",
+        "title": "Форма future arrangement",
         "headers": [
-          "Type",
-          "Structure",
-          "Example"
+          "Тип",
+          "Пример",
+          "Перевод"
         ],
         "rows": [
           [
-            "Affirmative",
-            "I am / he is / we are + verb-ing",
-            "We’re travelling to Krakow on Monday."
+            "+",
+            "She’s having dinner with Cassie on Thursday.",
+            "В четверг она ужинает с Кэсси."
           ],
           [
-            "Negative",
-            "am not / isn’t / aren’t + verb-ing",
-            "She isn’t going to the conference."
+            "−",
+            "She isn’t having dinner on Thursday.",
+            "В четверг она не ужинает (с ней)."
           ],
           [
-            "Question",
-            "Am / Is / Are + subject + verb-ing?",
-            "Are you staying in Warsaw?"
+            "?",
+            "Is she having dinner with Cassie?",
+            "Она ужинает с Кэсси?"
           ],
           [
-            "Short answer",
-            "Yes, subject + am/is/are. / No, subject + am not/isn’t/aren’t.",
-            "Yes, I am. / No, I’m not."
+            "кратко",
+            "Yes, she is. / No, she isn’t.",
+            "Да. / Нет."
           ]
         ]
       },
       {
-        "title": "Present Continuous vs be going to",
+        "title": "Чем отличаются будущие формы",
         "headers": [
-          "Form",
-          "Typical use",
-          "Example"
+          "Вопрос",
+          "Present Continuous",
+          "Be going to",
+          "Present Simple"
         ],
         "rows": [
           [
-            "Present Continuous",
-            "fixed / organized future arrangement",
-            "I’m catching the 6.00 train tomorrow."
+            "смысл",
+            "организованная договорённость",
+            "намерение или прогноз с признаками",
+            "фиксированное расписание"
           ],
           [
-            "be going to",
-            "intention, plan, or prediction from evidence",
-            "I’m going to visit my grandparents this weekend."
+            "пример",
+            "I’m meeting Jack at six.",
+            "I’m going to meet Jack soon.",
+            "The train leaves at six."
+          ],
+          [
+            "перевод",
+            "У меня встреча с Джеком в шесть.",
+            "Я собираюсь встретиться с Джеком.",
+            "Поезд отправляется в шесть."
+          ]
+        ]
+      },
+      {
+        "title": "Сейчас vs будущее",
+        "headers": [
+          "Форма",
+          "Временной контекст",
+          "Значение"
+        ],
+        "rows": [
+          [
+            "I’m working.",
+            "right now",
+            "Я работаю прямо сейчас."
+          ],
+          [
+            "I’m working from home tomorrow.",
+            "tomorrow",
+            "Завтра я работаю из дома (запланировано)."
+          ],
+          [
+            "I work from home every Friday.",
+            "every Friday",
+            "Я работаю из дома каждую пятницу (привычка)."
           ]
         ]
       }
     ],
     "exampleGroups": [
       {
-        "title": "Future arrangements",
+        "title": "Календарь Стефана",
         "items": [
-          "I’m meeting Jack on Monday.",
-          "We’re having dinner with Cassie on Thursday.",
-          "She’s flying to Warsaw on Sunday.",
-          "Are you getting the train to Krakow?"
+          "On Monday, he’s meeting Jack at the recording studio. — В понедельник он встречается с Джеком в студии.",
+          "On Tuesday, he’s going to Cambridge. — Во вторник он едет в Кембридж.",
+          "On Wednesday, he’s working at home. — В среду он работает дома.",
+          "On Friday, he’s listening to a new pianist. — В пятницу он слушает нового пианиста."
         ]
       },
       {
-        "title": "Negative and questions",
+        "title": "Вопросы о договорённостях",
         "items": [
-          "She isn’t going to the conference.",
-          "We aren’t working at home tomorrow.",
-          "Are you staying in Warsaw?",
-          "What time are you leaving tomorrow?"
+          "Are you working tomorrow? — Ты завтра работаешь?",
+          "Where are you staying in Warsaw? — Где ты остановишься в Варшаве?",
+          "Who are you meeting on Thursday? — С кем ты встречаешься в четверг?"
         ]
       }
     ],
     "commonMistakes": [
-      "Не пропускай be: I’m meeting Sam. ✓  I meeting Sam. ✗",
-      "Не используй начальную форму после be: She’s flying. ✓  She’s fly. ✗",
-      "Не используй do / does в вопросе: Are you leaving tomorrow? ✓  Do you leaving tomorrow? ✗",
-      "Для будущего значения обычно нужен контекст времени: tomorrow, on Friday, next week и т. п.",
-      "Не путай договорённость и намерение: Present Continuous обычно означает, что детали уже организованы; be going to может быть просто намерением."
+      "✗ I meet Jack tomorrow (если имеется в виду личная договорённость). → ✓ I’m meeting Jack tomorrow.",
+      "✗ I’m meet Jack. → ✓ I’m meeting Jack. Нужен V-ing.",
+      "✗ I’m going meet Jack. → ✓ I’m going to meet Jack. В конструкции be going to обязательно to.",
+      "✗ The train is going to leaving at seven. → ✓ The train leaves at seven. Расписание — Present Simple.",
+      "✗ She isn’t meets us next week. → ✓ She isn’t meeting us next week. После isn’t + V-ing."
     ],
     "exercises": [
       {
@@ -3508,6 +4312,52 @@ window.GRAMMAR_DATA = [
           }
         ]
       }
+    ],
+    "visualGuides": [
+      {
+        "title": "От идеи к согласованному действию",
+        "mode": "sequence",
+        "steps": [
+          {
+            "label": "Намерение",
+            "pattern": "be going to",
+            "example": "I’m going to meet Claire.",
+            "translation": "Я собираюсь встретиться с Клэр."
+          },
+          {
+            "label": "Договорённость",
+            "pattern": "Present Continuous",
+            "example": "I’m meeting Claire at 12.30 tomorrow.",
+            "translation": "Завтра в 12:30 у меня встреча с Клэр."
+          },
+          {
+            "label": "Регулярное расписание",
+            "pattern": "Present Simple",
+            "example": "The train leaves at 6.00.",
+            "translation": "Поезд отправляется в 6:00 по расписанию."
+          }
+        ],
+        "note": "Не всякое наличие точного времени делает Present Continuous обязательным, но согласованная встреча/поездка часто описывается именно так."
+      },
+      {
+        "title": "Одна форма, два значения",
+        "mode": "compare",
+        "steps": [
+          {
+            "label": "Сейчас",
+            "pattern": "happening now",
+            "example": "I’m having dinner now.",
+            "translation": "Я сейчас ужинаю."
+          },
+          {
+            "label": "Будущая договорённость",
+            "pattern": "future arrangement",
+            "example": "I’m having dinner with Cassie on Thursday.",
+            "translation": "В четверг я ужинаю с Кэсси (мы договорились)."
+          }
+        ],
+        "note": ""
+      }
     ]
   },
   {
@@ -3523,8 +4373,8 @@ window.GRAMMAR_DATA = [
     "linkedLessonId": "lesson-10",
     "revealAnswersOnError": false,
     "lockOnPass": true,
-    "explanation": "Defining relative clauses дают необходимую информацию о человеке, вещи или месте. Без этой части предложения часто непонятно, о ком или о чём именно мы говорим. Обычно используем who для людей, which для вещей и where для мест. That часто может заменить who или which в defining relative clauses.",
-    "formula": "person + who/that · thing + which/that · place + where",
+    "explanation": "Defining relative clause — придаточное определительное, без которого непонятно, о каком человеке, предмете или месте говорится. Оно стоит непосредственно после определяемого слова и уточняет его: a person who…, a phone which…, the place where…. Такие придаточные обычно не отделяются запятыми. Важно различать функцию who/which/that (подлежащее или дополнение) и where (место).",
+    "formula": "person + who/that + clause; thing + which/that + clause; place + where + clause. Если относительное слово — дополнение, who/which/that иногда опускается; если подлежащее — нет.",
     "glanceCards": [
       {
         "icon": "👤",
@@ -3558,7 +4408,11 @@ window.GRAMMAR_DATA = [
     "anchorLinks": [
       {
         "id": "grammar-at-a-glance",
-        "title": "Краткая схема"
+        "title": "Главное"
+      },
+      {
+        "id": "grammar-visual-guides",
+        "title": "Схемы"
       },
       {
         "id": "grammar-rule-map",
@@ -3566,7 +4420,7 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-tables",
-        "title": "Таблица"
+        "title": "Формы и сравнения"
       },
       {
         "id": "grammar-examples",
@@ -3574,128 +4428,178 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "grammar-mistakes",
-        "title": "Типичные ошибки"
+        "title": "Ошибки"
       },
       {
         "id": "grammar-practice-section",
-        "title": "Задания"
+        "title": "Практика"
       }
     ],
     "miniRules": [
       {
-        "title": "1. Who — люди",
-        "text": "Используй who, когда относительная часть описывает человека.",
-        "example": "He’s the man who works at the airport."
+        "title": "Для чего нужна defining clause",
+        "text": "Служит частью определения: I know a woman who lives next door. Именно придаточная часть показывает, о какой женщине речь. Обычно без запятых.",
+        "example": "That’s the restaurant which has fresh fish. — Это ресторан, в котором есть свежая рыба."
       },
       {
-        "title": "2. Which — вещи",
-        "text": "Используй which для предметов, вещей и животных.",
-        "example": "This is the book which won the prize."
+        "title": "Who / that для людей",
+        "text": "Когда говорим о человеке: a teacher who works here; a teacher that works here. В обычной определительной конструкции that — допустимая замена who, но в non-defining clauses правила другие.",
+        "example": "The man who lives next door is a doctor. — Мужчина, который живёт по соседству, — врач."
       },
       {
-        "title": "3. Where — места",
-        "text": "Используй where после места, если дальше говорится, что происходит в этом месте.",
-        "example": "That’s the restaurant where we had dinner."
+        "title": "Which / that для вещей",
+        "text": "Для предметов и животных чаще which/that. Ключевое — определить слово, к которому относится придаточное.",
+        "example": "I need a phone which has a good camera. — Мне нужен телефон с хорошей камерой."
       },
       {
-        "title": "4. That",
-        "text": "В defining relative clauses that часто может заменить who или which, но не where.",
-        "example": "The bus that goes to the airport is number 10."
+        "title": "Where для места действия",
+        "text": "Where = «где»; после where обычно идёт подлежащее и сказуемое. Сравни: The shop where I bought the book (где я купил) и The shop which sells books (который продаёт).",
+        "example": "That’s the hotel where we stayed. — Это отель, где мы останавливались."
       },
       {
-        "title": "5. Нужная информация",
-        "text": "Defining relative clause не отделяется запятыми: информация нужна, чтобы точно определить человека, вещь или место.",
-        "example": "The woman who called you is my aunt."
+        "title": "Когда допустимо опустить who/which/that",
+        "text": "Если относительное местоимение выступает дополнением: The film (that) we watched. Если оно — подлежащее, опускать нельзя: The man who called me. Where тоже нельзя механически удалять без перестройки структуры.",
+        "example": "The book (which) I bought is interesting. — Книга, которую я купил, интересная."
       },
       {
-        "title": "6. Не дублируй местоимение",
-        "text": "После who / which / that не добавляй ещё he, she, it или they, если относительное слово уже является подлежащим.",
-        "example": "The man who lives here ✓ · The man who he lives here ✗"
+        "title": "Правило без двойного подлежащего",
+        "text": "После who/which в роли подлежащего не повторяем he/it: the man who lives…, не the man who he lives…. После where субъект может быть нужен: the place where we met.",
+        "example": "A car that uses less petrol. — Машина, которая расходует меньше бензина."
+      },
+      {
+        "title": "Defining vs non-defining",
+        "text": "В defining clause информация необходима для идентификации и обычно нет запятых. Non-defining добавляет необязательное уточнение в запятых; в нём that не употребляется.",
+        "example": "My brother, who lives in London, is visiting. — Мой брат, который живёт в Лондоне, приезжает (дополнительная информация)."
       }
     ],
     "tables": [
       {
-        "title": "Relative words",
+        "title": "Выбор относительного слова",
         "headers": [
-          "Word",
-          "Use",
-          "Example"
+          "К чему относится",
+          "Слово",
+          "Пример / перевод"
         ],
         "rows": [
           [
-            "who",
-            "people",
-            "The woman who lives next door."
+            "человек",
+            "who / that",
+            "A woman who knows me. — Женщина, которая меня знает."
           ],
           [
-            "which",
-            "things / animals",
-            "The phone which has a good camera."
+            "предмет, животное",
+            "which / that",
+            "A book which won a prize. — Книга, которая получила премию."
           ],
           [
+            "место действия",
             "where",
-            "places",
-            "The café where we met."
-          ],
-          [
-            "that",
-            "people or things",
-            "The bus that goes to the airport."
+            "A city where I was born. — Город, где я родился."
           ]
         ]
       },
       {
-        "title": "Can I use that?",
+        "title": "Относительное слово: подлежащее или дополнение?",
         "headers": [
-          "Original",
-          "With that",
-          "Possible?"
+          "Роль",
+          "Пример",
+          "Можно опустить?"
         ],
         "rows": [
           [
-            "the woman who called",
-            "the woman that called",
-            "Yes"
+            "подлежащее",
+            "The woman who called me…",
+            "Нет: who нужно."
           ],
           [
-            "the book which won",
-            "the book that won",
-            "Yes"
+            "дополнение",
+            "The woman (who) I called…",
+            "Да: who можно опустить."
           ],
           [
-            "the place where we met",
-            "the place that we met",
-            "Not in this pattern"
+            "место",
+            "The shop where I work…",
+            "Нельзя просто вычеркнуть where без изменения структуры."
+          ]
+        ]
+      },
+      {
+        "title": "Which и where: не путай",
+        "headers": [
+          "Конструкция",
+          "Что означает",
+          "Пример"
+        ],
+        "rows": [
+          [
+            "the café which opened yesterday",
+            "кафе, которое открылось",
+            "which — подлежащее opened"
+          ],
+          [
+            "the café where we met",
+            "кафе, где мы встретились",
+            "where — обстоятельство места"
+          ],
+          [
+            "the café which we visited",
+            "кафе, которое мы посетили",
+            "which — дополнение visited"
+          ],
+          [
+            "the café (which) we met in",
+            "кафе, в котором мы встретились",
+            "which — дополнение предлога in; разговорный вариант"
+          ]
+        ]
+      },
+      {
+        "title": "Defining / non-defining",
+        "headers": [
+          "Тип",
+          "Знаки препинания",
+          "that?"
+        ],
+        "rows": [
+          [
+            "Defining: the person who…",
+            "обычно без запятых",
+            "Возможен для человека/предмета"
+          ],
+          [
+            "Non-defining: Anna, who…",
+            "уточнение в запятых",
+            "Не используется"
           ]
         ]
       }
     ],
     "exampleGroups": [
       {
-        "title": "People, things, places",
+        "title": "Люди, вещи, места",
         "items": [
-          "She’s the person who remembers my birthday.",
-          "I love the picture which is on your wall.",
-          "This is the place where they have the festival.",
-          "Maria is the woman that bought my car."
+          "A waiter is a person who works in a restaurant. — Официант — человек, который работает в ресторане.",
+          "A menu is something which tells you what you can order. — Меню — то, что показывает доступные блюда.",
+          "A campsite is a place where people can sleep in tents. — Кемпинг — место, где можно жить в палатках."
         ]
       },
       {
-        "title": "Useful for paraphrasing",
+        "title": "Одинаковые слова — разная грамматическая роль",
         "items": [
-          "A waiter is someone who works in a restaurant.",
-          "A cinema is somewhere where you can see a film.",
-          "A wallet is something which you use to keep money in.",
-          "A campsite is a place where you can sleep in a tent."
+          "The woman who knows Jack lives here. — Женщина, которая знает Джека, живёт здесь (who — подлежащее).",
+          "The woman (who) Jack knows lives here. — Женщина, которую знает Джек, живёт здесь (who — дополнение).",
+          "The cinema where we met is closed. — Кинотеатр, где мы встретились, закрыт.",
+          "The cinema which closed is old. — Кинотеатр, который закрылся, старый."
         ]
       }
     ],
     "commonMistakes": [
-      "Не используй who для вещей: a phone which/that has a good camera ✓",
-      "Не используй which для людей, если речь о человеке: the man who/that lives next door ✓",
-      "После названия места обычно используй where, если смысл — «где»: the café where we met ✓",
-      "Не повторяй подлежащее: the woman who knows me ✓ · the woman who she knows me ✗",
-      "That может заменить who/which в defining clauses, но не используется как обычная замена where в конструкции place + where."
+      "✗ The woman which called me. → ✓ The woman who/that called me. Для людей who/that.",
+      "✗ The shop where sells books. → ✓ The shop which/that sells books. Здесь слово — подлежащее sells.",
+      "✗ The man who he lives here. → ✓ The man who lives here. Не дублируй подлежащее.",
+      "✗ The book I bought it. → ✓ The book (which/that) I bought. Не дублируй дополнение it.",
+      "✗ My friend, that lives here, … (non-defining). → ✓ My friend, who lives here, …",
+      "✗ The place which I work (если после work нет предлога). → ✓ The place where I work / the place (which) I work in."
     ],
     "exercises": [
       {
@@ -3932,6 +4836,52 @@ window.GRAMMAR_DATA = [
             ]
           }
         ]
+      }
+    ],
+    "visualGuides": [
+      {
+        "title": "Что мы объясняем?",
+        "mode": "choice",
+        "steps": [
+          {
+            "label": "Человек",
+            "pattern": "who / that",
+            "example": "A person who works here…",
+            "translation": "Человек, который здесь работает…"
+          },
+          {
+            "label": "Предмет / животное",
+            "pattern": "which / that",
+            "example": "A bag which belongs to me…",
+            "translation": "Сумка, которая мне принадлежит…"
+          },
+          {
+            "label": "Место",
+            "pattern": "where (= in/at which)",
+            "example": "A café where we met…",
+            "translation": "Кафе, где мы познакомились…"
+          }
+        ],
+        "note": "Where показывает место действия: the café where we met. Но если относительное местоимение — подлежащее, нужен which/that: the café which opened yesterday."
+      },
+      {
+        "title": "Можно ли убрать относительное местоимение?",
+        "mode": "compare",
+        "steps": [
+          {
+            "label": "Оно — подлежащее",
+            "pattern": "не убирать",
+            "example": "The woman who called me…",
+            "translation": "Женщина, которая мне звонила…"
+          },
+          {
+            "label": "Оно — дополнение",
+            "pattern": "можно опустить",
+            "example": "The woman (who) I called…",
+            "translation": "Женщина, которой я звонил…"
+          }
+        ],
+        "note": ""
       }
     ]
   }
