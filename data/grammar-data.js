@@ -5963,5 +5963,631 @@ window.GRAMMAR_DATA = [
       }
     ],
     "studyVersion": 2
+  },
+  {
+    "id": "grammar-present-perfect-yet-just-already",
+    "order": 10,
+    "title": "Present Perfect · just, already, yet",
+    "level": "A2",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-present-perfect-yet-just-already",
+    "passed": false,
+    "attempts": 0,
+    "publishedAt": "2026-10-19",
+    "linkedLessonId": "lesson-12",
+    "revealAnswersOnError": false,
+    "lockOnPass": true,
+    "explanation": "Present Perfect связывает прошлое событие с настоящей ситуацией. В 4A нас интересуют три слова: just — только что, already — уже, yet — уже? / ещё не. Сначала разберём смысл, затем образование формы и место каждого слова.",
+    "formula": "have/has + past participle (V3): I have done / she has done; Have you done?; I haven’t done.",
+    "glanceCards": [],
+    "anchorLinks": [
+      {
+        "id": "grammar-study-sections",
+        "title": "Разобраться по шагам"
+      },
+      {
+        "id": "grammar-practice-section",
+        "title": "Практика"
+      }
+    ],
+    "miniRules": [
+      {
+        "title": "Что выражает Present Perfect",
+        "text": "Действие произошло раньше, но важно то, что это означает сейчас: I’ve done the washing — стирка уже сделана. Мы сообщаем результат, а не когда именно это случилось.",
+        "example": "I’ve cleaned the floor. — Я помыл пол (теперь он чистый)."
+      },
+      {
+        "title": "Форма have/has + V3",
+        "text": "С I / you / we / they используем have; с he / she / it — has. После have/has идёт третья форма глагола: washed, cleaned, done, made, gone, been, laid.",
+        "example": "He has taken out the rubbish. — Он вынес мусор."
+      },
+      {
+        "title": "Отрицание и вопрос",
+        "text": "Отрицание: haven’t / hasn’t + V3. Вопрос: Have/Has + подлежащее + V3? Кратко: Yes, I have. / No, I haven’t. Вопросительный знак находится после всего предложения.",
+        "example": "Have you made dinner? — Ты приготовил ужин? / No, I haven’t. — Нет."
+      },
+      {
+        "title": "Just — только что",
+        "text": "Just ставится между have/has и третьей формой глагола, когда действие завершилось совсем недавно. Обязательной точной границы «несколько минут» нет: важна близость момента.",
+        "example": "She’s just laid the table. — Она только что накрыла на стол."
+      },
+      {
+        "title": "Already — уже",
+        "text": "Already чаще стоит после have/has и перед V3. Говорим о действии, которое уже завершилось — иногда раньше, чем ожидали. В вопросе already тоже возможно, но часто выражает удивление; не заменяй бездумно yet.",
+        "example": "I’ve already finished lunch. — Я уже закончил обедать."
+      },
+      {
+        "title": "Yet — уже? / ещё не",
+        "text": "Yet обычно в конце вопроса или отрицания. В вопросе: «уже?». В отрицании: «пока ещё не». В стандартных утвердительных предложениях типа I have finished yet оно не используется.",
+        "example": "Have you done the washing yet? — Ты уже постирал? / I haven’t done it yet. — Я ещё не постирал."
+      },
+      {
+        "title": "Когда не используем Present Perfect",
+        "text": "Если сообщаем о завершённом времени в прошлом (yesterday, last Monday, in 2020), обычно нужен Past Simple. Нельзя: I’ve cleaned the floor yesterday. Правильно: I cleaned the floor yesterday.",
+        "example": "I’ve cleaned the floor. (результат сейчас) / I cleaned it yesterday. (вчера)"
+      },
+      {
+        "title": "Нюанс BrE и AmE",
+        "text": "В британском варианте Present Perfect особенно типичен с just, already, yet. В разговорном американском варианте Past Simple иногда встречается и с этими словами; это не делает британское правило неправильным.",
+        "example": "BrE: I’ve just eaten. / AmE: I just ate. — Я только что поел."
+      }
+    ],
+    "tables": [
+      {
+        "title": "Три формы предложения",
+        "headers": [
+          "Вид",
+          "Структура",
+          "Пример / перевод"
+        ],
+        "rows": [
+          [
+            "Утверждение",
+            "I/you/we/they + have + V3; he/she/it + has + V3",
+            "She has made lunch. — Она приготовила обед."
+          ],
+          [
+            "Отрицание",
+            "subject + haven’t / hasn’t + V3",
+            "I haven’t washed the dishes. — Я не вымыл посуду."
+          ],
+          [
+            "Вопрос",
+            "Have/Has + subject + V3?",
+            "Have you cleaned your room? — Ты убрался в комнате?"
+          ],
+          [
+            "Короткий ответ",
+            "Yes, I have. / No, she hasn’t.",
+            "Has he arrived? — Yes, he has."
+          ]
+        ]
+      },
+      {
+        "title": "Just / already / yet — где ставить",
+        "headers": [
+          "Слово",
+          "Позиция",
+          "Смысл",
+          "Пример"
+        ],
+        "rows": [
+          [
+            "just",
+            "have/has + just + V3",
+            "только что",
+            "I’ve just got on the bus."
+          ],
+          [
+            "already",
+            "have/has + already + V3",
+            "уже",
+            "I’ve already done the ironing."
+          ],
+          [
+            "yet",
+            "в конце вопроса",
+            "уже?",
+            "Have you made dinner yet?"
+          ],
+          [
+            "yet",
+            "в конце отрицания",
+            "ещё не",
+            "We haven’t finished lunch yet."
+          ]
+        ]
+      },
+      {
+        "title": "Вторая и третья формы — не одно и то же",
+        "headers": [
+          "Начальная форма",
+          "Past Simple (V2)",
+          "Past Participle (V3)",
+          "Present Perfect"
+        ],
+        "rows": [
+          [
+            "do",
+            "did",
+            "done",
+            "I’ve done."
+          ],
+          [
+            "make",
+            "made",
+            "made",
+            "She’s made."
+          ],
+          [
+            "go",
+            "went",
+            "gone",
+            "He’s gone."
+          ],
+          [
+            "be",
+            "was/were",
+            "been",
+            "I’ve been."
+          ],
+          [
+            "fall",
+            "fell",
+            "fallen",
+            "He’s fallen."
+          ],
+          [
+            "lay",
+            "laid",
+            "laid",
+            "She’s laid."
+          ],
+          [
+            "take",
+            "took",
+            "taken",
+            "He’s taken."
+          ],
+          [
+            "win",
+            "won",
+            "won",
+            "They’ve won."
+          ]
+        ]
+      },
+      {
+        "title": "Выбор Present Perfect или Past Simple",
+        "headers": [
+          "Ситуация",
+          "Выбираем",
+          "Пример"
+        ],
+        "rows": [
+          [
+            "Результат важен сейчас",
+            "Present Perfect",
+            "I’ve cleaned the floor. — Пол теперь чист."
+          ],
+          [
+            "Названо закончившееся время",
+            "Past Simple",
+            "I cleaned the floor yesterday. — Я помыл его вчера."
+          ],
+          [
+            "Очень недавний результат",
+            "Present Perfect + just",
+            "I’ve just washed the plates."
+          ],
+          [
+            "Вопрос о завершении дела к настоящему",
+            "Present Perfect + yet",
+            "Have you done the shopping yet?"
+          ]
+        ]
+      }
+    ],
+    "exampleGroups": [
+      {
+        "title": "Вечер дома: сначала смысл, потом форма",
+        "items": [
+          {
+            "en": "I’ve just got home.",
+            "ru": "Я только что пришёл домой."
+          },
+          {
+            "en": "I’ve already made lunch.",
+            "ru": "Я уже приготовил обед."
+          },
+          {
+            "en": "I haven’t done the washing-up yet.",
+            "ru": "Я ещё не помыл посуду."
+          },
+          {
+            "en": "Have you laid the table yet?",
+            "ru": "Ты уже накрыл на стол?"
+          }
+        ]
+      }
+    ],
+    "commonMistakes": [
+      "✗ I have did the washing. → ✓ I have done the washing. После have/has нужна V3, а не V2.",
+      "✗ She have made lunch. → ✓ She has made lunch. С she — has.",
+      "✗ I have yet finished. → ✓ I have already finished. Yet не ставим вместо already в обычном утверждении.",
+      "✗ Have you yet made lunch? → ✓ Have you made lunch yet? Для этого уровня в обычном вопросе yet — в конце.",
+      "✗ I haven’t already finished. → ✓ I haven’t finished yet. Нейтральное «ещё не» выражаем yet.",
+      "✗ I’ve cleaned the room yesterday. → ✓ I cleaned the room yesterday. Yesterday — закончившийся период.",
+      "✗ He’s just fell. → ✓ He’s just fallen. После has нужна третья форма."
+    ],
+    "visualGuides": [
+      {
+        "title": "Что уже изменилось?",
+        "mode": "compare",
+        "steps": [
+          {
+            "label": "До",
+            "pattern": "not done",
+            "example": "The floor was dirty.",
+            "translation": "Пол был грязным."
+          },
+          {
+            "label": "Теперь",
+            "pattern": "have/has + V3",
+            "example": "I’ve cleaned the floor.",
+            "translation": "Я вымыл пол; сейчас он чистый."
+          }
+        ],
+        "note": "Present Perfect не показывает точное время события: он связывает событие и состояние сейчас."
+      }
+    ],
+    "studySections": [
+      {
+        "kind": "exposition",
+        "title": "1. Почему здесь Present Perfect, а не Past Simple?",
+        "paragraphs": [
+          "Ты подходишь к кухне: раковина пустая. “I’ve done the washing-up.” Важен результат — теперь посуда чистая.",
+          "Если ты рассказываешь, что сделал вчера, нужен Past Simple: “I did the washing-up yesterday.” Слово yesterday указывает на завершённое время."
+        ]
+      },
+      {
+        "kind": "diagram",
+        "title": "2. Сначала покажем связь с настоящим",
+        "variant": "steps",
+        "steps": [
+          {
+            "label": "Раньше",
+            "form": "unfinished",
+            "example": "The dishes were dirty.",
+            "ru": "Посуда была грязной.",
+            "hint": ""
+          },
+          {
+            "label": "Действие завершилось",
+            "form": "have + V3",
+            "example": "I have washed the dishes.",
+            "ru": "Я помыл посуду.",
+            "hint": ""
+          },
+          {
+            "label": "Результат сейчас",
+            "form": "result now",
+            "example": "The dishes are clean now.",
+            "ru": "Теперь посуда чистая.",
+            "hint": ""
+          }
+        ],
+        "note": "Сама форма не показывает, в какую минуту это произошло."
+      },
+      {
+        "kind": "table",
+        "title": "3. Строим утверждение, отрицание и вопрос",
+        "index": 0
+      },
+      {
+        "kind": "rules",
+        "title": "4. Что такое V3 и почему нельзя подставить did или went",
+        "indices": [
+          1,
+          2
+        ]
+      },
+      {
+        "kind": "table",
+        "title": "5. Неправильные глаголы из домашнего задания",
+        "index": 2
+      },
+      {
+        "kind": "contrast",
+        "title": "6. Три разных смысла: just, already, yet",
+        "pairs": [
+          {
+            "before": "I’ve just finished the ironing.",
+            "after": "I’ve already finished the ironing.",
+            "why": "Just подчёркивает, что действие завершилось совсем недавно. Already — что оно уже сделано."
+          },
+          {
+            "before": "Have you made dinner yet?",
+            "after": "I haven’t made dinner yet.",
+            "why": "В вопросе yet = «уже?». В отрицании yet = «ещё не»."
+          }
+        ],
+        "note": "Не делай вывод только по переводу «уже»: смотри на тип предложения и оттенок смысла."
+      },
+      {
+        "kind": "table",
+        "title": "7. Куда поставить just, already и yet",
+        "index": 1
+      },
+      {
+        "kind": "rules",
+        "title": "8. Already и yet: различия в употреблении",
+        "indices": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "kind": "table",
+        "title": "9. Когда нужен Past Simple вместо Present Perfect",
+        "index": 3
+      },
+      {
+        "kind": "rules",
+        "title": "10. Дополнительные нюансы и ограничения",
+        "indices": [
+          6,
+          7
+        ]
+      },
+      {
+        "kind": "mistakes",
+        "title": "11. Найди причину типичных ошибок",
+        "indices": null
+      }
+    ],
+    "exercises": [
+      {
+        "type": "exercise",
+        "id": "present-perfect-4a-step-1",
+        "title": "1. Easy · Choose the correct completion",
+        "difficulty": "Easy",
+        "instructions": "Выбери единственный грамматически корректный вариант.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "single",
+            "prompt": "I ___ already done the washing.",
+            "options": [
+              "have",
+              "has",
+              "did"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "single",
+            "prompt": "She ___ just laid the table.",
+            "options": [
+              "have",
+              "has",
+              "is"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "single",
+            "prompt": "Have you made dinner ___?",
+            "options": [
+              "already",
+              "yet",
+              "just"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "single",
+            "prompt": "He has ___ off his bike.",
+            "options": [
+              "fell",
+              "fallen",
+              "fall"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "present-perfect-4a-step-2",
+        "title": "2. Medium · Complete the form",
+        "difficulty": "Medium",
+        "instructions": "Впиши нужную грамматическую форму.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "gaps",
+            "segments": [
+              "I ",
+              " done the washing-up."
+            ],
+            "answers": [
+              [
+                "have"
+              ]
+            ],
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "gaps",
+            "segments": [
+              "She ",
+              " just cleaned the kitchen."
+            ],
+            "answers": [
+              [
+                "has"
+              ]
+            ],
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "gaps",
+            "segments": [
+              "We haven’t finished lunch ",
+              "."
+            ],
+            "answers": [
+              [
+                "yet"
+              ]
+            ],
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "gaps",
+            "segments": [
+              "He has already ",
+              " out the rubbish."
+            ],
+            "answers": [
+              [
+                "taken"
+              ]
+            ],
+            "hideAnswersOnError": true
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "present-perfect-4a-step-3",
+        "title": "3. Harder · Choose by context",
+        "difficulty": "Harder",
+        "instructions": "Посмотри на смысл и выбери правильный вариант.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "single",
+            "prompt": "I’ve ___ finished the ironing — I did it a minute ago.",
+            "options": [
+              "yet",
+              "just",
+              "never"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "single",
+            "prompt": "We ___ dinner yesterday.",
+            "options": [
+              "have made",
+              "made",
+              "has made"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "single",
+            "prompt": "No, I haven’t cleaned my room ___",
+            "options": [
+              "yet",
+              "already",
+              "just"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "single",
+            "prompt": "Has she ___ the table?",
+            "options": [
+              "lay",
+              "laid",
+              "lie"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "type": "exercise",
+        "id": "present-perfect-4a-step-4",
+        "title": "4. Challenge · Build full sentences",
+        "difficulty": "Challenge",
+        "instructions": "Составь предложение с указанным словом и правильной формой.",
+        "items": [
+          {
+            "id": "1",
+            "number": 1,
+            "input": "text",
+            "prompt": "I / just / do / the washing-up",
+            "answer": "I’ve just done the washing-up.",
+            "acceptedAnswers": [
+              "I’ve just done the washing-up.",
+              "I have just done the washing-up."
+            ],
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "2",
+            "number": 2,
+            "input": "text",
+            "prompt": "She / already / lay / the table",
+            "answer": "She’s already laid the table.",
+            "acceptedAnswers": [
+              "She’s already laid the table.",
+              "She has already laid the table."
+            ],
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "3",
+            "number": 3,
+            "input": "text",
+            "prompt": "you / make / dinner / yet?",
+            "answer": "Have you made dinner yet?",
+            "acceptedAnswers": [
+              "Have you made dinner yet?"
+            ],
+            "hideAnswersOnError": true
+          },
+          {
+            "id": "4",
+            "number": 4,
+            "input": "text",
+            "prompt": "We / not / finish / lunch / yet",
+            "answer": "We haven’t finished lunch yet.",
+            "acceptedAnswers": [
+              "We haven’t finished lunch yet.",
+              "We have not finished lunch yet."
+            ],
+            "hideAnswersOnError": true
+          }
+        ]
+      }
+    ],
+    "studyVersion": 1
   }
 ];

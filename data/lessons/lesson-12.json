@@ -1,0 +1,1097 @@
+{
+  "id": "lesson-12",
+  "number": 12,
+  "title": "Unit 4A · Who does what?",
+  "subtitle": "English File 4th edition Pre-intermediate · Workbook 4A · housework, present perfect + yet, just, already; /j/ and /dʒ/",
+  "status": "available",
+  "page": "lesson.html?id=lesson-12",
+  "vocabularyId": "vocab-lesson-4a",
+  "grammarIds": [
+    "grammar-present-perfect-yet-just-already"
+  ],
+  "publishedAt": "2026-10-19",
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "totalPoints": 45,
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "4A · 1",
+      "title": "VOCABULARY · housework, make or do?",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1a",
+      "title": "1a. Complete the phrases.",
+      "hideAnswersOnError": true,
+      "layout": "media-list",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "image": "images/lesson-12/housework-1.png",
+          "imageAlt": "Original workbook photograph 1: housework activity.",
+          "hideAnswersOnError": true,
+          "input": "text",
+          "example": true,
+          "exampleTextOnly": true,
+          "prompt": "do the washing"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "image": "images/lesson-12/housework-2.png",
+          "imageAlt": "Original workbook photograph 2: housework activity.",
+          "hideAnswersOnError": true,
+          "input": "gaps",
+          "segments": [
+            "dust the f",
+            ""
+          ],
+          "answers": [
+            [
+              "urniture"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "image": "images/lesson-12/housework-3.png",
+          "imageAlt": "Original workbook photograph 3: housework activity.",
+          "hideAnswersOnError": true,
+          "input": "gaps",
+          "segments": [
+            "do the sh",
+            ""
+          ],
+          "answers": [
+            [
+              "opping"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "image": "images/lesson-12/housework-4.png",
+          "imageAlt": "Original workbook photograph 4: housework activity.",
+          "hideAnswersOnError": true,
+          "input": "gaps",
+          "segments": [
+            "make l",
+            ""
+          ],
+          "answers": [
+            [
+              "unch"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "image": "images/lesson-12/housework-5.png",
+          "imageAlt": "Original workbook photograph 5: housework activity.",
+          "hideAnswersOnError": true,
+          "input": "gaps",
+          "segments": [
+            "do the v",
+            ""
+          ],
+          "answers": [
+            [
+              "acuuming"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "image": "images/lesson-12/housework-6.png",
+          "imageAlt": "Original workbook photograph 6: housework activity.",
+          "hideAnswersOnError": true,
+          "input": "gaps",
+          "segments": [
+            "lay the t",
+            ""
+          ],
+          "answers": [
+            [
+              "able"
+            ]
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "image": "images/lesson-12/housework-7.png",
+          "imageAlt": "Original workbook photograph 7: housework activity.",
+          "hideAnswersOnError": true,
+          "input": "gaps",
+          "segments": [
+            "load the d",
+            ""
+          ],
+          "answers": [
+            [
+              "ishwasher"
+            ]
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "image": "images/lesson-12/housework-8.png",
+          "imageAlt": "Original workbook photograph 8: housework activity.",
+          "hideAnswersOnError": true,
+          "input": "gaps",
+          "segments": [
+            "take out the r",
+            ""
+          ],
+          "answers": [
+            [
+              "ubbish"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1b",
+      "title": "1b. Complete the phrases with a verb from the list.",
+      "hideAnswersOnError": true,
+      "wordBank": [
+        "clean",
+        "clear",
+        "do",
+        "make",
+        "pick up",
+        "put away",
+        "tidy"
+      ],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "text",
+          "example": true,
+          "exampleTextOnly": true,
+          "prompt": "pick up dirty clothes"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "bank-select",
+          "segments": [
+            "",
+            " the beds, dinner"
+          ],
+          "options": [
+            "clean",
+            "clear",
+            "do",
+            "make",
+            "pick up",
+            "put away",
+            "tidy"
+          ],
+          "acceptedAnswers": [
+            "make"
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "bank-select",
+          "segments": [
+            "",
+            " your room, your desk"
+          ],
+          "options": [
+            "clean",
+            "clear",
+            "do",
+            "make",
+            "pick up",
+            "put away",
+            "tidy"
+          ],
+          "acceptedAnswers": [
+            "tidy"
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "bank-select",
+          "segments": [
+            "",
+            " the table after dinner"
+          ],
+          "options": [
+            "clean",
+            "clear",
+            "do",
+            "make",
+            "pick up",
+            "put away",
+            "tidy"
+          ],
+          "acceptedAnswers": [
+            "clear"
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "bank-select",
+          "segments": [
+            "",
+            " the floor, the bathroom"
+          ],
+          "options": [
+            "clean",
+            "clear",
+            "do",
+            "make",
+            "pick up",
+            "put away",
+            "tidy"
+          ],
+          "acceptedAnswers": [
+            "clean"
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "bank-select",
+          "segments": [
+            "",
+            " the ironing, the washing-up"
+          ],
+          "options": [
+            "clean",
+            "clear",
+            "do",
+            "make",
+            "pick up",
+            "put away",
+            "tidy"
+          ],
+          "acceptedAnswers": [
+            "do"
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "bank-select",
+          "segments": [
+            "",
+            " your clothes"
+          ],
+          "options": [
+            "clean",
+            "clear",
+            "do",
+            "make",
+            "pick up",
+            "put away",
+            "tidy"
+          ],
+          "acceptedAnswers": [
+            "put away"
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1c",
+      "title": "1c. Complete the sentences with do or make.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "text",
+          "example": true,
+          "exampleTextOnly": true,
+          "prompt": "I usually do my homework in my room."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "Don’t ",
+            " a noise! Mum’s asleep."
+          ],
+          "answers": [
+            [
+              "make"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "My husband doesn’t often ",
+            " plans."
+          ],
+          "answers": [
+            [
+              "make"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "I’m going to ",
+            " a Portuguese course before I go to Brazil."
+          ],
+          "answers": [
+            [
+              "do"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "We always ",
+            " housework on Saturday morning."
+          ],
+          "answers": [
+            [
+              "do"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "Some children ",
+            " friends easily when they go to school."
+          ],
+          "answers": [
+            [
+              "make"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "segments": [
+            "I want to ",
+            " more exercise, but I don’t have much time."
+          ],
+          "answers": [
+            [
+              "do"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "segments": [
+            "Sorry, I need to ",
+            " a phone call."
+          ],
+          "answers": [
+            [
+              "make"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "4A · 2",
+      "title": "GRAMMAR · present perfect + yet, just, already",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-2a",
+      "title": "2a. Complete the conversations using the words in brackets in the present perfect form. Use contractions where possible.",
+      "hideAnswersOnError": true,
+      "layout": "dialogue",
+      "dialogueLines": [
+        {
+          "speaker": "1A",
+          "itemIds": [
+            "1"
+          ]
+        },
+        {
+          "speaker": "1B",
+          "text": "Yes, he has. He’s in the kitchen."
+        },
+        {
+          "speaker": "2A",
+          "itemIds": [
+            "2"
+          ]
+        },
+        {
+          "speaker": "2B",
+          "text": "No, I haven’t. I’m going to do it later."
+        },
+        {
+          "speaker": "3A",
+          "text": "What’s for lunch?"
+        },
+        {
+          "speaker": "3B",
+          "itemIds": [
+            "3"
+          ]
+        },
+        {
+          "speaker": "4A",
+          "text": "What’s the matter?"
+        },
+        {
+          "speaker": "4B",
+          "itemIds": [
+            "4"
+          ]
+        },
+        {
+          "speaker": "5A",
+          "itemIds": [
+            "5"
+          ]
+        },
+        {
+          "speaker": "5B",
+          "text": "Oh, no. What have you done?"
+        }
+      ],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "example": true,
+          "exampleAnswer": "Has Peter arrived?",
+          "segments": [
+            "",
+            " (Peter / arrive?)"
+          ],
+          "answers": [
+            [
+              "Has Peter arrived?"
+            ]
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "",
+            " your homework? (you / do)"
+          ],
+          "answers": [
+            [
+              "Have you done"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "I don’t know. ",
+            " anything. (I / not make)"
+          ],
+          "answers": [
+            [
+              "I haven’t made",
+              "I have not made"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "",
+            " my hand. (I / cut)"
+          ],
+          "answers": [
+            [
+              "I’ve cut",
+              "I have cut"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "",
+            " a big mistake. (I / make)"
+          ],
+          "answers": [
+            [
+              "I’ve made",
+              "I have made"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-2b",
+      "title": "2b. Rewrite the sentences with already or yet in the correct place.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "text",
+          "example": true,
+          "exampleTextOnly": true,
+          "prompt": "I’ve done the washing. → I’ve already done the washing."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "prompt": "Have you made any plans for the weekend?",
+          "answer": "Have you made any plans for the weekend yet?",
+          "acceptedAnswers": [
+            "Have you made any plans for the weekend yet?",
+            "Have you made any plans for the weekend yet?"
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "prompt": "We haven’t finished lunch.",
+          "answer": "We haven’t finished lunch yet.",
+          "acceptedAnswers": [
+            "We haven’t finished lunch yet.",
+            "We haven't finished lunch yet."
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "prompt": "Daniel has tidied his room.",
+          "answer": "Daniel has already tidied his room.",
+          "acceptedAnswers": [
+            "Daniel has already tidied his room.",
+            "Daniel has already tidied his room."
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "prompt": "I’ve done the ironing.",
+          "answer": "I’ve already done the ironing.",
+          "acceptedAnswers": [
+            "I’ve already done the ironing.",
+            "I've already done the ironing."
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "text",
+          "prompt": "Have you been to the supermarket?",
+          "answer": "Have you been to the supermarket yet?",
+          "acceptedAnswers": [
+            "Have you been to the supermarket yet?",
+            "Have you been to the supermarket yet?"
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "text",
+          "prompt": "I haven’t cleaned the bathroom.",
+          "answer": "I haven’t cleaned the bathroom yet.",
+          "acceptedAnswers": [
+            "I haven’t cleaned the bathroom yet.",
+            "I haven't cleaned the bathroom yet."
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "text",
+          "prompt": "Edward has taken out the rubbish.",
+          "answer": "Edward has already taken out the rubbish.",
+          "acceptedAnswers": [
+            "Edward has already taken out the rubbish.",
+            "Edward has already taken out the rubbish."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-2c",
+      "title": "2c. Complete the sentences. Use just + present perfect and a verb from the list. Use contractions.",
+      "hideAnswersOnError": true,
+      "layout": "media-list",
+      "wordBank": [
+        "clean",
+        "do",
+        "fall",
+        "lay",
+        "miss",
+        "win"
+      ],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "text",
+          "example": true,
+          "exampleTextOnly": true,
+          "prompt": "Sorry. You’ve just missed dinner.",
+          "image": "images/lesson-12/just-1.png",
+          "imageAlt": "The family at dinner; someone has arrived too late."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "image": "images/lesson-12/just-2.png",
+          "imageAlt": "Original workbook illustration 2 for just + present perfect.",
+          "input": "gaps",
+          "segments": [
+            "He ",
+            " off his bike."
+          ],
+          "answers": [
+            [
+              "’s just fallen",
+              "'s just fallen",
+              "has just fallen"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "image": "images/lesson-12/just-3.png",
+          "imageAlt": "Original workbook illustration 3 for just + present perfect.",
+          "input": "gaps",
+          "segments": [
+            "They ",
+            " the cup."
+          ],
+          "answers": [
+            [
+              "’ve just won",
+              "'ve just won",
+              "have just won"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "image": "images/lesson-12/just-4.png",
+          "imageAlt": "Original workbook illustration 4 for just + present perfect.",
+          "input": "gaps",
+          "segments": [
+            "I ",
+            " the floor."
+          ],
+          "answers": [
+            [
+              "’ve just cleaned",
+              "'ve just cleaned",
+              "have just cleaned"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "image": "images/lesson-12/just-5.png",
+          "imageAlt": "Original workbook illustration 5 for just + present perfect.",
+          "input": "gaps",
+          "segments": [
+            "She ",
+            " the table."
+          ],
+          "answers": [
+            [
+              "’s just laid",
+              "'s just laid",
+              "has just laid"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "image": "images/lesson-12/just-6.png",
+          "imageAlt": "Original workbook illustration 6 for just + present perfect.",
+          "input": "gaps",
+          "segments": [
+            "She ",
+            " the washing-up."
+          ],
+          "answers": [
+            [
+              "’s just done",
+              "'s just done",
+              "has just done"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-2d",
+      "title": "2d. Complete the conversation between two flatmates. Use the present perfect and the words in brackets. Use contractions where possible.",
+      "hideAnswersOnError": true,
+      "layout": "dialogue",
+      "dialogueLines": [
+        {
+          "speaker": "Mark",
+          "text": "Hey, Joe, where are you? Remember Matt and Tracey are coming for dinner in an hour."
+        },
+        {
+          "speaker": "Joe",
+          "itemIds": [
+            "1"
+          ]
+        },
+        {
+          "speaker": "Joe",
+          "itemIds": [
+            "2"
+          ]
+        },
+        {
+          "speaker": "Mark",
+          "itemIds": [
+            "3"
+          ]
+        },
+        {
+          "speaker": "Joe",
+          "text": "Why not? What’s the problem?"
+        },
+        {
+          "speaker": "Mark",
+          "text": "We need some rice and onions."
+        },
+        {
+          "speaker": "Joe",
+          "text": "Why didn’t you tell me before?"
+        },
+        {
+          "speaker": "Joe",
+          "itemIds": [
+            "4"
+          ]
+        },
+        {
+          "speaker": "Mark",
+          "text": "Well, don’t worry. I can go now."
+        },
+        {
+          "speaker": "Mark",
+          "itemIds": [
+            "5",
+            "6"
+          ]
+        },
+        {
+          "speaker": "Joe",
+          "text": "OK, great. See you soon."
+        }
+      ],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": [
+            "Hi! ",
+            " I’ll be home in 20 minutes."
+          ],
+          "exampleAnswer": "I’ve just got on the bus.",
+          "answers": [
+            [
+              "I’ve just got on the bus."
+            ]
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "",
+            "? (You / make dinner / yet?)"
+          ],
+          "answers": [
+            [
+              "Have you made dinner yet"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "What? No! ",
+            " (I / not start / yet)"
+          ],
+          "answers": [
+            [
+              "I haven’t started yet",
+              "I have not started yet"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "",
+            " (I / just / be to the shop)"
+          ],
+          "answers": [
+            [
+              "I’ve just been to the shop",
+              "I have just been to the shop"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "",
+            " (I / clean the flat)"
+          ],
+          "answers": [
+            [
+              "I’ve cleaned the flat",
+              "I have cleaned the flat"
+            ]
+          ],
+          "hideAnswersOnError": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "and ",
+            " (I / already / lay the table)"
+          ],
+          "answers": [
+            [
+              "I’ve already laid the table",
+              "I have already laid the table"
+            ]
+          ],
+          "hideAnswersOnError": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-2e",
+      "title": "2e. Write true sentences about:",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1a",
+          "number": "1a",
+          "input": "text",
+          "prompt": "Three things you’ve already done today: a) I’ve already …",
+          "scored": false
+        },
+        {
+          "id": "1b",
+          "number": "1b",
+          "input": "text",
+          "prompt": "b) I’ve …",
+          "scored": false
+        },
+        {
+          "id": "1c",
+          "number": "1c",
+          "input": "text",
+          "prompt": "c) I …",
+          "scored": false
+        },
+        {
+          "id": "2a",
+          "number": "2a",
+          "input": "text",
+          "prompt": "Three things you haven’t done yet, but which you are going to do today: a) I haven’t …",
+          "scored": false
+        },
+        {
+          "id": "2b",
+          "number": "2b",
+          "input": "text",
+          "prompt": "b) I …",
+          "scored": false
+        },
+        {
+          "id": "2c",
+          "number": "2c",
+          "input": "text",
+          "prompt": "c) I …",
+          "scored": false
+        },
+        {
+          "id": "3",
+          "number": "3",
+          "input": "text",
+          "prompt": "One thing you’ve just done: I …",
+          "scored": false
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "4A · 3",
+      "title": "PRONUNCIATION · the letters y and j",
+      "text": ""
+    },
+    {
+      "type": "audio",
+      "id": "pronunciation-3a-audio",
+      "title": "3a. 4.1 Listen and write five sentences.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_4.1.mp3",
+      "response": false
+    },
+    {
+      "type": "exercise",
+      "id": "pronunciation-3a",
+      "title": "3a. Listen and write five sentences.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "text",
+          "example": true,
+          "exampleTextOnly": true,
+          "prompt": "Yesterday, John got a jet to New York."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "prompt": "",
+          "answer": "I’ve just got a new job!",
+          "acceptedAnswers": [
+            "I’ve just got a new job!"
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "prompt": "",
+          "answer": "A lot of young people like jazz.",
+          "acceptedAnswers": [
+            "A lot of young people like jazz."
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "prompt": "",
+          "answer": "Do you want your yellow jacket?",
+          "acceptedAnswers": [
+            "Do you want your yellow jacket?"
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "prompt": "",
+          "answer": "The journey took over a year.",
+          "acceptedAnswers": [
+            "The journey took over a year."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "audio",
+      "id": "pronunciation-3b-audio",
+      "title": "3b. 4.1 Listen again and repeat the sentences.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_4.1.mp3",
+      "response": false
+    }
+  ]
+}

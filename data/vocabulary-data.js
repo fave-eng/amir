@@ -2252,5 +2252,172 @@ window.VOCABULARY_DATA = [
         "exampleRu": "Принести вам что-нибудь для начала?"
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-4a",
+    "order": 12,
+    "title": "Housework & everyday chores",
+    "label": "Lesson 12 · Unit 4A · Who does what?",
+    "icon": "🧹",
+    "type": "lesson",
+    "linkedLessonId": "lesson-12",
+    "page": "vocabulary.html?id=vocab-lesson-4a",
+    "publishedAt": "2026-10-19",
+    "words": [
+      {
+        "id": "lesson-12-4a-01",
+        "en": "do the washing",
+        "ru": "стирать бельё",
+        "exampleEn": "I’ve already done the washing.",
+        "exampleRu": "Я уже постирал бельё."
+      },
+      {
+        "id": "lesson-12-4a-02",
+        "en": "dust the furniture",
+        "ru": "вытирать пыль с мебели",
+        "exampleEn": "I dust the furniture on Saturdays.",
+        "exampleRu": "Я вытираю пыль с мебели по субботам."
+      },
+      {
+        "id": "lesson-12-4a-03",
+        "en": "do the shopping",
+        "ru": "ходить за покупками",
+        "exampleEn": "Can you do the shopping today?",
+        "exampleRu": "Ты можешь сегодня сходить за покупками?"
+      },
+      {
+        "id": "lesson-12-4a-04",
+        "en": "make lunch",
+        "ru": "готовить обед",
+        "exampleEn": "I haven’t made lunch yet.",
+        "exampleRu": "Я ещё не приготовил обед."
+      },
+      {
+        "id": "lesson-12-4a-05",
+        "en": "do the vacuuming",
+        "ru": "пылесосить",
+        "exampleEn": "I’ve just done the vacuuming.",
+        "exampleRu": "Я только что пропылесосил."
+      },
+      {
+        "id": "lesson-12-4a-06",
+        "en": "lay the table",
+        "ru": "накрывать на стол",
+        "exampleEn": "She’s already laid the table.",
+        "exampleRu": "Она уже накрыла на стол."
+      },
+      {
+        "id": "lesson-12-4a-07",
+        "en": "load the dishwasher",
+        "ru": "загружать посудомоечную машину",
+        "exampleEn": "Please load the dishwasher.",
+        "exampleRu": "Пожалуйста, загрузи посудомоечную машину."
+      },
+      {
+        "id": "lesson-12-4a-08",
+        "en": "take out the rubbish",
+        "ru": "выносить мусор",
+        "exampleEn": "Edward has already taken out the rubbish.",
+        "exampleRu": "Эдвард уже вынес мусор."
+      },
+      {
+        "id": "lesson-12-4a-09",
+        "en": "pick up dirty clothes",
+        "ru": "подбирать грязную одежду",
+        "exampleEn": "Pick up your dirty clothes.",
+        "exampleRu": "Подбери свою грязную одежду."
+      },
+      {
+        "id": "lesson-12-4a-10",
+        "en": "make the bed",
+        "ru": "заправлять кровать",
+        "exampleEn": "Have you made your bed?",
+        "exampleRu": "Ты заправил кровать?"
+      },
+      {
+        "id": "lesson-12-4a-11",
+        "en": "tidy your room",
+        "ru": "убираться в комнате",
+        "exampleEn": "Daniel has already tidied his room.",
+        "exampleRu": "Дэниел уже убрался в комнате."
+      },
+      {
+        "id": "lesson-12-4a-12",
+        "en": "clear the table",
+        "ru": "убирать со стола",
+        "exampleEn": "Please clear the table after dinner.",
+        "exampleRu": "Пожалуйста, убери со стола после ужина."
+      },
+      {
+        "id": "lesson-12-4a-13",
+        "en": "clean the floor",
+        "ru": "мыть пол",
+        "exampleEn": "I’ve just cleaned the floor.",
+        "exampleRu": "Я только что помыл пол."
+      },
+      {
+        "id": "lesson-12-4a-14",
+        "en": "do the ironing",
+        "ru": "гладить вещи",
+        "exampleEn": "I’ve already done the ironing.",
+        "exampleRu": "Я уже погладил вещи."
+      },
+      {
+        "id": "lesson-12-4a-15",
+        "en": "do the washing-up",
+        "ru": "мыть посуду вручную",
+        "exampleEn": "She’s just done the washing-up.",
+        "exampleRu": "Она только что вымыла посуду."
+      },
+      {
+        "id": "lesson-12-4a-16",
+        "en": "put away your clothes",
+        "ru": "убирать одежду на место",
+        "exampleEn": "Put away your clothes.",
+        "exampleRu": "Убери одежду на место."
+      },
+      {
+        "id": "lesson-12-4a-17",
+        "en": "make a noise",
+        "ru": "шуметь",
+        "exampleEn": "Don’t make a noise!",
+        "exampleRu": "Не шуми!"
+      },
+      {
+        "id": "lesson-12-4a-18",
+        "en": "make plans",
+        "ru": "строить планы",
+        "exampleEn": "Have you made any plans for the weekend?",
+        "exampleRu": "Ты уже составил планы на выходные?"
+      },
+      {
+        "id": "lesson-12-4a-19",
+        "en": "make friends",
+        "ru": "заводить друзей",
+        "exampleEn": "Some children make friends easily.",
+        "exampleRu": "Некоторые дети легко заводят друзей."
+      },
+      {
+        "id": "lesson-12-4a-20",
+        "en": "make a phone call",
+        "ru": "позвонить",
+        "exampleEn": "I need to make a phone call.",
+        "exampleRu": "Мне нужно позвонить."
+      },
+      {
+        "id": "lesson-12-4a-21",
+        "en": "do housework",
+        "ru": "заниматься домашними делами",
+        "exampleEn": "We always do housework on Saturday.",
+        "exampleRu": "По субботам мы всегда занимаемся домашними делами."
+      },
+      {
+        "id": "lesson-12-4a-22",
+        "en": "do more exercise",
+        "ru": "больше заниматься физическими упражнениями",
+        "exampleEn": "I want to do more exercise.",
+        "exampleRu": "Я хочу больше заниматься спортом."
+      }
+    ]
   }
 ];
