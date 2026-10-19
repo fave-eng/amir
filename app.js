@@ -1110,7 +1110,14 @@
     } else if (item.input === 'dependent-select') {
       control = renderDependentSelectControl(item, inputId);
     } else if (item.input === 'bank-select') {
-      control = `<select id="${escapeHtml(inputId)}" data-bank-select><option value="">— выбери —</option>${(item.options || []).map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join('')}</select>`;
+      const optionsHtml = (item.options || []).map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join('');
+      const hasInlinePhrase = Array.isArray(item.segments) && item.segments.length === 2;
+      const selectHtml = `<select id="${escapeHtml(inputId)}"${hasInlinePhrase ? ' class="gap-select"' : ''} data-bank-select><option value="">— choose —</option>${optionsHtml}</select>`;
+      // Keep the original workbook phrase visible directly beside the dropdown.
+      // Preserve input=bank-select and unchanged item IDs for saving/scoring existing answers.
+      control = hasInlinePhrase
+        ? `<div class="sentence-gaps"><span>${inlineHtml(item.segments[0])}</span>${selectHtml}<span>${inlineHtml(item.segments[1])}</span></div>`
+        : selectHtml;
     } else if (item.input === 'textarea') {
       control = `<textarea id="${escapeHtml(inputId)}" placeholder="${escapeHtml(item.placeholder || '')}"></textarea>`;
     } else if (item.input === 'gaps') {
@@ -1129,7 +1136,7 @@
       control = `<input class="text-field" id="${escapeHtml(inputId)}" autocomplete="off" placeholder="${escapeHtml(item.placeholder || '')}">`;
     }
 
-    const isSentenceGaps = item.input === 'gaps';
+    const isSentenceGaps = item.input === 'gaps' || (item.input === 'bank-select' && Array.isArray(item.segments) && item.segments.length === 2);
     const itemHeader = isSentenceGaps
       ? (numberMarkup ? `<div class="exercise-item-header exercise-item-header-number-only">${numberMarkup}</div>` : '')
       : (numberMarkup || prompt

@@ -182,7 +182,8 @@
           "input": "text",
           "example": true,
           "exampleTextOnly": true,
-          "prompt": "pick up dirty clothes"
+          "prompt": "pick up dirty clothes",
+          "exampleAnswer": "pick up"
         },
         {
           "id": "2",
@@ -330,7 +331,8 @@
           "input": "text",
           "example": true,
           "exampleTextOnly": true,
-          "prompt": "I usually do my homework in my room."
+          "prompt": "I usually do my homework in my room.",
+          "exampleAnswer": "do"
         },
         {
           "id": "2",
