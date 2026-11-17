@@ -2419,5 +2419,186 @@ window.VOCABULARY_DATA = [
         "exampleRu": "Я хочу больше заниматься спортом."
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-4b-shopping",
+    "order": 13,
+    "title": "Shopping",
+    "label": "Lesson 13 · Unit 4B · In your basket",
+    "icon": "🛍️",
+    "type": "lesson",
+    "linkedLessonId": "lesson-13",
+    "page": "vocabulary.html?id=vocab-lesson-4b-shopping",
+    "publishedAt": "2026-11-17",
+    "words": [
+      {
+        "id": "lesson-13-4b-01",
+        "en": "account",
+        "ru": "учётная запись",
+        "exampleEn": "Create an account to shop online.",
+        "exampleRu": "Создайте учётную запись, чтобы делать покупки онлайн."
+      },
+      {
+        "id": "lesson-13-4b-02",
+        "en": "auction",
+        "ru": "аукцион",
+        "exampleEn": "It’s an online auction.",
+        "exampleRu": "Это онлайн-аукцион."
+      },
+      {
+        "id": "lesson-13-4b-03",
+        "en": "basket",
+        "ru": "корзина (для покупок)",
+        "exampleEn": "Put the item in your shopping basket.",
+        "exampleRu": "Положите товар в корзину."
+      },
+      {
+        "id": "lesson-13-4b-04",
+        "en": "changing room",
+        "ru": "примерочная",
+        "exampleEn": "There’s a queue for the changing room.",
+        "exampleRu": "В примерочную очередь."
+      },
+      {
+        "id": "lesson-13-4b-05",
+        "en": "checkout",
+        "ru": "оформление заказа; кассовая зона",
+        "exampleEn": "Go to the checkout to pay.",
+        "exampleRu": "Перейдите к оформлению заказа, чтобы оплатить покупку."
+      },
+      {
+        "id": "lesson-13-4b-06",
+        "en": "credit card",
+        "ru": "кредитная карта",
+        "exampleEn": "You can pay with a credit card.",
+        "exampleRu": "Можно оплатить кредитной картой."
+      },
+      {
+        "id": "lesson-13-4b-07",
+        "en": "debit card",
+        "ru": "дебетовая карта",
+        "exampleEn": "The website accepts debit cards.",
+        "exampleRu": "Сайт принимает дебетовые карты."
+      },
+      {
+        "id": "lesson-13-4b-08",
+        "en": "delivery",
+        "ru": "доставка",
+        "exampleEn": "The store offers free delivery.",
+        "exampleRu": "Магазин предлагает бесплатную доставку."
+      },
+      {
+        "id": "lesson-13-4b-09",
+        "en": "delivery address",
+        "ru": "адрес доставки",
+        "exampleEn": "Enter your delivery address.",
+        "exampleRu": "Введите адрес доставки."
+      },
+      {
+        "id": "lesson-13-4b-10",
+        "en": "fit",
+        "ru": "подходить по размеру",
+        "exampleEn": "These clothes don’t fit me.",
+        "exampleRu": "Эта одежда мне не по размеру."
+      },
+      {
+        "id": "lesson-13-4b-11",
+        "en": "item",
+        "ru": "товар; предмет",
+        "exampleEn": "I want to return this item.",
+        "exampleRu": "Я хочу вернуть этот товар."
+      },
+      {
+        "id": "lesson-13-4b-12",
+        "en": "lunch break",
+        "ru": "обеденный перерыв",
+        "exampleEn": "I go shopping in my lunch break.",
+        "exampleRu": "Я хожу за покупками в обеденный перерыв."
+      },
+      {
+        "id": "lesson-13-4b-13",
+        "en": "next-day delivery",
+        "ru": "доставка на следующий день",
+        "exampleEn": "You need to pay for next-day delivery.",
+        "exampleRu": "За доставку на следующий день нужно платить."
+      },
+      {
+        "id": "lesson-13-4b-14",
+        "en": "payment",
+        "ru": "платёж; оплата",
+        "exampleEn": "You can make a payment online.",
+        "exampleRu": "Можно оплатить покупку онлайн."
+      },
+      {
+        "id": "lesson-13-4b-15",
+        "en": "personal details",
+        "ru": "личные данные",
+        "exampleEn": "Enter your personal details.",
+        "exampleRu": "Введите свои личные данные."
+      },
+      {
+        "id": "lesson-13-4b-16",
+        "en": "receipt",
+        "ru": "чек",
+        "exampleEn": "Keep the receipt.",
+        "exampleRu": "Сохраните чек."
+      },
+      {
+        "id": "lesson-13-4b-17",
+        "en": "sales",
+        "ru": "распродажи",
+        "exampleEn": "You can buy things in the sales.",
+        "exampleRu": "На распродажах можно купить вещи со скидкой."
+      },
+      {
+        "id": "lesson-13-4b-18",
+        "en": "shop assistant",
+        "ru": "продавец-консультант",
+        "exampleEn": "Ask a shop assistant for help.",
+        "exampleRu": "Попросите продавца-консультанта помочь."
+      },
+      {
+        "id": "lesson-13-4b-19",
+        "en": "shopping bag",
+        "ru": "пакет или сумка для покупок",
+        "exampleEn": "Do you need a shopping bag?",
+        "exampleRu": "Вам нужен пакет для покупок?"
+      },
+      {
+        "id": "lesson-13-4b-20",
+        "en": "size",
+        "ru": "размер",
+        "exampleEn": "I got the wrong size.",
+        "exampleRu": "Я взял не тот размер."
+      },
+      {
+        "id": "lesson-13-4b-21",
+        "en": "suit somebody",
+        "ru": "идти кому-либо (об одежде)",
+        "exampleEn": "This colour suits you.",
+        "exampleRu": "Этот цвет тебе идёт."
+      },
+      {
+        "id": "lesson-13-4b-22",
+        "en": "till",
+        "ru": "касса; кассовый аппарат",
+        "exampleEn": "Take the items to the till.",
+        "exampleRu": "Отнесите товары на кассу."
+      },
+      {
+        "id": "lesson-13-4b-23",
+        "en": "try on",
+        "ru": "примерять",
+        "exampleEn": "Can I try on these trousers?",
+        "exampleRu": "Можно примерить эти брюки?"
+      },
+      {
+        "id": "lesson-13-4b-24",
+        "en": "website",
+        "ru": "веб-сайт",
+        "exampleEn": "I found it on a website.",
+        "exampleRu": "Я нашёл это на сайте."
+      }
+    ]
   }
 ];

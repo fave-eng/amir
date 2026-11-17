@@ -3139,3 +3139,15 @@ label.odd-option {
  #grammar-topic-root .study-table-wrap {padding:12px;}
  #grammar-topic-root .study-table-wrap table {min-width:440px;}
 }
+
+/* Unit 4B — shared-cell crossword, with standard homework scoring and persistence. */
+.crossword-layout{padding:clamp(10px,3vw,22px);display:grid;gap:20px;min-width:0}
+.cross-board{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));grid-template-rows:repeat(14,auto);width:min(100%,440px);margin:0 auto;gap:0;align-items:stretch}
+.cross-cell{position:relative;aspect-ratio:1;min-width:0;background:#fff;border:1px solid #b8c4d8;border-radius:0;overflow:hidden}
+.cross-letter{position:absolute;inset:0;width:100%;height:100%;min-width:0!important;min-height:0!important;border:0!important;border-radius:0!important;padding:6px 0 0!important;margin:0!important;background:transparent!important;text-align:center;font-size:clamp(12px,3.8vw,19px);font-weight:750;color:var(--text,#111827);box-shadow:none!important;outline:none!important}
+.cross-number{position:absolute;left:2px;top:1px;font-size:9px;line-height:1;color:#475569;z-index:1;pointer-events:none}
+.cross-fixed{background:#eef0ff}.cross-fixed .cross-letter{color:#5145cd;font-weight:800}.cross-letter.cross-active-cell{background:#e9edff!important}.cross-letter:focus{background:#dce4ff!important;box-shadow:inset 0 0 0 2px #625cf4!important}
+.cross-clue-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.cross-clues h4{margin:0 0 8px;font-size:.9rem;letter-spacing:.05em}.cross-clue{padding:7px 8px;border-radius:8px;margin-bottom:5px}.cross-clue-button{display:flex;align-items:flex-start;gap:8px;width:100%;background:none;border:0;padding:0;font:inherit;color:inherit;text-align:left;cursor:pointer;line-height:1.5}.cross-clue-button b{min-width:15px;color:#5145cd}.cross-active{background:#eef0ff}.cross-clue.is-correct{background:#e8f6ed}.cross-clue.is-wrong{background:#fff0ee}.cross-example-tag{display:inline-block;margin-left:23px;font-size:.75rem;color:#5145cd;font-weight:700}.cross-clue .feedback{margin-left:23px;font-size:.8rem}.cross-example .cross-clue-button{cursor:default}
+.cloze-suffix-item{display:inline!important;white-space:normal!important;margin:0 2px}.cloze-gap-part{display:inline-block;white-space:nowrap}.cloze-suffix{display:inline-block!important;width:calc(var(--gap-ch)*1ch + 12px)!important;min-width:0!important;max-width:100%!important;min-height:36px!important;padding:3px 4px!important;font-size:1rem;vertical-align:middle}.cloze-suffix-item.is-correct .cloze-suffix{border-bottom-color:#16a34a;background:#e8f6ed}.cloze-suffix-item.is-wrong .cloze-suffix{border-bottom-color:#dc2626;background:#fff0ee}
+.shopping-select-card .gap-select{max-width:150px;width:auto;min-width:100px}
+@media(max-width:580px){.cross-clue-list{grid-template-columns:1fr;gap:8px}.cross-board{width:100%}.cross-number{font-size:8px}.crossword-layout{padding:10px}.cross-letter{font-size:clamp(11px,4vw,17px)}}

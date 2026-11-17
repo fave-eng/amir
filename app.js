@@ -1160,6 +1160,11 @@
       return `<span class="cloze-inline-item cloze-example" data-exercise-item="${escapeHtml(itemId)}"><span class="inline-example-label">Example</span>${gapNumber}<span class="cloze-example-answer">${escapeHtml(item.exampleAnswer || '')}</span></span>`;
     }
 
+    if (item.input === 'gaps') {
+      const parts = (item.answers || []).map((answer, i) => `<span class="cloze-gap-part">${escapeHtml(item.segments?.[i] || '')}<input class="gap-input cloze-suffix" data-gap-index="${i}" style="--gap-ch:${Math.max(4,Math.min(11,String(answer[0] || '').length+1))}" aria-label="Gap ${escapeHtml(number)}, part ${i+1}" autocomplete="off" autocapitalize="none" spellcheck="false"></span>`).join('');
+      return `<span class="cloze-inline-item cloze-suffix-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="gaps">${gapNumber}${parts}${escapeHtml(item.segments?.at(-1) || '')}<span class="feedback" aria-live="polite"></span></span>`;
+    }
+
     let control = '';
     if (item.input === 'select') {
       control = `<select id="${escapeHtml(inputId)}" aria-label="Пропуск ${escapeHtml(number)}"><option value="">— выбери —</option>${(item.options || []).map((option, optionIndex) => `<option value="${optionIndex}">${escapeHtml(option)}</option>`).join('')}</select>`;
@@ -1360,6 +1365,62 @@
     return `<div class="letter-grid-layout"><div class="letter-grid-board" aria-label="Interactive word puzzle">${rows}</div><ol class="letter-grid-clues">${clues}</ol></div>`;
   }
 
+  function renderCrosswordExercise(block) {
+    const items = block.items || [];
+    const cells = new Map();
+    items.forEach(item => item.cells.forEach(([r,c],i) => {
+      const key = `${r}-${c}`;
+      const cell = cells.get(key) || {r,c,words:[],number:'',fixed:''};
+      cell.words.push(item.id);
+      if (!i) cell.number = item.number;
+      if (item.example) cell.fixed = item.answer[i].toUpperCase();
+      cells.set(key,cell);
+    }));
+    const board = [...cells.values()].map(cell => {
+      const key = `${cell.r}-${cell.c}`;
+      return `<div class="cross-cell${cell.fixed?' cross-fixed':''}" style="grid-row:${cell.r+1};grid-column:${cell.c+1}">${cell.number?`<span class="cross-number">${cell.number}</span>`:''}<input data-cross-cell="${key}" data-cross-words="${escapeHtml(cell.words.join(' '))}" class="cross-letter" type="text" inputmode="text" maxlength="1" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Row ${cell.r+1}, column ${cell.c+1}" ${cell.fixed?`readonly value="${escapeHtml(cell.fixed)}"`:''}></div>`;
+    }).join('');
+    const clues = ['down','across'].map(dir => `<section class="cross-clues"><h4>${dir==='down'?'DOWN ↓':'ACROSS →'}</h4>${items.filter(item=>item.direction===dir).map(item=>`<div class="cross-clue${item.example?' cross-example':''}" data-exercise-item="${escapeHtml(item.id)}"><button type="button" class="cross-clue-button" data-cross-clue="${escapeHtml(item.id)}"><b>${item.number}</b><span>${item.example?highlightExampleAnswer(item.prompt,[item.answer]):escapeHtml(item.prompt)}</span></button>${item.example?'<span class="cross-example-tag">Example</span>':`<input type="hidden" data-cross-value data-cross-path="${item.cells.map(([r,c])=>`${r}-${c}`).join(' ')}"><div class="feedback" aria-live="polite"></div>`}</div>`).join('')}</section>`).join('');
+    return `<div class="crossword-layout"><div class="cross-board" aria-label="Interactive crossword">${board}</div><div class="cross-clue-list">${clues}</div></div>`;
+  }
+
+  function initCrosswords(root) {
+    root.querySelectorAll('.crossword-layout').forEach(puzzle => {
+      const cells = new Map([...puzzle.querySelectorAll('[data-cross-cell]')].map(el=>[el.dataset.crossCell,el]));
+      const words = new Map([...puzzle.querySelectorAll('[data-cross-value]')].map(el=>[el.closest('[data-exercise-item]').dataset.exerciseItem,el]));
+      const path = word => (word?.dataset.crossPath || '').split(' ').filter(Boolean).map(key=>cells.get(key));
+      let selected = '';
+      words.forEach(word => path(word).forEach((cell,i)=>{const ch=word.value[i]; if(!cell.readOnly && /^[a-z]$/i.test(ch||''))cell.value=ch.toUpperCase();}));
+      const sync = () => words.forEach(word => {word.value=path(word).map(cell=>cell.value||'_').join('');});
+      sync();
+      const activate = id => {
+        if (!words.has(id)) return;
+        selected=id;
+        puzzle.querySelectorAll('.cross-clue').forEach(el=>el.classList.toggle('cross-active',el.dataset.exerciseItem===id));
+        cells.forEach(el=>el.classList.toggle('cross-active-cell',path(words.get(id)).includes(el)));
+      };
+      puzzle.querySelectorAll('[data-cross-clue]').forEach(button=>button.addEventListener('click',()=>{
+        const id=button.dataset.crossClue;if(!words.has(id))return;activate(id);const seq=path(words.get(id));(seq.find(el=>!el.readOnly&&!el.value)||seq.find(el=>!el.readOnly))?.focus();
+      }));
+      cells.forEach(cell=>{
+        const choose=()=>{const ids=cell.dataset.crossWords.split(' ').filter(id=>words.has(id));if(!ids.includes(selected))activate(ids[0]);};
+        cell.addEventListener('focus',choose);
+        cell.addEventListener('click',()=>{choose();cell.select();});
+        cell.addEventListener('input',()=>{
+          if(cell.readOnly)return;choose();cell.value=cell.value.replace(/[^a-z]/gi,'').slice(-1).toUpperCase();sync();
+          cell.dataset.crossWords.split(' ').forEach(id=>{const row=words.get(id)?.closest('[data-exercise-item]');if(row){row.classList.remove('is-correct','is-wrong');const f=row.querySelector('.feedback');f.className='feedback';f.textContent='';}});
+          if(cell.value){const seq=path(words.get(selected));const i=seq.indexOf(cell);seq.slice(i+1).find(el=>!el.readOnly)?.focus();}
+        });
+        cell.addEventListener('keydown',event=>{
+          choose();const seq=path(words.get(selected));const i=seq.indexOf(cell);
+          if(event.key==='Backspace'&&!cell.value&&i>0){const prev=seq.slice(0,i).reverse().find(el=>!el.readOnly);if(prev){event.preventDefault();prev.focus();prev.value='';prev.dispatchEvent(new Event('input',{bubbles:true}));}}
+          const delta={ArrowUp:[-1,0],ArrowDown:[1,0],ArrowLeft:[0,-1],ArrowRight:[0,1]}[event.key];
+          if(delta){const [r,c]=cell.dataset.crossCell.split('-').map(Number);const next=cells.get(`${r+delta[0]}-${c+delta[1]}`);if(next){event.preventDefault();next.focus();}}
+        });
+      });
+    });
+  }
+
   function renderLessonBlock(block, index) {
     const id = safeText(block.id, `task-${index}`);
     const title = escapeHtml(block.title || block.prompt || `Task ${index + 1}`);
@@ -1408,6 +1469,7 @@
             ? renderWordChartExercise(block, id)
             : block.layout === 'letter-grid'
               ? renderLetterGridExercise(block, id)
+              : block.layout === 'crossword' ? renderCrosswordExercise(block)
               : `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex, block)).join('')}</div>`;
       const layoutClass = block.layout === 'dialogue'
         ? ' dialogue-card'
@@ -1419,7 +1481,7 @@
               ? ' media-list-card'
               : block.layout === 'letter-grid'
                 ? ' letter-grid-card'
-                : '';
+                : block.layout === 'shopping-select' ? ' shopping-select-card' : '';
       const referenceBody = image
         ? `<div class="exercise-reference-layout">
             <aside class="exercise-reference-media" aria-label="Reference image">${image}</aside>
@@ -1997,6 +2059,7 @@
       <div class="card section lesson-actions"><div id="lesson-result" aria-live="polite"></div><div class="button-row"><button class="btn btn-primary" id="check-lesson" type="button">Проверить ответы</button><button class="btn btn-secondary" id="submit-lesson" type="button" ${Number(savedResult?.total || 0) > 0 ? '' : 'disabled'}>Отправить преподавателю</button></div><p class="muted save-note">Черновик сохраняется автоматически. После проверки станет доступна отправка преподавателю.</p></div>`;
 
     restoreLessonAnswers(root, blocks, savedResult?.answers);
+    initCrosswords(root);
     initLessonDependencies(root, blocks);
     initMatchingBlocks(root);
 
@@ -2028,7 +2091,7 @@
           feedback.className = 'feedback';
           feedback.textContent = '';
         }
-      } else {
+      } else if (!target.matches('[data-cross-cell]')) {
         const taskNode = target.closest('[data-task]');
         const feedback = taskNode?.querySelector('.feedback');
         if (feedback) {

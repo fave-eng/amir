@@ -1,0 +1,660 @@
+{
+  "id": "lesson-13",
+  "number": 13,
+  "title": "Unit 4B · In your basket",
+  "subtitle": "English File 4th edition Pre-intermediate · Workbook 4B · shopping",
+  "status": "available",
+  "page": "lesson.html?id=lesson-13",
+  "vocabularyId": "vocab-lesson-4b-shopping",
+  "grammarIds": [],
+  "publishedAt": "2026-11-17",
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "totalPoints": 20,
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "4B · 1",
+      "title": "VOCABULARY · shopping",
+      "text": ""
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1a",
+      "title": "1a. Complete the crossword.",
+      "layout": "crossword",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "text",
+          "answer": "account",
+          "direction": "down",
+          "cells": [
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              3,
+              10
+            ],
+            [
+              4,
+              10
+            ],
+            [
+              5,
+              10
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "prompt": "When you shop online, you normally have to create an account with your personal details.",
+          "example": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "answer": "item",
+          "direction": "down",
+          "cells": [
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "prompt": "Something you want to buy is called an it____."
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "answer": "auction",
+          "direction": "down",
+          "cells": [
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              8,
+              3
+            ],
+            [
+              9,
+              3
+            ],
+            [
+              10,
+              3
+            ]
+          ],
+          "prompt": "eBay is an online au____ site, which sells things to the person who offers the most money."
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "text",
+          "answer": "website",
+          "direction": "down",
+          "cells": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ]
+          ],
+          "prompt": "Amazon is a popular w____ where you can buy things such as books, computers, and clothes."
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "answer": "basket",
+          "direction": "across",
+          "cells": [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "prompt": "When you find something you want to buy on a website, you put it in your shopping b____."
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "answer": "payment",
+          "direction": "across",
+          "cells": [
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              4,
+              8
+            ]
+          ],
+          "prompt": "You can make a p____ in different ways, e.g. using your debit or credit card, or Paypal."
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "text",
+          "answer": "checkout",
+          "direction": "across",
+          "cells": [
+            [
+              6,
+              3
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              6,
+              8
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "prompt": "When you are ready to buy something, you go to the ch____."
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "text",
+          "answer": "delivery",
+          "direction": "across",
+          "cells": [
+            [
+              8,
+              0
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              8,
+              2
+            ],
+            [
+              8,
+              3
+            ],
+            [
+              8,
+              4
+            ],
+            [
+              8,
+              5
+            ],
+            [
+              8,
+              6
+            ],
+            [
+              8,
+              7
+            ]
+          ],
+          "prompt": "You have to enter your d____ address so they can send your things to the correct place."
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1b",
+      "title": "1b. Complete the text.",
+      "layout": "cloze",
+      "introTitle": "SHOPPING IN A SHOP OR STORE",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "text",
+          "example": true,
+          "exampleAnswer": "try"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "ch",
+            " r",
+            ""
+          ],
+          "answers": [
+            [
+              "anging"
+            ],
+            [
+              "oom",
+              "ooms"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "ch",
+            ""
+          ],
+          "answers": [
+            [
+              "eckout"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "r",
+            ""
+          ],
+          "answers": [
+            [
+              "eceipt"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "s",
+            ""
+          ],
+          "answers": [
+            [
+              "uit"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "s",
+            ""
+          ],
+          "answers": [
+            [
+              "ize"
+            ]
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "segments": [
+            "f",
+            ""
+          ],
+          "answers": [
+            [
+              "it"
+            ]
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "segments": [
+            "t",
+            " things b",
+            ""
+          ],
+          "answers": [
+            [
+              "ake"
+            ],
+            [
+              "ack"
+            ]
+          ]
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "gaps",
+          "segments": [
+            "sh",
+            " a",
+            ""
+          ],
+          "answers": [
+            [
+              "op"
+            ],
+            [
+              "ssistants"
+            ]
+          ]
+        }
+      ],
+      "clozeParagraphs": [
+        [
+          "I usually go shopping in my lunch break, so I don’t have time to ",
+          {
+            "itemId": "1"
+          },
+          " on clothes. There’s always a long queue for the ",
+          {
+            "itemId": "2"
+          },
+          ", so I just take them straight to the ",
+          {
+            "itemId": "3"
+          },
+          " to pay. I keep the ",
+          {
+            "itemId": "4"
+          },
+          " so I can change them if they don’t ",
+          {
+            "itemId": "5"
+          },
+          " me."
+        ],
+        [
+          "Sometimes I get the wrong ",
+          {
+            "itemId": "6"
+          },
+          ", and the clothes don’t ",
+          {
+            "itemId": "7"
+          },
+          ". I often ",
+          {
+            "itemId": "8"
+          },
+          " to shops, but the ",
+          {
+            "itemId": "9"
+          },
+          " don’t mind."
+        ]
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-1c",
+      "title": "1c. Complete the sentences with a word from the list.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "segments": [
+            "If you’re not happy with an item, you can take or send it back with the ",
+            "."
+          ],
+          "answers": [
+            [
+              "receipt"
+            ]
+          ],
+          "example": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "You can buy things with 50% off in the ",
+            "."
+          ],
+          "answers": [
+            [
+              "sales"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "debit",
+              "next-day",
+              "receipt",
+              "sales",
+              "shopping bag",
+              "till"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "When you’ve tried on your items, you take them to the ",
+            " to pay."
+          ],
+          "answers": [
+            [
+              "till"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "debit",
+              "next-day",
+              "receipt",
+              "sales",
+              "shopping bag",
+              "till"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "In shops in the UK, you pay 5p for a ",
+            " to carry your items home in."
+          ],
+          "answers": [
+            [
+              "shopping bag"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "debit",
+              "next-day",
+              "receipt",
+              "sales",
+              "shopping bag",
+              "till"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "Websites accept credit and ",
+            " cards, and you can also pay with Paypal."
+          ],
+          "answers": [
+            [
+              "debit"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "debit",
+              "next-day",
+              "receipt",
+              "sales",
+              "shopping bag",
+              "till"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "Most online stores offer free delivery, but you need to pay for ",
+            " delivery."
+          ],
+          "answers": [
+            [
+              "next-day"
+            ]
+          ],
+          "gapOptions": [
+            [
+              "debit",
+              "next-day",
+              "receipt",
+              "sales",
+              "shopping bag",
+              "till"
+            ]
+          ]
+        }
+      ],
+      "layout": "shopping-select"
+    }
+  ]
+}
